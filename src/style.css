@@ -2175,7 +2175,7 @@
 }
 .testimonial-2 .overlap-group {
   height: 693px;
-  background-image: url(./img/image-66.png);
+  background-image: url("../img/testimonial-bg.png");
   background-size: cover;
   background-position: 50% 50%;
 }

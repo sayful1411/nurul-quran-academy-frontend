@@ -3833,7 +3833,7 @@
 .blog {
   position: relative;
   width: 1440px;
-  height: 693px;
+  height: 800px;
   background-color: #fffcf8;
 }
 .blog .overlap-group {
@@ -4416,6 +4416,190 @@
     .blog .frame-4:hover {
       transform: translateY(-2px);
       transition: transform 0.2s ease-in-out;
+    }
+  }
+}
+
+/*------------------------------------------------------------------------------
+  Call To Action (CTA)
+------------------------------------------------------------------------------*/
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 100px 135px;
+  position: relative;
+  background-color: #fefefe;
+}
+.cta .frame {
+  position: relative;
+  width: 1169px;
+  height: 420px;
+  background-color: #9b1b40;
+  border-radius: 32px;
+  overflow: hidden;
+}
+.cta .overlap-group {
+  position: relative;
+  height: 420px;
+  background-image: url("../img/cta-02.png");
+  background-size: 100% 100%;
+}
+.cta .image {
+  position: absolute;
+  width: 389px;
+  height: 388px;
+  top: 32px;
+  left: 780px;
+  mix-blend-mode: hard-light;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.cta .frame-wrapper {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 148px;
+  position: absolute;
+  top: 126px;
+  left: 154px;
+}
+.cta .div {
+  display: flex;
+  flex-direction: column;
+  width: 475px;
+  align-items: flex-start;
+  gap: 33px;
+  position: relative;
+}
+.cta .text-wrapper {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: var(--h-2-font-family);
+  font-weight: var(--h-2-font-weight);
+  color: var(--white-100);
+  font-size: var(--h-2-font-size);
+  letter-spacing: var(--h-2-letter-spacing);
+  line-height: var(--h-2-line-height);
+  font-style: var(--h-2-font-style);
+}
+.cta .button {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 24px;
+  position: relative;
+  border-radius: 50px;
+  background: linear-gradient(
+    90deg,
+    rgba(223, 24, 106, 1) 0%,
+    rgba(250, 111, 33, 1) 100%
+  );
+}
+.cta .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  font-family: var(--body-text-font-family);
+  font-weight: var(--body-text-font-weight);
+  color: #ffffff;
+  font-size: var(--body-text-font-size);
+  letter-spacing: var(--body-text-letter-spacing);
+  line-height: var(--body-text-line-height);
+  white-space: nowrap;
+  font-style: var(--body-text-font-style);
+}
+.cta .arrow-right {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  aspect-ratio: 1;
+}
+.cta .vector {
+  position: absolute;
+  width: 12px;
+  height: 10px;
+  top: 3px;
+  left: 2px;
+}
+/* Original CSS code should be injected here */
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 100px 135px;
+  position: relative;
+  background-color: #fefefe;
+}
+.cta .button {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 24px;
+  position: relative;
+  border-radius: 50px;
+  background: linear-gradient(
+    90deg,
+    rgba(223, 24, 106, 1) 0%,
+    rgba(250, 111, 33, 1) 100%
+  );
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cta .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(223, 24, 106, 0.3);
+}
+.cta .button:active {
+  transform: translateY(0);
+}
+/* Responsive design improvements */
+@media (max-width: 1200px) {
+  .cta {
+    padding: 80px 60px;
+  }
+  .cta .frame {
+    width: 100%;
+    max-width: 1169px;
+  }
+  @media (max-width: 768px) {
+    .cta {
+      padding: 60px 20px;
+    }
+    .cta .frame {
+      height: auto;
+      min-height: 420px;
+    }
+    .cta .frame-wrapper {
+      position: static;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+    .cta .div {
+      width: 100%;
+      max-width: 475px;
+      align-items: center;
+    }
+    .cta .image {
+      position: static;
+      width: 200px;
+      height: 200px;
+      margin: 20px auto;
+      display: block;
     }
   }
 }

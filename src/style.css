@@ -4603,3 +4603,203 @@
     }
   }
 }
+
+/* --------------------------------------------------------------------------------------
+  Accordion QA Section
+--------------------------------------------------------------------------------------- */
+.accordion-qa {
+  position: relative;
+  width: 1440px;
+  height: 693px;
+  background-color: #fefefe;
+}
+
+.accordion-qa .frame {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  top: 100px;
+  left: 106px;
+}
+
+.accordion-qa .div {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.accordion-qa .frame-2 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.accordion-qa .question {
+  display: flex;
+  flex-direction: column;
+  width: 590px;
+  align-items: flex-start;
+  padding: 12px;
+  position: relative;
+  flex: 0 0 auto;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: var(--greyoutline);
+}
+.accordion-qa .heading {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  flex: 0 0 auto;
+  font-family: var(--h-1-font-family);
+  font-weight: var(--h-1-font-weight);
+  color: var(--blackheading);
+  font-size: var(--h-1-font-size);
+  text-align: center;
+  letter-spacing: var(--h-1-letter-spacing);
+  line-height: var(--h-1-line-height);
+  font-style: var(--h-1-font-style);
+}
+.accordion-qa .heading span {
+  background: linear-gradient(
+    90deg,
+    rgba(223, 24, 106, 1) 0%,
+    rgba(250, 111, 33, 1) 100%
+  );
+  -webkit-background-clip: text !important;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+.accordion-qa .frame-3 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.accordion-qa .expend-collapse {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  aspect-ratio: 1;
+}
+
+.accordion-qa .text-wrapper {
+  position: relative;
+  flex: 1;
+  margin-top: -1px;
+  font-family: var(--h-6-font-family);
+  font-weight: var(--h-6-font-weight);
+  color: var(--blackheading);
+  font-size: var(--h-6-font-size);
+  letter-spacing: var(--h-6-letter-spacing);
+  line-height: var(--h-6-line-height);
+  font-style: var(--h-6-font-style);
+}
+
+.accordion-qa .frame-4 {
+  display: flex;
+  flex-direction: column;
+  width: 590px;
+  align-items: flex-start;
+  gap: 8px;
+  position: relative;
+}
+
+.accordion-qa .nurul-quran-academy-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 0px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.accordion-qa .nurul-quran-academy {
+  position: relative;
+  flex: 1;
+  margin-top: -1px;
+  font-family: var(--body-text-font-family);
+  font-weight: var(--body-text-font-weight);
+  color: #7a7a7a;
+  font-size: var(--body-text-font-size);
+  letter-spacing: var(--body-text-letter-spacing);
+  line-height: var(--body-text-line-height);
+  font-style: var(--body-text-font-style);
+}
+
+/* Original CSS code should be injected here */
+
+.accordion-qa .question summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.accordion-qa .question summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-qa .question summary::-moz-list-bullet {
+  list-style-type: none;
+}
+
+.accordion-qa .question[open] .expend-collapse {
+  transform: rotate(180deg);
+}
+
+.accordion-qa .expend-collapse {
+  transition: transform 0.3s ease;
+}
+
+.accordion-qa .question summary:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+.accordion-qa .question summary:hover {
+  background-color: rgba(240, 240, 240, 0.3);
+}
+
+@media (max-width: 768px) {
+  .accordion-qa {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .accordion-qa .frame {
+    left: 0;
+    top: 20px;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .accordion-qa .div {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .accordion-qa .question,
+  .accordion-qa .frame-4 {
+    width: 100%;
+  }
+}

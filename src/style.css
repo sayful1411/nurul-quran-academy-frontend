@@ -4803,3 +4803,207 @@
     width: 100%;
   }
 }
+
+/*------------------------------------------------------------------------------
+  Tutorial
+------------------------------------------------------------------------------*/
+.tutorial {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 100px 135px;
+  position: relative;
+  background-color: #fefefe;
+}
+.tutorial .frame {
+  position: relative;
+  width: 1169px;
+  height: 420px;
+  border-radius: 32px;
+  overflow: hidden;
+  background: linear-gradient(
+    45deg,
+    rgba(37, 2, 16, 1) 0%,
+    rgba(46, 188, 204, 1) 100%
+  );
+}
+.tutorial .overlap-group {
+  position: relative;
+  height: 650px;
+  top: -115px;
+}
+.tutorial .faruk-kaymak {
+  position: absolute;
+  width: 535px;
+  height: 420px;
+  top: 115px;
+  left: 0;
+  mix-blend-mode: darken;
+  aspect-ratio: 0.72;
+}
+.tutorial .image {
+  position: absolute;
+  width: 630px;
+  height: 420px;
+  top: 115px;
+  left: 539px;
+  mix-blend-mode: luminosity;
+  aspect-ratio: 1.5;
+  object-fit: cover;
+}
+.tutorial .rectangle {
+  position: absolute;
+  width: 227px;
+  height: 650px;
+  top: 0;
+  left: 437px;
+  background-color: #0a4954;
+  filter: blur(60px);
+}
+.tutorial .div {
+  display: flex;
+  flex-direction: column;
+  width: 333px;
+  align-items: flex-start;
+  gap: 32px;
+  position: absolute;
+  top: 241px;
+  left: 104px;
+}
+.tutorial .text-wrapper {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: var(--h-2-font-family);
+  font-weight: var(--h-2-font-weight);
+  color: var(--white-100);
+  font-size: var(--h-2-font-size);
+  letter-spacing: var(--h-2-letter-spacing);
+  line-height: var(--h-2-line-height);
+  font-style: var(--h-2-font-style);
+}
+.tutorial .button {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 24px;
+  position: relative;
+  border-radius: 50px;
+  background: linear-gradient(
+    90deg,
+    rgba(223, 24, 106, 1) 0%,
+    rgba(250, 111, 33, 1) 100%
+  );
+}
+.tutorial .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  font-family: var(--body-text-font-family);
+  font-weight: var(--body-text-font-weight);
+  color: #ffffff;
+  font-size: var(--body-text-font-size);
+  letter-spacing: var(--body-text-letter-spacing);
+  line-height: var(--body-text-line-height);
+  white-space: nowrap;
+  font-style: var(--body-text-font-style);
+}
+.tutorial .arrow-right {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  aspect-ratio: 1;
+}
+.tutorial .vector {
+  position: absolute;
+  width: 12px;
+  height: 10px;
+  top: 3px;
+  left: 2px;
+}
+/* Original CSS code should be injected here */
+
+.tutorial {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 100px 135px;
+  position: relative;
+  background-color: #fefefe;
+}
+.tutorial .content {
+  display: flex;
+  flex-direction: column;
+  width: 333px;
+  align-items: flex-start;
+  gap: 32px;
+  position: absolute;
+  top: 241px;
+  left: 104px;
+}
+.tutorial .heading {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: var(--h-2-font-family);
+  font-weight: var(--h-2-font-weight);
+  color: var(--white-100);
+  font-size: var(--h-2-font-size);
+  letter-spacing: var(--h-2-letter-spacing);
+  line-height: var(--h-2-line-height);
+  font-style: var(--h-2-font-style);
+}
+.tutorial .cta-button {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 24px;
+  position: relative;
+  border-radius: 50px;
+  background: linear-gradient(
+    90deg,
+    rgba(223, 24, 106, 1) 0%,
+    rgba(250, 111, 33, 1) 100%
+  );
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.tutorial .cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(223, 24, 106, 0.3);
+}
+.tutorial .cta-button:active {
+  transform: translateY(0);
+}
+.tutorial .button-text {
+  position: relative;
+  width: fit-content;
+  font-family: var(--body-text-font-family);
+  font-weight: var(--body-text-font-weight);
+  color: #ffffff;
+  font-size: var(--body-text-font-size);
+  letter-spacing: var(--body-text-letter-spacing);
+  line-height: var(--body-text-line-height);
+  white-space: nowrap;
+  font-style: var(--body-text-font-style);
+}
+/* Legacy class support for backward compatibility */
+.tutorial .div {
+  display: flex;
+  flex-direction: column;
+  width: 333px;
+  align-items: flex-start;
+  gap: 32px;
+  position: absolute;
+  top: 241px;
+  left: 104px;
+}

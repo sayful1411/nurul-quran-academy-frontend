@@ -2163,3 +2163,354 @@
     margin: 10px 0;
   }
 }
+
+/*--------------------------------------------------------------
+  Testimonial 2
+--------------------------------------------------------------*/
+.testimonial-2 {
+  position: relative;
+  width: 1440px;
+  height: 693px;
+  background-color: #fffcf8;
+}
+.testimonial-2 .overlap-group {
+  height: 693px;
+  background-image: url(./img/image-66.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.testimonial-2 .frame {
+  display: flex;
+  flex-direction: column;
+  width: 1107px;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  top: 100px;
+  left: 167px;
+}
+.testimonial-2 .frame-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 90px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+.testimonial-2 .div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+.testimonial-2 .frame-2 {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  flex: 0 0 auto;
+}
+.testimonial-2 .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: var(--h-1-font-family);
+  font-weight: var(--h-1-font-weight);
+  color: var(--blackheading);
+  font-size: var(--h-1-font-size);
+  text-align: center;
+  letter-spacing: var(--h-1-letter-spacing);
+  line-height: var(--h-1-line-height);
+  font-style: var(--h-1-font-style);
+}
+.testimonial-2 .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  background: linear-gradient(
+    90deg,
+    rgba(223, 24, 106, 1) 0%,
+    rgba(250, 111, 33, 1) 100%
+  );
+  -webkit-background-clip: text !important;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  font-family: var(--h-1-font-family);
+  font-weight: var(--h-1-font-weight);
+  color: transparent;
+  font-size: var(--h-1-font-size);
+  text-align: center;
+  letter-spacing: var(--h-1-letter-spacing);
+  line-height: var(--h-1-line-height);
+  font-style: var(--h-1-font-style);
+}
+.testimonial-2 .frame-3 {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+.testimonial-2 .frame-4 {
+  position: relative;
+  width: 342px;
+  height: 285px;
+  background-color: var(--white-100);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: var(--greyoutline);
+  box-shadow: var(--shadow-card);
+}
+.testimonial-2 .frame-5 {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  position: absolute;
+  top: 213px;
+  left: 20px;
+}
+.testimonial-2 .image-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 17px;
+  position: relative;
+  background-color: #2db65b;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.testimonial-2 .image {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin-top: -15px;
+  margin-bottom: -15px;
+  margin-left: -17px;
+  margin-right: -17px;
+  aspect-ratio: 1.31;
+}
+.testimonial-2 .frame-6 {
+  display: flex;
+  flex-direction: column;
+  width: 147px;
+  align-items: flex-start;
+  position: relative;
+}
+.testimonial-2 .text-wrapper-3 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: var(--body-text-semibold-font-family);
+  font-weight: var(--body-text-semibold-font-weight);
+  color: var(--blackheading);
+  font-size: var(--body-text-semibold-font-size);
+  letter-spacing: var(--body-text-semibold-letter-spacing);
+  line-height: var(--body-text-semibold-line-height);
+  font-style: var(--body-text-semibold-font-style);
+}
+.testimonial-2 .text-wrapper-4 {
+  position: relative;
+  align-self: stretch;
+  font-family: var(--paragraph-text-font-family);
+  font-weight: var(--paragraph-text-font-weight);
+  color: var(--blacksubtext);
+  font-size: var(--paragraph-text-font-size);
+  letter-spacing: var(--paragraph-text-letter-spacing);
+  line-height: var(--paragraph-text-line-height);
+  font-style: var(--paragraph-text-font-style);
+}
+.testimonial-2 .p {
+  position: absolute;
+  width: 274px;
+  top: 30px;
+  left: 24px;
+  font-family: var(--body-text-font-family);
+  font-weight: var(--body-text-font-weight);
+  color: var(--blackheading);
+  font-size: var(--body-text-font-size);
+  letter-spacing: var(--body-text-letter-spacing);
+  line-height: var(--body-text-line-height);
+  font-style: var(--body-text-font-style);
+}
+.testimonial-2 .img {
+  left: 292px;
+  position: absolute;
+  width: 25px;
+  height: 52px;
+  top: 213px;
+}
+.testimonial-2 .image-2 {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin-top: -15px;
+  margin-bottom: -15px;
+  margin-left: -17px;
+  margin-right: -17px;
+  aspect-ratio: 1.31;
+  object-fit: cover;
+}
+.testimonial-2 .img-2 {
+  left: 299px;
+  position: absolute;
+  width: 25px;
+  height: 52px;
+  top: 213px;
+}
+.testimonial-2 .arrow-frame {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+.testimonial-2 .arrow-frame .component {
+  border: 1px solid;
+  border-color: var(--greyoutline);
+  display: flex;
+  width: 51px;
+  height: 51px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 7px;
+  position: relative;
+  background-color: var(--white-100);
+  border-radius: 25.5px;
+}
+.testimonial-2 .arrow-frame .arrow-right {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  aspect-ratio: 1;
+}
+.testimonial-2 .arrow-frame .vector {
+  position: absolute;
+  width: 18px;
+  height: 15px;
+  top: 5px;
+  left: 3px;
+}
+.testimonial-2 .arrow-frame .arrow-right-wrapper {
+  border: none;
+  display: flex;
+  width: 51px;
+  height: 51px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 7px;
+  position: relative;
+  background-color: var(--white-100);
+  border-radius: 25.5px;
+}
+.testimonial-2 .arrow-frame .arrow-right-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 25.5px;
+  background: linear-gradient(
+    90deg,
+    rgba(223, 24, 106, 1) 0%,
+    rgba(250, 111, 33, 1) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 1;
+  pointer-events: none;
+}
+.testimonial-2 .arrow-frame .img {
+  position: absolute;
+  width: 18px;
+  height: 15px;
+  top: 4px;
+  left: 3px;
+}
+/* Original CSS code should be injected here */
+
+.testimonial-2 .arrow-frame .component,
+.testimonial-2 .arrow-frame .arrow-right-wrapper {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.testimonial-2 .arrow-frame .component:hover,
+.testimonial-2 .arrow-frame .arrow-right-wrapper:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.testimonial-2 .arrow-frame .component:active,
+.testimonial-2 .arrow-frame .arrow-right-wrapper:active {
+  transform: translateY(0);
+}
+.testimonial-2 .arrow-frame .component:focus-visible,
+.testimonial-2 .arrow-frame .arrow-right-wrapper:focus-visible {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+/* Original CSS code should be injected here */
+
+/* Enhanced responsive design improvements */
+@media (max-width: 1440px) {
+  .testimonial-2 {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .testimonial-2 .frame {
+    width: min(1107px, calc(100% - 2rem));
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @media (max-width: 768px) {
+    .testimonial-2 .frame-3 {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .testimonial-2 .frame-4 {
+      width: 100%;
+      max-width: 342px;
+      margin: 0 auto;
+    }
+    .testimonial-2 .frame-2 {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .testimonial-2 .text-wrapper,
+    .testimonial-2 .text-wrapper-2 {
+      font-size: clamp(32px, 5vw, 48px);
+    }
+    /* Focus states for accessibility */
+    .testimonial-2 .frame-4:focus-within {
+      outline: 2px solid #4a90e2;
+      outline-offset: 2px;
+    }
+    /* Improved semantic styling */
+    .testimonial-2 blockquote {
+      margin: 0;
+    }
+    .testimonial-2 cite {
+      font-style: normal;
+    }
+    /* Enhanced hover states */
+    .testimonial-2 .frame-4:hover {
+      transform: translateY(-2px);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+}

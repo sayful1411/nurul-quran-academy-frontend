@@ -4763,7 +4763,7 @@
 }
 
 .accordion-qa .question[open] .expend-collapse {
-  transform: rotate(180deg);
+  transform: rotate(133deg);
 }
 
 .accordion-qa .expend-collapse {
@@ -5272,9 +5272,9 @@
 }
 
 .footer .facebook-icon {
-  overflow: hidden;
-  aspect-ratio: 1;
-  background-image: url(./img/vector-6.svg);
+  width: 24px;
+  height: 24px;
+  background-image: url("../logos_facebook-icon.svg");
   background-size: 100% 100%;
 }
 
@@ -5285,7 +5285,10 @@
 }
 
 .footer .whatsapp-icon {
-  aspect-ratio: 0.99;
+  width: 24px;
+  height: 24px;
+  background-image: url("../logos_whatsapp-icon.svg");
+  background-size: 100% 100%;
 }
 
 .footer .icon-layers {
@@ -5317,7 +5320,10 @@
 }
 
 .footer .linkedin-icon {
-  aspect-ratio: 1;
+  width: 24px;
+  height: 24px;
+  background-image: url("../logos_linkedin-icon.svg");
+  background-size: 100% 100%;
 }
 
 .footer .linkedin-icon .icon-image {
@@ -5329,11 +5335,8 @@
 }
 
 .footer .youtube-icon {
-  width: 23px;
-  height: 16px;
-  top: 12px;
-  left: 9px;
-  aspect-ratio: 1.42;
+  width: 24px;
+  height: 24px;
   background-image: url("../logos_youtube-icon.svg");
   background-size: 100% 100%;
 }

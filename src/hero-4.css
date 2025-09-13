@@ -1,0 +1,668 @@
+@import url("./globals.css");
+
+/* -----------------------------------------------------------------------------------
+  Navbar
+------------------------------------------------------------------------------------*/
+.navbar {
+  display: flex;
+  width: 1440px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 72px;
+  position: relative;
+  background-color: var(--white-100);
+  z-index: 1;
+}
+
+.navbar .frame {
+  gap: 48px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.navbar .image {
+  position: relative;
+  width: 163px;
+  height: 62.24px;
+  aspect-ratio: 2.62;
+  object-fit: cover;
+}
+
+.navbar .div {
+  gap: 12px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.navbar .spark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 8px;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  border: none;
+}
+
+.navbar .spark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    rgba(160, 24, 223, 1) 0%,
+    rgba(90, 205, 79, 1) 50%,
+    rgba(244, 184, 73, 1) 75%,
+    rgba(250, 33, 80, 1) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.navbar .text-wrapper {
+  position: relative;
+  align-self: stretch;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: var(--body-text-font-family);
+  font-weight: var(--body-text-font-weight);
+  color: var(--blackheading);
+  font-size: var(--body-text-font-size);
+  letter-spacing: var(--body-text-letter-spacing);
+  line-height: var(--body-text-line-height);
+  white-space: nowrap;
+  font-style: var(--body-text-font-style);
+}
+
+.navbar .page {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 8px;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 8px;
+}
+
+.navbar .caret-down {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  aspect-ratio: 1;
+}
+
+.navbar .vector {
+  position: absolute;
+  width: 11px;
+  height: 6px;
+  top: 5px;
+  left: 2px;
+}
+
+.navbar .frame-2 {
+  justify-content: flex-end;
+  gap: 16px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.navbar .button {
+  all: unset;
+  box-sizing: border-box;
+  gap: 8px;
+  padding: 10px 8px;
+  border: 1px solid;
+  display: inline-flex;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: var(--white-100);
+  border-radius: 50px;
+  border-color: var(--white-100);
+}
+
+.navbar .text-wrapper-2 {
+  position: relative;
+  width: fit-content;
+  font-family: var(--body-text-font-family);
+  font-weight: var(--body-text-font-weight);
+  color: var(--blackheading);
+  font-size: var(--body-text-font-size);
+  letter-spacing: var(--body-text-letter-spacing);
+  line-height: var(--body-text-line-height);
+  white-space: nowrap;
+  font-style: var(--body-text-font-style);
+}
+
+.navbar .img {
+  position: absolute;
+  width: 6px;
+  height: 11px;
+  top: 3px;
+  left: 5px;
+}
+
+.navbar .button-2 {
+  all: unset;
+  box-sizing: border-box;
+  gap: 10px;
+  padding: 10px 24px;
+  border: none;
+  display: inline-flex;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: var(--white-100);
+  border-radius: 50px;
+}
+
+.navbar .button-2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 50px;
+  background: linear-gradient(
+    103deg,
+    rgba(41, 160, 182, 1) 0%,
+    rgba(176, 195, 67, 1) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 1;
+  pointer-events: none;
+}
+/* Original CSS code should be injected here */
+
+/* Additional responsive improvements */
+.navbar {
+  max-width: 100%;
+  width: 100%;
+  min-width: 320px;
+}
+
+.navbar .image {
+  max-width: 163px;
+  height: auto;
+}
+
+.navbar .div {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .div li {
+  display: inline-flex;
+}
+
+.navbar .spark,
+.navbar .page {
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+.navbar .spark:hover,
+.navbar .page:hover {
+  opacity: 0.8;
+}
+
+.navbar .spark:focus-visible,
+.navbar .page:focus-visible,
+.navbar .button:focus-visible,
+.navbar .button-2:focus-visible {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+.navbar .logo-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.navbar .logo-link:focus-visible {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 24px;
+    flex-wrap: wrap;
+  }
+
+  .navbar .frame {
+    gap: 24px;
+  }
+
+  .navbar .div {
+    gap: 8px;
+  }
+
+  .navbar .frame-2 {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .navbar .frame {
+    gap: 16px;
+  }
+
+  .navbar .div {
+    gap: 4px;
+  }
+
+  .navbar .text-wrapper,
+  .navbar .text-wrapper-2 {
+    font-size: 14px;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------
+  Hero
+-------------------------------------------------------------------------------------------*/
+.dropdown {
+  width: 1440px;
+  height: 606px;
+  background-color: #1a0c12;
+  overflow: hidden;
+  position: relative;
+  top: -93px;
+  z-index: 0;
+}
+
+.dropdown .overlap-group {
+  position: relative;
+  width: 1896px;
+  height: 902px;
+  top: -296px;
+  left: -240px;
+}
+
+.dropdown .bg {
+  position: absolute;
+  width: 1440px;
+  height: 606px;
+  top: 296px;
+  left: 240px;
+  aspect-ratio: 1.78;
+  object-fit: cover;
+}
+
+.dropdown .hero {
+  position: absolute;
+  width: 768px;
+  height: 512px;
+  top: 390px;
+  left: 912px;
+  aspect-ratio: 1.5;
+  object-fit: cover;
+}
+
+.dropdown .ellipse {
+  width: 868px;
+  top: 0;
+  left: 1028px;
+  border-radius: 434px / 210px;
+  position: absolute;
+  height: 420px;
+  filter: blur(140px);
+  background: linear-gradient(
+    90deg,
+    rgba(223, 24, 106, 1) 0%,
+    rgba(250, 111, 33, 1) 100%
+  );
+}
+
+.dropdown .rectangle {
+  position: absolute;
+  width: 829px;
+  height: 606px;
+  top: 296px;
+  left: 610px;
+}
+
+.dropdown .div {
+  width: 420px;
+  top: 20px;
+  left: 0;
+  border-radius: 210px;
+  position: absolute;
+  height: 420px;
+  filter: blur(140px);
+  background: linear-gradient(
+    90deg,
+    rgba(223, 24, 106, 1) 0%,
+    rgba(250, 111, 33, 1) 100%
+  );
+}
+
+.dropdown .frame {
+  display: flex;
+  flex-direction: column;
+  width: 608px;
+  align-items: flex-start;
+  gap: 56px;
+  position: absolute;
+  top: 432px;
+  left: 336px;
+}
+
+.dropdown .frame-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.dropdown .frame-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.dropdown .p {
+  margin-top: -1px;
+  font-size: 52px;
+  line-height: 70px;
+  position: relative;
+  align-self: stretch;
+  font-weight: 400;
+  color: var(--white-100);
+  letter-spacing: 0;
+}
+
+.dropdown .text-wrapper {
+  font-weight: 500;
+}
+
+.dropdown .span {
+  font-family: "Li M. A. Hai Unicode-Regular", Helvetica;
+}
+
+.dropdown .text-wrapper-2 {
+  font-family: var(--h-6-font-family);
+  font-size: var(--h-6-font-size);
+  line-height: var(--h-6-line-height);
+  position: relative;
+  align-self: stretch;
+  font-weight: var(--h-6-font-weight);
+  color: var(--white-100);
+  letter-spacing: var(--h-6-letter-spacing);
+  font-style: var(--h-6-font-style);
+}
+
+.dropdown .button {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 24px;
+  position: relative;
+  border-radius: 50px;
+  background: linear-gradient(
+    90deg,
+    rgba(223, 24, 106, 1) 0%,
+    rgba(250, 111, 33, 1) 100%
+  );
+}
+
+.dropdown .text-wrapper-3 {
+  position: relative;
+  width: fit-content;
+  font-family: var(--body-text-font-family);
+  font-weight: var(--body-text-font-weight);
+  color: #ffffff;
+  font-size: var(--body-text-font-size);
+  letter-spacing: var(--body-text-letter-spacing);
+  line-height: var(--body-text-line-height);
+  white-space: nowrap;
+  font-style: var(--body-text-font-style);
+}
+
+.dropdown .arrow-right {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  aspect-ratio: 1;
+}
+
+.dropdown .vector {
+  position: absolute;
+  width: 12px;
+  height: 10px;
+  top: 3px;
+  left: 2px;
+}
+
+.dropdown .frame-4 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.dropdown .text-wrapper-4 {
+  margin-top: -1px;
+  font-family: var(--body-text-font-family);
+  font-size: var(--body-text-font-size);
+  line-height: var(--body-text-line-height);
+  position: relative;
+  align-self: stretch;
+  font-weight: var(--body-text-font-weight);
+  color: var(--white-100);
+  letter-spacing: var(--body-text-letter-spacing);
+  font-style: var(--body-text-font-style);
+}
+
+.dropdown .frame-5 {
+  display: inline-flex;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.dropdown .frame-6 {
+  display: inline-flex;
+  align-items: center;
+  gap: 10.86px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.dropdown .student-wrapper {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  position: relative;
+  background-color: #2c1708;
+  border-radius: 4.24px;
+}
+
+.dropdown .vector-wrapper {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  aspect-ratio: 1;
+}
+
+.dropdown .img {
+  position: absolute;
+  width: 18px;
+  height: 17px;
+  top: 2px;
+  left: 2px;
+}
+
+.dropdown .frame-7 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.dropdown .text-wrapper-5 {
+  margin-top: -1.36px;
+  font-family: var(--h-6-font-family);
+  font-size: var(--h-6-font-size);
+  line-height: var(--h-6-line-height);
+  position: relative;
+  align-self: stretch;
+  font-weight: var(--h-6-font-weight);
+  color: var(--white-100);
+  letter-spacing: var(--h-6-letter-spacing);
+  font-style: var(--h-6-font-style);
+}
+
+.dropdown .text-wrapper-6 {
+  font-family: var(--paragraph-text-font-family);
+  font-size: var(--paragraph-text-font-size);
+  line-height: var(--paragraph-text-line-height);
+  position: relative;
+  align-self: stretch;
+  font-weight: var(--paragraph-text-font-weight);
+  color: var(--white-100);
+  letter-spacing: var(--paragraph-text-letter-spacing);
+  font-style: var(--paragraph-text-font-style);
+}
+
+.dropdown .graduation-cap-wrapper {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  position: relative;
+  background-color: #092311;
+  border-radius: 4.24px;
+}
+
+.dropdown .vector-2 {
+  position: absolute;
+  width: 22px;
+  height: 19px;
+  top: 2px;
+  left: 0;
+}
+
+.dropdown .seal-check-wrapper {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  position: relative;
+  background-color: #211245;
+  border-radius: 8px;
+}
+
+.dropdown .vector-3 {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top: 1px;
+  left: 1px;
+}
+/* Original CSS code should be injected here */
+
+/* Enhanced accessibility and semantic improvements */
+.dropdown button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.dropdown button:active {
+  transform: translateY(0);
+}
+
+.dropdown button:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Improved keyboard navigation */
+.dropdown .frame-6:focus-within {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Enhanced screen reader support */
+.dropdown [aria-hidden="true"] {
+  pointer-events: none;
+}
+
+/* Improved responsive behavior */
+@media (max-width: 768px) {
+  .dropdown {
+    width: 100%;
+    min-width: 320px;
+  }
+
+  .dropdown .overlap-group {
+    width: 100%;
+    left: 0;
+  }
+
+  .dropdown .frame {
+    width: 90%;
+    left: 5%;
+  }
+
+  .dropdown .frame-5 {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

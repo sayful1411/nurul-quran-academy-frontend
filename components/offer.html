@@ -11,7 +11,7 @@
     <title>Nurul Quran Academy</title>
     <link rel="stylesheet" href="../src/globals.css">
     <style>        
-        .topbar {
+        .offer {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -21,7 +21,7 @@
             background-color: #9b1b40;
         }
 
-        .topbar__left-decoration {
+        .offer__left-decoration {
             flex-shrink: 0;
             height: 40px;
             width: auto;
@@ -29,7 +29,7 @@
             object-fit: cover;
         }
 
-        .topbar__content {
+        .offer__content {
             flex: 1;
             display: flex;
             justify-content: center;
@@ -37,7 +37,7 @@
             margin: 0 16px;
         }
 
-        .topbar__title {
+        .offer__title {
             font-weight: 400;
             color: #ffffff;
             font-size: 18px;
@@ -47,21 +47,21 @@
             margin: 0;
         }
 
-        .topbar__right-section {
+        .offer__right-section {
             display: flex;
             align-items: center;
             gap: 16px;
             flex-shrink: 0;
         }
 
-        .topbar__right-decoration {
+        .offer__right-decoration {
             height: 40px;
             width: auto;
             mix-blend-mode: luminosity;
             object-fit: cover;
         }
 
-        .topbar__close-button {
+        .offer__close-button {
             width: 24px;
             height: 24px;
             cursor: pointer;
@@ -75,76 +75,76 @@
             transition: opacity 0.2s ease;
         }
 
-        .topbar__close-icon {
+        .offer__close-icon {
             width: 20px;
             height: 20px;
         }
 
-        .topbar__close-button:hover {
+        .offer__close-button:hover {
             opacity: 0.8;
         }
 
-        .topbar__close-button:focus {
+        .offer__close-button:focus {
             outline: 2px solid #ffffff;
             outline-offset: 2px;
         }
 
         @media (max-width: 768px) {
-            .topbar {
+            .offer {
                 padding: 0 12px;
                 min-height: auto;
                 gap: 8px;
             }
 
-            .topbar__title {
+            .offer__title {
                 font-size: 16px;
             }
 
-            .topbar__left-decoration,
-            .topbar__right-decoration {
+            .offer__left-decoration,
+            .offer__right-decoration {
                 height: 32px;
                 max-width: 120px;
             }
 
-            .topbar__content {
+            .offer__content {
                 margin: 0 8px;
             }
 
-            .topbar__right-section {
+            .offer__right-section {
                 gap: 8px;
             }
         }
 
         @media (max-width: 480px) {
-            .topbar {
+            .offer {
                 padding: 0 8px;
                 gap: 4px;
             }
 
-            .topbar__title {
+            .offer__title {
                 font-size: 14px;
             }
 
-            .topbar__left-decoration,
-            .topbar__right-decoration {
+            .offer__left-decoration,
+            .offer__right-decoration {
                 height: 24px;
                 max-width: 80px;
             }
 
-            .topbar__content {
+            .offer__content {
                 margin: 0 4px;
             }
 
-            .topbar__right-section {
+            .offer__right-section {
                 gap: 4px;
             }
 
-            .topbar__close-button {
+            .offer__close-button {
                 width: 20px;
                 height: 20px;
             }
 
-            .topbar__close-icon {
+            .offer__close-icon {
                 width: 16px;
                 height: 16px;
             }
@@ -153,19 +153,19 @@
 </head>
 
 <body>
-    <header class="topbar-wrapper" role="banner">
+    <header class="offer-wrapper" role="banner">
         <div class="container">
-            <div class="topbar">
-                <img class="topbar__left-decoration" src="../img/offer-2.png" alt="" />
+            <div class="offer">
+                <img class="offer__left-decoration" src="../img/offer-2.png" alt="" />
 
-                <div class="topbar__content">
-                    <h1 class="topbar__title">ছোটদের কোরআন শিক্ষা কোর্সে</h1>
+                <div class="offer__content">
+                    <h1 class="offer__title">ছোটদের কোরআন শিক্ষা কোর্সে</h1>
                 </div>
 
-                <div class="topbar__right-section">
-                    <img class="topbar__right-decoration" src="../img/offer-1.png" alt="" />
-                    <button class="topbar__close-button" type="button" aria-label="বন্ধ করুন">
-                        <img class="topbar__close-icon" src="../x-circle.svg" alt="" />
+                <div class="offer__right-section">
+                    <img class="offer__right-decoration" src="../img/offer-1.png" alt="" />
+                    <button class="offer__close-button" type="button" aria-label="বন্ধ করুন">
+                        <img class="offer__close-icon" src="../x-circle.svg" alt="" />
                     </button>
                 </div>
             </div>

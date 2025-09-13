@@ -10,12 +10,13 @@
         rel="stylesheet">
     <title>ইসলামী জ্ঞানে আলোকিত করুন নিজের ভবিষ্যৎ</title>
     <link rel="stylesheet" href="/src/hero-4.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body>
     <div class="container">
         <header class="navbar" role="banner">
-            <nav class="frame" role="navigation" aria-label="Main navigation">
+            <nav class="frame" role="navigation" aria-label="Main navigation" x-data="{ coursesOpen: false }" @click.outside="coursesOpen = false">
                 <a href="/" class="logo-link" aria-label="Nurul Quran Academy Home">
                     <img class="image" src="/img/logo.png" alt="Nurul Quran Academy Logo" />
                 </a>
@@ -31,15 +32,68 @@
                         </a>
                     </li>
                     <li role="none">
-                        <button class="page" role="menuitem" aria-expanded="false" aria-haspopup="true"
-                            aria-label="সব কোর্স ক্যাটাগরি">
+                        <button class="page" role="menuitem" 
+                            :aria-expanded="coursesOpen" 
+                            aria-haspopup="true"
+                            aria-label="সব কোর্স ক্যাটাগরি"
+                            @click="coursesOpen = !coursesOpen">
                             <span class="text-wrapper">সব কোর্স ক্যাটাগরি</span>
                             <span class="caret-down" aria-hidden="true">
-                                <img class="vector" src="/arrow-down.svg" alt="" />
+                                <img class="vector" src="/arrow-down.svg" alt="" :class="{ 'rotate-180': coursesOpen }" />
                             </span>
                         </button>
                     </li>
                 </ul>
+                <div class="all-courses" x-show="coursesOpen" x-transition>
+                    <section class="course-item course-item--featured">
+                        <div class="course-item__icon" aria-hidden="true">
+                            <img src="/heart.svg" alt="" />
+                        </div>
+                        <div class="course-item__content">
+                            <h2 class="course-item__title">জনপ্রিয় কোর্স সমূহ</h2>
+                        </div>
+                    </section>
+                    <section class="course-item course-item--active">
+                        <div class="course-item__icon" aria-hidden="true">
+                            <img src="/arabic-door.svg" alt="" />
+                        </div>
+                        <div class="course-item__content">
+                            <h3 class="course-item__title">আরবি ভাষা</h3>
+                        </div>
+                    </section>
+                    <section class="course-item">
+                        <div class="course-item__icon" aria-hidden="true">
+                            <img src="/quran.svg" alt="" />
+                        </div>
+                        <div class="course-item__content">
+                            <h3 class="course-item__title">কুরআন শিক্ষা</h3>
+                        </div>
+                    </section>
+                    <section class="course-item">
+                        <div class="course-item__icon" aria-hidden="true">
+                            <img src="/moon-star.svg" alt="" />
+                        </div>
+                        <div class="course-item__content">
+                            <h3 class="course-item__title">সীরাত</h3>
+                        </div>
+                    </section>
+                    <section class="course-item">
+                        <div class="course-item__icon" aria-hidden="true">
+                            <img src="/VideoCamera.svg" alt="" />
+                        </div>
+                        <div class="course-item__content">
+                            <h3 class="course-item__title">প্রি-রেকর্ডেড কোর্স</h3>
+                        </div>
+                    </section>
+                    <section class="course-item">
+                        <div class="course-item__icon" aria-hidden="true">
+                            <img src="/key.svg" alt="" />
+                        </div>
+                        <div class="course-item__content">
+                            <h3 class="course-item__title">ফিকহ শিক্ষা</h3>
+                        </div>
+                    </section>
+                </div>
             </nav>
             <div class="frame-2">
                 <button class="button" type="button" aria-label="লগ ইন">
@@ -64,7 +118,7 @@
                     <header class="frame-2">
                         <div class="frame-3">
                             <h1 class="p">
-                                <span class="text-wrapper">ইসলামী জ্ঞানে </span> <span class="span">আলোকিত করুন নিজের
+                                <span class="text-wrapper">ইসলামী জ্ঞানে আলোকিত করুন নিজের
                                     ভবিষ্যৎ!</span>
                             </h1>
                             <p class="text-wrapper-2">

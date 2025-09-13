@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap"
+        rel="stylesheet">
+    <title>Nurul Quran Academy</title>
+    <link rel="stylesheet" href="../src/globals.css">
+    <style>
+        .hero {
+            position: relative;
+            width: 1440px;
+            height: 606px;
+            background-color: #1a0c12;
+            overflow: hidden;
+        }
+
+        .hero .overlap-group {
+            position: relative;
+            width: 1896px;
+            height: 902px;
+            top: -296px;
+            left: -240px;
+        }
+
+        .hero .bg {
+            position: absolute;
+            width: 1440px;
+            height: 606px;
+            top: 296px;
+            left: 240px;
+            aspect-ratio: 1.78;
+            object-fit: cover;
+        }
+
+        .hero .img {
+            position: absolute;
+            width: 768px;
+            height: 512px;
+            top: 390px;
+            left: 912px;
+            aspect-ratio: 1.5;
+            object-fit: cover;
+        }
+
+        .hero .ellipse {
+            width: 868px;
+            top: 0;
+            left: 1028px;
+            border-radius: 434px / 210px;
+            position: absolute;
+            height: 420px;
+            filter: blur(140px);
+            background: linear-gradient(90deg,
+                    rgba(223, 24, 106, 1) 0%,
+                    rgba(250, 111, 33, 1) 100%);
+        }
+
+        .hero .rectangle {
+            position: absolute;
+            width: 829px;
+            height: 606px;
+            top: 296px;
+            left: 610px;
+        }
+
+        .hero .div {
+            width: 420px;
+            top: 20px;
+            left: 0;
+            border-radius: 210px;
+            position: absolute;
+            height: 420px;
+            filter: blur(140px);
+            background: linear-gradient(90deg,
+                    rgba(223, 24, 106, 1) 0%,
+                    rgba(250, 111, 33, 1) 100%);
+        }
+
+        .hero .frame {
+            display: flex;
+            flex-direction: column;
+            width: 608px;
+            align-items: flex-start;
+            gap: 56px;
+            position: absolute;
+            top: 432px;
+            left: 336px;
+        }
+
+        .hero .frame-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .hero .frame-3 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .hero .p {
+            position: relative;
+            align-self: stretch;
+            margin-top: -1px;
+            font-weight: 400;
+            color: var(--white-100);
+            font-size: 52px;
+            letter-spacing: 0;
+            line-height: 70px;
+        }
+
+        .hero .text-wrapper {
+            font-weight: 500;
+        }
+
+        .hero .text-wrapper-2 {
+            font-size: var(--h-6-font-size);
+            line-height: var(--h-6-line-height);
+            position: relative;
+            align-self: stretch;
+            font-family: var(--h-6-font-family);
+            font-weight: var(--h-6-font-weight);
+            color: var(--white-100);
+            letter-spacing: var(--h-6-letter-spacing);
+            font-style: var(--h-6-font-style);
+        }
+
+        .hero .button {
+            all: unset;
+            box-sizing: border-box;
+            display: inline-flex;
+            height: 48px;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 24px;
+            position: relative;
+            border-radius: 50px;
+            background: linear-gradient(90deg,
+                    rgba(223, 24, 106, 1) 0%,
+                    rgba(250, 111, 33, 1) 100%);
+        }
+
+        .hero .text-wrapper-3 {
+            position: relative;
+            width: fit-content;
+            font-family: var(--body-text-font-family);
+            font-weight: var(--body-text-font-weight);
+            color: #ffffff;
+            font-size: var(--body-text-font-size);
+            letter-spacing: var(--body-text-letter-spacing);
+            line-height: var(--body-text-line-height);
+            white-space: nowrap;
+            font-style: var(--body-text-font-style);
+        }
+
+        .hero .arrow-right {
+            position: relative;
+            width: 16px;
+            height: 16px;
+            aspect-ratio: 1;
+        }
+
+        .hero .vector {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+        }
+
+        .hero .frame-4 {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .hero .text-wrapper-4 {
+            margin-top: -1px;
+            font-size: var(--body-text-font-size);
+            line-height: var(--body-text-line-height);
+            position: relative;
+            align-self: stretch;
+            font-family: var(--body-text-font-family);
+            font-weight: var(--body-text-font-weight);
+            color: var(--white-100);
+            letter-spacing: var(--body-text-letter-spacing);
+            font-style: var(--body-text-font-style);
+        }
+
+        .hero .frame-5 {
+            display: inline-flex;
+            align-items: center;
+            gap: 32px;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .hero .frame-6 {
+            display: inline-flex;
+            align-items: center;
+            gap: 10.86px;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .hero .frame-7 {
+            position: relative;
+            width: 38px;
+            height: 38px;
+        }
+
+        .hero .frame-8 {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .hero .text-wrapper-5 {
+            margin-top: -1.36px;
+            font-size: var(--h-6-font-size);
+            line-height: var(--h-6-line-height);
+            position: relative;
+            align-self: stretch;
+            font-family: var(--h-6-font-family);
+            font-weight: var(--h-6-font-weight);
+            color: var(--white-100);
+            letter-spacing: var(--h-6-letter-spacing);
+            font-style: var(--h-6-font-style);
+        }
+
+        .hero .text-wrapper-6 {
+            font-size: var(--paragraph-text-font-size);
+            line-height: var(--paragraph-text-line-height);
+            position: relative;
+            align-self: stretch;
+            font-family: var(--paragraph-text-font-family);
+            font-weight: var(--paragraph-text-font-weight);
+            color: var(--white-100);
+            letter-spacing: var(--paragraph-text-letter-spacing);
+            font-style: var(--paragraph-text-font-style);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                width: 100%;
+                height: auto;
+                min-height: 100vh;
+            }
+
+            .hero .overlap-group {
+                width: 100%;
+                height: auto;
+                position: static;
+                top: auto;
+                left: auto;
+            }
+
+            .hero .frame {
+                width: 90%;
+                max-width: 608px;
+                position: static;
+                top: auto;
+                left: auto;
+                margin: 2rem auto;
+                padding: 1rem;
+            }
+
+            .hero .p {
+                font-size: clamp(2rem, 5vw, 3.25rem);
+                line-height: 1.2;
+            }
+
+            .hero .text-wrapper-2 {
+                font-size: clamp(1rem, 2.5vw, 1.1875rem);
+            }
+        }
+
+        /* Focus states for better accessibility */
+        .hero .button:focus {
+            outline: 2px solid #ffffff;
+            outline-offset: 2px;
+        }
+
+        .hero .button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        /* Enhanced button accessibility */
+        .hero .button {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .hero .button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* Improved text contrast and readability */
+        .hero .text-wrapper-3 {
+            font-weight: 500;
+        }
+
+        /* Better spacing for statistics section */
+        .hero .frame-5 {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media (max-width: 640px) {
+            .hero .frame-5 {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .hero .frame-6 {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero container" role="section">
+        <div class="overlap-group">
+            <!-- <img class="bg" src="../img/bg.png" alt="Background image" /> -->
+            <img class="img" src="../img/hero.png" alt="Islamic scholars and students in a learning environment" />
+            <div class="ellipse" aria-hidden="true"></div>
+            <img class="rectangle" src="../rectangle-1.svg" alt="" aria-hidden="true" />
+            <div class="div" aria-hidden="true"></div>
+            <div class="frame">
+                <div class="frame-2">
+                    <div class="frame-3">
+                        <h1 class="p">
+                            <span class="text-wrapper">ইসলামী জ্ঞানে </span><span class="span">আলোকিত করুন নিজের
+                                ভবিষ্যৎ!</span>
+                        </h1>
+                        <p class="text-wrapper-2">
+                            ইসলামী জ্ঞান অর্জনের এক অনন্য অনলাইন উদ্যোগ। যেখানে আরবী ভাষা ও সাহিত্যসহ কুরআন, হাদীস, ফিকহ
+                            ও আকীদার
+                            উপর রয়েছে সুচিন্তিত পেইড ও ফ্রি কোর্সের আয়োজন।
+                        </p>
+                    </div>
+                    <button class="button" type="button" aria-label="শেখা শুরু করুন - কোর্সে এনরোল করতে ক্লিক করুন">
+                        <span class="text-wrapper-3">শেখা শুরু করুন</span>
+                        <div class="arrow-right" aria-hidden="true">
+                            <img class="vector" src="../arrow-right.svg" alt="" />
+                        </div>
+                    </button>
+                </div>
+                <div class="frame-4" aria-labelledby="success-stats">
+                    <h2 class="text-wrapper-4" id="success-stats">বিগত ৩ বছর ধরে আমাদের সাফল্য</h2>
+                    <div class="frame-5" role="list">
+                        <div class="frame-6" role="listitem">
+                            <img class="frame-7" src="../student.svg" alt="শিক্ষার্থী আইকন" />
+                            <div class="frame-8">
+                                <div class="text-wrapper-5">১০,০০০</div>
+                                <div class="text-wrapper-6">শিক্ষার্থী</div>
+                            </div>
+                        </div>
+                        <div class="frame-6" role="listitem">
+                            <img class="frame-7" src="../teacher.svg" alt="শিক্ষক আইকন" />
+                            <div class="frame-8">
+                                <div class="text-wrapper-5">২৫+</div>
+                                <div class="text-wrapper-6">শিক্ষক</div>
+                            </div>
+                        </div>
+                        <div class="frame-6" role="listitem">
+                            <img class="frame-7" src="../check.svg" alt="কোর্স সম্পূর্ণতার হার আইকন" />
+                            <div class="frame-8">
+                                <div class="text-wrapper-5">৮৯%</div>
+                                <div class="text-wrapper-6">কোর্স কমপ্লিট রেট</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

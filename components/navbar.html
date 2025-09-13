@@ -11,53 +11,54 @@
     <title>Nurul Quran Academy</title>
     <link rel="stylesheet" href="../src/globals.css">
     <style>
-        .navbar {
+        .header {
             display: flex;
-            width: 1440px;
+            width: 100%;
+            max-width: 1440px;
             align-items: center;
             justify-content: space-between;
             padding: 16px 72px;
-            position: relative;
             background-color: var(--white-100);
+            box-sizing: border-box;
         }
 
-        .navbar .frame {
-            gap: 48px;
-            display: inline-flex;
+        .header__brand {
+            display: flex;
             align-items: center;
-            position: relative;
+            gap: 48px;
             flex: 0 0 auto;
         }
 
-        .navbar .image {
-            position: relative;
+        .header__logo {
             width: 163px;
             height: 62.24px;
             aspect-ratio: 2.62;
             object-fit: cover;
         }
 
-        .navbar .div {
-            gap: 12px;
-            display: inline-flex;
+        .header__navigation {
+            display: flex;
             align-items: center;
-            position: relative;
+            gap: 12px;
             flex: 0 0 auto;
         }
 
-        .navbar .spark {
-            display: inline-flex;
+        .nav-link {
+            display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
             padding: 10px 8px;
-            position: relative;
             flex: 0 0 auto;
             border-radius: 8px;
             border: none;
+            text-decoration: none;
+            background: transparent;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
         }
 
-        .navbar .spark::before {
+        .nav-link--special::before {
             content: "";
             position: absolute;
             inset: 0;
@@ -75,11 +76,12 @@
             pointer-events: none;
         }
 
-        .navbar .text-wrapper {
+        .nav-link--special {
             position: relative;
-            align-self: stretch;
+        }
+
+        .nav-link__text {
             width: fit-content;
-            margin-top: -1.00px;
             font-family: var(--body-text-font-family);
             font-weight: var(--body-text-font-weight);
             color: var(--blackheading);
@@ -90,96 +92,88 @@
             font-style: var(--body-text-font-style);
         }
 
-        .navbar .page {
-            display: inline-flex;
+        .nav-dropdown {
+            display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
             padding: 10px 8px;
-            position: relative;
             flex: 0 0 auto;
             border-radius: 8px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
         }
 
-        .navbar .caret-down {
-            position: relative;
+        .nav-dropdown__text {
+            width: fit-content;
+            font-family: var(--body-text-font-family);
+            font-weight: var(--body-text-font-weight);
+            color: var(--blackheading);
+            font-size: var(--body-text-font-size);
+            letter-spacing: var(--body-text-letter-spacing);
+            line-height: var(--body-text-line-height);
+            white-space: nowrap;
+            font-style: var(--body-text-font-style);
+        }
+
+        .nav-dropdown__icon {
             width: 16px;
             height: 16px;
             aspect-ratio: 1;
         }
 
-        .navbar .vector {
-            position: absolute;
+        .nav-dropdown__arrow {
             width: 11px;
             height: 6px;
-            top: 5px;
-            left: 2px;
         }
 
-        .navbar .frame-2 {
+        .header__actions {
+            display: flex;
             justify-content: flex-end;
-            gap: 16px;
-            display: inline-flex;
             align-items: center;
-            position: relative;
+            gap: 16px;
             flex: 0 0 auto;
         }
 
-        .navbar .button {
+        .btn {
             all: unset;
             box-sizing: border-box;
-            gap: 8px;
-            padding: 10px 8px;
-            border: 1px solid;
-            display: inline-flex;
-            height: 48px;
+            display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            flex: 0 0 auto;
-            background-color: var(--white-100);
+            height: 48px;
+            padding: 10px 24px;
             border-radius: 50px;
-            border-color: var(--white-100);
-        }
-
-        .navbar .text-wrapper-2 {
-            position: relative;
-            width: fit-content;
             font-family: var(--body-text-font-family);
             font-weight: var(--body-text-font-weight);
-            color: var(--blackheading);
             font-size: var(--body-text-font-size);
             letter-spacing: var(--body-text-letter-spacing);
             line-height: var(--body-text-line-height);
-            white-space: nowrap;
             font-style: var(--body-text-font-style);
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            flex: 0 0 auto;
         }
 
-        .navbar .img {
-            position: absolute;
-            width: 6px;
-            height: 11px;
-            top: 3px;
-            left: 5px;
+        .btn--outline {
+            gap: 8px;
+            padding: 10px 8px;
+            border: 1px solid var(--white-100);
+            background-color: var(--white-100);
+            color: var(--blackheading);
         }
 
-        .navbar .button-2 {
-            all: unset;
-            box-sizing: border-box;
+        .btn--primary {
             gap: 10px;
             padding: 10px 24px;
-            border: none;
-            display: inline-flex;
-            height: 48px;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            flex: 0 0 auto;
             background-color: var(--white-100);
-            border-radius: 50px;
+            color: var(--blackheading);
+            position: relative;
         }
 
-        .navbar .button-2::before {
+        .btn--primary::before {
             content: "";
             position: absolute;
             inset: 0;
@@ -195,76 +189,73 @@
             pointer-events: none;
         }
 
-        .navbar .page[role="button"] {
-            cursor: pointer;
+        .btn__text {
+            width: fit-content;
+            white-space: nowrap;
         }
 
-        .navbar .page[role="button"]:hover {
+        .btn__arrow {
+            width: 16px;
+            height: 10px;
+        }
+
+        .nav-link:hover,
+        .nav-dropdown:hover {
             background-color: rgba(0, 0, 0, 0.05);
         }
 
-        .navbar .page[role="button"]:focus {
+        .nav-link:focus,
+        .nav-dropdown:focus {
             outline: 2px solid #4a90e2;
             outline-offset: 2px;
         }
 
-        .navbar .page[role="button"][aria-expanded="true"] .vector {
+        .nav-dropdown[aria-expanded="true"] .nav-dropdown__arrow {
             transform: rotate(180deg);
         }
 
-        .navbar .spark:hover {
+        .btn:hover {
             background-color: rgba(0, 0, 0, 0.05);
         }
 
-        .navbar .spark:focus {
+        .btn:focus {
             outline: 2px solid #4a90e2;
             outline-offset: 2px;
         }
 
-        .navbar .button:hover {
-            background-color: rgba(0, 0, 0, 0.05);
-        }
-
-        .navbar .button-2:hover {
-            background-color: rgba(0, 0, 0, 0.05);
-        }
-
         @media (max-width: 768px) {
-            .navbar {
+            .header {
                 padding: 16px 24px;
-                flex-wrap: wrap;
             }
 
-            .navbar .frame {
-                gap: 24px;
+            .header__brand {
+                gap: 0;
             }
 
-            .navbar .div {
-                gap: 8px;
+            .header__navigation {
+                display: none;
             }
 
-            .navbar .frame-2 {
+            .header__actions {
                 gap: 12px;
+            }
+
+            .btn--outline {
+                display: none;
             }
         }
 
         @media (max-width: 480px) {
-            .navbar {
+            .header {
                 padding: 12px 16px;
             }
 
-            .navbar .image {
+            .header__logo {
                 width: 120px;
                 height: auto;
             }
 
-            .navbar .div {
-                flex-wrap: wrap;
-                gap: 6px;
-            }
-
-            .navbar .text-wrapper,
-            .navbar .text-wrapper-2 {
+            .btn__text {
                 font-size: 14px;
             }
         }
@@ -272,34 +263,34 @@
 </head>
 
 <body>
-    <header class="navbar container" role="banner">
-        <div class="frame">
-            <img class="image" src="../img/logo.png" alt="Nurul Quran Academy Logo" />
-            <nav class="div" role="navigation" aria-label="Main navigation">
-                <a href="#special-offer" class="spark" role="link" aria-label="স্পেশাল অফার">
-                    <span class="text-wrapper">স্পেশাল অফার</span>
+    <header class="header container" role="banner">
+        <div class="header__brand">
+            <img class="header__logo" src="../img/logo.png" alt="Nurul Quran Academy Logo" />
+            <nav class="header__navigation" role="navigation" aria-label="Main navigation">
+                <a href="#special-offer" class="nav-link nav-link--special" aria-label="স্পেশাল অফার">
+                    <span class="nav-link__text">স্পেশাল অফার</span>
                 </a>
-                <a href="#free-courses" class="page" role="link" aria-label="ফ্রী কোর্স">
-                    <span class="text-wrapper">ফ্রী কোর্স</span>
+                <a href="#free-courses" class="nav-link" aria-label="ফ্রী কোর্স">
+                    <span class="nav-link__text">ফ্রী কোর্স</span>
                 </a>
-                <div class="page" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true"
+                <button class="nav-dropdown" type="button" aria-expanded="false" aria-haspopup="true"
                     aria-label="সব কোর্স ক্যাটাগরি">
-                    <span class="text-wrapper">সব কোর্স ক্যাটাগরি</span>
-                    <div class="caret-down" aria-hidden="true">
-                        <img class="vector" src="../arrow-down.svg" alt="" />
+                    <span class="nav-dropdown__text">সব কোর্স ক্যাটাগরি</span>
+                    <div class="nav-dropdown__icon">
+                        <img class="nav-dropdown__arrow" src="../arrow-down.svg" alt="" />
                     </div>
-                </div>
+                </button>
             </nav>
         </div>
-        <div class="frame-2">
-            <button class="button" type="button" aria-label="লগ ইন">
-                <span class="text-wrapper-2">লগ ইন</span>
-                <div class="caret-down" aria-hidden="true">
-                    <img class="img" src="../arrow-right-active.svg" alt="" />
+        <div class="header__actions">
+            <button class="btn btn--outline" type="button" aria-label="লগ ইন">
+                <span class="btn__text">লগ ইন</span>
+                <div class="btn__icon">
+                    <img class="btn__arrow" src="../arrow-right-active.svg" alt="" />
                 </div>
             </button>
-            <button class="button-2" type="button" aria-label="যোগাযোগ করুন">
-                <span class="text-wrapper-2">যোগাযোগ করুন</span>
+            <button class="btn btn--primary" type="button" aria-label="যোগাযোগ করুন">
+                <span class="btn__text">যোগাযোগ করুন</span>
             </button>
         </div>
     </header>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap"
+        rel="stylesheet">
+    <title>Nurul Quran Academy</title>
+    <link rel="stylesheet" href="../src/globals.css">
+    <style>
+        .offer {
+            position: relative;
+            width: 1440px;
+            height: 40px;
+            background-color: #9b1b40;
+        }
+
+        .offer .frame {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .offer .text-wrapper {
+            position: relative;
+            align-self: stretch;
+            width: 320px;
+            font-weight: 400;
+            color: #ffffff;
+            font-size: 18px;
+            text-align: center;
+            letter-spacing: 0;
+            line-height: normal;
+        }
+
+        .offer .image {
+            width: 187px;
+            left: 1123px;
+            position: absolute;
+            height: 40px;
+            top: 0;
+            mix-blend-mode: luminosity;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+
+        .offer .img {
+            width: 193px;
+            left: 63px;
+            position: absolute;
+            height: 40px;
+            top: 0;
+            mix-blend-mode: luminosity;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+
+        .offer .x-circle {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 8px;
+            left: 1343px;
+            aspect-ratio: 1;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            padding: 0;
+        }
+
+        .offer .vector {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 2px;
+            left: 2px;
+        }
+
+        .offer .x-circle:hover {
+            opacity: 0.8;
+        }
+
+        .offer .x-circle:focus {
+            outline: 2px solid #ffffff;
+            outline-offset: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .offer {
+                height: auto;
+                padding: 8px;
+            }
+
+            .offer .frame {
+                position: static;
+                width: 100%;
+                justify-content: center;
+                gap: 0;
+                margin-bottom: 8px;
+            }
+
+            .offer .text-wrapper {
+                font-size: 16px;
+                width: auto;
+                margin: 0;
+            }
+
+            .offer .image,
+            .offer .img {
+                position: static;
+                width: auto;
+                height: 32px;
+                margin: 0 8px;
+            }
+
+            .offer .x-circle {
+                position: absolute;
+                top: 8px;
+                right: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="offer container" role="banner">
+        <div class="frame">
+            <h1 class="text-wrapper">ছোটদের কোরআন শিক্ষা কোর্সে</h1>
+        </div>
+        <img class="image" src="../img/offer-1.png" alt="কোর্স ব্যানার" />
+        <img class="img" src="../img/offer-2.png" alt="কোর্স লোগো" />
+        <button class="x-circle" type="button" aria-label="বন্ধ করুন">
+            <img class="vector" src="../x-circle.svg" alt="" />
+        </button>
+    </div>
+</body>
+
+</html>

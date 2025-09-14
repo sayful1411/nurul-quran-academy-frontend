@@ -12,406 +12,302 @@
     <link rel="stylesheet" href="../../src/globals.css">
 
     <style>
-        .course-d-hero {
-            position: relative;
-            width: 1440px;
-            height: 640px;
+        /* Mobile-first approach with BEM methodology */
+        .course-hero {
             background: linear-gradient(91deg,
                     rgba(37, 2, 16, 1) 0%,
                     rgba(142, 40, 48, 1) 39%,
                     rgba(37, 2, 16, 1) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 1rem;
+            gap: 2rem;
+            position: relative;
+            overflow: hidden;
         }
 
-        .course-d-hero .overlap {
-            position: relative;
-            height: 640px;
+        .course-hero__overlap {
             background-image: url("../../img/bg-5.png");
-            background-size: 100% 100%;
-        }
-
-        .course-d-hero .frame {
-            display: flex;
-            flex-direction: column;
-            width: 486px;
-            align-items: flex-start;
-            gap: 24px;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
             position: absolute;
-            top: 145px;
-            left: 92px;
+            top: 0;
+            opacity: .5;
         }
 
-        .course-d-hero .div {
+        .course-hero__content {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            gap: 16px;
-            position: relative;
-            align-self: stretch;
+            gap: 2rem;
+            max-width: 486px;
             width: 100%;
-            flex: 0 0 auto;
+            z-index: 1;
         }
 
-        .course-d-hero .div-wrapper {
+        .course-hero__header {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 16px;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
+            gap: 1rem;
         }
 
-        .course-d-hero .text-wrapper {
-            width: 468px;
-            margin-top: -1.00px;
+        .course-hero__title-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .course-hero__title {
             font-family: var(--h-3-font-family);
             font-weight: var(--h-3-font-weight);
             color: var(--white-100);
             font-size: var(--h-3-font-size);
             line-height: var(--h-3-line-height);
-            position: relative;
             letter-spacing: var(--h-3-letter-spacing);
             font-style: var(--h-3-font-style);
+            margin: 0;
         }
 
-        .course-d-hero .frame-wrapper {
+        .course-hero__rating-section {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            gap: 8px;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
+            gap: 0.5rem;
         }
 
-        .course-d-hero .frame-2 {
-            display: inline-flex;
+        .course-hero__rating {
+            display: flex;
             align-items: center;
             gap: 11px;
-            position: relative;
-            flex: 0 0 auto;
         }
 
-        .course-d-hero .img {
-            position: relative;
-            flex: 0 0 auto;
+        .course-hero__rating-icon {
+            flex-shrink: 0;
         }
 
-        .course-d-hero .p {
-            width: fit-content;
-            margin-top: -1.00px;
+        .course-hero__rating-text {
             font-family: var(--body-text-font-family);
             font-weight: var(--body-text-font-weight);
             color: var(--white-100);
             font-size: var(--body-text-font-size);
             line-height: var(--body-text-line-height);
-            white-space: nowrap;
-            position: relative;
             letter-spacing: var(--body-text-letter-spacing);
             font-style: var(--body-text-font-style);
+            margin: 0;
         }
 
-        .course-d-hero .text-wrapper-2 {
-            align-self: stretch;
+        .course-hero__description {
             font-family: var(--body-text-font-family);
             font-weight: var(--body-text-font-weight);
             color: var(--greyoutline);
             font-size: var(--body-text-font-size);
             line-height: var(--body-text-line-height);
-            position: relative;
             letter-spacing: var(--body-text-letter-spacing);
             font-style: var(--body-text-font-style);
+            margin: 0;
         }
 
-        .course-d-hero .frame-3 {
+        .course-hero__info-list {
             display: flex;
-            align-items: center;
-            gap: 24px;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
-            border-radius: 8px;
-            box-shadow: var(--shadow-card);
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
-        .course-d-hero .frame-4 {
-            display: inline-flex;
+        .course-hero__info-item {
+            display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 12px;
-            position: relative;
-            align-self: stretch;
-            flex: 0 0 auto;
+            align-items: center;
+            gap: 0.75rem;
             opacity: 0.8;
         }
 
-        .course-d-hero .vector-wrapper {
-            position: relative;
+        .course-hero__info-icon {
             width: 24px;
             height: 24px;
-            aspect-ratio: 1;
+            flex-shrink: 0;
         }
 
-        .course-d-hero .vector {
-            position: absolute;
+        .course-hero__icon {
             width: 20px;
             height: 20px;
-            top: 2px;
-            left: 2px;
         }
 
-        .course-d-hero .text-wrapper-3 {
-            position: relative;
-            width: fit-content;
+        .course-hero__info-text {
             font-family: var(--body-text-semibold-font-family);
             font-weight: var(--body-text-semibold-font-weight);
             color: var(--greyoutline);
             font-size: var(--body-text-semibold-font-size);
             letter-spacing: var(--body-text-semibold-letter-spacing);
             line-height: var(--body-text-semibold-line-height);
-            white-space: nowrap;
             font-style: var(--body-text-semibold-font-style);
+            text-align: center;
         }
 
-        .course-d-hero .vector-2 {
-            position: absolute;
-            width: 24px;
-            height: 21px;
-            top: 2px;
-            left: 0;
-        }
-
-        .course-d-hero .vector-3 {
-            position: absolute;
-            width: 20px;
-            height: 19px;
-            top: 2px;
-            left: 2px;
-        }
-
-        .course-d-hero .frame-5 {
-            display: inline-flex;
+        .course-hero__pricing-section {
+            display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 12px;
-            position: relative;
-            align-self: stretch;
-            flex: 0 0 auto;
-            margin-right: -2.00px;
-            opacity: 0.8;
+            gap: 1rem;
         }
 
-        .course-d-hero .vector-4 {
-            position: absolute;
-            width: 18px;
-            height: 20px;
-            top: 2px;
-            left: 3px;
-        }
-
-        .course-d-hero .frame-6 {
+        .course-hero__price-group {
             display: flex;
             align-items: center;
-            gap: 4px;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
+            gap: 1.25rem;
         }
 
-        .course-d-hero .frame-7 {
-            display: inline-flex;
-            align-items: center;
-            gap: 19px;
-            position: relative;
-            flex: 0 0 auto;
-        }
-
-        .course-d-hero .text-wrapper-4 {
-            width: fit-content;
-            margin-top: -1.00px;
+        .course-hero__current-price {
             font-family: var(--h-2-font-family);
             font-weight: var(--h-2-font-weight);
             color: var(--white-100);
             font-size: var(--h-2-font-size);
             line-height: var(--h-2-line-height);
-            white-space: nowrap;
-            position: relative;
             letter-spacing: var(--h-2-letter-spacing);
             font-style: var(--h-2-font-style);
         }
 
-        .course-d-hero .text-wrapper-5 {
-            width: fit-content;
+        .course-hero__old-price {
             font-family: var(--h-4-font-family);
             font-weight: var(--h-4-font-weight);
             color: var(--white-100);
             font-size: var(--h-4-font-size);
             line-height: var(--h-4-line-height);
             text-decoration: line-through;
-            white-space: nowrap;
-            position: relative;
             letter-spacing: var(--h-4-letter-spacing);
             font-style: var(--h-4-font-style);
         }
 
-        .course-d-hero .button {
-            all: unset;
-            box-sizing: border-box;
+        .course-hero__cta-button {
             display: flex;
             height: 40px;
             align-items: center;
             justify-content: center;
             gap: 10px;
             padding: 10px 16px;
-            position: relative;
-            align-self: stretch;
             width: 100%;
+            border: none;
             border-radius: 50px;
             background: linear-gradient(90deg,
                     rgba(223, 24, 106, 1) 0%,
                     rgba(250, 111, 33, 1) 100%);
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
 
-        .course-d-hero .text-wrapper-6 {
-            position: relative;
-            width: fit-content;
-            margin-top: -3.00px;
-            margin-bottom: -1.00px;
+        .course-hero__button-text {
             font-family: var(--body-text-font-family);
             font-weight: var(--body-text-font-weight);
             color: #ffffff;
             font-size: var(--body-text-font-size);
             letter-spacing: var(--body-text-letter-spacing);
             line-height: var(--body-text-line-height);
-            white-space: nowrap;
             font-style: var(--body-text-font-style);
         }
 
-        .course-d-hero .arrow-right {
-            position: relative;
+        .course-hero__button-icon {
             width: 16px;
             height: 16px;
-            aspect-ratio: 1;
+            flex-shrink: 0;
         }
 
-        .course-d-hero .vector-5 {
-            position: absolute;
-            width: 12px;
-            height: 10px;
-            top: 3px;
-            left: 2px;
-        }
 
-        .course-d-hero .frame-8 {
+        .course-hero__media-section {
             display: flex;
             flex-direction: column;
-            width: 596px;
             align-items: center;
-            gap: 32px;
-            position: absolute;
-            top: 190px;
-            left: 747px;
+            gap: 2rem;
+            max-width: 596px;
+            width: 100%;
+            z-index: 1;
         }
 
-        .course-d-hero .overlap-wrapper {
-            position: relative;
-            align-self: stretch;
+        .course-hero__video-container {
             width: 100%;
             height: 354px;
             background-color: #ffffff;
             border-radius: 16px;
             overflow: hidden;
-        }
-
-        .course-d-hero .overlap-group {
             position: relative;
-            width: 596px;
-            height: 354px;
-            background-image: url(./img/image-83.png);
-            background-size: cover;
-            background-position: 50% 50%;
         }
 
-        .course-d-hero .frame-9 {
+        .course-hero__video-preview {
+            width: 100%;
+            height: 100%;
+            position: relative;
             display: flex;
-            width: 556px;
             align-items: center;
-            justify-content: space-between;
-            padding: 8px 16px;
-            position: absolute;
-            top: 298px;
-            left: 20px;
-            background-color: var(--blackheading);
-            border-radius: 8px;
+            justify-content: center;
         }
 
-        .course-d-hero .rectangle-wrapper {
+        .course-hero__video-overlay {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .course-hero__video-controls {
             display: flex;
-            flex-direction: column;
-            width: 368px;
+            align-items: center;
+        }
+
+        .course-hero__progress-bar {
+            flex: 1;
             height: 8px;
-            align-items: flex-start;
-            gap: 10px;
-            position: relative;
             background-color: #d9d9d9;
             border-radius: 10px;
+            position: relative;
+            cursor: pointer;
         }
 
-        .course-d-hero .rectangle {
-            position: relative;
+        .course-hero__progress-fill {
             width: 106px;
-            height: 8px;
+            height: 100%;
             border-radius: 10px;
             background: linear-gradient(90deg,
                     rgba(223, 24, 106, 1) 0%,
                     rgba(250, 111, 33, 1) 100%);
         }
 
-        .course-d-hero .group {
+        .course-hero__play-button {
             position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             width: 45px;
             height: 24px;
-            top: 288px;
-            left: 195px;
+            cursor: pointer;
         }
 
-        .course-d-hero .overlap-group-2 {
+        .course-hero__play-button-inner {
             position: relative;
-            height: 24px;
+            height: 100%;
         }
 
-        .course-d-hero .frame-10 {
-            display: inline-flex;
+        .course-hero__play-icon {
+            display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
             padding: 0px 4px;
-            position: absolute;
-            top: 0;
-            left: 0;
             background-color: var(--white-100);
             border-radius: 4px;
+            width: 100%;
+            height: 100%;
         }
 
-        .course-d-hero .text-wrapper-7 {
-            width: fit-content;
+        .course-hero__play-text {
             font-family: "Tiro Bangla-Regular", Helvetica;
             font-weight: 400;
             color: var(--blackheading);
             font-size: 14px;
             line-height: normal;
-            position: relative;
             letter-spacing: 0;
         }
 
-        .course-d-hero .rectangle-2 {
+        .course-hero__play-arrow {
             position: absolute;
             width: 7px;
             height: 7px;
@@ -421,167 +317,166 @@
             transform: rotate(-45deg);
         }
 
-        /* Original CSS code should be injected here */
-
-        /* Enhanced semantic and accessibility improvements */
-        .course-d-hero .frame-3 {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .course-d-hero .frame-4,
-        .course-d-hero .frame-5 {
-            list-style: none;
-        }
-
-        .course-d-hero .frame-9 button {
-            background: none;
-            border: none;
-            padding: 0;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .course-d-hero .frame-9 button:focus {
-            outline: 2px solid #ffffff;
-            outline-offset: 2px;
-        }
-
-        .course-d-hero .frame-9 button:hover {
-            opacity: 0.8;
-        }
-
-        .course-d-hero .rectangle-wrapper {
-            cursor: pointer;
-        }
-
-        .course-d-hero .rectangle-wrapper:focus {
-            outline: 2px solid #ffffff;
-            outline-offset: 2px;
-        }
-
-        .course-d-hero .button:hover {
+        /* Button interactions */
+        .course-hero__cta-button:hover {
             opacity: 0.9;
             transform: translateY(-1px);
-            transition: all 0.2s ease;
         }
 
-        .course-d-hero .button:active {
+        .course-hero__cta-button:active {
             transform: translateY(0);
         }
 
-        .course-d-hero .button:focus {
+        .course-hero__cta-button:focus {
             outline: 2px solid #ffffff;
             outline-offset: 2px;
         }
 
-        /* Responsive enhancements */
-        @media (max-width: 768px) {
-            .course-d-hero {
-                width: 100%;
-                min-height: 100vh;
+        .course-hero__play-button:hover {
+            opacity: 0.8;
+        }
+
+        .course-hero__progress-bar:focus {
+            outline: 2px solid #ffffff;
+            outline-offset: 2px;
+        }
+
+        /* Tablet and Desktop Layout */
+        @media (min-width: 768px) {
+            .course-hero {
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                min-height: 640px;
+                max-width: 1440px;
+                margin: 0 auto;
+                padding: 6rem 4rem;
             }
 
-            .course-d-hero .frame {
-                width: calc(100% - 32px);
-                left: 16px;
-                top: 80px;
+            .course-hero__content {
+                flex: 0 0 486px;
+                align-self: flex-start;
+                margin-top: 3rem;
+                z-index: 1;
             }
 
-            .course-d-hero .frame-8 {
-                width: calc(100% - 32px);
-                left: 16px;
-                top: auto;
-                position: relative;
-                margin-top: 32px;
+            .course-hero__media-section {
+                flex: 0 0 596px;
+                align-self: center;
+                margin-top: 2rem;
             }
 
-            .course-d-hero .frame-3 {
-                flex-wrap: wrap;
-                gap: 16px;
+            .course-hero__info-list {
+                display: flex;
+                gap: 1.5rem;
+                align-items: center;
             }
 
-            .course-d-hero .text-wrapper {
-                width: 100%;
-                font-size: 24px;
+            .course-hero__info-item {
+                align-items: flex-start;
+                text-align: center;
+            }
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 767px) {
+            .course-hero {
+                padding: 1rem;
+            }
+
+            .course-hero__title {
+                font-size: clamp(1.5rem, 5vw, 2rem);
                 line-height: 1.3;
+            }
+
+            .course-hero__info-list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .course-hero__media-section {
+                margin-top: 2rem;
+            }
+
+            .course-hero__video-container {
+                height: 250px;
             }
         }
     </style>
 </head>
 
 <body>
-    <section class="course-d-hero container">
-        <div class="overlap">
-            <div class="frame">
-                <header class="div">
-                    <div class="div-wrapper">
-                        <h1 class="text-wrapper">প্রাথমিক আরবীভাষা শিক্ষা কোর্সের মাধ্যমে শুরু করুন নতুন যাত্রা</h1>
+    <section class="course-hero container">
+        <div class="course-hero__overlap"></div>
+        <div class="course-hero__content">
+            <header class="course-hero__header">
+                <div class="course-hero__title-section">
+                    <h1 class="course-hero__title">প্রাথমিক আরবীভাষা শিক্ষা কোর্সের মাধ্যমে শুরু করুন নতুন যাত্রা</h1>
+                </div>
+                <div class="course-hero__rating-section">
+                    <div class="course-hero__rating">
+                        <img class="course-hero__rating-icon" src="../../5-star.svg" alt="৫ তারকা রেটিং" />
+                        <p class="course-hero__rating-text">(৫ রেটিং, ৮১% কমপ্লিট করেছেন)</p>
                     </div>
-                    <div class="frame-wrapper">
-                        <div class="frame-2">
-                            <img class="img" src="../../5-star.svg" alt="৫ তারকা রেটিং" />
-                            <p class="p">(৫ রেটিং, ৮১% কমপ্লিট করেছেন)</p>
+                </div>
+                <p class="course-hero__description">
+                    ইসলামী জ্ঞানের প্রথম ধাপ শুরু হোক সঠিক আরবীভাষা শেখার মাধ্যমে। এই কোর্সটি সাজানো হয়েছে নতুন
+                    শিক্ষার্থীদের
+                    জন্য যারা ইসলামী জ্ঞান, কুরআন ও হাদীস অধ্যয়নের পটভূমি তৈরি করতে চায়। ধাপে ধাপে আরবী ভাষার
+                    বর্ণমালা,
+                    শব্দগঠন, বাক্যগঠন ও মৌলিক ব্যাকরণ শেখার পাশাপাশি থাকছে সাহিত্যিক অনুশীলন ও লাইভ ক্লাসের সুবিধা।
+                </p>
+                <ul class="course-hero__info-list" role="list">
+                    <li class="course-hero__info-item">
+                        <div class="course-hero__info-icon" aria-hidden="true">
+                            <img class="course-hero__icon" src="../../clock.svg" alt="" />
                         </div>
-                    </div>
-                    <p class="text-wrapper-2">
-                        ইসলামী জ্ঞানের প্রথম ধাপ শুরু হোক সঠিক আরবীভাষা শেখার মাধ্যমে। এই কোর্সটি সাজানো হয়েছে নতুন
-                        শিক্ষার্থীদের
-                        জন্য যারা ইসলামী জ্ঞান, কুরআন ও হাদীস অধ্যয়নের পটভূমি তৈরি করতে চায়। ধাপে ধাপে আরবী ভাষার
-                        বর্ণমালা,
-                        শব্দগঠন, বাক্যগঠন ও মৌলিক ব্যাকরণ শেখার পাশাপাশি থাকছে সাহিত্যিক অনুশীলন ও লাইভ ক্লাসের সুবিধা।
-                    </p>
-                    <ul class="frame-3" role="list">
-                        <li class="frame-4">
-                            <div class="vector-wrapper" aria-hidden="true"><img class="vector" src="../../clock.svg"
-                                    alt="" /></div>
-                            <span class="text-wrapper-3">ক্লাস শুরুঃ ১৫ মার্চ</span>
-                        </li>
-                        <li class="frame-4">
-                            <div class="vector-wrapper" aria-hidden="true">
-                                <img class="vector-2" src="../../graduation-cap.svg" alt="" />
-                            </div>
-                            <span class="text-wrapper-3">২৫ টি লেসন</span>
-                        </li>
-                        <li class="frame-4">
-                            <div class="vector-wrapper" aria-hidden="true"><img class="vector-3" src="../../graduation-user.svg"
-                                    alt="" /></div>
-                            <span class="text-wrapper-3">৫২ স্টুডেন্ট</span>
-                        </li>
-                        <li class="frame-4">
-                            <div class="vector-wrapper" aria-hidden="true">
-                                <img class="vector" src="../../course-circle.svg" alt="" />
-                            </div>
-                            <span class="text-wrapper-3">লাইভ ক্লাস</span>
-                        </li>
-                        <li class="frame-5">
-                            <div class="vector-wrapper" aria-hidden="true">
-                                <img class="vector-4" src="../../calander.svg" alt="" />
-                            </div>
-                            <span class="text-wrapper-3">৪ মাস মেয়াদ</span>
-                        </li>
-                    </ul>
-                </header>
-                <aside class="div">
-                    <div class="frame-6">
-                        <div class="frame-7">
-                            <span class="text-wrapper-4" aria-label="বর্তমান মূল্য ৪৫০ টাকা">৪৫০৳</span>
-                            <span class="text-wrapper-5" aria-label="পূর্বের মূল্য ৮৫০ টাকা">৮৫০৳</span>
+                        <span class="course-hero__info-text">ক্লাস শুরুঃ ১৫ মার্চ</span>
+                    </li>
+                    <li class="course-hero__info-item">
+                        <div class="course-hero__info-icon" aria-hidden="true">
+                            <img class="course-hero__icon" src="../../graduation-cap.svg" alt="" />
                         </div>
+                        <span class="course-hero__info-text">২৫ টি লেসন</span>
+                    </li>
+                    <li class="course-hero__info-item">
+                        <div class="course-hero__info-icon" aria-hidden="true">
+                            <img class="course-hero__icon" src="../../graduation-user.svg" alt="" />
+                        </div>
+                        <span class="course-hero__info-text">৫২ স্টুডেন্ট</span>
+                    </li>
+                    <li class="course-hero__info-item">
+                        <div class="course-hero__info-icon" aria-hidden="true">
+                            <img class="course-hero__icon" src="../../course-circle.svg" alt="" />
+                        </div>
+                        <span class="course-hero__info-text">লাইভ ক্লাস</span>
+                    </li>
+                    <li class="course-hero__info-item">
+                        <div class="course-hero__info-icon" aria-hidden="true">
+                            <img class="course-hero__icon" src="../../calander.svg" alt="" />
+                        </div>
+                        <span class="course-hero__info-text">৪ মাস মেয়াদ</span>
+                    </li>
+                </ul>
+            </header>
+
+            <aside class="course-hero__pricing-section">
+                <div class="course-hero__price-group">
+                    <span class="course-hero__current-price" aria-label="বর্তমান মূল্য ৪৫০ টাকা">৪৫০৳</span>
+                    <span class="course-hero__old-price" aria-label="পূর্বের মূল্য ৮৫০ টাকা">৮৫০৳</span>
+                </div>
+                <button class="course-hero__cta-button" type="button" aria-label="কোর্সটি কিনুন">
+                    <span class="course-hero__button-text">কোর্সটি কিনুন</span>
+                    <div class="course-hero__button-icon" aria-hidden="true">
+                        <img src="../../arrow-right.svg" alt="" />
                     </div>
-                    <button class="button" type="button" aria-label="কোর্সটি কিনুন">
-                        <span class="text-wrapper-6">কোর্সটি কিনুন</span>
-                        <div class="arrow-right" aria-hidden="true"><img class="vector-5" src="../../arrow-right.svg"
-                                alt="" /></div>
-                    </button>
-                </aside>
-            </div>
-            <div class="frame-8">
-                <img src="../../video-preview.svg" alt="">
-            </div>
+                </button>
+            </aside>
+        </div>
+
+        <div class="course-hero__media-section">
+            <img src="../../video-preview.svg" alt="">
         </div>
     </section>
 </body>

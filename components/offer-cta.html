@@ -6,207 +6,199 @@
     <meta charset="utf-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&family=Tiro+Bangla:ital@0;1&display=swap"
         rel="stylesheet">
     <title>Nurul Quran Academy</title>
     <link rel="stylesheet" href="../src/globals.css" />
 
     <style>
+        /* Mobile-first approach with BEM methodology */
         .offer-cta {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 8px;
-            padding: 100px 135px;
-            position: relative;
             background-color: #fefefe;
+            padding: 3rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .offer-cta .frame {
-            position: relative;
-            width: 1169px;
-            height: 420px;
+        .offer-cta__container {
+            width: 100%;
+            max-width: 1169px;
             background-color: #9b1b40;
             border-radius: 32px;
             overflow: hidden;
+            position: relative;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
         }
 
-        .offer-cta .overlap-group {
-            position: relative;
-            height: 420px;
+        .offer-cta__background {
+            width: 100%;
+            height: 200px;
             background-image: url("../img/cta-02.png");
             background-size: 100% 100%;
+            position: relative;
         }
 
-        .offer-cta .image {
-            position: absolute;
-            width: 389px;
-            height: 388px;
-            top: 32px;
-            left: 780px;
-            mix-blend-mode: hard-light;
-            aspect-ratio: 1;
-            object-fit: cover;
-        }
-
-        .offer-cta .frame-wrapper {
-            display: inline-flex;
+        .offer-cta__content {
+            display: flex;
             align-items: flex-end;
-            gap: 148px;
-            position: absolute;
+            /* position: absolute;
             top: 126px;
             left: 154px;
+            gap: 148px; */
         }
 
-        .offer-cta .div {
+        .offer-cta__text-section {
             display: flex;
             flex-direction: column;
-            width: 475px;
-            align-items: flex-start;
             gap: 33px;
-            position: relative;
+            width: 475px;
         }
 
-        .offer-cta .text-wrapper {
-            position: relative;
-            align-self: stretch;
-            margin-top: -1px;
-            font-family: var(--h-2-font-family);
+        .offer-cta__title {
+            font-family: "Tiro Bangla", serif;
             font-weight: var(--h-2-font-weight);
             color: var(--white-100);
             font-size: var(--h-2-font-size);
             letter-spacing: var(--h-2-letter-spacing);
             line-height: var(--h-2-line-height);
             font-style: var(--h-2-font-style);
+            margin: 0;
         }
 
-        .offer-cta .button {
-            all: unset;
-            box-sizing: border-box;
+        .offer-cta__button {
             display: inline-flex;
             height: 48px;
             align-items: center;
             justify-content: center;
             gap: 10px;
             padding: 10px 24px;
-            position: relative;
+            border: none;
             border-radius: 50px;
             background: linear-gradient(90deg,
                     rgba(223, 24, 106, 1) 0%,
                     rgba(250, 111, 33, 1) 100%);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: fit-content;
         }
 
-        .offer-cta .text-wrapper-2 {
-            position: relative;
-            width: fit-content;
+        .offer-cta__button-text {
             font-family: var(--body-text-font-family);
             font-weight: var(--body-text-font-weight);
             color: #ffffff;
             font-size: var(--body-text-font-size);
             letter-spacing: var(--body-text-letter-spacing);
             line-height: var(--body-text-line-height);
-            white-space: nowrap;
             font-style: var(--body-text-font-style);
+            white-space: nowrap;
         }
 
-        .offer-cta .arrow-right {
-            position: relative;
+        .offer-cta__button-icon {
             width: 16px;
             height: 16px;
-            aspect-ratio: 1;
-        }
-
-        .offer-cta .vector {
-            position: absolute;
-            width: 12px;
-            height: 10px;
-            top: 3px;
-            left: 2px;
-        }
-
-        /* Original CSS code should be injected here */
-
-        .offer-cta {
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 8px;
-            padding: 100px 135px;
-            position: relative;
-            background-color: #fefefe;
-        }
-
-        .offer-cta .button {
-            all: unset;
-            box-sizing: border-box;
-            display: inline-flex;
-            height: 48px;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 10px 24px;
-            position: relative;
-            border-radius: 50px;
-            background: linear-gradient(90deg,
-                    rgba(223, 24, 106, 1) 0%,
-                    rgba(250, 111, 33, 1) 100%);
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .offer-cta .button:hover {
+        .offer-cta__button-icon img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .offer-cta__decorative-image {
+            width: 389px;
+            height: 388px;
+            object-fit: cover;
+            mix-blend-mode: hard-light;
+            flex-shrink: 0;
+            position: absolute;
+            top: 7%;
+            right: 0;
+        }
+
+        /* Button interactions */
+        .offer-cta__button:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(223, 24, 106, 0.3);
         }
 
-        .offer-cta .button:active {
+        .offer-cta__button:active {
             transform: translateY(0);
         }
 
-        /* Responsive design improvements */
-        @media (max-width: 1200px) {
+        .offer-cta__button:focus {
+            outline: 2px solid #ffffff;
+            outline-offset: 2px;
+        }
+
+        /* Tablet and Desktop */
+        @media (min-width: 768px) {
             .offer-cta {
-                padding: 80px 60px;
+                padding: 4rem 2rem;
             }
 
-            .offer-cta .frame {
-                width: 100%;
-                max-width: 1169px;
+            .offer-cta__background {
+                padding: 4rem;
+                height: 420px;
+
             }
 
-            @media (max-width: 768px) {
-                .offer-cta {
-                    padding: 60px 20px;
-                }
+            .offer-cta__content {
+                gap: 4rem;
+            }
+        }
 
-                .offer-cta .frame {
-                    height: auto;
-                    min-height: 420px;
-                }
+        @media (min-width: 1200px) {
+            .offer-cta {
+                padding: 6rem 8rem;
+            }
 
-                .offer-cta .frame-wrapper {
-                    position: static;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    text-align: center;
-                    padding: 40px 20px;
-                    gap: 20px;
-                }
+            .offer-cta__background {
+                padding: 6rem;
+                height: 420px;
+            }
+        }
 
-                .offer-cta .div {
-                    width: 100%;
-                    max-width: 475px;
-                    align-items: center;
-                }
+        /* Mobile responsive */
+        @media (max-width: 767px) {
+            .offer-cta {
+                padding: 2rem 1rem;
+            }
 
-                .offer-cta .image {
-                    position: static;
-                    width: 200px;
-                    height: 200px;
-                    margin: 20px auto;
-                    display: block;
-                }
+            .offer-cta__background {
+                padding: 2rem 1rem;
+                min-height: 200px;
+                background-image: none;
+            }
+
+            .offer-cta__content {
+                /* flex-direction: column; */
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .offer-cta__text-section {
+                order: 2;
+                align-items: flex-start;
+            }
+
+            .offer-cta__decorative-image {
+                order: 1;
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+                top: 30%;
+            }
+
+            .offer-cta__title {
+                font-size: clamp(1.5rem, 4vw, 2rem);
+                text-align: left;
+                line-height: 1.2;
             }
         }
     </style>
@@ -216,19 +208,19 @@
 
     <!-- Offer Call To Action -->
     <section class="offer-cta container">
-        <div class="frame">
-            <div class="overlap-group">
-                <img class="image" src="/img/cta-01.png" alt="ইসলামী শিক্ষার প্রতীক" />
-                <div class="frame-wrapper">
-                    <div class="div">
-                        <h1 class="text-wrapper">ইসলামী জ্ঞান অর্জনের মাধ্যমে আলোকিত করুন নিজের ভবিষ্যৎ</h1>
-                        <button class="button" type="button" aria-label="শেখা শুরু করুন">
-                            <span class="text-wrapper-2">শেখা শুরু করুন</span>
-                            <div class="arrow-right" aria-hidden="true">
-                                <img class="vector" src="/arrow-right.svg" alt="" />
+        <div class="offer-cta__container">
+            <div class="offer-cta__background">
+                <img class="offer-cta__decorative-image" src="/img/cta-01.png" alt="ইসলামী শিক্ষার প্রতীক" />
+                <div class="offer-cta__content">
+                    <header class="offer-cta__text-section">
+                        <h1 class="offer-cta__title">ইসলামী জ্ঞান অর্জনের মাধ্যমে আলোকিত করুন নিজের ভবিষ্যৎ</h1>
+                        <button class="offer-cta__button" type="button" aria-label="শেখা শুরু করুন">
+                            <span class="offer-cta__button-text">শেখা শুরু করুন</span>
+                            <div class="offer-cta__button-icon" aria-hidden="true">
+                                <img src="/arrow-right.svg" alt="" />
                             </div>
                         </button>
-                    </div>
+                    </header>
                 </div>
             </div>
         </div>

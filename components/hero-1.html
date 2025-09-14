@@ -12,16 +12,17 @@
     <link rel="stylesheet" href="../src/globals.css">
     <style>
         /* Mobile-first approach */
-        .hero-section {
+        .hero {
             background-color: #1a0c12;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             position: relative;
             overflow: hidden;
+            align-items: stretch;
         }
 
-        .hero-background {
+        .hero__background {
             position: absolute;
             top: 0;
             left: 0;
@@ -30,7 +31,8 @@
             z-index: 1;
         }
 
-        .background-gradient-left {
+        .hero__background-gradient--left {
+            display: none;
             position: absolute;
             top: 10%;
             left: -20%;
@@ -41,7 +43,7 @@
             background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
         }
 
-        .background-gradient-right {
+        .hero__background-gradient--right {
             position: absolute;
             top: -10%;
             right: -20%;
@@ -52,61 +54,70 @@
             background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
         }
 
-        .hero-image-container {
+        .hero__image-container {
             position: relative;
             z-index: 2;
             flex: 1;
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: center;
-            padding: 2rem 1rem;
-            min-height: 50vh;
+            padding: 0;
         }
 
-        .hero-image {
+        .hero__image {
             width: 100%;
-            max-width: 400px;
+            max-width: 768px;
             height: auto;
             aspect-ratio: 1.5;
             object-fit: cover;
-            border-radius: 12px;
+            position: relative;
         }
 
-        .hero-content {
+        .hero__image-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            object-fit: cover;
+            z-index: 2;
+            transform: rotate(-90deg);
+            width: 150%;
+        }
+
+        .hero__content {
             position: relative;
             z-index: 2;
-            padding: 2rem 1rem;
+            padding: 2rem 1rem 0;
             display: flex;
             flex-direction: column;
             gap: 2rem;
         }
 
-        .hero-text-section {
+        .hero__text-section {
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
         }
 
-        .hero-heading-group {
+        .hero__heading-group {
             display: flex;
             flex-direction: column;
             gap: 0.75rem;
         }
 
-        .hero-title {
+        .hero__title {
             font-size: clamp(1.75rem, 4vw, 2.5rem);
             line-height: 1.3;
             font-weight: 400;
             color: var(--white-100);
             margin: 0;
-            text-align: center;
+            text-align: left;
         }
 
-        .hero-title-highlight {
+        .hero__title--highlight {
             font-weight: 500;
         }
 
-        .hero-description {
+        .hero__description {
             font-size: clamp(0.9rem, 2vw, 1rem);
             line-height: 1.6;
             font-family: var(--h-6-font-family);
@@ -114,13 +125,14 @@
             color: var(--white-100);
             letter-spacing: var(--h-6-letter-spacing);
             font-style: var(--h-6-font-style);
-            text-align: center;
+            text-align: left;
             margin: 0;
         }
 
-        .hero-cta-button {
+        .hero__cta-button {
             align-self: center;
             display: inline-flex;
+            width: 100%;
             height: 48px;
             align-items: center;
             justify-content: center;
@@ -135,22 +147,22 @@
             box-sizing: border-box;
         }
 
-        .hero-cta-button:hover {
+        .hero__cta-button:hover {
             transform: translateY(-1px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .hero-cta-button:focus {
+        .hero__cta-button:focus {
             outline: 2px solid #ffffff;
             outline-offset: 2px;
         }
 
-        .hero-cta-button:disabled {
+        .hero__cta-button:disabled {
             opacity: 0.6;
             cursor: not-allowed;
         }
 
-        .hero-button-text {
+        .hero__button-text {
             font-family: var(--body-text-font-family);
             font-weight: 500;
             color: #ffffff;
@@ -161,19 +173,19 @@
             font-style: var(--body-text-font-style);
         }
 
-        .hero-button-icon {
+        .hero__button-icon {
             width: 16px;
             height: 16px;
             flex-shrink: 0;
         }
 
-        .hero-statistics {
+        .hero__statistics {
             display: flex;
             flex-direction: column;
             gap: 1rem;
         }
 
-        .statistics-title {
+        .hero__statistics-title {
             font-size: var(--body-text-font-size);
             line-height: var(--body-text-line-height);
             font-family: var(--body-text-font-family);
@@ -185,34 +197,35 @@
             margin: 0;
         }
 
-        .statistics-grid {
+        .hero__statistics-grid {
             display: flex;
-            flex-direction: column;
             gap: 1rem;
             align-items: center;
+            justify-content: center;
+            padding-bottom: 2rem;
         }
 
-        .statistic-item {
+        .hero__statistic-item {
             display: flex;
             align-items: center;
             gap: 12px;
             text-align: center;
         }
 
-        .statistic-icon {
+        .hero__statistic-icon {
             width: 38px;
             height: 38px;
             flex-shrink: 0;
         }
 
-        .statistic-content {
+        .hero__statistic-content {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
         }
 
-        .statistic-number {
+        .hero__statistic-number {
             font-size: var(--h-6-font-size);
             line-height: var(--h-6-line-height);
             font-family: var(--h-6-font-family);
@@ -223,7 +236,7 @@
             margin: 0;
         }
 
-        .statistic-label {
+        .hero__statistic-label {
             font-size: var(--paragraph-text-font-size);
             line-height: var(--paragraph-text-line-height);
             font-family: var(--paragraph-text-font-family);
@@ -236,67 +249,81 @@
 
         /* Tablet and larger screens */
         @media (min-width: 768px) {
-            .hero-section {
+            .hero {
                 flex-direction: row;
-                align-items: center;
+                align-items: flex-end;
                 min-height: 606px;
                 max-width: 1440px;
                 margin: 0 auto;
             }
 
-            .hero-image-container {
+            .hero__image-container {
                 flex: 1;
                 order: 2;
-                min-height: auto;
-                padding: 2rem;
+                align-items: flex-end;
+                justify-content: flex-end;
+                padding: 0;
             }
 
-            .hero-image {
-                max-width: 500px;
+            .hero__image {
+                max-width: 768px;
             }
 
-            .hero-content {
+            .hero__image-overlay {
+                position: absolute;
+                top: 0;
+                left: -30%;
+                height: 100%;
+                transform: none;
+                width: 100%;
+            }
+
+            .hero__content {
                 flex: 1;
                 order: 1;
-                padding: 2rem;
+                padding: 2rem 2rem 0;
                 gap: 3.5rem;
                 max-width: 608px;
+                z-index: 4;
+                align-self: center;
             }
 
-            .hero-title {
+            .hero__title {
                 font-size: clamp(2.5rem, 4vw, 3.25rem);
                 line-height: 1.35;
                 text-align: left;
             }
 
-            .hero-description {
+            .hero__description {
                 font-size: clamp(1rem, 1.5vw, 1.1875rem);
                 text-align: left;
             }
 
-            .hero-cta-button {
+            .hero__cta-button {
                 align-self: flex-start;
+                width: auto;
             }
 
-            .statistics-title {
+            .hero__statistics-title {
                 text-align: left;
             }
 
-            .statistics-grid {
+            .hero__statistics-grid {
                 flex-direction: row;
                 justify-content: flex-start;
                 gap: 2rem;
                 flex-wrap: wrap;
             }
 
-            .background-gradient-left {
+            .hero__background-gradient--left {
                 top: 5%;
                 left: -15%;
                 width: 420px;
                 height: 420px;
+                display: block;
             }
 
-            .background-gradient-right {
+            .hero__background-gradient--right {
                 top: -20%;
                 right: -15%;
                 width: 868px;
@@ -307,22 +334,18 @@
 
         /* Large desktop screens */
         @media (min-width: 1200px) {
-            .hero-content {
-                padding: 4rem;
+            .hero__content {
+                padding: 4rem 0 0 4rem;
             }
 
-            .hero-image-container {
-                padding: 4rem;
-            }
-
-            .statistics-grid {
+            .hero__statistics-grid {
                 gap: 2rem;
             }
         }
 
         /* High resolution displays */
         @media (min-width: 1440px) {
-            .hero-section {
+            .hero {
                 max-width: none;
                 width: 1440px;
             }
@@ -331,54 +354,58 @@
 </head>
 
 <body>
-    <section class="hero-section container" role="section">
-        <div class="hero-background">
-            <div class="background-gradient-left" aria-hidden="true"></div>
-            <div class="background-gradient-right" aria-hidden="true"></div>
+    <section class="hero container" role="section">
+        <div class="hero__background">
+            <div class="hero__background-gradient--left" aria-hidden="true"></div>
+            <div class="hero__background-gradient--right" aria-hidden="true"></div>
         </div>
 
-        <div class="hero-image-container">
-            <img class="hero-image" src="../img/hero.png" alt="Islamic scholars and students in a learning environment" />
+        <div class="hero__image-container">
+            <img class="hero__image-overlay" src="../rectangle-1.svg" alt="" aria-hidden="true" />
+            <img class="hero__image" src="../img/hero.png"
+                alt="Islamic scholars and students in a learning environment" />
         </div>
 
-        <div class="hero-content">
-            <div class="hero-text-section">
-                <div class="hero-heading-group">
-                    <h1 class="hero-title">
-                        <span class="hero-title-highlight">ইসলামী জ্ঞানে আলোকিত করুন নিজের ভবিষ্যৎ!</span>
+        <div class="hero__content">
+            <div class="hero__text-section">
+                <div class="hero__heading-group">
+                    <h1 class="hero__title">
+                        <span class="hero__title--highlight">ইসলামী জ্ঞানে আলোকিত করুন নিজের ভবিষ্যৎ!</span>
                     </h1>
-                    <p class="hero-description">
-                        ইসলামী জ্ঞান অর্জনের এক অনন্য অনলাইন উদ্যোগ। যেখানে আরবী ভাষা ও সাহিত্যসহ কুরআন, হাদীস, ফিকহ ও আকীদার উপর রয়েছে সুচিন্তিত পেইড ও ফ্রি কোর্সের আয়োজন।
+                    <p class="hero__description">
+                        ইসলামী জ্ঞান অর্জনের এক অনন্য অনলাইন উদ্যোগ। যেখানে আরবী ভাষা ও সাহিত্যসহ কুরআন, হাদীস, ফিকহ ও
+                        আকীদার উপর রয়েছে সুচিন্তিত পেইড ও ফ্রি কোর্সের আয়োজন।
                     </p>
                 </div>
-                <button class="hero-cta-button" type="button" aria-label="শেখা শুরু করুন - কোর্সে এনরোল করতে ক্লিক করুন">
-                    <span class="hero-button-text">শেখা শুরু করুন</span>
-                    <img class="hero-button-icon" src="../arrow-right.svg" alt="" aria-hidden="true" />
+                <button class="hero__cta-button" type="button"
+                    aria-label="শেখা শুরু করুন - কোর্সে এনরোল করতে ক্লিক করুন">
+                    <span class="hero__button-text">শেখা শুরু করুন</span>
+                    <img class="hero__button-icon" src="../arrow-right.svg" alt="" aria-hidden="true" />
                 </button>
             </div>
 
-            <div class="hero-statistics" aria-labelledby="success-stats">
-                <h2 class="statistics-title" id="success-stats">বিগত ৩ বছর ধরে আমাদের সাফল্য</h2>
-                <div class="statistics-grid" role="list">
-                    <div class="statistic-item" role="listitem">
-                        <img class="statistic-icon" src="../student.svg" alt="শিক্ষার্থী আইকন" />
-                        <div class="statistic-content">
-                            <div class="statistic-number">১০,০০০</div>
-                            <div class="statistic-label">শিক্ষার্থী</div>
+            <div class="hero__statistics" aria-labelledby="success-stats">
+                <h2 class="hero__statistics-title" id="success-stats">বিগত ৩ বছর ধরে আমাদের সাফল্য</h2>
+                <div class="hero__statistics-grid" role="list">
+                    <div class="hero__statistic-item" role="listitem">
+                        <img class="hero__statistic-icon" src="../student.svg" alt="শিক্ষার্থী আইকন" />
+                        <div class="hero__statistic-content">
+                            <div class="hero__statistic-number">১০,০০০</div>
+                            <div class="hero__statistic-label">শিক্ষার্থী</div>
                         </div>
                     </div>
-                    <div class="statistic-item" role="listitem">
-                        <img class="statistic-icon" src="../teacher.svg" alt="শিক্ষক আইকন" />
-                        <div class="statistic-content">
-                            <div class="statistic-number">২৫+</div>
-                            <div class="statistic-label">শিক্ষক</div>
+                    <div class="hero__statistic-item" role="listitem">
+                        <img class="hero__statistic-icon" src="../teacher.svg" alt="শিক্ষক আইকন" />
+                        <div class="hero__statistic-content">
+                            <div class="hero__statistic-number">২৫+</div>
+                            <div class="hero__statistic-label">শিক্ষক</div>
                         </div>
                     </div>
-                    <div class="statistic-item" role="listitem">
-                        <img class="statistic-icon" src="../check.svg" alt="কোর্স সম্পূর্ণতার হার আইকন" />
-                        <div class="statistic-content">
-                            <div class="statistic-number">৮৯%</div>
-                            <div class="statistic-label">কোর্স কমপ্লিট রেট</div>
+                    <div class="hero__statistic-item" role="listitem">
+                        <img class="hero__statistic-icon" src="../check.svg" alt="কোর্স সম্পূর্ণতার হার আইকন" />
+                        <div class="hero__statistic-content">
+                            <div class="hero__statistic-number">৮৯%</div>
+                            <div class="hero__statistic-label">কোর্স কমপ্লিট রেট</div>
                         </div>
                     </div>
                 </div>

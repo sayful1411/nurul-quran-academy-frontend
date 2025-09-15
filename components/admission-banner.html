@@ -14,56 +14,87 @@
     <style>
         .admission-banner {
             position: relative;
-            width: 1440px;
-            height: 200px;
+            max-width: 1440px;
+            min-height: 200px;
             background-color: #9b1b40;
-        }
-
-        .admission-banner .frame {
+            margin: 0 auto;
+            padding: 2rem;
             display: flex;
-            width: 591px;
             align-items: center;
-            justify-content: space-between;
-            position: absolute;
-            top: 51px;
-            left: 425px;
+            justify-content: center;
+            overflow: hidden;
         }
 
-        .admission-banner .div {
+        .admission-banner::before {
+            content: '';
+            position: absolute;
+            left: 48px;
+            top: 0;
+            width: 313px;
+            height: 200px;
+            background-image: url('/img/offer-3.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            mix-blend-mode: luminosity;
+            z-index: 1;
+        }
+
+        .admission-banner::after {
+            content: '';
+            position: absolute;
+            right: 4px;
+            top: 27px;
+            width: 254px;
+            height: 173px;
+            background-image: url('/img/offer-4.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            mix-blend-mode: luminosity;
+            z-index: 1;
+        }
+
+        .admission-banner__content {
             display: flex;
-            flex-direction: column;
-            width: 320px;
-            align-items: flex-start;
-            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            z-index: 2;
             position: relative;
         }
 
-        .admission-banner .text-wrapper {
-            margin-top: -1px;
+        .admission-banner__text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            max-width: 320px;
+        }
+
+        .admission-banner__subtitle {
             font-family: var(--h-4-font-family);
             font-weight: var(--h-4-font-weight);
             font-size: var(--h-4-font-size);
             line-height: var(--h-4-line-height);
-            position: relative;
-            align-self: stretch;
             color: #ffffff;
             letter-spacing: var(--h-4-letter-spacing);
             font-style: var(--h-4-font-style);
+            margin: 0;
         }
 
-        .admission-banner .text-wrapper-2 {
+        .admission-banner__title {
             font-family: var(--h-2-font-family);
             font-weight: var(--h-2-font-weight);
             font-size: var(--h-2-font-size);
             line-height: var(--h-2-line-height);
-            position: relative;
-            align-self: stretch;
             color: #ffffff;
             letter-spacing: var(--h-2-letter-spacing);
             font-style: var(--h-2-font-style);
+            margin: 0;
+            display: block;
         }
 
-        .admission-banner .button {
+        .admission-banner__button {
             all: unset;
             box-sizing: border-box;
             display: inline-flex;
@@ -72,17 +103,30 @@
             justify-content: center;
             gap: 10px;
             padding: 10px 24px;
-            position: relative;
-            flex: 0 0 auto;
             border-radius: 50px;
             background: linear-gradient(90deg,
                     rgba(223, 24, 106, 1) 0%,
                     rgba(250, 111, 33, 1) 100%);
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            flex-shrink: 0;
         }
 
-        .admission-banner .text-wrapper-3 {
-            position: relative;
-            width: fit-content;
+        .admission-banner__button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .admission-banner__button:active {
+            transform: translateY(0);
+        }
+
+        .admission-banner__button:focus-visible {
+            outline: 2px solid #ffffff;
+            outline-offset: 2px;
+        }
+
+        .admission-banner__button-text {
             font-family: var(--body-text-font-family);
             font-weight: var(--body-text-font-weight);
             color: #ffffff;
@@ -93,176 +137,170 @@
             font-style: var(--body-text-font-style);
         }
 
-        .admission-banner .arrow-right {
-            position: relative;
+        .admission-banner__arrow {
             width: 16px;
             height: 16px;
-            aspect-ratio: 1;
-        }
-
-        .admission-banner .vector {
-            position: absolute;
-            width: 12px;
-            height: 10px;
-            top: 3px;
-            left: 2px;
-        }
-
-        .admission-banner .image {
-            width: 254px;
-            height: 173px;
-            top: 27px;
-            left: 1182px;
-            position: absolute;
-            mix-blend-mode: luminosity;
-            aspect-ratio: 1;
-            object-fit: cover;
-        }
-
-        .admission-banner .img {
-            width: 313px;
-            height: 200px;
-            top: 0;
-            left: 48px;
-            position: absolute;
-            mix-blend-mode: luminosity;
-            aspect-ratio: 1;
-            object-fit: cover;
-        }
-
-        /* Original CSS code should be injected here */
-
-        .admission-banner {
-            position: relative;
-            max-width: 1440px;
-            height: 200px;
-            background-color: #9b1b40;
-            margin: 0 auto;
-        }
-
-        .admission-banner .frame {
             display: flex;
-            max-width: 591px;
-            align-items: center;
-            justify-content: space-between;
-            position: absolute;
-            top: 51px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 0 20px;
-        }
-
-        .admission-banner .div {
-            display: flex;
-            flex-direction: column;
-            max-width: 320px;
-            align-items: flex-start;
-            gap: 12px;
-            position: relative;
-        }
-
-        .admission-banner .button {
-            all: unset;
-            box-sizing: border-box;
-            display: inline-flex;
-            height: 48px;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 10px 24px;
-            position: relative;
-            flex: 0 0 auto;
-            border-radius: 50px;
-            background: linear-gradient(90deg,
-                    rgba(223, 24, 106, 1) 0%,
-                    rgba(250, 111, 33, 1) 100%);
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .admission-banner .button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        .admission-banner__arrow-icon {
+            width: 16px;
+            height: 16px;
         }
 
-        .admission-banner .button:active {
-            transform: translateY(0);
-        }
 
-        .admission-banner .image {
-            max-width: 254px;
-            height: 173px;
-            top: 27px;
-            right: 4px;
-            position: absolute;
-            mix-blend-mode: luminosity;
-            aspect-ratio: 1;
-            object-fit: cover;
-        }
+        @media (max-width: 1200px) {
+            .admission-banner {
+                padding: 1.5rem;
+            }
 
-        .admission-banner .img {
-            max-width: 313px;
-            height: 200px;
-            top: 0;
-            left: 48px;
-            position: absolute;
-            mix-blend-mode: luminosity;
-            aspect-ratio: 1;
-            object-fit: cover;
+            .admission-banner::before {
+                left: 30px;
+                width: 250px;
+                height: 160px;
+            }
+
+            .admission-banner::after {
+                right: 2px;
+                top: 22px;
+                width: 203px;
+                height: 138px;
+            }
+
+            .admission-banner__content {
+                gap: 1.5rem;
+            }
         }
 
         @media (max-width: 768px) {
             .admission-banner {
-                height: auto;
-                min-height: 200px;
-                padding: 20px;
+                padding: 0 2rem;
+                gap: 1rem;
+                min-height: 120px;
             }
 
-            .admission-banner .frame {
-                position: static;
-                transform: none;
-                flex-direction: column;
-                gap: 20px;
-                padding: 0;
-                max-width: 100%;
+            .admission-banner::before {
+                left: 15px;
+                top: 0;
+                width: 140px;
+                height: 90px;
+                opacity: 0.4;
             }
 
-            .admission-banner .div {
-                max-width: 100%;
-                text-align: center;
+            .admission-banner::after {
+                right: 15px;
+                top: 12px;
+                width: 115px;
+                height: 78px;
+                opacity: 0.4;
             }
 
-            .admission-banner .image,
-            .admission-banner .img {
-                position: static;
-                max-width: 100%;
-                height: auto;
-                margin: 10px 0;
+            .admission-banner__content {
+                flex-direction: row;
+                gap: 1rem;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .admission-banner__text {
+                flex: 1;
+                text-align: left;
+                max-width: none;
+            }
+
+            .admission-banner__subtitle {
+                font-size: 0.9rem;
+                line-height: 1.2;
+            }
+
+            .admission-banner__title {
+                font-size: 1.1rem;
+                line-height: 1.2;
+            }
+
+            .admission-banner__button {
+                flex-shrink: 0;
+                height: 40px;
+                padding: 8px 16px;
+                min-width: 120px;
+            }
+
+            .admission-banner__button-text {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .admission-banner {
+                padding: 0 1rem;
+                min-height: 100px;
+            }
+
+            .admission-banner::before {
+                left: 0;
+                top: 10%;
+                width: 100px;
+            }
+
+            .admission-banner::after {
+                right: 0;
+                top: 10%;
+                width: 100px;
+            }
+
+            .admission-banner__content {
+                gap: 0.75rem;
+                flex-direction: row;
+            }
+
+            .admission-banner__subtitle {
+                font-size: 1.2rem;
+                line-height: 1.5;
+            }
+
+            .admission-banner__title {
+                font-size: 1.8rem;
+                line-height: 1.5;
+            }
+
+            .admission-banner__button {
+                height: 36px;
+                padding: 6px 12px;
+                min-width: 100px;
+                flex-shrink: 0;
+            }
+
+            .admission-banner__button-text {
+                font-size: 0.8rem;
+            }
+
+            .admission-banner__arrow-icon {
+                width: 12px;
+                height: 12px;
             }
         }
     </style>
 </head>
 
 <body>
+    <section class="admission-banner" role="banner">
+        <div class="admission-banner__content">
+            <header class="admission-banner__text">
+                <h2 class="admission-banner__subtitle">ছোটদের কোরআন শিক্ষা কোর্সে <span
+                        class="admission-banner__title">ভর্তি চলছে!</span> </h2>
 
-    <!-- Admission Banner -->
-    <section class="admission-banner container">
-        <div class="frame">
-            <header class="div">
-                <h2 class="text-wrapper">ছোটদের কোরআন শিক্ষা কোর্সে</h2>
-                <h1 class="text-wrapper-2">ভর্তি চলছে!</h1>
             </header>
-            <button class="button" type="button" aria-label="কোর্সে ভর্তি হতে ক্লিক করুন">
-                <span class="text-wrapper-3">ক্লিক করুন</span>
-                <span class="arrow-right" aria-hidden="true">
-                    <img class="vector" src="img/vector.svg" alt="" />
+            <button class="admission-banner__button" type="button" aria-label="কোর্সে ভর্তি হতে ক্লিক করুন">
+                <span class="admission-banner__button-text">ক্লিক করুন</span>
+                <span class="admission-banner__arrow" aria-hidden="true">
+                    <img class="admission-banner__arrow-icon" src="../arrow-right.svg" alt="" />
                 </span>
             </button>
         </div>
-        <img class="image" src="/img/offer-3.png" alt="কোরআন শিক্ষার চিত্র" />
-        <img class="img" src="/img/offer-4.png" alt="শিক্ষার্থীদের চিত্র" />
     </section>
-
 </body>
 
 </html>

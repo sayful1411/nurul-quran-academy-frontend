@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&family=Tiro+Bangla:ital@0;1&display=swap"
+        rel="stylesheet">
+    <title>Nurul Quran Academy</title>
+    <link rel="stylesheet" href="../src/globals.css" />
+    <style>
+        .accordion-qa {
+            position: relative;
+            width: 1440px;
+            height: 693px;
+            background-color: #fefefe;
+        }
+
+        .accordion-qa .frame {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            position: relative;
+            top: 100px;
+            left: 106px;
+        }
+
+        .accordion-qa .div {
+            display: flex;
+            align-items: flex-start;
+            gap: 48px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .accordion-qa .frame-2 {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .accordion-qa .question {
+            display: flex;
+            flex-direction: column;
+            width: 590px;
+            align-items: flex-start;
+            padding: 12px;
+            position: relative;
+            flex: 0 0 auto;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-color: var(--greyoutline);
+        }
+
+        .accordion-qa .heading {
+            display: inline-flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 12px;
+            position: relative;
+            flex: 0 0 auto;
+            font-family: var(--h-1-font-family);
+            font-weight: var(--h-1-font-weight);
+            color: var(--blackheading);
+            font-size: var(--h-1-font-size);
+            text-align: center;
+            letter-spacing: var(--h-1-letter-spacing);
+            line-height: var(--h-1-line-height);
+            font-style: var(--h-1-font-style);
+        }
+
+        .accordion-qa .heading span {
+            background: linear-gradient(90deg,
+                    rgba(223, 24, 106, 1) 0%,
+                    rgba(250, 111, 33, 1) 100%);
+            -webkit-background-clip: text !important;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+        }
+
+        .accordion-qa .frame-3 {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 0px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .accordion-qa .expend-collapse {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            aspect-ratio: 1;
+        }
+
+        .accordion-qa .text-wrapper {
+            position: relative;
+            flex: 1;
+            margin-top: -1px;
+            font-family: var(--h-6-font-family);
+            font-weight: var(--h-6-font-weight);
+            color: var(--blackheading);
+            font-size: var(--h-6-font-size);
+            letter-spacing: var(--h-6-letter-spacing);
+            line-height: var(--h-6-line-height);
+            font-style: var(--h-6-font-style);
+        }
+
+        .accordion-qa .frame-4 {
+            display: flex;
+            flex-direction: column;
+            width: 590px;
+            align-items: flex-start;
+            gap: 8px;
+            position: relative;
+        }
+
+        .accordion-qa .nurul-quran-academy-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 0px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .accordion-qa .nurul-quran-academy {
+            position: relative;
+            flex: 1;
+            margin-top: -1px;
+            font-family: var(--body-text-font-family);
+            font-weight: var(--body-text-font-weight);
+            color: #7a7a7a;
+            font-size: var(--body-text-font-size);
+            letter-spacing: var(--body-text-letter-spacing);
+            line-height: var(--body-text-line-height);
+            font-style: var(--body-text-font-style);
+        }
+
+        /* Original CSS code should be injected here */
+
+        .accordion-qa .question summary {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        .accordion-qa .question summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .accordion-qa .question summary::-moz-list-bullet {
+            list-style-type: none;
+        }
+
+        .accordion-qa .question[open] .expend-collapse {
+            transform: rotate(133deg);
+        }
+
+        .accordion-qa .expend-collapse {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-qa .question summary:focus {
+            outline: 2px solid #4a90e2;
+            outline-offset: 2px;
+        }
+
+        .accordion-qa .question summary:hover {
+            background-color: rgba(240, 240, 240, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .accordion-qa {
+                width: 100%;
+                height: auto;
+                padding: 20px;
+            }
+
+            .accordion-qa .frame {
+                left: 0;
+                top: 20px;
+                width: 100%;
+                padding: 0 20px;
+            }
+
+            .accordion-qa .div {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .accordion-qa .question,
+            .accordion-qa .frame-4 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Accordion QA -->
+    <section class="accordion-qa container">
+        <div class="frame">
+            <h1 class="heading">
+                <span>প্রশ্নোত্তর</span>সবাই জানতে চান
+            </h1>
+            <div class="div">
+                <div class="frame-2">
+                    <details class="question">
+                        <summary class="frame-3">
+                            <img class="expend-collapse" src="/plus.svg" alt="Expand/Collapse icon" />
+                            <h3 class="text-wrapper">Nurul Quran Academy কী?</h3>
+                        </summary>
+                    </details>
+                    <details class="question">
+                        <summary class="frame-3">
+                            <img class="expend-collapse" src="/plus.svg" alt="Expand/Collapse icon" />
+                            <h3 class="text-wrapper">নারী ও পুরুষদের জন্য আলাদা ক্লাস আছে কি?</h3>
+                        </summary>
+                    </details>
+                    <details class="question">
+                        <summary class="frame-3">
+                            <img class="expend-collapse" src="/plus.svg" alt="Expand/Collapse icon" />
+                            <h3 class="text-wrapper">ক্লাসগুলো কীভাবে নেওয়া হয়?</h3>
+                        </summary>
+                    </details>
+                    <details class="question">
+                        <summary class="frame-3">
+                            <img class="expend-collapse" src="/plus.svg" alt="Expand/Collapse icon" />
+                            <h3 class="text-wrapper">কুরআন শেখার জন্য কোনো পূর্বজ্ঞান থাকা লাগবে কি?</h3>
+                        </summary>
+                        <div class="nurul-quran-academy-wrapper">
+                            <p class="nurul-quran-academy">
+                                উভয় ধরনের কোর্স রয়েছে। কিছু কোর্স সম্পূর্ণ ফ্রি, আর কিছু কোর্সের জন্য নির্ধারিত ফি
+                                রয়েছে। তবে
+                                আর্থিক অসচ্ছল শিক্ষার্থীদের জন্য স্কলারশিপ সুবিধাও রয়েছে।
+                            </p>
+                        </div>
+                    </details>
+                </div>
+                <div class="frame-4">
+                    <details class="question">
+                        <summary class="frame-3">
+                            <img class="expend-collapse" src="/plus.svg" alt="Expand/Collapse icon" />
+                            <h3 class="text-wrapper">কোর্স শেষে কি সার্টিফিকেট দেওয়া হয়?</h3>
+                        </summary>
+                        <div class="nurul-quran-academy-wrapper">
+                            <p class="nurul-quran-academy">
+                                উভয় ধরনের কোর্স রয়েছে। কিছু কোর্স সম্পূর্ণ ফ্রি, আর কিছু কোর্সের জন্য নির্ধারিত ফি
+                                রয়েছে। তবে
+                                আর্থিক অসচ্ছল শিক্ষার্থীদের জন্য স্কলারশিপ সুবিধাও রয়েছে।
+                            </p>
+                        </div>
+                    </details>
+                    <details class="question" open>
+                        <summary class="frame-3">
+                            <img class="expend-collapse" src="/plus.svg" alt="Expand/Collapse icon" />
+                            <h3 class="text-wrapper">কোর্সগুলো কি ফ্রি নাকি পেইড?</h3>
+                        </summary>
+                        <div class="nurul-quran-academy-wrapper">
+                            <p class="nurul-quran-academy">
+                                উভয় ধরনের কোর্স রয়েছে। কিছু কোর্স সম্পূর্ণ ফ্রি, আর কিছু কোর্সের জন্য নির্ধারিত ফি
+                                রয়েছে। তবে
+                                আর্থিক অসচ্ছল শিক্ষার্থীদের জন্য স্কলারশিপ সুবিধাও রয়েছে।
+                            </p>
+                        </div>
+                    </details>
+                    <details class="question">
+                        <summary class="frame-3">
+                            <img class="expend-collapse" src="/plus.svg" alt="Expand/Collapse icon" />
+                            <h3 class="text-wrapper">শিক্ষকেরা কারা?</h3>
+                        </summary>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

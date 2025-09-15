@@ -1,0 +1,220 @@
+@import url("./globals.css");
+
+.course-details {
+  position: relative;
+  width: 1440px;
+  height: 949px;
+  background-color: #9d1934;
+}
+.course-details .overlap-group {
+  height: 949px;
+  background-image: url("../img/bg-6.png");
+  background-size: 100% 100%;
+}
+.course-details .frame {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 24px;
+  top: 100px;
+  left: 176px;
+  align-items: flex-start;
+  position: relative;
+}
+.course-details .text-wrapper {
+  font-family: var(--h-2-font-family);
+  font-weight: var(--h-2-font-weight);
+  color: var(--white-100);
+  font-size: var(--h-2-font-size);
+  line-height: var(--h-2-line-height);
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  letter-spacing: var(--h-2-letter-spacing);
+  font-style: var(--h-2-font-style);
+}
+.course-details .div {
+  display: flex;
+  flex-direction: column;
+  width: 709px;
+  gap: 24px;
+  flex: 0 0 auto;
+  align-items: flex-start;
+  position: relative;
+}
+.course-details .frame-2 {
+  display: flex;
+  gap: 24px;
+  padding: 16px 24px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: var(--white-100);
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: var(--greyoutline);
+  align-items: flex-start;
+  position: relative;
+}
+.course-details .vector-wrapper {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  aspect-ratio: 1;
+}
+.course-details .vector {
+  position: absolute;
+  width: 42px;
+  height: 36px;
+  top: 8px;
+  left: 4px;
+}
+.course-details .frame-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  flex-grow: 1;
+  align-items: flex-start;
+  position: relative;
+}
+.course-details .text-wrapper-2 {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 106, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  -webkit-background-clip: text !important;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  font-family: var(--h-6-font-family);
+  font-weight: var(--h-6-font-weight);
+  color: transparent;
+  font-size: var(--h-6-font-size);
+  line-height: var(--h-6-line-height);
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  letter-spacing: var(--h-6-letter-spacing);
+  font-style: var(--h-6-font-style);
+}
+.course-details .p {
+  position: relative;
+  align-self: stretch;
+  font-family: var(--body-text-font-family);
+  font-weight: var(--body-text-font-weight);
+  color: var(--blackheading);
+  font-size: var(--body-text-font-size);
+  letter-spacing: var(--body-text-letter-spacing);
+  line-height: var(--body-text-line-height);
+  font-style: var(--body-text-font-style);
+}
+.course-details .img {
+  position: absolute;
+  width: 36px;
+  height: 40px;
+  top: 2px;
+  left: 6px;
+}
+.course-details .text-wrapper-3 {
+  background: linear-gradient(
+    166deg,
+    rgba(40, 156, 136, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  -webkit-background-clip: text !important;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  font-family: var(--h-6-font-family);
+  font-weight: var(--h-6-font-weight);
+  color: transparent;
+  font-size: var(--h-6-font-size);
+  line-height: var(--h-6-line-height);
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  letter-spacing: var(--h-6-letter-spacing);
+  font-style: var(--h-6-font-style);
+}
+.course-details .vector-2 {
+  position: absolute;
+  width: 39px;
+  height: 39px;
+  top: 4px;
+  left: 4px;
+}
+.course-details .text-wrapper-4 {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 13, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  -webkit-background-clip: text !important;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  font-family: var(--h-6-font-family);
+  font-weight: var(--h-6-font-weight);
+  color: transparent;
+  font-size: var(--h-6-font-size);
+  line-height: var(--h-6-line-height);
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  letter-spacing: var(--h-6-letter-spacing);
+  font-style: var(--h-6-font-style);
+}
+.course-details .text-wrapper-5 {
+  font-family: var(--h-6-font-family);
+  font-weight: var(--h-6-font-weight);
+  color: #ca6a37;
+  font-size: var(--h-6-font-size);
+  line-height: var(--h-6-line-height);
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  letter-spacing: var(--h-6-letter-spacing);
+  font-style: var(--h-6-font-style);
+}
+.course-details .text-wrapper-6 {
+  font-family: var(--h-6-font-family);
+  font-weight: var(--h-6-font-weight);
+  color: #cd4791;
+  font-size: var(--h-6-font-size);
+  line-height: var(--h-6-line-height);
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  letter-spacing: var(--h-6-letter-spacing);
+  font-style: var(--h-6-font-style);
+}
+/* Original CSS code should be injected here */
+
+.course-details {
+  position: relative;
+  max-width: 1440px;
+  min-height: 949px;
+  background-color: #9d1934;
+}
+.course-details .overlap-group {
+  min-height: 949px;
+  background-image: url("../img/bg-6.png");
+  background-size: 100% 100%;
+}
+.course-details .div {
+  display: flex;
+  flex-direction: column;
+  max-width: 709px;
+  gap: 24px;
+  flex: 0 0 auto;
+  align-items: flex-start;
+  position: relative;
+}
+.course-details .vector-wrapper {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+}

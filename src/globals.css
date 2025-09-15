@@ -1,4 +1,10 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@font-face {
+  font-family: "Li M. A. Hai Unicode";
+  src: url("../fonts/Li_M_A_Hai_Unicode.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;

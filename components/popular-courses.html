@@ -10,1417 +10,385 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&family=Tiro+Bangla:ital@0;1&display=swap"
         rel="stylesheet">
     <title>Nurul Quran Academy</title>
-    <link rel="stylesheet" href="../src/globals.css" />
-
-    <style>
-        .course {
-            display: flex;
-            flex-direction: column;
-            width: 1440px;
-            align-items: flex-start;
-            gap: 10px;
-            padding: 100px 167px;
-            position: relative;
-            background-color: #fefefe;
-        }
-
-        .course .frame {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 72px;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
-        }
-
-        .course .div {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 40px;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
-        }
-
-        .course .frame-2 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
-        }
-
-        .course .button-wrapper {
-            display: inline-flex;
-            align-items: center;
-            gap: 24px;
-            position: relative;
-            flex: 0 0 auto;
-        }
-
-        .course .popular-courses {
-            color: black;
-            font-size: var(--h-2-font-size);
-            font-weight: bold;
-            margin: 0;
-        }
-
-        .course .popular-courses span {
-            background-image: linear-gradient(#df186a, #fa6f21);
-            background-clip: text;
-            color: transparent;
-        }
-
-        .course .button {
-            all: unset;
-            box-sizing: border-box;
-            height: 48px;
-            padding: 10px 24px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            position: relative;
-            flex: 0 0 auto;
-            background-color: #ffffff;
-            border-radius: 50px;
-            border: none;
-        }
-
-        .course .button::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            padding: 1px;
-            border-radius: 50px;
-            background: linear-gradient(103deg,
-                    rgba(41, 160, 182, 1) 0%,
-                    rgba(176, 195, 67, 1) 100%);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .course .text-wrapper {
-            position: relative;
-            width: fit-content;
-            font-family: var(--body-text-font-family);
-            font-weight: var(--body-text-font-weight);
-            color: var(--blackheading);
-            font-size: var(--body-text-font-size);
-            letter-spacing: var(--body-text-letter-spacing);
-            line-height: var(--body-text-line-height);
-            white-space: nowrap;
-            font-style: var(--body-text-font-style);
-        }
-
-        .course .group {
-            position: relative;
-            width: 1106px;
-            height: 69px;
-        }
-
-        .course .overlap-group {
-            position: relative;
-            height: 69px;
-        }
-
-        .course .frame-3 {
-            display: flex;
-            width: 1106px;
-            align-items: center;
-            gap: 18px;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        .course .frame-4 {
-            display: flex;
-            width: 204px;
-            align-items: center;
-            gap: 12px;
-            padding: 12px;
-            position: relative;
-            background-color: var(--white-100);
-            border-radius: 8px;
-            border: none;
-            box-shadow: var(--shadow-card);
-        }
-
-        .course .frame-4::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            padding: 2px;
-            border-radius: 8px;
-            background: linear-gradient(90deg,
-                    rgba(223, 24, 106, 1) 0%,
-                    rgba(250, 111, 33, 1) 100%);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .course .vector-wrapper {
-            position: relative;
-            width: 24px;
-            height: 24px;
-            aspect-ratio: 1;
-        }
-
-        .course .vector {
-            position: absolute;
-            width: 21px;
-            height: 18px;
-            top: 4px;
-            left: 2px;
-        }
-
-        .course .frame-5 {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            position: relative;
-            flex: 1;
-            align-self: stretch;
-            flex-grow: 1;
-        }
-
-        .course .text-wrapper-2 {
-            align-self: stretch;
-            color: var(--blackheading);
-            font-size: var(--body-text-font-size);
-            line-height: var(--body-text-line-height);
-            position: relative;
-            margin-top: -1px;
-            font-family: var(--body-text-font-family);
-            font-weight: var(--body-text-font-weight);
-            letter-spacing: var(--body-text-letter-spacing);
-            font-style: var(--body-text-font-style);
-        }
-
-        .course .frame-6 {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
-        }
-
-        .course .text-wrapper-3 {
-            width: fit-content;
-            margin-top: -1px;
-            font-family: var(--paragraph-text-font-family);
-            font-weight: var(--paragraph-text-font-weight);
-            color: var(--blacksubtext);
-            font-size: var(--paragraph-text-font-size);
-            line-height: var(--paragraph-text-line-height);
-            white-space: nowrap;
-            position: relative;
-            letter-spacing: var(--paragraph-text-letter-spacing);
-            font-style: var(--paragraph-text-font-style);
-        }
-
-        .course .ellipse {
-            position: relative;
-            width: 4px;
-            height: 4px;
-            border-radius: 2px;
-            aspect-ratio: 1;
-            background: linear-gradient(103deg,
-                    rgba(41, 160, 182, 1) 0%,
-                    rgba(176, 195, 67, 1) 100%);
-        }
-
-        .course .frame-7 {
-            display: flex;
-            width: 204px;
-            align-items: center;
-            gap: 12px;
-            padding: 12px;
-            position: relative;
-            background-color: var(--white-100);
-            border-radius: 8px;
-            border: 1px solid;
-            border-color: var(--greyoutline);
-            box-shadow: var(--shadow-card);
-        }
-
-        .course .img {
-            position: absolute;
-            width: 15px;
-            height: 22px;
-            top: 1px;
-            left: 4px;
-        }
-
-        .course .text-wrapper-4 {
-            width: fit-content;
-            margin-top: -1px;
-            font-family: var(--body-text-font-family);
-            font-weight: var(--body-text-font-weight);
-            color: var(--blackheading);
-            font-size: var(--body-text-font-size);
-            line-height: var(--body-text-line-height);
-            white-space: nowrap;
-            position: relative;
-            letter-spacing: var(--body-text-letter-spacing);
-            font-style: var(--body-text-font-style);
-        }
-
-        .course .frame-8 {
-            display: inline-flex;
-            gap: 6px;
-            align-items: center;
-            position: relative;
-            flex: 0 0 auto;
-        }
-
-        .course .vector-2 {
-            position: absolute;
-            width: 16px;
-            height: 20px;
-            top: 2px;
-            left: 4px;
-        }
-
-        .course .vector-3 {
-            position: absolute;
-            width: 19px;
-            height: 19px;
-            top: 2px;
-            left: 3px;
-        }
-
-        .course .vector-4 {
-            position: absolute;
-            width: 22px;
-            height: 14px;
-            top: 5px;
-            left: 2px;
-        }
-
-        .course .frame-9 {
-            display: flex;
-            width: 204px;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 12px;
-            position: relative;
-            margin-right: -208px;
-            background-color: var(--white-100);
-            border-radius: 8px;
-            border: 1px solid;
-            border-color: var(--greyoutline);
-            box-shadow: var(--shadow-card);
-        }
-
-        .course .key {
-            position: relative;
-            width: 24px;
-            height: 24px;
-            overflow: hidden;
-            aspect-ratio: 1;
-        }
-
-        .course .vector-5 {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            top: -1317px;
-            left: -1287px;
-        }
-
-        .course .frame-10 {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 12px;
-            position: relative;
-            flex: 1;
-            align-self: stretch;
-            flex-grow: 1;
-        }
-
-        .course .text-wrapper-5 {
-            width: fit-content;
-            margin-top: -1px;
-            font-family: "Noto Serif Bengali-Regular", Helvetica;
-            font-weight: 400;
-            color: var(--blackheading);
-            font-size: 16px;
-            line-height: normal;
-            white-space: nowrap;
-            position: relative;
-            letter-spacing: 0;
-        }
-
-        .course .text-wrapper-6 {
-            width: fit-content;
-            color: var(--blacksubtext);
-            font-size: 13px;
-            line-height: normal;
-            white-space: nowrap;
-            position: relative;
-            margin-top: -1px;
-            font-family: "Noto Serif Bengali-Regular", Helvetica;
-            font-weight: 400;
-            letter-spacing: 0;
-        }
-
-        .course .caret-down-wrapper {
-            display: flex;
-            width: 32px;
-            height: 32px;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 4px;
-            position: absolute;
-            top: 17px;
-            left: 1074px;
-            background-color: #d9d9d9;
-            border-radius: 32px;
-            cursor: pointer;
-        }
-
-        .course .caret-down {
-            position: relative;
-            width: 20px;
-            height: 20px;
-            aspect-ratio: 1;
-        }
-
-        .course .vector-6 {
-            position: absolute;
-            width: 8px;
-            height: 14px;
-            top: 4px;
-            left: 6px;
-        }
-
-        .course .frame-11 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 41px;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
-        }
-
-        .course .frame-12 {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
-        }
-
-        .course .crouse-card {
-            position: relative;
-            width: 342px;
-            height: 432px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid;
-            border-color: #e8e8e8;
-        }
-
-        .course .frame-13 {
-            position: absolute;
-            width: 342px;
-            height: 186px;
-            top: 0;
-            left: 0;
-            background: linear-gradient(75deg,
-                    rgba(37, 2, 16, 1) 0%,
-                    rgba(248, 79, 81, 1) 52%,
-                    rgba(250, 111, 33, 1) 100%);
-        }
-
-        .course .faruk-kaymak {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            top: -1315px;
-            left: 4px;
-            object-fit: cover;
-        }
-
-        .course .overlap-group-2 {
-            position: absolute;
-            width: 342px;
-            height: 186px;
-            top: 0;
-            left: 0;
-            background-image: url(./../img/course-bg-3.png);
-            background-size: cover;
-            background-position: 50% 50%;
-        }
-
-        .course .image {
-            position: absolute;
-            width: 189px;
-            height: 186px;
-            top: 0;
-            left: 153px;
-            mix-blend-mode: luminosity;
-            aspect-ratio: 1;
-            object-fit: cover;
-        }
-
-        .course .frame-14 {
-            display: flex;
-            flex-direction: column;
-            width: 172px;
-            align-items: flex-start;
-            position: absolute;
-            top: 34px;
-            left: 31px;
-        }
-
-        .course .text-wrapper-7 {
-            align-self: stretch;
-            margin-top: -1px;
-            font-family: var(--h-3-font-family);
-            font-weight: var(--h-3-font-weight);
-            color: var(--white-100);
-            font-size: var(--h-3-font-size);
-            line-height: var(--h-3-line-height);
-            position: relative;
-            letter-spacing: var(--h-3-letter-spacing);
-            font-style: var(--h-3-font-style);
-        }
-
-        .course .text-wrapper-8 {
-            align-self: stretch;
-            margin-top: -6px;
-            font-family: var(--h-3-font-family);
-            font-weight: var(--h-3-font-weight);
-            color: var(--white-100);
-            font-size: var(--h-3-font-size);
-            line-height: var(--h-3-line-height);
-            position: relative;
-            letter-spacing: var(--h-3-letter-spacing);
-            font-style: var(--h-3-font-style);
-        }
-
-        .course .text-wrapper-9 {
-            align-self: stretch;
-            margin-top: -6px;
-            font-family: var(--h-4-font-family);
-            font-weight: var(--h-4-font-weight);
-            color: var(--white-100);
-            font-size: var(--h-4-font-size);
-            line-height: var(--h-4-line-height);
-            position: relative;
-            letter-spacing: var(--h-4-letter-spacing);
-            font-style: var(--h-4-font-style);
-        }
-
-        .course .frame-15 {
-            display: flex;
-            flex-direction: column;
-            width: 310px;
-            align-items: flex-start;
-            gap: 16px;
-            position: absolute;
-            top: 202px;
-            left: 16px;
-        }
-
-        .course .frame-16 {
-            display: flex;
-            justify-content: space-between;
-            padding: 8px 12px;
-            align-self: stretch;
-            width: 100%;
-            background-color: #ffffff;
-            border-radius: 23px;
-            box-shadow: 0px 1px 5px #00000029;
-            align-items: center;
-            position: relative;
-            flex: 0 0 auto;
-        }
-
-        .course .img-wrapper {
-            position: relative;
-            width: 14px;
-            height: 14px;
-            aspect-ratio: 1;
-        }
-
-        .course .vector-7 {
-            position: absolute;
-            width: 14px;
-            height: 12px;
-            top: 1px;
-            left: 0;
-        }
-
-        .course .text-wrapper-10 {
-            width: fit-content;
-            margin-top: -1px;
-            font-family: var(--paragraph-text-font-family);
-            font-weight: var(--paragraph-text-font-weight);
-            color: var(--blackheading);
-            font-size: var(--paragraph-text-font-size);
-            line-height: var(--paragraph-text-line-height);
-            white-space: nowrap;
-            position: relative;
-            letter-spacing: var(--paragraph-text-letter-spacing);
-            font-style: var(--paragraph-text-font-style);
-        }
-
-        .course .vector-8 {
-            position: absolute;
-            width: 11px;
-            height: 11px;
-            top: 1px;
-            left: 1px;
-        }
-
-        .course .frame-17 {
-            gap: 12px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
-        }
-
-        .course .frame-18 {
-            gap: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
-        }
-
-        .course .p {
-            align-self: stretch;
-            margin-top: -1px;
-            font-family: var(--h6-semibold-font-family);
-            font-weight: var(--h6-semibold-font-weight);
-            color: var(--blackheading);
-            font-size: var(--h6-semibold-font-size);
-            line-height: var(--h6-semibold-line-height);
-            position: relative;
-            letter-spacing: var(--h6-semibold-letter-spacing);
-            font-style: var(--h6-semibold-font-style);
-        }
-
-        .course .text-wrapper-11 {
-            align-self: stretch;
-            font-family: var(--paragraph-text-font-family);
-            font-weight: var(--paragraph-text-font-weight);
-            color: var(--blacksubtext);
-            font-size: var(--paragraph-text-font-size);
-            line-height: var(--paragraph-text-line-height);
-            position: relative;
-            letter-spacing: var(--paragraph-text-letter-spacing);
-            font-style: var(--paragraph-text-font-style);
-        }
-
-        .course .frame-19 {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
-        }
-
-        .course .text-wrapper-12 {
-            width: fit-content;
-            margin-top: -1px;
-            font-family: var(--h-4-font-family);
-            font-weight: var(--h-4-font-weight);
-            color: var(--blackheading);
-            font-size: var(--h-4-font-size);
-            line-height: var(--h-4-line-height);
-            white-space: nowrap;
-            position: relative;
-            letter-spacing: var(--h-4-letter-spacing);
-            font-style: var(--h-4-font-style);
-        }
-
-        .course .button-2 {
-            all: unset;
-            box-sizing: border-box;
-            height: 40px;
-            padding: 10px 16px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            position: relative;
-            flex: 0 0 auto;
-            background-color: var(--white-100);
-            border-radius: 50px;
-            border: none;
-        }
-
-        .course .button-2::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            padding: 1px;
-            border-radius: 50px;
-            background: linear-gradient(103deg,
-                    rgba(41, 160, 182, 1) 0%,
-                    rgba(176, 195, 67, 1) 100%);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .course .text-wrapper-13 {
-            margin-top: -3px;
-            margin-bottom: -1px;
-            position: relative;
-            width: fit-content;
-            font-family: var(--body-text-font-family);
-            font-weight: var(--body-text-font-weight);
-            color: var(--blackheading);
-            font-size: var(--body-text-font-size);
-            letter-spacing: var(--body-text-letter-spacing);
-            line-height: var(--body-text-line-height);
-            white-space: nowrap;
-            font-style: var(--body-text-font-style);
-        }
-
-        .course .caret-down-2 {
-            position: relative;
-            width: 16px;
-            height: 16px;
-            aspect-ratio: 1;
-        }
-
-        .course .vector-9 {
-            position: absolute;
-            width: 6px;
-            height: 11px;
-            top: 3px;
-            left: 5px;
-        }
-
-        .course .frame-20 {
-            overflow: hidden;
-            background: linear-gradient(77deg,
-                    rgba(37, 2, 16, 1) 0%,
-                    rgba(41, 103, 74, 1) 52%,
-                    rgba(46, 175, 204, 1) 100%);
-            position: absolute;
-            width: 342px;
-            height: 186px;
-            top: 0;
-            left: 0;
-        }
-
-        .course .faruk-kaymak-2 {
-            top: -1315px;
-            left: -378px;
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            object-fit: cover;
-        }
-
-        .course .overlap-group-3 {
-            position: absolute;
-            width: 342px;
-            height: 186px;
-            top: 0;
-            left: 0;
-            background-image: url(./../img/course-bg-3.png);
-            background-size: cover;
-            background-position: 50% 50%;
-        }
-
-        .course .text-wrapper-14 {
-            align-self: stretch;
-            margin-top: -8px;
-            font-family: var(--h-3-font-family);
-            font-weight: var(--h-3-font-weight);
-            color: var(--white-100);
-            font-size: var(--h-3-font-size);
-            line-height: var(--h-3-line-height);
-            position: relative;
-            letter-spacing: var(--h-3-letter-spacing);
-            font-style: var(--h-3-font-style);
-        }
-
-        .course .vector-10 {
-            position: absolute;
-            width: 13px;
-            height: 8px;
-            top: 3px;
-            left: 1px;
-        }
-
-        .course .text-wrapper-15 {
-            width: fit-content;
-            margin-top: -1px;
-            font-family: "Noto Serif Bengali-Regular", Helvetica;
-            font-weight: 400;
-            color: #1e7e43;
-            font-size: 28px;
-            line-height: normal;
-            position: relative;
-            letter-spacing: 0;
-        }
-
-        .course .frame-21 {
-            overflow: hidden;
-            background: linear-gradient(77deg,
-                    rgba(37, 2, 16, 1) 0%,
-                    rgba(103, 103, 41, 1) 52%,
-                    rgba(204, 172, 46, 1) 100%);
-            position: absolute;
-            width: 342px;
-            height: 186px;
-            top: 0;
-            left: 0;
-        }
-
-        .course .faruk-kaymak-3 {
-            top: -1315px;
-            left: -760px;
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            object-fit: cover;
-        }
-
-        .course .overlap-group-4 {
-            position: absolute;
-            width: 342px;
-            height: 186px;
-            top: 0;
-            left: 0;
-            background-image: url(./../img/course-bg-3.png);
-            background-size: cover;
-            background-position: 50% 50%;
-        }
-
-        .course .frame-22 {
-            display: flex;
-            flex-direction: column;
-            width: 310px;
-            align-items: flex-start;
-            gap: 16px;
-            position: absolute;
-            top: 201px;
-            left: 16px;
-        }
-
-        .course .frame-23 {
-            display: flex;
-            flex-direction: column;
-            height: 108px;
-            align-items: flex-start;
-            gap: 8px;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-        }
-
-        .course .frame-24 {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
-        }
-
-        .course .frame-25 {
-            display: inline-flex;
-            align-items: center;
-            gap: 20px;
-            position: relative;
-            flex: 0 0 auto;
-        }
-
-        .course .text-wrapper-16 {
-            width: fit-content;
-            font-family: var(--h-6-font-family);
-            font-weight: var(--h-6-font-weight);
-            color: var(--blackheading);
-            font-size: var(--h-6-font-size);
-            line-height: var(--h-6-line-height);
-            text-decoration: line-through;
-            white-space: nowrap;
-            position: relative;
-            letter-spacing: var(--h-6-letter-spacing);
-            font-style: var(--h-6-font-style);
-        }
-
-        .course .frame-26 {
-            background: linear-gradient(42deg,
-                    rgba(37, 2, 16, 1) 0%,
-                    rgba(34, 36, 119, 1) 49%,
-                    rgba(63, 118, 235, 1) 100%);
-            position: absolute;
-            width: 342px;
-            height: 186px;
-            top: 0;
-            left: 0;
-        }
-
-        .course .faruk-kaymak-4 {
-            top: -1788px;
-            left: 4px;
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            object-fit: cover;
-        }
-
-        .course .overlap-group-5 {
-            position: absolute;
-            width: 342px;
-            height: 186px;
-            top: 0;
-            left: 0;
-            background-image: url(./../img/course-bg-3.png);
-            background-size: cover;
-            background-position: 50% 50%;
-        }
-
-        .course .frame-27 {
-            overflow: hidden;
-            background: linear-gradient(65deg,
-                    rgba(37, 2, 16, 1) 0%,
-                    rgba(118, 85, 53, 1) 52%,
-                    rgba(168, 113, 65, 1) 100%);
-            position: absolute;
-            width: 342px;
-            height: 186px;
-            top: 0;
-            left: 0;
-        }
-
-        .course .faruk-kaymak-5 {
-            top: -1788px;
-            left: -378px;
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            object-fit: cover;
-        }
-
-        .course .overlap-group-6 {
-            position: absolute;
-            width: 342px;
-            height: 186px;
-            top: 0;
-            left: 0;
-            background-image: url(./../img/course-bg-3.png);
-            background-size: cover;
-            background-position: 50% 50%;
-        }
-
-        .course .frame-28 {
-            overflow: hidden;
-            background: linear-gradient(41deg,
-                    rgba(10, 11, 42, 1) 0%,
-                    rgba(37, 79, 141, 1) 55%,
-                    rgba(27, 240, 255, 1) 100%);
-            position: absolute;
-            width: 342px;
-            height: 186px;
-            top: 0;
-            left: 0;
-        }
-
-        .course .faruk-kaymak-6 {
-            top: -1788px;
-            left: -760px;
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            object-fit: cover;
-        }
-
-        .course .overlap-group-7 {
-            position: absolute;
-            width: 342px;
-            height: 186px;
-            top: 0;
-            left: 0;
-            background-image: url(./../img/course-bg-3.png);
-            background-size: cover;
-            background-position: 50% 50%;
-        }
-
-        .course .frame-29 {
-            display: inline-flex;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 16px;
-            position: relative;
-            flex: 0 0 auto;
-        }
-
-        .course .text-wrapper-17 {
-            position: relative;
-            width: fit-content;
-            margin-top: -1px;
-            background: linear-gradient(90deg,
-                    rgba(223, 24, 106, 1) 0%,
-                    rgba(250, 111, 33, 1) 100%);
-            -webkit-background-clip: text !important;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-fill-color: transparent;
-            font-family: var(--body-text-font-family);
-            font-weight: var(--body-text-font-weight);
-            color: transparent;
-            font-size: var(--body-text-font-size);
-            letter-spacing: var(--body-text-letter-spacing);
-            line-height: var(--body-text-line-height);
-            white-space: nowrap;
-            font-style: var(--body-text-font-style);
-        }
-
-        .course .text-wrapper-18 {
-            position: relative;
-            width: fit-content;
-            margin-top: -1px;
-            font-family: var(--body-text-font-family);
-            font-weight: var(--body-text-font-weight);
-            color: var(--blacksubtext);
-            font-size: var(--body-text-font-size);
-            letter-spacing: var(--body-text-letter-spacing);
-            line-height: var(--body-text-line-height);
-            white-space: nowrap;
-            font-style: var(--body-text-font-style);
-        }
-    </style>
+    <link rel="stylesheet" href="../src/popular-courses.css" />
 </head>
 
 <body>
 
-    <!-- Popular Courses -->
-    <section class="container">
-        <div class="course">
-            <div class="frame">
-                <div class="div">
-                    <div class="frame-2">
-                        <div class="button-wrapper">
-                            <h2 class="popular-courses"><span>জনপ্রিয়</span> কোর্স সমূহ</h2>
-                            <button class="button">
-                                <div class="text-wrapper">সব কোর্স দেখুন</div>
-                            </button>
-                        </div>
-                        <div class="group">
-                            <div class="overlap-group">
-                                <div class="frame-3">
-                                    <div class="frame-4">
-                                        <div class="vector-wrapper"><img class="vector" src="/heart.svg" /></div>
-                                        <div class="frame-5">
-                                            <div class="text-wrapper-2">জনপ্রিয় কোর্স সমূহ</div>
-                                            <div class="frame-6">
-                                                <div class="text-wrapper-3">১১ টি কোর্স</div>
-                                                <div class="ellipse"></div>
-                                                <div class="text-wrapper-3">৫২ টি ক্লাস</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="frame-7">
-                                        <div class="vector-wrapper"><img class="img"
-                                                src="/game-icons_arabic-door.svg" /></div>
-                                        <div class="frame-5">
-                                            <div class="text-wrapper-4">আরবি ভাষা</div>
-                                            <div class="frame-8">
-                                                <div class="text-wrapper-3">১২ টি কোর্স</div>
-                                                <div class="ellipse"></div>
-                                                <div class="text-wrapper-3">৫২ টি ক্লাস</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="frame-7">
-                                        <div class="vector-wrapper"><img class="vector-2" src="/BookBookmark.svg" />
-                                        </div>
-                                        <div class="frame-5">
-                                            <div class="text-wrapper-4">কুরআন শিক্ষা</div>
-                                            <div class="frame-8">
-                                                <div class="text-wrapper-3">৯ টি কোর্স</div>
-                                                <div class="ellipse"></div>
-                                                <div class="text-wrapper-3">৫২ টি ক্লাস</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="frame-7">
-                                        <div class="vector-wrapper"><img class="vector-3" src="/MoonStars.svg" />
-                                        </div>
-                                        <div class="frame-5">
-                                            <div class="text-wrapper-4">সীরাত</div>
-                                            <div class="frame-8">
-                                                <div class="text-wrapper-3">২ টি কোর্স</div>
-                                                <div class="ellipse"></div>
-                                                <div class="text-wrapper-3">৫ টি ক্লাস</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="frame-7">
-                                        <div class="vector-wrapper"><img class="vector-4" src="/VideoCamera.svg" />
-                                        </div>
-                                        <div class="frame-5">
-                                            <div class="text-wrapper-4">প্রি-রেকর্ডেড কোর্স</div>
-                                            <div class="frame-8">
-                                                <div class="text-wrapper-3">৫ টি কোর্স</div>
-                                                <div class="ellipse"></div>
-                                                <div class="text-wrapper-3">২৫ টি ক্লাস</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="caret-down-wrapper">
-                                    <div class="caret-down"><img class="vector-6" src="/right-arrow.svg" /></div>
-                                </div>
-                            </div>
-                        </div>
+    <main class="popular-courses-section">
+        <div class="popular-courses-section__container">
+            <div class="popular-courses-section__header">
+                <div class="popular-courses-section__top">
+                    <div class="popular-courses-section__title-wrapper">
+                        <h2 class="popular-courses-section__title">
+                            <span class="popular-courses-section__title--highlight">জনপ্রিয়</span> কোর্স সমূহ
+                        </h2>
+                        <button class="popular-courses-section__view-all-btn">
+                            <span class="popular-courses-section__view-all-text">সব কোর্স দেখুন</span>
+                        </button>
                     </div>
-                    <div class="frame-11">
-                        <div class="frame-12">
-                            <div class="crouse-card">
-                                <div class="frame-13">
-                                    <div class="overlap-group-2">
-                                        <img class="image" src="../img/course-1.png" />
-                                        <div class="frame-14">
-                                            <div class="text-wrapper-7">প্রাথমিক</div>
-                                            <div class="text-wrapper-8">আরবীভাষা</div>
-                                            <div class="text-wrapper-9">শিক্ষা</div>
-                                        </div>
+                    <nav class="category-filter" aria-label="Course categories">
+                        <ul class="category-filter__list">
+                            <li class="category-filter__item category-filter__item--active">
+                                <div class="category-filter__icon">
+                                    <img src="../public/heart.svg" alt="Popular courses icon" />
+                                </div>
+                                <div class="category-filter__content">
+                                    <h3 class="category-filter__title">জনপ্রিয় কোর্স সমূহ</h3>
+                                    <div class="category-filter__stats">
+                                        <span class="category-filter__stat">১১ টি কোর্স</span>
+                                        <div class="category-filter__dot"></div>
+                                        <span class="category-filter__stat">৫২ টি ক্লাস</span>
                                     </div>
                                 </div>
-                                <div class="frame-15">
-                                    <div class="frame-16">
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-7" src="/lesson.svg" /></div>
-                                            <div class="text-wrapper-10">২৫ টি লেসন</div>
-                                        </div>
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-8" src="/student-cap.svg" />
-                                            </div>
-                                            <div class="text-wrapper-10">৫২ স্টুডেন্ট</div>
-                                        </div>
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-8" src="/live.svg" />
-                                            </div>
-                                            <div class="text-wrapper-10">লাইভ ক্লাস</div>
-                                        </div>
-                                    </div>
-                                    <div class="frame-17">
-                                        <div class="frame-18">
-                                            <p class="p">প্রাথমিক আরবীভাষা শিক্ষার মাধ্যমে শুরু করুন আপনার যাত্রা</p>
-                                            <p class="text-wrapper-11">
-                                                এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
-                                                আরবি ভাষা জানতে পারবেন
-                                            </p>
-                                        </div>
-                                        <div class="frame-19">
-                                            <div class="text-wrapper-12">৮৫০৳</div>
-                                            <button class="button-2">
-                                                <div class="text-wrapper-13">বিস্তারিত</div>
-                                                <div class="caret-down-2"><img class="vector-9"
-                                                        src="/right-arrow.svg" /></div>
-                                            </button>
-                                        </div>
+                            </li>
+                            <li class="category-filter__item">
+                                <div class="category-filter__icon">
+                                    <img src="../public/game-icons_arabic-door.svg" alt="Arabic language icon" />
+                                </div>
+                                <div class="category-filter__content">
+                                    <h3 class="category-filter__title">আরবি ভাষা</h3>
+                                    <div class="category-filter__stats">
+                                        <span class="category-filter__stat">১২ টি কোর্স</span>
+                                        <div class="category-filter__dot"></div>
+                                        <span class="category-filter__stat">৫২ টি ক্লাস</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="crouse-card">
-                                <div class="frame-20">
-                                    <div class="overlap-group-3">
-                                        <img class="image" src="../img/course-2.png" />
-                                        <div class="frame-14">
-                                            <div class="text-wrapper-7">কুরআন</div>
-                                            <div class="text-wrapper-14">ও সালাত</div>
-                                            <div class="text-wrapper-14">অনুধাবন</div>
-                                        </div>
+                            </li>
+                            <li class="category-filter__item">
+                                <div class="category-filter__icon">
+                                    <img src="../public/BookBookmark.svg" alt="Quran education icon" />
+                                </div>
+                                <div class="category-filter__content">
+                                    <h3 class="category-filter__title">কুরআন শিক্ষা</h3>
+                                    <div class="category-filter__stats">
+                                        <span class="category-filter__stat">৯ টি কোর্স</span>
+                                        <div class="category-filter__dot"></div>
+                                        <span class="category-filter__stat">৫২ টি ক্লাস</span>
                                     </div>
                                 </div>
-                                <div class="frame-15">
-                                    <div class="frame-16">
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-7" src="/lesson.svg" />
-                                            </div>
-                                            <div class="text-wrapper-10">২৫ টি লেসন</div>
-                                        </div>
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-8" src="/student-cap.svg" />
-                                            </div>
-                                            <div class="text-wrapper-10">৫২ স্টুডেন্ট</div>
-                                        </div>
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-10" src="/live.svg" />
-                                            </div>
-                                            <div class="text-wrapper-10">রেকর্ডেড ক্লাস</div>
-                                        </div>
-                                    </div>
-                                    <div class="frame-17">
-                                        <div class="frame-18">
-                                            <p class="p">কুরআন ও সালাত অনুধাবন কোর্স করে হয়ে উঠুন আদর্শ মুসলিম</p>
-                                            <p class="text-wrapper-11">
-                                                এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
-                                                আরবি ভাষা জানতে পারবেন
-                                            </p>
-                                        </div>
-                                        <div class="frame-19">
-                                            <div class="text-wrapper-15">ফ্রী কোর্স</div>
-                                            <button class="button-2">
-                                                <div class="text-wrapper-13">বিস্তারিত</div>
-                                                <div class="caret-down-2"><img class="vector-9"
-                                                        src="/right-arrow.svg" /></div>
-                                            </button>
-                                        </div>
+                            </li>
+                            <li class="category-filter__item">
+                                <div class="category-filter__icon">
+                                    <img src="../public/MoonStars.svg" alt="Sirat icon" />
+                                </div>
+                                <div class="category-filter__content">
+                                    <h3 class="category-filter__title">সীরাত</h3>
+                                    <div class="category-filter__stats">
+                                        <span class="category-filter__stat">২ টি কোর্স</span>
+                                        <div class="category-filter__dot"></div>
+                                        <span class="category-filter__stat">৫ টি ক্লাস</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="crouse-card">
-                                <div class="frame-21">
-                                    <div class="overlap-group-4">
-                                        <img class="image" src="../img/course-3.png" />
-                                        <div class="frame-14">
-                                            <div class="text-wrapper-7">আরবী</div>
-                                            <div class="text-wrapper-14">হাতের</div>
-                                            <div class="text-wrapper-14">লেখা</div>
-                                        </div>
+                            </li>
+                            <li class="category-filter__item">
+                                <div class="category-filter__icon">
+                                    <img src="../public/VideoCamera.svg" alt="Pre-recorded courses icon" />
+                                </div>
+                                <div class="category-filter__content">
+                                    <h3 class="category-filter__title">প্রি-রেকর্ডেড কোর্স</h3>
+                                    <div class="category-filter__stats">
+                                        <span class="category-filter__stat">৫ টি কোর্স</span>
+                                        <div class="category-filter__dot"></div>
+                                        <span class="category-filter__stat">২৫ টি ক্লাস</span>
                                     </div>
                                 </div>
-                                <div class="frame-22">
-                                    <div class="frame-16">
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-7" src="/lesson.svg" />
-                                            </div>
-                                            <div class="text-wrapper-10">২৫ টি লেসন</div>
-                                        </div>
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-8" src="/student-cap.svg" />
-                                            </div>
-                                            <div class="text-wrapper-10">৫২ স্টুডেন্ট</div>
-                                        </div>
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-8" src="/live.svg" />
-                                            </div>
-                                            <div class="text-wrapper-10">লাইভ ক্লাস</div>
-                                        </div>
-                                    </div>
-                                    <div class="frame-17">
-                                        <div class="frame-23">
-                                            <p class="p">প্রাথমিক আরবীভাষা শিক্ষার মাধ্যমে শুরু করুন আপনার যাত্রা</p>
-                                            <p class="text-wrapper-11">
-                                                এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
-                                                আরবি ভাষা জানতে পারবেন
-                                            </p>
-                                        </div>
-                                        <div class="frame-24">
-                                            <div class="frame-25">
-                                                <div class="text-wrapper-12">৪৫০৳</div>
-                                                <div class="text-wrapper-16">৮৫০৳</div>
-                                            </div>
-                                            <button class="button-2">
-                                                <div class="text-wrapper-13">বিস্তারিত</div>
-                                                <div class="caret-down-2"><img class="vector-9"
-                                                        src="/right-arrow.svg" /></div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="frame-12">
-                            <div class="crouse-card">
-                                <div class="frame-26">
-                                    <div class="overlap-group-5">
-                                        <img class="image" src="../img/course-4.png" />
-                                        <div class="frame-14">
-                                            <div class="text-wrapper-7">প্রাথমিক</div>
-                                            <div class="text-wrapper-14">দ্বীন শিক্ষা</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="frame-15">
-                                    <div class="frame-16">
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-7" src="/lesson.svg" />
-                                            </div>
-                                            <div class="text-wrapper-10">২৫ টি লেসন</div>
-                                        </div>
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-8" src="/student-cap.svg" />
-                                            </div>
-                                            <div class="text-wrapper-10">৫২ স্টুডেন্ট</div>
-                                        </div>
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-10" src="/live.svg" />
-                                            </div>
-                                            <div class="text-wrapper-10">রেকর্ডেড ক্লাস</div>
-                                        </div>
-                                    </div>
-                                    <div class="frame-17">
-                                        <div class="frame-18">
-                                            <p class="p">প্রাথমিক দ্বীন শিক্ষা কোর্স করে শুরু করুন আপনার ইসলাম যত্রা</p>
-                                            <p class="text-wrapper-11">
-                                                এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
-                                                আরবি ভাষা জানতে পারবেন
-                                            </p>
-                                        </div>
-                                        <div class="frame-19">
-                                            <div class="text-wrapper-15">ফ্রী কোর্স</div>
-                                            <button class="button-2">
-                                                <div class="text-wrapper-13">বিস্তারিত</div>
-                                                <div class="caret-down-2"><img class="vector-9"
-                                                        src="/right-arrow.svg" /></div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="crouse-card">
-                                <div class="frame-27">
-                                    <div class="overlap-group-6">
-                                        <img class="image" src="../img/course-5.png" />
-                                        <div class="frame-14">
-                                            <div class="text-wrapper-7">ব্যাসিক</div>
-                                            <div class="text-wrapper-14">আকীদা</div>
-                                            <div class="text-wrapper-14">শিক্ষা</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="frame-15">
-                                    <div class="frame-16">
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-7" src="/lesson.svg" />
-                                            </div>
-                                            <div class="text-wrapper-10">২৫ টি লেসন</div>
-                                        </div>
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-8" src="/student-cap.svg" />
-                                            </div>
-                                            <div class="text-wrapper-10">৫২ স্টুডেন্ট</div>
-                                        </div>
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-10" src="/live.svg" />
-                                            </div>
-                                            <div class="text-wrapper-10">রেকর্ডেড ক্লাস</div>
-                                        </div>
-                                    </div>
-                                    <div class="frame-17">
-                                        <div class="frame-18">
-                                            <p class="p">ব্যাসিক আকীদা কোর্স করে সমৃদ্ধ করুন নিজের জ্ঞানের পরিধি</p>
-                                            <p class="text-wrapper-11">
-                                                এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
-                                                আরবি ভাষা জানতে পারবেন
-                                            </p>
-                                        </div>
-                                        <div class="frame-19">
-                                            <div class="text-wrapper-12">৫০০৳</div>
-                                            <button class="button-2">
-                                                <div class="text-wrapper-13">বিস্তারিত</div>
-                                                <div class="caret-down-2"><img class="vector-9"
-                                                        src="/right-arrow.svg" /></div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="crouse-card">
-                                <div class="frame-28">
-                                    <div class="overlap-group-7">
-                                        <img class="image" src="../img/course-6.png" />
-                                        <div class="frame-14">
-                                            <div class="text-wrapper-7">৩০ নং পারা</div>
-                                            <div class="text-wrapper-14">হিফজ</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="frame-15">
-                                    <div class="frame-16">
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-7" src="/lesson.svg" />
-                                            </div>
-                                            <div class="text-wrapper-10">২৫ টি লেসন</div>
-                                        </div>
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-8" src="/student-cap.svg" />
-                                            </div>
-                                            <div class="text-wrapper-10">৫২ স্টুডেন্ট</div>
-                                        </div>
-                                        <div class="frame-8">
-                                            <div class="img-wrapper"><img class="vector-10" src="/live.svg" />
-                                            </div>
-                                            <div class="text-wrapper-10">রেকর্ডেড ক্লাস</div>
-                                        </div>
-                                    </div>
-                                    <div class="frame-17">
-                                        <div class="frame-18">
-                                            <p class="p">৩০ নং পারা হিফজ কোর্স করার মাধ্যমে পবিত্র কোরআন আয়ত্ব করুন</p>
-                                            <p class="text-wrapper-11">
-                                                এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
-                                                আরবি ভাষা জানতে পারবেন
-                                            </p>
-                                        </div>
-                                        <div class="frame-19">
-                                            <div class="text-wrapper-12">৮৫০৳</div>
-                                            <button class="button-2">
-                                                <div class="text-wrapper-13">বিস্তারিত</div>
-                                                <div class="caret-down-2"><img class="vector-9"
-                                                        src="/right-arrow.svg" /></div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="frame-29">
-                            <div class="text-wrapper-17">১</div>
-                            <div class="text-wrapper-18">২</div>
-                            <div class="text-wrapper-18">৩</div>
-                            <div class="text-wrapper-18">.</div>
-                            <div class="text-wrapper-18">.</div>
-                            <div class="text-wrapper-18">.</div>
-                            <div class="text-wrapper-18">৫</div>
-                        </div>
-                    </div>
+                            </li>
+                        </ul>
+                        <button class="category-filter__nav-btn" aria-label="Navigate categories">
+                            <img class="category-filter__nav-icon" src="../public/right-arrow.svg" alt="Navigation arrow" />
+                        </button>
+                    </nav>
                 </div>
             </div>
+            <section class="course-grid">
+                <div class="course-grid__row">
+                    <article class="course-card">
+                        <header class="course-card__header">
+                            <div class="course-card__background course-card__background--course1">
+                                <div class="course-card__overlay"></div>
+                                <img class="course-card__image" src="../img/course-1.png" alt="প্রাথমিক আরবীভাষা শিক্ষা কোর্স" />
+                                <div class="course-card__title-wrapper">
+                                    <h3 class="course-card__title-line">প্রাথমিক</h3>
+                                    <h3 class="course-card__title-line">আরবীভাষা</h3>
+                                    <h3 class="course-card__title-line course-card__title-line--small">শিক্ষা</h3>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="course-card__content">
+                            <div class="course-card__stats">
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/lesson.svg" alt="Lessons" />
+                                    <span class="course-card__stat-text">২৫ টি লেসন</span>
+                                </div>
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/student-cap.svg" alt="Students" />
+                                    <span class="course-card__stat-text">৫২ স্টুডেন্ট</span>
+                                </div>
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/live.svg" alt="Live class" />
+                                    <span class="course-card__stat-text">লাইভ ক্লাস</span>
+                                </div>
+                            </div>
+                            <div class="course-card__info">
+                                <div class="course-card__text-content">
+                                    <h4 class="course-card__description">প্রাথমিক আরবীভাষা শিক্ষার মাধ্যমে শুরু করুন আপনার যাত্রা</h4>
+                                    <p class="course-card__details">
+                                        এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
+                                        আরবি ভাষা জানতে পারবেন
+                                    </p>
+                                </div>
+                                <footer class="course-card__footer">
+                                    <span class="course-card__price">৮৫০৳</span>
+                                    <button class="course-card__details-btn">
+                                        <span class="course-card__details-text">বিস্তারিত</span>
+                                        <img class="course-card__arrow-icon" src="../public/right-arrow.svg" alt="Arrow" />
+                                    </button>
+                                </footer>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="course-card">
+                        <header class="course-card__header">
+                            <div class="course-card__background course-card__background--course2">
+                                <div class="course-card__overlay"></div>
+                                <img class="course-card__image" src="../img/course-2.png" alt="কুরআন ও সালাত অনুধাবন কোর্স" />
+                                <div class="course-card__title-wrapper">
+                                    <h3 class="course-card__title-line">কুরআন</h3>
+                                    <h3 class="course-card__title-line">ও সালাত</h3>
+                                    <h3 class="course-card__title-line">অনুধাবন</h3>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="course-card__content">
+                            <div class="course-card__stats">
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/lesson.svg" alt="Lessons" />
+                                    <span class="course-card__stat-text">২৫ টি লেসন</span>
+                                </div>
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/student-cap.svg" alt="Students" />
+                                    <span class="course-card__stat-text">৫২ স্টুডেন্ট</span>
+                                </div>
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/live.svg" alt="Recorded class" />
+                                    <span class="course-card__stat-text">রেকর্ডেড ক্লাস</span>
+                                </div>
+                            </div>
+                            <div class="course-card__info">
+                                <div class="course-card__text-content">
+                                    <h4 class="course-card__description">কুরআন ও সালাত অনুধাবন কোর্স করে হয়ে উঠুন আদর্শ মুসলিম</h4>
+                                    <p class="course-card__details">
+                                        এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
+                                        আরবি ভাষা জানতে পারবেন
+                                    </p>
+                                </div>
+                                <footer class="course-card__footer">
+                                    <span class="course-card__price course-card__price--free">ফ্রী কোর্স</span>
+                                    <button class="course-card__details-btn">
+                                        <span class="course-card__details-text">বিস্তারিত</span>
+                                        <img class="course-card__arrow-icon" src="../public/right-arrow.svg" alt="Arrow" />
+                                    </button>
+                                </footer>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="course-card">
+                        <header class="course-card__header">
+                            <div class="course-card__background course-card__background--course3">
+                                <div class="course-card__overlay"></div>
+                                <img class="course-card__image" src="../img/course-3.png" alt="আরবী হাতের লেখা কোর্স" />
+                                <div class="course-card__title-wrapper">
+                                    <h3 class="course-card__title-line">আরবী</h3>
+                                    <h3 class="course-card__title-line">হাতের</h3>
+                                    <h3 class="course-card__title-line">লেখা</h3>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="course-card__content">
+                            <div class="course-card__stats">
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/lesson.svg" alt="Lessons" />
+                                    <span class="course-card__stat-text">২৫ টি লেসন</span>
+                                </div>
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/student-cap.svg" alt="Students" />
+                                    <span class="course-card__stat-text">৫২ স্টুডেন্ট</span>
+                                </div>
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/live.svg" alt="Live class" />
+                                    <span class="course-card__stat-text">লাইভ ক্লাস</span>
+                                </div>
+                            </div>
+                            <div class="course-card__info">
+                                <div class="course-card__text-content">
+                                    <h4 class="course-card__description">প্রাথমিক আরবীভাষা শিক্ষার মাধ্যমে শুরু করুন আপনার যাত্রা</h4>
+                                    <p class="course-card__details">
+                                        এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
+                                        আরবি ভাষা জানতে পারবেন
+                                    </p>
+                                </div>
+                                <footer class="course-card__footer">
+                                    <div class="course-card__price-wrapper">
+                                        <span class="course-card__price">৪৫০৳</span>
+                                        <span class="course-card__price course-card__price--original">৮৫০৳</span>
+                                    </div>
+                                    <button class="course-card__details-btn">
+                                        <span class="course-card__details-text">বিস্তারিত</span>
+                                        <img class="course-card__arrow-icon" src="../public/right-arrow.svg" alt="Arrow" />
+                                    </button>
+                                </footer>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="course-grid__row">
+                    <article class="course-card">
+                        <header class="course-card__header">
+                            <div class="course-card__background course-card__background--course4">
+                                <div class="course-card__overlay"></div>
+                                <img class="course-card__image" src="../img/course-4.png" alt="প্রাথমিক দ্বীন শিক্ষা কোর্স" />
+                                <div class="course-card__title-wrapper">
+                                    <h3 class="course-card__title-line">প্রাথমিক</h3>
+                                    <h3 class="course-card__title-line">দ্বীন শিক্ষা</h3>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="course-card__content">
+                            <div class="course-card__stats">
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/lesson.svg" alt="Lessons" />
+                                    <span class="course-card__stat-text">২৫ টি লেসন</span>
+                                </div>
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/student-cap.svg" alt="Students" />
+                                    <span class="course-card__stat-text">৫২ স্টুডেন্ট</span>
+                                </div>
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/live.svg" alt="Recorded class" />
+                                    <span class="course-card__stat-text">রেকর্ডেড ক্লাস</span>
+                                </div>
+                            </div>
+                            <div class="course-card__info">
+                                <div class="course-card__text-content">
+                                    <h4 class="course-card__description">প্রাথমিক দ্বীন শিক্ষা কোর্স করে শুরু করুন আপনার ইসলাম যত্রা</h4>
+                                    <p class="course-card__details">
+                                        এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
+                                        আরবি ভাষা জানতে পারবেন
+                                    </p>
+                                </div>
+                                <footer class="course-card__footer">
+                                    <span class="course-card__price course-card__price--free">ফ্রী কোর্স</span>
+                                    <button class="course-card__details-btn">
+                                        <span class="course-card__details-text">বিস্তারিত</span>
+                                        <img class="course-card__arrow-icon" src="../public/right-arrow.svg" alt="Arrow" />
+                                    </button>
+                                </footer>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="course-card">
+                        <header class="course-card__header">
+                            <div class="course-card__background course-card__background--course5">
+                                <div class="course-card__overlay"></div>
+                                <img class="course-card__image" src="../img/course-5.png" alt="ব্যাসিক আকীদা শিক্ষা কোর্স" />
+                                <div class="course-card__title-wrapper">
+                                    <h3 class="course-card__title-line">ব্যাসিক</h3>
+                                    <h3 class="course-card__title-line">আকীদা</h3>
+                                    <h3 class="course-card__title-line">শিক্ষা</h3>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="course-card__content">
+                            <div class="course-card__stats">
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/lesson.svg" alt="Lessons" />
+                                    <span class="course-card__stat-text">২৫ টি লেসন</span>
+                                </div>
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/student-cap.svg" alt="Students" />
+                                    <span class="course-card__stat-text">৫২ স্টুডেন্ট</span>
+                                </div>
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/live.svg" alt="Recorded class" />
+                                    <span class="course-card__stat-text">রেকর্ডেড ক্লাস</span>
+                                </div>
+                            </div>
+                            <div class="course-card__info">
+                                <div class="course-card__text-content">
+                                    <h4 class="course-card__description">ব্যাসিক আকীদা কোর্স করে সমৃদ্ধ করুন নিজের জ্ঞানের পরিধি</h4>
+                                    <p class="course-card__details">
+                                        এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
+                                        আরবি ভাষা জানতে পারবেন
+                                    </p>
+                                </div>
+                                <footer class="course-card__footer">
+                                    <span class="course-card__price">৫০০৳</span>
+                                    <button class="course-card__details-btn">
+                                        <span class="course-card__details-text">বিস্তারিত</span>
+                                        <img class="course-card__arrow-icon" src="../public/right-arrow.svg" alt="Arrow" />
+                                    </button>
+                                </footer>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="course-card">
+                        <header class="course-card__header">
+                            <div class="course-card__background course-card__background--course6">
+                                <div class="course-card__overlay"></div>
+                                <img class="course-card__image" src="../img/course-6.png" alt="৩০ নং পারা হিফজ কোর্স" />
+                                <div class="course-card__title-wrapper">
+                                    <h3 class="course-card__title-line">৩০ নং পারা</h3>
+                                    <h3 class="course-card__title-line">হিফজ</h3>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="course-card__content">
+                            <div class="course-card__stats">
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/lesson.svg" alt="Lessons" />
+                                    <span class="course-card__stat-text">২৫ টি লেসন</span>
+                                </div>
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/student-cap.svg" alt="Students" />
+                                    <span class="course-card__stat-text">৫২ স্টুডেন্ট</span>
+                                </div>
+                                <div class="course-card__stat">
+                                    <img class="course-card__stat-icon" src="../public/live.svg" alt="Recorded class" />
+                                    <span class="course-card__stat-text">রেকর্ডেড ক্লাস</span>
+                                </div>
+                            </div>
+                            <div class="course-card__info">
+                                <div class="course-card__text-content">
+                                    <h4 class="course-card__description">৩০ নং পারা হিফজ কোর্স করার মাধ্যমে পবিত্র কোরআন আয়ত্ব করুন</h4>
+                                    <p class="course-card__details">
+                                        এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
+                                        আরবি ভাষা জানতে পারবেন
+                                    </p>
+                                </div>
+                                <footer class="course-card__footer">
+                                    <span class="course-card__price">৮৫০৳</span>
+                                    <button class="course-card__details-btn">
+                                        <span class="course-card__details-text">বিস্তারিত</span>
+                                        <img class="course-card__arrow-icon" src="../public/right-arrow.svg" alt="Arrow" />
+                                    </button>
+                                </footer>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <nav class="pagination" aria-label="Course pages">
+                    <button class="pagination__item pagination__item--active">১</button>
+                    <button class="pagination__item">২</button>
+                    <button class="pagination__item">৩</button>
+                    <span class="pagination__item">.</span>
+                    <span class="pagination__item">.</span>
+                    <span class="pagination__item">.</span>
+                    <button class="pagination__item">৫</button>
+                </nav>
+            </section>
         </div>
-    </section>
+    </main>
 
 </body>
 

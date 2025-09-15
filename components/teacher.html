@@ -12,71 +12,56 @@
     <title>Nurul Quran Academy</title>
     <link rel="stylesheet" href="../src/globals.css" />
     <style>
-        .experience-teachers {
-            position: relative;
-            width: 1440px;
-            height: 693px;
+        .teachers-section {
+            max-width: 1440px;
+            margin: 0 auto;
             background-color: #fffcf8;
-        }
-
-        .experience-teachers .overlap-group {
-            height: 693px;
             background-image: url("../img/testimonial-bg.png");
             background-size: cover;
-            background-position: 50% 50%;
-        }
-
-        .experience-teachers .frame {
+            background-position: center;
+            padding: 100px 2rem 60px;
+            min-height: 693px;
             display: flex;
             flex-direction: column;
-            width: 1107px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .teachers-section__container {
+            display: flex;
+            flex-direction: column;
             align-items: center;
             gap: 40px;
-            position: relative;
-            top: 100px;
-            left: 167px;
+            max-width: 1107px;
+            width: 100%;
+            margin: 0 auto;
         }
 
-        .experience-teachers .frame-wrapper {
+        .teachers-section__content {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             gap: 90px;
-            position: relative;
-            align-self: stretch;
             width: 100%;
-            flex: 0 0 auto;
-            border: 0 !important;
         }
 
-        .experience-teachers .div {
+        .teachers-section__main {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 40px;
-            position: relative;
-            align-self: stretch;
             width: 100%;
-            flex: 0 0 auto;
         }
 
-        .experience-teachers .frame-3 .div {
-            gap: 0;
-        }
-
-        .experience-teachers .frame-2 {
-            display: inline-flex;
-            align-items: flex-start;
+        .teachers-section__header {
+            display: flex;
+            align-items: center;
             justify-content: center;
             gap: 12px;
-            position: relative;
-            flex: 0 0 auto;
+            flex-wrap: wrap;
         }
 
-        .experience-teachers .text-wrapper {
-            position: relative;
-            width: fit-content;
-            margin-top: -1px;
+        .teachers-section__title {
             font-family: var(--h-1-font-family);
             font-weight: var(--h-1-font-weight);
             color: var(--blackheading);
@@ -85,12 +70,10 @@
             letter-spacing: var(--h-1-letter-spacing);
             line-height: var(--h-1-line-height);
             font-style: var(--h-1-font-style);
+            margin: 0;
         }
 
-        .experience-teachers .text-wrapper-2 {
-            position: relative;
-            width: fit-content;
-            margin-top: -1px;
+        .teachers-section__title--gradient {
             background: linear-gradient(90deg,
                     rgba(223, 24, 106, 1) 0%,
                     rgba(250, 111, 33, 1) 100%);
@@ -100,90 +83,81 @@
             text-fill-color: transparent;
             font-family: var(--h-1-font-family);
             font-weight: var(--h-1-font-weight);
-            color: transparent;
             font-size: var(--h-1-font-size);
             text-align: center;
             letter-spacing: var(--h-1-letter-spacing);
             line-height: var(--h-1-line-height);
             font-style: var(--h-1-font-style);
+            margin: 0;
         }
 
-        .experience-teachers .frame-3 {
-            display: flex;
-            align-items: center;
+        .teachers-section__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(267px, 1fr));
             gap: 41px;
-            position: relative;
+            max-width: 900px;
+            width: 100%;
+            justify-items: center;
         }
 
-        .experience-teachers .frame-3 .div {
-            width: 267px;
+        .teacher-card {
+            width: 100%;
+            max-width: 267px;
             background-color: var(--white-100);
+            border: 1px solid #e6e6e6;
             border-radius: 12px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .experience-teachers .frame-3 .rectangle {
-            position: relative;
-            align-self: stretch;
+        .teacher-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .teacher-card__image {
             width: 100%;
             height: 214px;
+            object-fit: cover;
+            display: block;
         }
 
-        .experience-teachers .frame-3 .frame-wrapper {
-            justify-content: center;
+        .teacher-card__content {
+            display: flex;
+            flex-direction: column;
             gap: 34px;
             padding: 16px 20px;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
-            border-radius: 0px 0px 12px 12px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            position: relative;
+            flex: 1;
         }
 
-        .experience-teachers .frame-3 .div-2 {
+        .teacher-card__info {
+            display: flex;
+            flex-direction: column;
             gap: 12px;
-            align-self: stretch;
             width: 100%;
-            flex: 0 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            position: relative;
         }
 
-        .experience-teachers .frame-3 .div-3 {
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
+        .teacher-card__header {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            position: relative;
+            gap: 4px;
+            width: 100%;
         }
 
-        .experience-teachers .frame-3 .text-wrapper {
-            position: relative;
-            width: fit-content;
-            margin-top: -1px;
+        .teacher-card__name {
             font-family: var(--h-6-font-family);
             font-weight: var(--h-6-font-weight);
             color: var(--blackheading);
             font-size: var(--h-6-font-size);
             letter-spacing: var(--h-6-letter-spacing);
             line-height: var(--h-6-line-height);
-            white-space: nowrap;
             font-style: var(--h-6-font-style);
+            margin: 0;
         }
 
-        .experience-teachers .frame-3 .text-wrapper-2 {
+        .teacher-card__title {
             background: linear-gradient(103deg,
                     rgba(41, 160, 182, 1) 0%,
                     rgba(176, 195, 67, 1) 100%);
@@ -191,20 +165,16 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
             text-fill-color: transparent;
-            color: transparent;
-            position: relative;
-            align-self: stretch;
             font-family: var(--paragraph-text-font-family);
             font-weight: var(--paragraph-text-font-weight);
             font-size: var(--paragraph-text-font-size);
             letter-spacing: var(--paragraph-text-letter-spacing);
             line-height: var(--paragraph-text-line-height);
             font-style: var(--paragraph-text-font-style);
+            margin: 0;
         }
 
-        .experience-teachers .frame-3 .p {
-            position: relative;
-            align-self: stretch;
+        .teacher-card__description {
             font-family: var(--paragraph-text-font-family);
             font-weight: var(--paragraph-text-font-weight);
             color: var(--blacksubtext);
@@ -212,95 +182,36 @@
             letter-spacing: var(--paragraph-text-letter-spacing);
             line-height: var(--paragraph-text-line-height);
             font-style: var(--paragraph-text-font-style);
+            margin: 0;
         }
 
-        /* Original CSS code should be injected here */
-
-        /* Enhanced responsive design improvements */
-        @media (max-width: 768px) {
-            .experience-teachers .frame-3 {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .experience-teachers .frame-3 .div {
-                max-width: 100%;
-            }
-
-            @media (max-width: 480px) {
-                .experience-teachers .frame-3 {
-                    gap: 16px;
-                }
-
-                .experience-teachers .frame-3 .frame-wrapper {
-                    padding: 12px 16px;
-                }
-
-                /* Focus states for accessibility */
-                .experience-teachers .frame-3 .div:focus-within {
-                    outline: 2px solid #4a90e2;
-                    outline-offset: 2px;
-                }
-
-                /* Improved image accessibility */
-                .experience-teachers .frame-3 .rectangle {
-                    object-fit: cover;
-                }
-            }
-        }
-
-        .experience-teachers .arrow-frame {
-            display: inline-flex;
+        .teachers-section__navigation {
+            display: flex;
             align-items: center;
             gap: 16px;
-            position: relative;
         }
 
-        .experience-teachers .arrow-frame .component {
-            border: 1px solid;
-            border-color: var(--greyoutline);
+        .navigation-button {
+            all: unset;
+            box-sizing: border-box;
             display: flex;
             width: 51px;
             height: 51px;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 13px 7px;
-            position: relative;
             background-color: var(--white-100);
             border-radius: 25.5px;
+            border: 1px solid var(--greyoutline);
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .experience-teachers .arrow-frame .arrow-right {
-            position: relative;
-            width: 24px;
-            height: 24px;
-            aspect-ratio: 1;
-        }
-
-        .experience-teachers .arrow-frame .vector {
-            position: absolute;
-            width: 18px;
-            height: 15px;
-            top: 5px;
-            left: 3px;
-        }
-
-        .experience-teachers .arrow-frame .arrow-right-wrapper {
+        .navigation-button--active {
             border: none;
-            display: flex;
-            width: 51px;
-            height: 51px;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 13px 7px;
             position: relative;
-            background-color: var(--white-100);
-            border-radius: 25.5px;
         }
 
-        .experience-teachers .arrow-frame .arrow-right-wrapper::before {
+        .navigation-button--active::before {
             content: "";
             position: absolute;
             inset: 0;
@@ -312,177 +223,185 @@
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
-            z-index: 1;
             pointer-events: none;
         }
 
-        .experience-teachers .arrow-frame .img {
-            position: absolute;
-            width: 18px;
-            height: 15px;
-            top: 4px;
-            left: 3px;
-        }
-
-        /* Original CSS code should be injected here */
-
-        .experience-teachers .arrow-frame .component,
-        .experience-teachers .arrow-frame .arrow-right-wrapper {
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .experience-teachers .arrow-frame .component:hover,
-        .experience-teachers .arrow-frame .arrow-right-wrapper:hover {
+        .navigation-button:hover {
             transform: translateY(-1px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .experience-teachers .arrow-frame .component:active,
-        .experience-teachers .arrow-frame .arrow-right-wrapper:active {
+        .navigation-button:active {
             transform: translateY(0);
         }
 
-        .experience-teachers .arrow-frame .component:focus-visible,
-        .experience-teachers .arrow-frame .arrow-right-wrapper:focus-visible {
+        .navigation-button:focus-visible {
             outline: 2px solid #4a90e2;
             outline-offset: 2px;
         }
 
-        /* Original CSS code should be injected here */
+        .navigation-button__icon {
+            width: 18px;
+            height: 15px;
+        }
 
-        /* Enhanced responsive design improvements */
-        @media (max-width: 1440px) {
-            .experience-teachers {
-                width: 100%;
-                max-width: 1440px;
+        @media (max-width: 1200px) {
+            .teachers-section {
+                padding: 80px 1.5rem 50px;
+            }
+
+            .teachers-section__grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .teachers-section {
+                padding: 60px 1rem 40px;
+            }
+
+            .teachers-section__header {
+                flex-direction: row;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .teachers-section__title,
+            .teachers-section__title--gradient {
+                font-size: calc(var(--h-1-font-size) * 0.8);
+            }
+
+            .teachers-section__grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                max-width: 267px;
                 margin: 0 auto;
             }
 
-            .experience-teachers .frame {
-                width: min(1107px, calc(100% - 2rem));
-                left: 50%;
-                transform: translateX(-50%);
+            .teacher-card {
+                max-width: 100%;
             }
 
-            @media (max-width: 768px) {
-                .experience-teachers .frame-3 {
-                    flex-direction: column;
-                    gap: 20px;
-                }
+            .teacher-card__content {
+                padding: 12px 16px;
+                gap: 20px;
+            }
 
-                .experience-teachers .frame-4 {
-                    width: 100%;
-                    max-width: 342px;
-                    margin: 0 auto;
-                }
+            .teachers-section__content {
+                gap: 60px;
+            }
+        }
 
-                .experience-teachers .frame-2 {
-                    flex-wrap: wrap;
-                    justify-content: center;
-                }
+        @media (max-width: 480px) {
+            .teachers-section {
+                padding: 40px 0.75rem 30px;
+            }
 
-                .experience-teachers .text-wrapper,
-                .experience-teachers .text-wrapper-2 {
-                    font-size: clamp(32px, 5vw, 48px);
-                }
+            .teachers-section__title,
+            .teachers-section__title--gradient {
+                font-size: calc(var(--h-1-font-size) * 0.7);
+            }
 
-                /* Focus states for accessibility */
-                .experience-teachers .frame-4:focus-within {
-                    outline: 2px solid #4a90e2;
-                    outline-offset: 2px;
-                }
+            .teacher-card__image {
+                height: 180px;
+            }
 
-                /* Improved semantic styling */
-                .experience-teachers blockquote {
-                    margin: 0;
-                }
+            .teacher-card__content {
+                padding: 10px 14px;
+                gap: 16px;
+            }
 
-                .experience-teachers cite {
-                    font-style: normal;
-                }
+            .teacher-card__name {
+                font-size: calc(var(--h-6-font-size) * 0.9);
+            }
 
-                /* Enhanced hover states */
-                .experience-teachers .frame-4:hover {
-                    transform: translateY(-2px);
-                    transition: transform 0.2s ease-in-out;
-                }
+            .teacher-card__title {
+                font-size: calc(var(--paragraph-text-font-size) * 0.9);
+            }
+
+            .teacher-card__description {
+                font-size: calc(var(--paragraph-text-font-size) * 0.9);
+                line-height: 1.5;
+            }
+
+            .navigation-button {
+                width: 45px;
+                height: 45px;
+            }
+
+            .navigation-button__icon {
+                width: 16px;
+                height: 13px;
             }
         }
     </style>
 </head>
 
 <body>
+    <section class="teachers-section container" role="main">
+        <div class="teachers-section__container">
+            <div class="teachers-section__content">
+                <div class="teachers-section__main">
+                    <header class="teachers-section__header">
+                        <h1 class="teachers-section__title">আমাদের</h1>
+                        <h1 class="teachers-section__title--gradient">অভিজ্ঞ</h1>
+                        <h1 class="teachers-section__title">শিক্ষকবৃন্দ</h1>
+                    </header>
 
-    <!-- Experience Teachers -->
-    <section class="experience-teachers container">
-        <div class="overlap-group">
-            <div class="frame">
-                <div class="frame-wrapper">
-                    <div class="div">
-                        <div class="frame-2">
-                            <h1 class="text-wrapper">আমাদের</h1>
-                            <h1 class="text-wrapper-2">অভিজ্ঞ</h1>
-                            <h1 class="text-wrapper">শিক্ষকবৃন্দ</h1>
-                        </div>
-                        <div class="frame-3">
-                            <article class="div">
-                                <img class="rectangle" src="/img/teacher-1.png" alt="মাওলানা আবদুল কাদের এর ছবি" />
-                                <section class="frame-wrapper">
-                                    <div class="div-2">
-                                        <header class="div-3">
-                                            <h2 class="text-wrapper">মাওলানা আবদুল কাদের</h2>
-                                            <h3 class="text-wrapper-2">কুরআন শরীফ শিক্ষক</h3>
-                                        </header>
-                                        <p class="p">২০ বছরের অভিজ্ঞতাসম্পন্ন হাফেজ ও তাজবিদ বিশেষজ্ঞ।</p>
+                    <div class="teachers-section__grid">
+                        <article class="teacher-card">
+                            <img class="teacher-card__image" src="/img/teacher-1.png" alt="মাওলানা আবদুল কাদের এর ছবি" />
+                            <div class="teacher-card__content">
+                                <div class="teacher-card__info">
+                                    <div class="teacher-card__header">
+                                        <h2 class="teacher-card__name">মাওলানা আবদুল কাদের</h2>
+                                        <h3 class="teacher-card__title">কুরআন শরীফ শিক্ষক</h3>
                                     </div>
-                                </section>
-                            </article>
-                            <article class="div">
-                                <img class="rectangle" src="/img/teacher-2.png" alt="মাওলানা ফারুক হাসান এর ছবি" />
-                                <section class="frame-wrapper">
-                                    <div class="div-2">
-                                        <header class="div-3">
-                                            <h2 class="text-wrapper">মাওলানা ফারুক হাসান</h2>
-                                            <h3 class="text-wrapper-2">হাদীস ও ফিকহ শিক্ষক</h3>
-                                        </header>
-                                        <p class="p">ইসলামি শাস্রচর্চায় ১৫ বছরের অভিজ্ঞতা, বিভিন্ন মাদ্রাসায়
-                                            অধ্যাপনায় নিয়োজিত।</p>
+                                    <p class="teacher-card__description">২০ বছরের অভিজ্ঞতাসম্পন্ন হাফেজ ও তাজবিদ বিশেষজ্ঞ।</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="teacher-card">
+                            <img class="teacher-card__image" src="/img/teacher-2.png" alt="মাওলানা ফারুক হাসান এর ছবি" />
+                            <div class="teacher-card__content">
+                                <div class="teacher-card__info">
+                                    <div class="teacher-card__header">
+                                        <h2 class="teacher-card__name">মাওলানা ফারুক হাসান</h2>
+                                        <h3 class="teacher-card__title">হাদীস ও ফিকহ শিক্ষক</h3>
                                     </div>
-                                </section>
-                            </article>
-                            <article class="div">
-                                <img class="rectangle" src="/img/teacher-3.png" alt="হাফেজ সুলাইমান হাবিব এর ছবি" />
-                                <section class="frame-wrapper">
-                                    <div class="div-2">
-                                        <header class="div-3">
-                                            <h2 class="text-wrapper">হাফেজ সুলাইমান হাবিব</h2>
-                                            <h3 class="text-wrapper-2">হিফজুল কুরআন প্রশিক্ষক</h3>
-                                        </header>
-                                        <p class="p">ইসলামি শাস্রচর্চায় ১৫ বছরের অভিজ্ঞতা, বিভিন্ন মাদ্রাসায়
-                                            অধ্যাপনায় নিয়োজিত।</p>
+                                    <p class="teacher-card__description">ইসলামি শাস্রচর্চায় ১৫ বছরের অভিজ্ঞতা, বিভিন্ন মাদ্রাসায় অধ্যাপনায় নিয়োজিত।</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="teacher-card">
+                            <img class="teacher-card__image" src="/img/teacher-3.png" alt="হাফেজ সুলাইমান হাবিব এর ছবি" />
+                            <div class="teacher-card__content">
+                                <div class="teacher-card__info">
+                                    <div class="teacher-card__header">
+                                        <h2 class="teacher-card__name">হাফেজ সুলাইমান হাবিব</h2>
+                                        <h3 class="teacher-card__title">হিফজুল কুরআন প্রশিক্ষক</h3>
                                     </div>
-                                </section>
-                            </article>
-                        </div>
+                                    <p class="teacher-card__description">ইসলামি শাস্রচর্চায় ১৫ বছরের অভিজ্ঞতা, বিভিন্ন মাদ্রাসায় অধ্যাপনায় নিয়োজিত।</p>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
-                <div class="arrow-frame">
-                    <button type="button" class="component" aria-label="Previous">
-                        <span class="arrow-right" aria-hidden="true">
-                            <img class="vector" src="/arrow-left.svg" alt="" />
-                        </span>
+
+                <nav class="teachers-section__navigation" aria-label="শিক্ষক তালিকা নেভিগেশন">
+                    <button type="button" class="navigation-button" aria-label="পূর্ববর্তী">
+                        <img class="navigation-button__icon" src="/arrow-left.svg" alt="" />
                     </button>
-                    <button type="button" class="arrow-right-wrapper" aria-label="Next">
-                        <span class="arrow-right" aria-hidden="true">
-                            <img class="img" src="/arrow-right-active.svg" alt="" />
-                        </span>
+                    <button type="button" class="navigation-button navigation-button--active" aria-label="পরবর্তী">
+                        <img class="navigation-button__icon" src="/arrow-right-active.svg" alt="" />
                     </button>
-                </div>
+                </nav>
             </div>
         </div>
     </section>
-
 </body>
 
 </html>

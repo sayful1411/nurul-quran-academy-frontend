@@ -12,214 +12,203 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../src/globals.css" />
     <style>
-        .mobile-menu {
+        /* Mobile Navigation - BEM methodology */
+        .mobile-nav {
             position: fixed;
             bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
         }
 
-        .mobile-menu .navbar {
+        .mobile-nav__container {
             display: flex;
-            width: 391px;
             align-items: center;
             justify-content: space-between;
             padding: 16px;
-            position: relative;
             background-color: var(--white-100);
-            border-top-width: 2px;
-            border-top-style: solid;
-            border-color: transparent;
-            border-image: linear-gradient(45deg,
-                    rgba(37, 2, 16, 1) 0%,
-                    rgba(46, 188, 204, 1) 100%) 1;
+            border-top: 2px solid transparent;
+            border-image: linear-gradient(45deg, rgba(37, 2, 16, 1) 0%, rgba(46, 188, 204, 1) 100%) 1;
+            max-width: 391px;
+            margin: 0 auto;
         }
 
-        .mobile-menu .navbar .frame {
-            align-self: stretch;
-            display: inline-flex;
+        /* Navigation Items */
+        .mobile-nav__item {
+            display: flex;
             flex-direction: column;
             align-items: center;
             gap: 4px;
-            padding: 0px 8px;
-            position: relative;
-            flex: 0 0 auto;
-        }
-
-        .mobile-menu .navbar .vector-wrapper {
-            position: relative;
-            width: 20px;
-            height: 20px;
-            aspect-ratio: 1;
-        }
-
-        .mobile-menu .navbar .vector {
-            position: absolute;
-            width: 19px;
-            height: 16px;
-            top: 2px;
-            left: 1px;
-        }
-
-        .mobile-menu .navbar .text-wrapper {
-            background: linear-gradient(90deg,
-                    rgba(223, 24, 106, 1) 0%,
-                    rgba(250, 111, 33, 1) 100%);
-            -webkit-background-clip: text !important;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-fill-color: transparent;
-            color: transparent;
-            position: relative;
-            width: fit-content;
-            font-family: var(--paragraph-text-font-family);
-            font-weight: var(--paragraph-text-font-weight);
-            font-size: var(--paragraph-text-font-size);
-            text-align: center;
-            letter-spacing: var(--paragraph-text-letter-spacing);
-            line-height: var(--paragraph-text-line-height);
-            white-space: nowrap;
-            font-style: var(--paragraph-text-font-style);
-        }
-
-        .mobile-menu .navbar .div {
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4px;
-            padding: 0px 8px;
-            position: relative;
-            flex: 0 0 auto;
-        }
-
-        .mobile-menu .navbar .img {
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            top: 1px;
-            left: 2px;
-        }
-
-        .mobile-menu .navbar .text-wrapper-2 {
-            color: #afafaf;
-            position: relative;
-            width: fit-content;
-            font-family: var(--paragraph-text-font-family);
-            font-weight: var(--paragraph-text-font-weight);
-            font-size: var(--paragraph-text-font-size);
-            text-align: center;
-            letter-spacing: var(--paragraph-text-letter-spacing);
-            line-height: var(--paragraph-text-line-height);
-            white-space: nowrap;
-            font-style: var(--paragraph-text-font-style);
-        }
-
-        .mobile-menu .navbar .vector-2 {
-            position: absolute;
-            width: 18px;
-            height: 18px;
-            top: 1px;
-            left: 1px;
-        }
-
-        .mobile-menu .navbar .vector-3 {
-            position: absolute;
-            width: 20px;
-            height: 17px;
-            top: 2px;
-            left: 0;
-        }
-
-        .mobile-menu .navbar .vector-4 {
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            top: 2px;
-            left: 2px;
-        }
-
-        /* Original CSS code should be injected here */
-
-        .mobile-menu .navbar .nav-item {
+            padding: 0 8px;
             text-decoration: none;
-            color: inherit;
             transition: opacity 0.2s ease;
+            cursor: pointer;
         }
 
-        .mobile-menu .navbar .nav-item:hover {
+        .mobile-nav__item:hover {
             opacity: 0.8;
         }
 
-        .mobile-menu .navbar .nav-item:focus {
+        .mobile-nav__item:focus {
             outline: 2px solid #4a90e2;
             outline-offset: 2px;
             border-radius: 4px;
         }
 
-        .mobile-menu .navbar .nav-item:focus-visible {
+        .mobile-nav__item:focus-visible {
             outline: 2px solid #4a90e2;
             outline-offset: 2px;
             border-radius: 4px;
         }
 
-        .mobile-menu .navbar .nav-item[aria-current="page"] .text-wrapper {
-            background: linear-gradient(90deg,
-                    rgba(223, 24, 106, 1) 0%,
-                    rgba(250, 111, 33, 1) 100%);
-            -webkit-background-clip: text !important;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-fill-color: transparent;
-            color: transparent;
+        /* Icon Container */
+        .mobile-nav__icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
         }
 
-        .mobile-menu .navbar .nav-item:not([aria-current="page"]) .text-wrapper {
-            color: #afafaf;
+        .mobile-nav__icon img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Label Styles */
+        .mobile-nav__label {
             font-family: var(--paragraph-text-font-family);
             font-weight: var(--paragraph-text-font-weight);
             font-size: var(--paragraph-text-font-size);
             text-align: center;
             letter-spacing: var(--paragraph-text-letter-spacing);
             line-height: var(--paragraph-text-line-height);
-            white-space: nowrap;
             font-style: var(--paragraph-text-font-style);
+            white-space: nowrap;
+            color: #afafaf;
+            transition: color 0.2s ease;
+        }
+
+        /* Active State */
+        .mobile-nav__item--active .mobile-nav__label {
+            background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 391px) {
+            .mobile-nav__container {
+                max-width: 100%;
+                padding: 12px 8px;
+            }
+
+            .mobile-nav__item {
+                padding: 0 4px;
+                gap: 2px;
+            }
+
+            .mobile-nav__icon {
+                width: 18px;
+                height: 18px;
+            }
+
+            .mobile-nav__label {
+                font-size: calc(var(--paragraph-text-font-size) * 0.9);
+            }
+        }
+
+        @media (max-width: 320px) {
+            .mobile-nav__container {
+                padding: 10px 4px;
+            }
+
+            .mobile-nav__item {
+                padding: 0 2px;
+            }
+
+            .mobile-nav__icon {
+                width: 16px;
+                height: 16px;
+            }
+
+            .mobile-nav__label {
+                font-size: calc(var(--paragraph-text-font-size) * 0.8);
+            }
+        }
+
+        /* Accessibility Improvements */
+        @media (prefers-reduced-motion: reduce) {
+            .mobile-nav__item {
+                transition: none;
+            }
+
+            .mobile-nav__label {
+                transition: none;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .mobile-nav__container {
+                border-top: 2px solid currentColor;
+            }
+
+            .mobile-nav__item--active .mobile-nav__label {
+                background: none;
+                -webkit-background-clip: unset;
+                background-clip: unset;
+                -webkit-text-fill-color: unset;
+                color: #000;
+                font-weight: bold;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="mobile-menu">
-        <nav class="navbar" role="navigation" aria-label="Main navigation">
-            <a href="#home" class="frame nav-item" aria-current="page">
-                <div class="vector-wrapper" aria-hidden="true">
-                    <img class="vector" src="../home-menu-active.svg" alt="" />
+    <nav class="mobile-nav" role="navigation" aria-label="Main navigation">
+        <div class="mobile-nav__container">
+            <a href="#home" class="mobile-nav__item mobile-nav__item--active" aria-current="page">
+                <div class="mobile-nav__icon" aria-hidden="true">
+                    <img src="../home-menu-active.svg" alt="">
                 </div>
-                <span class="text-wrapper">হোম</span>
+                <span class="mobile-nav__label">হোম</span>
             </a>
-            <a href="#special" class="div nav-item">
-                <div class="vector-wrapper" aria-hidden="true">
-                    <img class="img" src="../gift-menu.svg" alt="" />
+
+            <a href="#special" class="mobile-nav__item">
+                <div class="mobile-nav__icon" aria-hidden="true">
+                    <img src="../gift-menu.svg" alt="">
                 </div>
-                <span class="text-wrapper-2">স্পেশাল</span>
+                <span class="mobile-nav__label">স্পেশাল</span>
             </a>
-            <a href="#free-courses" class="frame nav-item">
-                <div class="vector-wrapper" aria-hidden="true">
-                    <img class="vector-2" src="../circle-menu.svg" alt="" />
+
+            <a href="#free-courses" class="mobile-nav__item">
+                <div class="mobile-nav__icon" aria-hidden="true">
+                    <img src="../circle-menu.svg" alt="">
                 </div>
-                <span class="text-wrapper-2">ফ্রী কোর্স</span>
+                <span class="mobile-nav__label">ফ্রী কোর্স</span>
             </a>
-            <a href="#all-courses" class="frame nav-item">
-                <div class="vector-wrapper" aria-hidden="true">
-                    <img class="vector-3" src="../cap-menu.svg" alt="" />
+
+            <a href="#all-courses" class="mobile-nav__item">
+                <div class="mobile-nav__icon" aria-hidden="true">
+                    <img src="../cap-menu.svg" alt="">
                 </div>
-                <span class="text-wrapper-2">সব কোর্স</span>
+                <span class="mobile-nav__label">সব কোর্স</span>
             </a>
-            <a href="#login" class="frame nav-item">
-                <div class="vector-wrapper" aria-hidden="true">
-                    <img class="vector-4" src="../user-menu.svg" alt="" />
+
+            <a href="#login" class="mobile-nav__item">
+                <div class="mobile-nav__icon" aria-hidden="true">
+                    <img src="../user-menu.svg" alt="">
                 </div>
-                <span class="text-wrapper-2">লগ ইন</span>
+                <span class="mobile-nav__label">লগ ইন</span>
             </a>
-        </nav>
-    </div>
+        </div>
+    </nav>
 </body>
 
 </html>

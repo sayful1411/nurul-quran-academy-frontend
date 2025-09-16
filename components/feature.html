@@ -12,199 +12,126 @@
     <title>Nurul Quran Academy</title>
     <link rel="stylesheet" href="../src/globals.css" />
     <style>
-        .feature-1 {
-            position: relative;
-            width: 1440px;
-            height: 1104px;
+        /* Features Section - BEM methodology */
+        .features {
             background-color: var(--white-100);
+            padding: 100px 0;
         }
 
-        .feature-1 .frame {
-            display: flex;
-            width: 1306px;
+        .features__container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 67px;
+            display: grid;
+            grid-template-columns: 520px 1fr;
+            gap: 66px;
             align-items: center;
-            justify-content: space-between;
-            position: relative;
-            top: 100px;
-            left: 67px;
         }
 
-        .feature-1 .overlap-group-wrapper {
-            position: relative;
-            align-self: stretch;
-            width: 520px;
+        /* Hero Image Section */
+        .features__hero {
+            margin: 0;
             border-radius: 16px;
             overflow: hidden;
             background-image: url("../img/feature-frame-1.png");
-        }
-
-        .feature-1 .overlap-group {
-            position: relative;
+            background-size: cover;
+            background-position: center;
             height: 904px;
         }
 
-        .feature-1 .faruk-kaymak {
-            position: absolute;
-            width: 520px;
-            height: 897px;
-            top: 7px;
-            left: 0;
-            mix-blend-mode: darken;
-            aspect-ratio: 0.79;
+        .features__hero-content {
+            height: 100%;
+            position: relative;
         }
 
-        .feature-1 .image {
-            position: absolute;
-            width: 411px;
-            height: 411px;
-            top: 246px;
-            left: 54px;
-            mix-blend-mode: luminosity;
-            aspect-ratio: 1;
-            object-fit: cover;
-        }
-
-        .feature-1 .ellipse {
-            position: absolute;
-            width: 388px;
-            height: 481px;
-            top: 423px;
-            left: 132px;
-        }
-
-        .feature-1 .img {
-            position: absolute;
-            width: 520px;
-            height: 411px;
-            top: 493px;
-            left: 0;
-        }
-
-        .feature-1 .ellipse-2 {
-            position: absolute;
-            width: 520px;
-            height: 296px;
-            top: 0;
-            left: 0;
-        }
-
-        .feature-1 .div {
+        /* Content Section */
+        .features__content {
             display: flex;
             flex-direction: column;
-            width: 720px;
-            align-items: flex-start;
             gap: 40px;
-            position: relative;
         }
 
-        .feature-1 .frame-2 {
-            display: inline-flex;
+        .features__header--mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 25px;
+            visibility: hidden;
+        }
+
+        .features__header {
+            display: flex;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: center;
-            position: relative;
-            flex: 0 0 auto;
         }
 
-        .feature-1 .text-wrapper {
-            position: relative;
-            width: fit-content;
-            margin-top: -1px;
+        .features__title {
             font-family: var(--h-1-font-family);
             font-weight: var(--h-1-font-weight);
             color: var(--blackheading);
             font-size: var(--h-1-font-size);
-            text-align: center;
             letter-spacing: var(--h-1-letter-spacing);
             line-height: var(--h-1-line-height);
             font-style: var(--h-1-font-style);
+            margin: 0;
         }
 
-        .feature-1 .text-wrapper-2 {
-            width: fit-content;
-            background: linear-gradient(90deg,
-                    rgba(223, 24, 106, 1) 0%,
-                    rgba(250, 111, 33, 1) 100%);
-            -webkit-background-clip: text !important;
+        .features__subtitle {
+            background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
+            -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-fill-color: transparent;
             font-family: var(--h-1-font-family);
             font-weight: var(--h-1-font-weight);
-            color: transparent;
             font-size: var(--h-1-font-size);
-            text-align: center;
             line-height: var(--h-1-line-height);
-            position: relative;
             letter-spacing: var(--h-1-letter-spacing);
             font-style: var(--h-1-font-style);
+            margin: 0;
         }
 
-        .feature-1 .frame-3 {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
+        /* Features Grid */
+        .features__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px 24px;
         }
 
-        .feature-1 .frame-4 {
-            display: flex;
-            flex-direction: column;
-            width: 348px;
-            align-items: flex-start;
-            gap: 16px;
-            position: relative;
-        }
-
-        .feature-1 .frame-5 {
+        /* Feature Card */
+        .feature-card {
             display: flex;
             flex-direction: column;
-            height: 226px;
-            align-items: flex-start;
             gap: 24px;
             padding: 16px 24px;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
             background-color: var(--white-100);
             border-radius: 16px;
-            border: 1px solid;
-            border-color: var(--greyoutline);
+            border: 1px solid var(--greyoutline);
+            height: 226px;
         }
 
-        .feature-1 .vector-wrapper {
-            position: relative;
+        .feature-card__icon {
             width: 48px;
             height: 48px;
-            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
         }
 
-        .feature-1 .vector {
-            position: absolute;
-            width: 39px;
-            height: 35px;
-            top: 8px;
-            left: 4px;
+        .feature-card__icon img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
-        .feature-1 .frame-6 {
-            width: 316px;
-            height: 116px;
-            margin-right: -16px;
+        .feature-card__content {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            gap: 23px;
-            position: relative;
+            gap: 16px;
+            flex: 1;
         }
 
-        .feature-1 .text-wrapper-3 {
-            position: relative;
-            align-self: stretch;
-            margin-top: -1px;
+        .feature-card__title {
             font-family: var(--h6-semibold-font-family);
             font-weight: var(--h6-semibold-font-weight);
             color: var(--blackheading);
@@ -212,142 +139,101 @@
             letter-spacing: var(--h6-semibold-letter-spacing);
             line-height: var(--h6-semibold-line-height);
             font-style: var(--h6-semibold-font-style);
+            margin: 0;
         }
 
-        .feature-1 .p {
-            align-self: stretch;
+        .feature-card__description {
             font-family: var(--body-text-font-family);
             font-weight: var(--body-text-font-weight);
             color: var(--blacksubtext);
             font-size: var(--body-text-font-size);
             line-height: var(--body-text-line-height);
-            position: relative;
             letter-spacing: var(--body-text-letter-spacing);
             font-style: var(--body-text-font-style);
+            margin: 0;
         }
 
-        .feature-1 .vector-2 {
-            position: absolute;
-            width: 39px;
-            height: 39px;
-            top: 4px;
-            left: 4px;
-        }
-
-        .feature-1 .frame-7 {
-            display: flex;
-            flex-direction: column;
-            height: 116px;
-            align-items: flex-start;
-            gap: 23px;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-        }
-
-        .feature-1 .vector-3 {
-            position: absolute;
-            width: 44px;
-            height: 33px;
-            top: 8px;
-            left: 3px;
-        }
-
-        .feature-1 .vector-4 {
-            position: absolute;
-            width: 45px;
-            height: 27px;
-            top: 10px;
-            left: 3px;
-        }
-
-        .feature-1 .frame-8 {
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
-            margin-bottom: -2px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 23px;
-            position: relative;
-        }
-
-        .feature-1 .vector-5 {
-            position: absolute;
-            width: 45px;
-            height: 33px;
-            top: 9px;
-            left: 2px;
-        }
-
-        .feature-1 .frame-9 {
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 23px;
-            position: relative;
-        }
-
-        .feature-1 .vector-6 {
-            position: absolute;
-            width: 45px;
-            height: 30px;
-            top: 9px;
-            left: 0;
-        }
-
-        /* Media queries for better responsiveness */
+        /* Responsive Design */
         @media (max-width: 1200px) {
-            .feature-1 .frame {
-                flex-direction: column;
+            .features__container {
+                grid-template-columns: 1fr;
                 gap: 40px;
-                left: 0;
                 padding: 0 40px;
+                justify-items: center;
             }
 
-            .feature-1 .overlap-group-wrapper {
+            .features__header {
+                display: none;
+            }
+
+            .features__header--mobile {
+                visibility: visible;
+            }
+
+            .features__hero {
                 width: 100%;
                 max-width: 600px;
             }
 
-            .feature-1 .div {
+            .features__content {
                 width: 100%;
-                max-width: none;
+                max-width: 720px;
             }
 
-            .feature-1 .frame-3 {
-                flex-direction: column;
+            .features__grid {
+                grid-template-columns: 1fr;
                 gap: 20px;
-            }
-
-            .feature-1 .frame-4 {
-                width: 100%;
-                max-width: none;
             }
         }
 
         @media (max-width: 768px) {
-            .feature-1 {
-                min-height: auto;
+            .features {
+                padding: 50px 0;
             }
 
-            .feature-1 .frame {
+            .features__container {
                 padding: 0 20px;
-                top: 50px;
             }
 
-            .feature-1 .text-wrapper,
-            .feature-1 .text-wrapper-2 {
-                font-size: 32px;
+            .features__header {
+                display: none;
             }
 
-            .feature-1 .frame-5 {
+            .features__header--mobile {
+                visibility: visible;
+            }
+
+            .features__title,
+            .features__subtitle {
+                font-size: clamp(24px, 6vw, 32px);
+            }
+
+            .feature-card {
                 height: auto;
-                min-height: 200px;
+                min-height: 180px;
+                padding: 20px;
+            }
+
+            .features__hero {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .features__container {
+                padding: 0 16px;
+            }
+
+            .features__header {
+                display: none;
+            }
+
+            .features__header--mobile {
+                visibility: visible;
+            }
+
+            .feature-card {
+                padding: 16px;
             }
         }
     </style>
@@ -355,84 +241,87 @@
 
 <body>
 
-    <section class="feature-1 container">
-        <div class="frame">
-            <div class="overlap-group-wrapper"></div>
-            <div class="div">
-                <div class="frame-2">
-                    <h1 class="text-wrapper">নূরুল কুরআন একাডেমিতে</h1>
-                    <h2 class="text-wrapper-2">আপনি যা পাচ্ছেন</h2>
-                </div>
-                <div class="frame-3">
-                    <div class="frame-4">
-                        <article class="frame-5">
-                            <div class="vector-wrapper" aria-hidden="true">
-                                <img class="vector" src="/feature-01.svg" alt="" />
-                            </div>
-                            <div class="frame-6">
-                                <h3 class="text-wrapper-3">উচ্চমানের কোর্স কনটেন্ট</h3>
-                                <p class="p">
-                                    আমাদের সব কোর্স তৈরি করা হয়েছে বিশেষজ্ঞ শিক্ষকদের দ্বারা, যারা নিজের ক্ষেত্রের
-                                    অভিজ্ঞ এবং দক্ষ।
-                                </p>
-                            </div>
-                        </article>
-                        <article class="frame-5">
-                            <div class="vector-wrapper" aria-hidden="true">
-                                <img class="vector-2" src="/feature-02.svg" alt="" />
-                            </div>
-                            <div class="frame-7">
-                                <h3 class="text-wrapper-3">ফ্লেক্সিবল সময়সূচি</h3>
-                                <p class="p">আপনার ব্যস্ততার সাথে খাপ খাইয়ে যেকোনো সময় পড়াশোনা করার সুবিধা।</p>
-                            </div>
-                        </article>
-                        <article class="frame-5">
-                            <div class="vector-wrapper" aria-hidden="true">
-                                <img class="vector-3" src="/feature-03.svg" alt="" />
-                            </div>
-                            <div class="frame-7">
-                                <h3 class="text-wrapper-3">স্মার্ট টেকনোলজি, সহজ ব্যবহার</h3>
-                                <p class="p">মোবাইল ও কম্পিউটার— যেকোনো ডিভাইস থেকে ঝামেলামুক্ত ও স্মুথ লার্নিংয়ের
-                                    নিশ্চয়তা।</p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="frame-4">
-                        <article class="frame-5">
-                            <div class="vector-wrapper" aria-hidden="true">
-                                <img class="vector-4" src="/feature-04.svg" alt="" />
-                            </div>
-                            <div class="frame-8">
-                                <h3 class="text-wrapper-3">লাইভ ও রেকর্ডেড ক্লাস</h3>
-                                <p class="p">
-                                    আপনি পছন্দমতো লাইভ ক্লাসে অংশ নিতে পারবেন বা রেকর্ডেড ভিডিও দেখে যেকোনো সময়
-                                    পড়াশোনা চালিয়ে যেতে
-                                    পারবেন।
-                                </p>
-                            </div>
-                        </article>
-                        <article class="frame-5">
-                            <div class="vector-wrapper" aria-hidden="true">
-                                <img class="vector-5" src="/feature-05.svg" alt="" />
-                            </div>
-                            <div class="frame-9">
-                                <h3 class="text-wrapper-3">কমিউনিটি সাপোর্ট</h3>
-                                <p class="p">
-                                    আপনার মত শিক্ষার্থীদের সাথে নেটওয়ার্ক গড়ে তোলার সুযোগ, যা শিক্ষায় নতুন মাত্রা যোগ
-                                    করে।
-                                </p>
-                            </div>
-                        </article>
-                        <article class="frame-5">
-                            <div class="vector-wrapper" aria-hidden="true">
-                                <img class="vector-6" src="/feature-06.svg" alt="" />
-                            </div>
-                            <div class="frame-9">
-                                <h3 class="text-wrapper-3">ধারাবাহিকভাবে দ্বীন শিক্ষা</h3>
-                                <p class="p">ইসলামের বিভিন্ন বিষয় ধারাবাহিকভাবে শিক্ষাগ্রহণের চমৎকার আয়োজন।</p>
-                            </div>
-                        </article>
-                    </div>
+    <section class="features container">
+        <header class="features__header--mobile">
+            <h1 class="features__title">নূরুল কুরআন একাডেমিতে</h1>
+            <h2 class="features__subtitle">আপনি যা পাচ্ছেন</h2>
+        </header>
+        <div class="features__container">
+            <figure class="features__hero" aria-hidden="true">
+                <div class="features__hero-content"></div>
+            </figure>
+            <div class="features__content">
+                <header class="features__header">
+                    <h1 class="features__title">নূরুল কুরআন একাডেমিতে</h1>
+                    <h2 class="features__subtitle">আপনি যা পাচ্ছেন</h2>
+                </header>
+                <div class="features__grid">
+                    <article class="feature-card">
+                        <div class="feature-card__icon" aria-hidden="true">
+                            <img src="/feature-01.svg" alt="">
+                        </div>
+                        <div class="feature-card__content">
+                            <h3 class="feature-card__title">উচ্চমানের কোর্স কনটেন্ট</h3>
+                            <p class="feature-card__description">
+                                আমাদের সব কোর্স তৈরি করা হয়েছে বিশেষজ্ঞ শিক্ষকদের দ্বারা, যারা নিজের ক্ষেত্রের অভিজ্ঞ
+                                এবং দক্ষ।
+                            </p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card__icon" aria-hidden="true">
+                            <img src="/feature-02.svg" alt="">
+                        </div>
+                        <div class="feature-card__content">
+                            <h3 class="feature-card__title">লাইভ ও রেকর্ডেড ক্লাস</h3>
+                            <p class="feature-card__description">
+                                আপনি পছন্দমতো লাইভ ক্লাসে অংশ নিতে পারবেন বা রেকর্ডেড ভিডিও দেখে যেকোনো সময় পড়াশোনা
+                                চালিয়ে যেতে পারবেন।
+                            </p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card__icon" aria-hidden="true">
+                            <img src="/feature-03.svg" alt="">
+                        </div>
+                        <div class="feature-card__content">
+                            <h3 class="feature-card__title">ফ্লেক্সিবল সময়সূচি</h3>
+                            <p class="feature-card__description">আপনার ব্যস্ততার সাথে খাপ খাইয়ে যেকোনো সময় পড়াশোনা
+                                করার সুবিধা।</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card__icon" aria-hidden="true">
+                            <img src="/feature-04.svg" alt="">
+                        </div>
+                        <div class="feature-card__content">
+                            <h3 class="feature-card__title">কমিউনিটি সাপোর্ট</h3>
+                            <p class="feature-card__description">
+                                আপনার মত শিক্ষার্থীদের সাথে নেটওয়ার্ক গড়ে তোলার সুযোগ, যা শিক্ষায় নতুন মাত্রা যোগ
+                                করে।
+                            </p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card__icon" aria-hidden="true">
+                            <img src="/feature-05.svg" alt="">
+                        </div>
+                        <div class="feature-card__content">
+                            <h3 class="feature-card__title">স্মার্ট টেকনোলজি, সহজ ব্যবহার</h3>
+                            <p class="feature-card__description">মোবাইল ও কম্পিউটার— যেকোনো ডিভাইস থেকে ঝামেলামুক্ত ও
+                                স্মুথ লার্নিংয়ের নিশ্চয়তা।</p>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card__icon" aria-hidden="true">
+                            <img src="/feature-06.svg" alt="">
+                        </div>
+                        <div class="feature-card__content">
+                            <h3 class="feature-card__title">ধারাবাহিকভাবে দ্বীন শিক্ষা</h3>
+                            <p class="feature-card__description">ইসলামের বিভিন্ন বিষয় ধারাবাহিকভাবে শিক্ষাগ্রহণের
+                                চমৎকার আয়োজন।</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>

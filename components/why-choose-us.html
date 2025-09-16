@@ -12,227 +12,189 @@
         rel="stylesheet">
     <link rel="stylesheet" href="../src/globals.css" />
     <style>
-        .why-choose-us {
+        /* Learning Path Section - BEM methodology */
+        .learning-path {
+            background: linear-gradient(11deg, rgba(37, 2, 16, 1) 0%, rgba(158, 36, 71, 1) 100%);
             position: relative;
-            width: 1440px;
-            height: 2581px;
-            background: linear-gradient(11deg,
-                    rgba(37, 2, 16, 1) 0%,
-                    rgba(158, 36, 71, 1) 100%);
+            padding: 100px 0 100px 0;
+            overflow: hidden;
         }
 
-        .why-choose-us .overlap {
-            position: relative;
-            height: 2381px;
-            top: 100px;
-        }
-
-        .why-choose-us .image {
-            width: 1440px;
-            height: 894px;
-            top: 753px;
-            left: 0;
-            mix-blend-mode: multiply;
+        .learning-path::before {
+            content: "";
             position: absolute;
-            object-fit: cover;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 894px;
+            background-image: url("/img/bg-3.png");
+            background-size: cover;
+            background-position: center;
+            mix-blend-mode: multiply;
+            z-index: 1;
         }
 
-        .why-choose-us .frame {
+        .learning-path__container {
+            max-width: 1106px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
             display: flex;
             flex-direction: column;
-            width: 1106px;
-            align-items: center;
             gap: 40px;
-            position: absolute;
-            top: 0;
-            left: 166px;
+            align-items: center;
         }
 
-        .why-choose-us .text-wrapper {
-            margin-top: -1.00px;
+        .learning-path__header {
+            text-align: center;
+        }
+
+        .learning-path__title {
             font-family: var(--h-1-font-family);
             font-weight: var(--h-1-font-weight);
             color: var(--white-100);
             font-size: var(--h-1-font-size);
-            text-align: center;
-            position: relative;
-            align-self: stretch;
             letter-spacing: var(--h-1-letter-spacing);
             line-height: var(--h-1-line-height);
             font-style: var(--h-1-font-style);
+            margin: 0;
         }
 
-        .why-choose-us .learning-path {
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            height: 344px;
-            background-color: #fff9e6;
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        .why-choose-us .overlap-group {
-            width: 1106px;
-            height: 344px;
-            background-image: url("../img/course-bg-2.png");
-            background-size: 100% 100%;
-        }
-
-        .why-choose-us .div {
-            display: flex;
-            width: 954px;
-            align-items: flex-start;
-            justify-content: space-between;
-            position: relative;
-            top: 48px;
-            left: 76px;
-        }
-
-        .why-choose-us .frame-2 {
+        .learning-path__steps {
             display: flex;
             flex-direction: column;
-            width: 440px;
-            align-items: flex-start;
-            gap: 32px;
-            position: relative;
+            gap: 40px;
+            width: 100%;
         }
 
-        .why-choose-us .frame-3 {
+        /* Step Card */
+        .step-card {
+            border-radius: 16px;
+            overflow: hidden;
+            background-size: 100% 100%;
+            background-image: url("../img/course-bg-2.png");
+            min-height: 344px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 48px 76px;
+            gap: 48px;
+        }
+
+        .step-card--primary {
+            background-color: #fff9e6;
+        }
+
+        .step-card--secondary {
+            background-color: #e6f7ff;
+        }
+
+        .step-card--tertiary {
+            background-color: #e6ffef;
+        }
+
+        .step-card--quaternary {
+            background-color: #fff2e6;
+        }
+
+        .step-card--quinary {
+            background-color: #e6f8ff;
+        }
+
+        .step-card--senary {
+            background-color: #ffebe6;
+        }
+
+        .step-card__content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            max-width: 440px;
+        }
+
+        .step-card__header {
+            display: flex;
+            align-items: center;
+        }
+
+        .step-card__badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
             padding: 4px 8px;
-            position: relative;
-            flex: 0 0 auto;
             border-radius: 28px;
-            background: linear-gradient(90deg,
-                    rgba(223, 24, 106, 1) 0%,
-                    rgba(250, 111, 33, 1) 100%);
+            background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
         }
 
-        .why-choose-us .vector-wrapper {
-            position: relative;
-            width: 16px;
-            height: 16px;
-            aspect-ratio: 1;
-        }
-
-        .why-choose-us .vector {
-            position: absolute;
+        .step-card__badge img {
             width: 14px;
             height: 14px;
-            top: 1px;
-            left: 1px;
         }
 
-        .why-choose-us .text-wrapper-2 {
-            position: relative;
-            width: fit-content;
-            margin-top: -1.00px;
+        .step-card__number {
             font-family: var(--body-text-font-family);
             font-weight: var(--body-text-font-weight);
             color: var(--white-100);
             font-size: var(--body-text-font-size);
             letter-spacing: var(--body-text-letter-spacing);
             line-height: var(--body-text-line-height);
-            white-space: nowrap;
             font-style: var(--body-text-font-style);
+            white-space: nowrap;
         }
 
-        .why-choose-us .frame-4 {
+        .step-card__body {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            gap: 16px;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
+            gap: 10px;
+            text-align: left;
         }
 
-        .why-choose-us .frame-5 {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 32px;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
-        }
-
-        .why-choose-us .frame-6 {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 12px;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
-        }
-
-        .why-choose-us .text-wrapper-3 {
-            margin-top: -1.00px;
+        .step-card__title {
             font-family: var(--h4-medium-font-family);
             font-weight: var(--h4-medium-font-weight);
             color: var(--blackheading);
             font-size: var(--h4-medium-font-size);
             line-height: var(--h4-medium-line-height);
-            position: relative;
-            align-self: stretch;
             letter-spacing: var(--h4-medium-letter-spacing);
             font-style: var(--h4-medium-font-style);
+            margin: 0;
         }
 
-        .why-choose-us .p {
+        .step-card__description {
             font-family: var(--body-text-font-family);
             font-weight: var(--body-text-font-weight);
             color: var(--blacksubtext);
             font-size: var(--body-text-font-size);
             line-height: var(--body-text-line-height);
-            position: relative;
-            align-self: stretch;
             letter-spacing: var(--body-text-letter-spacing);
             font-style: var(--body-text-font-style);
+            margin: 0;
         }
 
-        .why-choose-us .frame-7 {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            flex: 0 0 auto;
-        }
-
-        .why-choose-us .button {
-            all: unset;
-            box-sizing: border-box;
+        .step-card__button {
             display: inline-flex;
+            width: 106px;
             height: 40px;
             align-items: center;
             justify-content: center;
             gap: 10px;
             padding: 10px 16px;
-            position: relative;
-            flex: 0 0 auto;
             background-color: var(--white-100);
             border-radius: 50px;
             border: none;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.2s ease;
         }
 
-        .why-choose-us .button::before {
+        .step-card__button::before {
             content: "";
             position: absolute;
             inset: 0;
             padding: 1px;
             border-radius: 50px;
-            background: linear-gradient(103deg,
-                    rgba(41, 160, 182, 1) 0%,
-                    rgba(176, 195, 67, 1) 100%);
+            background: linear-gradient(103deg, rgba(41, 160, 182, 1) 0%, rgba(176, 195, 67, 1) 100%);
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
@@ -240,695 +202,321 @@
             pointer-events: none;
         }
 
-        .why-choose-us .text-wrapper-4 {
-            position: relative;
-            width: fit-content;
-            margin-top: -3.00px;
-            margin-bottom: -1.00px;
+        .step-card__button:hover {
+            transform: translateY(-1px);
+        }
+
+        .step-card__button:hover::before {
+            background: linear-gradient(103deg, rgba(41, 160, 182, 0.8) 0%, rgba(176, 195, 67, 0.8) 100%);
+        }
+
+        .step-card__button:focus {
+            outline: 2px solid #4a90e2;
+            outline-offset: 2px;
+        }
+
+        .step-card__button:active {
+            transform: translateY(0);
+        }
+
+        .step-card__button span {
             font-family: var(--body-text-font-family);
             font-weight: var(--body-text-font-weight);
             color: var(--blackheading);
             font-size: var(--body-text-font-size);
             letter-spacing: var(--body-text-letter-spacing);
             line-height: var(--body-text-line-height);
-            white-space: nowrap;
             font-style: var(--body-text-font-style);
+            white-space: nowrap;
+            position: relative;
+            z-index: 2;
         }
 
-        .why-choose-us .img {
-            position: absolute;
+        .step-card__button img {
             width: 6px;
             height: 11px;
-            top: 3px;
-            left: 5px;
+            position: relative;
+            z-index: 2;
         }
 
-        .why-choose-us .frame-8 {
-            position: relative;
+        .step-card__image {
             width: 379px;
             height: 248px;
             border-radius: 12px;
             overflow: hidden;
-            background: linear-gradient(75deg,
-                    rgba(37, 2, 16, 1) 0%,
-                    rgba(248, 79, 81, 1) 52%,
-                    rgba(250, 111, 33, 1) 100%);
-        }
-
-        .why-choose-us .faruk-kaymak {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            top: -8165px;
-            left: -646px;
-            object-fit: cover;
-        }
-
-        .why-choose-us .overlap-group-2 {
-            position: absolute;
-            width: 379px;
-            height: 248px;
-            top: 0;
-            left: 0;
-            background-image: url(./img/faruk-kaymak-cnvvdjvdivi-unsplash-2-2.png);
-            background-size: cover;
-            background-position: 50% 50%;
-        }
-
-        .why-choose-us .image-2 {
-            width: 189px;
-            height: 223px;
-            top: 0;
-            left: 190px;
-            mix-blend-mode: luminosity;
-            aspect-ratio: 1;
-            position: absolute;
-            object-fit: cover;
-        }
-
-        .why-choose-us .frame-9 {
-            display: flex;
-            flex-direction: column;
-            width: 172px;
-            align-items: flex-start;
-            position: absolute;
-            top: 44px;
-            left: 31px;
-        }
-
-        .why-choose-us .text-wrapper-5 {
-            margin-top: -1.00px;
-            font-family: var(--h-3-font-family);
-            font-weight: var(--h-3-font-weight);
-            color: var(--white-100);
-            font-size: var(--h-3-font-size);
-            line-height: var(--h-3-line-height);
             position: relative;
-            align-self: stretch;
-            letter-spacing: var(--h-3-letter-spacing);
-            font-style: var(--h-3-font-style);
-        }
-
-        .why-choose-us .text-wrapper-6 {
-            margin-top: -8px;
-            font-family: var(--h-3-font-family);
-            font-weight: var(--h-3-font-weight);
-            color: var(--white-100);
-            font-size: var(--h-3-font-size);
-            line-height: var(--h-3-line-height);
-            position: relative;
-            align-self: stretch;
-            letter-spacing: var(--h-3-letter-spacing);
-            font-style: var(--h-3-font-style);
-        }
-
-        .why-choose-us .overlap-wrapper {
-            background-color: #e6f7ff;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            height: 344px;
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        .why-choose-us .frame-wrapper {
-            width: 1106px;
-            height: 344px;
-            background-image: url("../img/course-bg-2.png");
-            background-size: 100% 100%;
-        }
-
-        .why-choose-us .text-wrapper-7 {
-            font-family: "Noto Serif Bengali-Regular", Helvetica;
-            font-weight: 400;
-            color: var(--blacksubtext);
-            font-size: 14px;
-            position: relative;
-            align-self: stretch;
-            letter-spacing: 0;
-            line-height: normal;
-        }
-
-        .why-choose-us .frame-10 {
-            background: linear-gradient(75deg,
-                    rgba(37, 2, 16, 1) 0%,
-                    rgba(79, 132, 248, 1) 52%,
-                    rgba(33, 152, 250, 1) 100%);
-            position: relative;
-            width: 379px;
-            height: 248px;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .why-choose-us .faruk-kaymak-2 {
-            top: -8549px;
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            left: -646px;
-            object-fit: cover;
-        }
-
-        .why-choose-us .overlap-group-3 {
-            position: absolute;
-            width: 379px;
-            height: 248px;
-            top: 0;
-            left: 0;
-            background-image: url(./img/faruk-kaymak-cnvvdjvdivi-unsplash-2-5.png);
-            background-size: cover;
-            background-position: 50% 50%;
-        }
-
-        .why-choose-us .overlap-group-wrapper {
-            background-color: #e6ffef;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            height: 344px;
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        .why-choose-us .div-wrapper {
-            width: 1106px;
-            height: 344px;
-            background-image: url("../img/course-bg-2.png");
-            background-size: 100% 100%;
-        }
-
-        .why-choose-us .frame-11 {
-            background: linear-gradient(75deg,
-                    rgba(37, 2, 16, 1) 0%,
-                    rgba(74, 190, 140, 1) 52%,
-                    rgba(67, 207, 125, 1) 100%);
-            position: relative;
-            width: 379px;
-            height: 248px;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .why-choose-us .faruk-kaymak-3 {
-            top: -8933px;
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            left: -646px;
-            object-fit: cover;
-        }
-
-        .why-choose-us .overlap-group-4 {
-            position: absolute;
-            width: 379px;
-            height: 248px;
-            top: 0;
-            left: 0;
-            background-image: url(./img/faruk-kaymak-cnvvdjvdivi-unsplash-2-4.png);
-            background-size: cover;
-            background-position: 50% 50%;
-        }
-
-        .why-choose-us .image-3 {
-            position: absolute;
-            width: 212px;
-            height: 248px;
-            top: 0;
-            left: 167px;
-            mix-blend-mode: luminosity;
-            aspect-ratio: 1;
-            object-fit: cover;
-        }
-
-        .why-choose-us .learning-path-2 {
-            background-color: #fff2e6;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            height: 344px;
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        .why-choose-us .overlap-2 {
-            width: 1106px;
-            height: 344px;
-            background-image: url("../img/course-bg-2.png");
-            background-size: 100% 100%;
-        }
-
-        .why-choose-us .frame-12 {
-            background: linear-gradient(75deg,
-                    rgba(37, 2, 16, 1) 0%,
-                    rgba(183, 114, 46, 1) 52%,
-                    rgba(183, 114, 46, 1) 100%);
-            position: relative;
-            width: 379px;
-            height: 248px;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .why-choose-us .faruk-kaymak-4 {
-            top: -9317px;
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            left: -646px;
-            object-fit: cover;
-        }
-
-        .why-choose-us .overlap-group-5 {
-            position: absolute;
-            width: 379px;
-            height: 248px;
-            top: 0;
-            left: 0;
-            background-image: url(./img/faruk-kaymak-cnvvdjvdivi-unsplash-2.png);
-            background-size: cover;
-            background-position: 50% 50%;
-        }
-
-        .why-choose-us .learning-path-3 {
-            background-color: #e6f8ff;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            height: 344px;
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        .why-choose-us .overlap-3 {
-            width: 1106px;
-            height: 344px;
-            background-image: url("../img/course-bg-2.png");
-            background-size: 100% 100%;
-        }
-
-        .why-choose-us .frame-13 {
-            display: flex;
-            width: 954px;
-            align-items: flex-start;
-            justify-content: space-between;
-            position: relative;
-            top: 41px;
-            left: 76px;
-        }
-
-        .why-choose-us .frame-14 {
-            position: relative;
-            width: 379px;
-            height: 248px;
-            border-radius: 12px;
-            overflow: hidden;
-            background: linear-gradient(75deg,
-                    rgba(37, 2, 16, 1) 0%,
-                    rgba(46, 178, 183, 1) 52%,
-                    rgba(46, 174, 183, 1) 100%);
-        }
-
-        .why-choose-us .faruk-kaymak-5 {
-            top: -9694px;
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            left: -646px;
-            object-fit: cover;
-        }
-
-        .why-choose-us .overlap-group-6 {
-            position: absolute;
-            width: 379px;
-            height: 248px;
-            top: 0;
-            left: 0;
-            background-image: url(./img/faruk-kaymak-cnvvdjvdivi-unsplash-2-6.png);
-            background-size: cover;
-            background-position: 50% 50%;
-        }
-
-        .why-choose-us .learning-path-4 {
-            background-color: #ffebe6;
-            position: relative;
-            align-self: stretch;
-            width: 100%;
-            height: 344px;
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        .why-choose-us .overlap-4 {
-            width: 1106px;
-            height: 344px;
-            background-image: url("../img/course-bg-2.png");
-            background-size: 100% 100%;
-        }
-
-        .why-choose-us .frame-15 {
-            background: linear-gradient(75deg,
-                    rgba(37, 2, 16, 1) 0%,
-                    rgba(183, 46, 76, 1) 52%,
-                    rgba(183, 87, 46, 1) 100%);
-            position: relative;
-            width: 379px;
-            height: 248px;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .why-choose-us .faruk-kaymak-6 {
-            top: -10085px;
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            left: -646px;
-            object-fit: cover;
-        }
-
-        .why-choose-us .overlap-group-7 {
-            position: absolute;
-            width: 379px;
-            height: 248px;
-            top: 0;
-            left: 0;
-            background-image: url(./img/faruk-kaymak-cnvvdjvdivi-unsplash-2-3.png);
-            background-size: cover;
-            background-position: 50% 50%;
-        }
-
-        /* Original CSS code should be injected here */
-
-        /* Enhanced accessibility and semantic improvements */
-        .why-choose-us button:hover {
-            transform: translateY(-1px);
-            transition: transform 0.2s ease;
-        }
-
-        .why-choose-us button:focus {
-            outline: 2px solid #4a90e2;
-            outline-offset: 2px;
-        }
-
-        .why-choose-us button:active {
-            transform: translateY(0);
-        }
-
-        /* Improved button interaction states */
-        .why-choose-us .button:hover::before {
-            background: linear-gradient(103deg,
-                    rgba(41, 160, 182, 0.8) 0%,
-                    rgba(176, 195, 67, 0.8) 100%);
-        }
-
-        /* Enhanced semantic structure styling */
-        .why-choose-us main {
-            display: block;
-        }
-
-        .why-choose-us header {
-            display: block;
-        }
-
-        .why-choose-us section {
-            display: block;
-        }
-
-        .why-choose-us article {
-            display: block;
-        }
-
-        .why-choose-us figure {
+            flex-shrink: 0;
             margin: 0;
-            display: block;
         }
 
-        .why-choose-us figcaption {
-            display: block;
+        .step-card__image::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
         }
 
-        /* Screen reader improvements */
-        .why-choose-us [aria-hidden="true"] {
-            pointer-events: none;
+        .step-card--primary .step-card__image::before {
+            background: linear-gradient(75deg, rgba(37, 2, 16, 1) 0%, rgba(248, 79, 81, 1) 52%, rgba(250, 111, 33, 1) 100%);
         }
 
-        /* Ensure proper focus management */
-        .why-choose-us button[type="button"] {
-            cursor: pointer;
+        .step-card--secondary .step-card__image::before {
+            background: linear-gradient(75deg, rgba(37, 2, 16, 1) 0%, rgba(79, 132, 248, 1) 52%, rgba(33, 152, 250, 1) 100%);
         }
 
-        /* Maintain visual consistency with semantic elements */
-        .why-choose-us h1,
-        .why-choose-us h2,
-        .why-choose-us h3 {
-            margin: 0;
-            padding: 0;
+        .step-card--tertiary .step-card__image::before {
+            background: linear-gradient(75deg, rgba(37, 2, 16, 1) 0%, rgba(74, 190, 140, 1) 52%, rgba(67, 207, 125, 1) 100%);
         }
 
-        .why-choose-us span {
-            display: inline;
+        .step-card--quaternary .step-card__image::before {
+            background: linear-gradient(75deg, rgba(37, 2, 16, 1) 0%, rgba(183, 114, 46, 1) 52%, rgba(183, 114, 46, 1) 100%);
+        }
+
+        .step-card--quinary .step-card__image::before {
+            background: linear-gradient(75deg, rgba(37, 2, 16, 1) 0%, rgba(46, 178, 183, 1) 52%, rgba(46, 174, 183, 1) 100%);
+        }
+
+        .step-card--senary .step-card__image::before {
+            background: linear-gradient(75deg, rgba(37, 2, 16, 1) 0%, rgba(183, 46, 76, 1) 52%, rgba(183, 87, 46, 1) 100%);
+        }
+
+        .step-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .learning-path__container {
+                padding: 0 40px;
+            }
+
+            .step-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px;
+            }
+
+            .step-card__content {
+                max-width: none;
+            }
+
+            .step-card__image {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .learning-path {
+                padding: 50px 0;
+            }
+
+            .learning-path__container {
+                padding: 0 20px;
+            }
+
+            .learning-path__title {
+                font-size: clamp(24px, 7vw, 32px);
+            }
+
+            .step-card {
+                padding: 24px;
+                gap: 24px;
+            }
+
+            .step-card__image {
+                width: 100%;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .learning-path__container {
+                padding: 0 16px;
+            }
+
+            .step-card {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <section class="why-choose-us container">
-        <div class="overlap">
-            <img class="image" src="/img/bg-3.png" alt="Background pattern" />
-            <div class="frame">
-                <header>
-                    <h1 class="text-wrapper">পর্যাক্রমে শিখুন আর এগিয়ে চলুন</h1>
-                </header>
-                <section class="learning-path" aria-labelledby="step-01">
-                    <div class="overlap-group">
-                        <article class="div">
-                            <div class="frame-2">
-                                <header class="frame-3">
-                                    <div class="vector-wrapper" aria-hidden="true">
-                                        <img class="vector" src="/check-2.svg" alt="" />
-                                    </div>
-                                    <h2 id="step-01" class="text-wrapper-2">স্টেপ - ০১</h2>
-                                </header>
-                                <div class="frame-4">
-                                    <div class="frame-5">
-                                        <div class="frame-6">
-                                            <h3 class="text-wrapper-3">কুরআন শিক্ষার প্রাথমিক ধাপ</h3>
-                                            <p class="p">
-                                                এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
-                                                আরবি ভাষা জানতে পারবেন
-                                            </p>
-                                        </div>
-                                        <div class="frame-7">
-                                            <button class="button" type="button"
-                                                aria-label="কুরআন শিক্ষার প্রাথমিক ধাপ সম্পর্কে বিস্তারিত জানুন">
-                                                <span class="text-wrapper-4">বিস্তারিত</span>
-                                                <div class="vector-wrapper" aria-hidden="true">
-                                                    <img class="img" src="/right-arrow.svg" alt="" />
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
+    <section class="learning-path">
+        <div class="learning-path__container">
+            <header class="learning-path__header">
+                <h1 class="learning-path__title">পর্যাক্রমে শিখুন আর এগিয়ে চলুন</h1>
+            </header>
+            <div class="learning-path__steps">
+                <article class="step-card step-card--primary">
+                    <div class="step-card__content">
+                        <header class="step-card__header">
+                            <div class="step-card__badge">
+                                <img src="/check-2.svg" alt="" aria-hidden="true">
+                                <span class="step-card__number">স্টেপ - ০১</span>
                             </div>
-                            <div class="frame-8">
-                                <img src="/img/course-thumb-1.png" alt="">
-                            </div>
-                        </article>
+                        </header>
+                        <div class="step-card__body">
+                            <h2 class="step-card__title">কুরআন শিক্ষার প্রাথমিক ধাপ</h2>
+                            <p class="step-card__description">
+                                এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
+                                আরবি ভাষা জানতে পারবেন
+                            </p>
+                            <button class="step-card__button" type="button"
+                                aria-label="কুরআন শিক্ষার প্রাথমিক ধাপ সম্পর্কে বিস্তারিত জানুন">
+                                <span>বিস্তারিত</span>
+                                <img src="/right-arrow.svg" alt="" aria-hidden="true">
+                            </button>
+                        </div>
                     </div>
-                </section>
-                <section class="overlap-wrapper" aria-labelledby="step-02">
-                    <div class="frame-wrapper">
-                        <article class="div">
-                            <div class="frame-2">
-                                <header class="frame-3">
-                                    <div class="vector-wrapper" aria-hidden="true">
-                                        <img class="vector" src="/check-2.svg" alt="" />
-                                    </div>
-                                    <h2 id="step-02" class="text-wrapper-2">স্টেপ - ০২</h2>
-                                </header>
-                                <div class="frame-4">
-                                    <div class="frame-5">
-                                        <div class="frame-6">
-                                            <h3 class="text-wrapper-3">কুরআনের বিশুদ্ধকরণ (তাজভীদ) কোর্স</h3>
-                                            <p class="text-wrapper-7">
-                                                এরপর কুরআনের সঠিক উচ্চারণে সমস্যা থেকে গেলে তা শুদ্ধ করা হয় হয়। যাতে
-                                                শব্দের মিসম্যাচ ও ভুল
-                                                উচ্চারণ দূর হয় এবং কুরআন যথাযথভাবে তিলাওয়াত করা সম্ভব হয়।
-                                            </p>
-                                        </div>
-                                        <div class="frame-7">
-                                            <button class="button" type="button"
-                                                aria-label="কুরআনের বিশুদ্ধকরণ কোর্স সম্পর্কে বিস্তারিত জানুন">
-                                                <span class="text-wrapper-4">বিস্তারিত</span>
-                                                <div class="vector-wrapper" aria-hidden="true">
-                                                    <img class="img" src="/right-arrow.svg" alt="" />
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
+                    <figure class="step-card__image">
+                        <img src="/img/course-thumb-1.png" alt="কুরআন শিক্ষার প্রাথমিক ধাপ">
+                    </figure>
+                </article>
+
+                <article class="step-card step-card--secondary">
+                    <div class="step-card__content">
+                        <header class="step-card__header">
+                            <div class="step-card__badge">
+                                <img src="/check-2.svg" alt="" aria-hidden="true">
+                                <span class="step-card__number">স্টেপ - ০২</span>
                             </div>
-                            <div class="frame-10">
-                                <img src="/img/course-thumb-2.png" alt="" />
-                            </div>
-                        </article>
+                        </header>
+                        <div class="step-card__body">
+                            <h2 class="step-card__title">কুরআনের বিশুদ্ধকরণ (তাজভীদ) কোর্স</h2>
+                            <p class="step-card__description">
+                                এরপর কুরআনের সঠিক উচ্চারণে সমস্যা থেকে গেলে তা শুদ্ধ করা হয় হয়। যাতে
+                                শব্দের মিসম্যাচ ও ভুল
+                                উচ্চারণ দূর হয় এবং কুরআন যথাযথভাবে তিলাওয়াত করা সম্ভব হয়।
+                            </p>
+                            <button class="step-card__button" type="button"
+                                aria-label="কুরআনের বিশুদ্ধকরণ কোর্স সম্পর্কে বিস্তারিত জানুন">
+                                <span>বিস্তারিত</span>
+                                <img src="/right-arrow.svg" alt="" aria-hidden="true">
+                            </button>
+                        </div>
                     </div>
-                </section>
-                <section class="overlap-group-wrapper" aria-labelledby="step-03">
-                    <div class="div-wrapper">
-                        <article class="div">
-                            <div class="frame-2">
-                                <header class="frame-3">
-                                    <div class="vector-wrapper" aria-hidden="true">
-                                        <img class="vector" src="/check-2.svg" alt="" />
-                                    </div>
-                                    <h2 id="step-03" class="text-wrapper-2">স্টেপ - ০৩</h2>
-                                </header>
-                                <div class="frame-4">
-                                    <div class="frame-5">
-                                        <div class="frame-6">
-                                            <h3 class="text-wrapper-3">কুরআন হিফজ (কুরআন মুখস্থকরণ)</h3>
-                                            <p class="text-wrapper-7">
-                                                কুরআনের তিলাওয়াত ঠিক করার পর যারা ইচ্ছুক তারা পুরো কুরআন কিংবা কুরআনের
-                                                পছন্দনীয় কিছু অংশ বা
-                                                আমলি সূরা ইত্যাদি মুখস্থ করতে পারে।
-                                            </p>
-                                        </div>
-                                        <div class="frame-7">
-                                            <button class="button" type="button"
-                                                aria-label="কুরআন হিফজ কোর্স সম্পর্কে বিস্তারিত জানুন">
-                                                <span class="text-wrapper-4">বিস্তারিত</span>
-                                                <div class="vector-wrapper" aria-hidden="true">
-                                                    <img class="img" src="/right-arrow.svg" alt="" />
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
+                    <figure class="step-card__image">
+                        <img src="/img/course-thumb-2.png" alt="কুরআনের বিশুদ্ধকরণ কোর্স">
+                    </figure>
+                </article>
+
+                <article class="step-card step-card--tertiary">
+                    <div class="step-card__content">
+                        <header class="step-card__header">
+                            <div class="step-card__badge">
+                                <img src="/check-2.svg" alt="" aria-hidden="true">
+                                <span class="step-card__number">স্টেপ - ০৩</span>
                             </div>
-                            <div class="frame-11">
-                                <img src="/img/course-thumb-3.png" alt="">
-                            </div>
-                        </article>
+                        </header>
+                        <div class="step-card__body">
+                            <h2 class="step-card__title">কুরআন হিফজ (কুরআন মুখস্থকরণ)</h2>
+                            <p class="step-card__description">
+                                কুরআনের তিলাওয়াত ঠিক করার পর যারা ইচ্ছুক তারা পুরো কুরআন কিংবা কুরআনের
+                                পছন্দনীয় কিছু অংশ বা
+                                আমলি সূরা ইত্যাদি মুখস্থ করতে পারে।
+                            </p>
+                            <button class="step-card__button" type="button"
+                                aria-label="কুরআন হিফজ কোর্স সম্পর্কে বিস্তারিত জানুন">
+                                <span>বিস্তারিত</span>
+                                <img src="/right-arrow.svg" alt="" aria-hidden="true">
+                            </button>
+                        </div>
                     </div>
-                </section>
-                <section class="learning-path-2" aria-labelledby="step-04">
-                    <div class="overlap-2">
-                        <article class="div">
-                            <div class="frame-2">
-                                <header class="frame-3">
-                                    <div class="vector-wrapper" aria-hidden="true">
-                                        <img class="vector" src="/check-2.svg" alt="" />
-                                    </div>
-                                    <h2 id="step-04" class="text-wrapper-2">স্টেপ - ০৪</h2>
-                                </header>
-                                <div class="frame-4">
-                                    <div class="frame-5">
-                                        <div class="frame-6">
-                                            <h3 class="text-wrapper-3">আরবীভাষা শিক্ষা</h3>
-                                            <p class="p">
-                                                অথবা কুরআনের অর্থ বুঝতে আরবীভাষা শিখতে পারে। আমরা আরবীভাষার দক্ষতা
-                                                বৃদ্ধির জন্য বিভিন্ন
-                                                পর্যায়ের কোর্স পরিচালনা করি।
-                                            </p>
-                                        </div>
-                                        <div class="frame-7">
-                                            <button class="button" type="button"
-                                                aria-label="আরবীভাষা শিক্ষা কোর্স সম্পর্কে বিস্তারিত জানুন">
-                                                <span class="text-wrapper-4">বিস্তারিত</span>
-                                                <div class="vector-wrapper" aria-hidden="true">
-                                                    <img class="img" src="/right-arrow.svg" alt="" />
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
+                    <figure class="step-card__image">
+                        <img src="/img/course-thumb-3.png" alt="কুরআন হিফজ কোর্স">
+                    </figure>
+                </article>
+
+                <article class="step-card step-card--quaternary">
+                    <div class="step-card__content">
+                        <header class="step-card__header">
+                            <div class="step-card__badge">
+                                <img src="/check-2.svg" alt="" aria-hidden="true">
+                                <span class="step-card__number">স্টেপ - ০৪</span>
                             </div>
-                            <div class="frame-12">
-                                <img src="/img/course-thumb-4.png" alt="">
-                            </div>
-                        </article>
+                        </header>
+                        <div class="step-card__body">
+                            <h2 class="step-card__title">আরবীভাষা শিক্ষা</h2>
+                            <p class="step-card__description">
+                                অথবা কুরআনের অর্থ বুঝতে আরবীভাষা শিখতে পারে। আমরা আরবীভাষার দক্ষতা
+                                বৃদ্ধির জন্য বিভিন্ন
+                                পর্যায়ের কোর্স পরিচালনা করি।
+                            </p>
+                            <button class="step-card__button" type="button"
+                                aria-label="আরবীভাষা শিক্ষা কোর্স সম্পর্কে বিস্তারিত জানুন">
+                                <span>বিস্তারিত</span>
+                                <img src="/right-arrow.svg" alt="" aria-hidden="true">
+                            </button>
+                        </div>
                     </div>
-                </section>
-                <section class="learning-path-3" aria-labelledby="step-05">
-                    <div class="overlap-3">
-                        <article class="frame-13">
-                            <div class="frame-2">
-                                <header class="frame-3">
-                                    <div class="vector-wrapper" aria-hidden="true">
-                                        <img class="vector" src="/check-2.svg" alt="" />
-                                    </div>
-                                    <h2 id="step-05" class="text-wrapper-2">স্টেপ - ০৫</h2>
-                                </header>
-                                <div class="frame-4">
-                                    <div class="frame-5">
-                                        <div class="frame-6">
-                                            <h3 class="text-wrapper-3">আকীদা শিক্ষা</h3>
-                                            <p class="p">
-                                                আরবীভাষায় দক্ষতা অর্জনের পাশাপাশি শিক্ষার্থীরা আকীদা (ইসলামের বিশ্বাসের
-                                                মূলনীতি) সম্পর্কে
-                                                জানতে পারবে। যা তাদের ঈমানকে মজবুত ও সুদৃঢ় করবে এবং ঈমানের হেফাজতে
-                                                ভূমিকা রাখবে
-                                            </p>
-                                        </div>
-                                        <div class="frame-7">
-                                            <button class="button" type="button"
-                                                aria-label="আকীদা শিক্ষা কোর্স সম্পর্কে বিস্তারিত জানুন">
-                                                <span class="text-wrapper-4">বিস্তারিত</span>
-                                                <div class="vector-wrapper" aria-hidden="true">
-                                                    <img class="img" src="/right-arrow.svg" alt="" />
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
+                    <figure class="step-card__image">
+                        <img src="/img/course-thumb-4.png" alt="আরবীভাষা শিক্ষা কোর্স">
+                    </figure>
+                </article>
+
+                <article class="step-card step-card--quinary">
+                    <div class="step-card__content">
+                        <header class="step-card__header">
+                            <div class="step-card__badge">
+                                <img src="/check-2.svg" alt="" aria-hidden="true">
+                                <span class="step-card__number">স্টেপ - ০৫</span>
                             </div>
-                            <div class="frame-14">
-                                <img src="/img/course-thumb-5.png" alt="">
-                            </div>
-                        </article>
+                        </header>
+                        <div class="step-card__body">
+                            <h2 class="step-card__title">আকীদা শিক্ষা</h2>
+                            <p class="step-card__description">
+                                আরবীভাষায় দক্ষতা অর্জনের পাশাপাশি শিক্ষার্থীরা আকীদা (ইসলামের বিশ্বাসের
+                                মূলনীতি) সম্পর্কে
+                                জানতে পারবে। যা তাদের ৈমানকে মজবুত ও সুদৃঢ় করবে এবং ৈমানের হেফাজতে
+                                ভূমিকা রাখবে
+                            </p>
+                            <button class="step-card__button" type="button"
+                                aria-label="আকীদা শিক্ষা কোর্স সম্পর্কে বিস্তারিত জানুন">
+                                <span>বিস্তারিত</span>
+                                <img src="/right-arrow.svg" alt="" aria-hidden="true">
+                            </button>
+                        </div>
                     </div>
-                </section>
-                <section class="learning-path-4" aria-labelledby="step-06">
-                    <div class="overlap-4">
-                        <article class="div">
-                            <div class="frame-2">
-                                <header class="frame-3">
-                                    <div class="vector-wrapper" aria-hidden="true">
-                                        <img class="vector" src="/check-2.svg" alt="" />
-                                    </div>
-                                    <h2 id="step-06" class="text-wrapper-2">স্টেপ - ০৬</h2>
-                                </header>
-                                <div class="frame-4">
-                                    <div class="frame-5">
-                                        <div class="frame-6">
-                                            <h3 class="text-wrapper-3">ফিকহ অধ্যয়ন</h3>
-                                            <p class="p">
-                                                অথবা কুরআনের অর্থ বুঝতে আরবীভাষা শিখতে পারে। আমরা আরবীভাষার দক্ষতা
-                                                বৃদ্ধির জন্য বিভিন্ন
-                                                পর্যায়ের কোর্স পরিচালনা করি।
-                                            </p>
-                                        </div>
-                                        <div class="frame-7">
-                                            <button class="button" type="button"
-                                                aria-label="ফিকহ অধ্যয়ন কোর্স সম্পর্কে বিস্তারিত জানুন">
-                                                <span class="text-wrapper-4">বিস্তারিত</span>
-                                                <div class="vector-wrapper" aria-hidden="true">
-                                                    <img class="img" src="/right-arrow.svg" alt="" />
-                                                </div>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
+                    <figure class="step-card__image">
+                        <img src="/img/course-thumb-5.png" alt="আকীদা শিক্ষা কোর্স">
+                    </figure>
+                </article>
+
+                <article class="step-card step-card--senary">
+                    <div class="step-card__content">
+                        <header class="step-card__header">
+                            <div class="step-card__badge">
+                                <img src="/check-2.svg" alt="" aria-hidden="true">
+                                <span class="step-card__number">স্টেপ - ০৬</span>
                             </div>
-                            <div class="frame-15">
-                                <img src="/img/course-thumb-6.png" alt="">
-                            </div>
-                        </article>
+                        </header>
+                        <div class="step-card__body">
+                            <h2 class="step-card__title">ফিকহ অধ্যয়ন</h2>
+                            <p class="step-card__description">
+                                অথবা কুরআনের অর্থ বুঝতে আরবীভাষা শিখতে পারে। আমরা আরবীভাষার দক্ষতা
+                                বৃদ্ধির জন্য বিভিন্ন
+                                পর্যায়ের কোর্স পরিচালনা করি।
+                            </p>
+                            <button class="step-card__button" type="button"
+                                aria-label="ফিকহ অধ্যয়ন কোর্স সম্পর্কে বিস্তারিত জানুন">
+                                <span>বিস্তারিত</span>
+                                <img src="/right-arrow.svg" alt="" aria-hidden="true">
+                            </button>
+                        </div>
                     </div>
-                </section>
+                    <figure class="step-card__image">
+                        <img src="/img/course-thumb-6.png" alt="ফিকহ অধ্যয়ন কোর্স">
+                    </figure>
+                </article>
             </div>
         </div>
     </section>

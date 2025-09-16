@@ -259,6 +259,170 @@
                 font-size: 14px;
             }
         }
+
+        /* Mobile Navigation - BEM methodology */
+        .mobile-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: none; /* Hidden by default */
+        }
+
+        .mobile-nav__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            background-color: var(--white-100);
+            border-top: 2px solid transparent;
+            border-image: linear-gradient(45deg, rgba(37, 2, 16, 1) 0%, rgba(46, 188, 204, 1) 100%) 1;
+            max-width: 391px;
+            margin: 0 auto;
+        }
+
+        /* Navigation Items */
+        .mobile-nav__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            padding: 0 8px;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+            cursor: pointer;
+        }
+
+        .mobile-nav__item:hover {
+            opacity: 0.8;
+        }
+
+        .mobile-nav__item:focus {
+            outline: 2px solid #4a90e2;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        .mobile-nav__item:focus-visible {
+            outline: 2px solid #4a90e2;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* Icon Container */
+        .mobile-nav__icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .mobile-nav__icon img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Label Styles */
+        .mobile-nav__label {
+            font-family: var(--paragraph-text-font-family);
+            font-weight: var(--paragraph-text-font-weight);
+            font-size: var(--paragraph-text-font-size);
+            text-align: center;
+            letter-spacing: var(--paragraph-text-letter-spacing);
+            line-height: var(--paragraph-text-line-height);
+            font-style: var(--paragraph-text-font-style);
+            white-space: nowrap;
+            color: #afafaf;
+            transition: color 0.2s ease;
+        }
+
+        /* Active State */
+        .mobile-nav__item--active .mobile-nav__label {
+            background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+
+        /* Show mobile navigation only on mobile devices */
+        @media (max-width: 768px) {
+            .mobile-nav {
+                display: block;
+            }
+        }
+
+        /* Mobile Navigation Responsive Design */
+        @media (max-width: 391px) {
+            .mobile-nav__container {
+                max-width: 100%;
+                padding: 12px 8px;
+            }
+
+            .mobile-nav__item {
+                padding: 0 4px;
+                gap: 2px;
+            }
+
+            .mobile-nav__icon {
+                width: 18px;
+                height: 18px;
+            }
+
+            .mobile-nav__label {
+                font-size: calc(var(--paragraph-text-font-size) * 0.9);
+            }
+        }
+
+        @media (max-width: 320px) {
+            .mobile-nav__container {
+                padding: 10px 4px;
+            }
+
+            .mobile-nav__item {
+                padding: 0 2px;
+            }
+
+            .mobile-nav__icon {
+                width: 16px;
+                height: 16px;
+            }
+
+            .mobile-nav__label {
+                font-size: calc(var(--paragraph-text-font-size) * 0.8);
+            }
+        }
+
+        /* Accessibility Improvements */
+        @media (prefers-reduced-motion: reduce) {
+            .mobile-nav__item {
+                transition: none;
+            }
+
+            .mobile-nav__label {
+                transition: none;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .mobile-nav__container {
+                border-top: 2px solid currentColor;
+            }
+
+            .mobile-nav__item--active .mobile-nav__label {
+                background: none;
+                -webkit-background-clip: unset;
+                background-clip: unset;
+                -webkit-text-fill-color: unset;
+                color: #000;
+                font-weight: bold;
+            }
+        }
     </style>
 </head>
 
@@ -294,6 +458,46 @@
             </button>
         </div>
     </header>
+
+    <!-- Mobile Navigation (shown only on mobile devices) -->
+    <nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+        <div class="mobile-nav__container">
+            <a href="#home" class="mobile-nav__item mobile-nav__item--active" aria-current="page">
+                <div class="mobile-nav__icon" aria-hidden="true">
+                    <img src="../home-menu-active.svg" alt="">
+                </div>
+                <span class="mobile-nav__label">হোম</span>
+            </a>
+
+            <a href="#special" class="mobile-nav__item">
+                <div class="mobile-nav__icon" aria-hidden="true">
+                    <img src="../gift-menu.svg" alt="">
+                </div>
+                <span class="mobile-nav__label">স্পেশাল</span>
+            </a>
+
+            <a href="#free-courses" class="mobile-nav__item">
+                <div class="mobile-nav__icon" aria-hidden="true">
+                    <img src="../circle-menu.svg" alt="">
+                </div>
+                <span class="mobile-nav__label">ফ্রী কোর্স</span>
+            </a>
+
+            <a href="#all-courses" class="mobile-nav__item">
+                <div class="mobile-nav__icon" aria-hidden="true">
+                    <img src="../cap-menu.svg" alt="">
+                </div>
+                <span class="mobile-nav__label">সব কোর্স</span>
+            </a>
+
+            <a href="#login" class="mobile-nav__item">
+                <div class="mobile-nav__icon" aria-hidden="true">
+                    <img src="../user-menu.svg" alt="">
+                </div>
+                <span class="mobile-nav__label">লগ ইন</span>
+            </a>
+        </div>
+    </nav>
 </body>
 
 </html>

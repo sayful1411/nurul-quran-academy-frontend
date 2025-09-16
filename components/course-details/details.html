@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&family=Tiro+Bangla:ital@0;1&display=swap"
+        rel="stylesheet">
+    <title>Nurul Quran Academy</title>
+    <link rel="stylesheet" href="../../src/globals.css">
+    <style>
+        .course-details {
+            position: relative;
+            width: 1440px;
+            height: 4614px;
+            background-color: #fefefe;
+            overflow: hidden;
+        }
+
+        .course-details .frame {
+            position: absolute;
+            width: 342px;
+            height: 922px;
+            top: 76px;
+            left: 1013px;
+            overflow-y: scroll;
+        }
+
+        .course-details .frame::-webkit-scrollbar {
+            width: 0;
+            display: none;
+        }
+
+        .course-details .crouse-card {
+            position: relative;
+            width: 342px;
+            height: 428px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid;
+            border-color: #e8e8e8;
+            box-shadow: var(--shadow-card);
+        }
+
+        .course-details .overlap-group-wrapper {
+            position: absolute;
+            width: 342px;
+            height: 186px;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            background: linear-gradient(75deg,
+                    rgba(37, 2, 16, 1) 0%,
+                    rgba(248, 79, 81, 1) 52%,
+                    rgba(250, 111, 33, 1) 100%);
+        }
+
+        .course-details .overlap-group {
+            position: relative;
+            width: 383px;
+            height: 239px;
+            top: -16px;
+            left: -4px;
+        }
+
+        .course-details .faruk-kaymak {
+            width: 1px;
+            height: 1px;
+            top: 109px;
+            left: 175px;
+            position: absolute;
+            object-fit: cover;
+        }
+
+        .course-details .img {
+            width: 350px;
+            height: 218px;
+            top: 0;
+            left: 0;
+            mix-blend-mode: darken;
+            aspect-ratio: 1.61;
+            position: absolute;
+            object-fit: cover;
+        }
+
+        .course-details .image {
+            position: absolute;
+            width: 226px;
+            height: 226px;
+            top: 13px;
+            left: 157px;
+            mix-blend-mode: luminosity;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+
+        .course-details .div {
+            display: flex;
+            flex-direction: column;
+            width: 172px;
+            align-items: flex-start;
+            position: absolute;
+            top: 60px;
+            left: 35px;
+        }
+
+        .course-details .text-wrapper {
+            align-self: stretch;
+            margin-top: -1.00px;
+            font-family: "Tiro Bangla-Regular", Helvetica;
+            font-weight: 400;
+            color: var(--white-100);
+            font-size: 32px;
+            line-height: normal;
+            position: relative;
+            letter-spacing: 0;
+        }
+
+        .course-details .text-wrapper-2 {
+            position: relative;
+            align-self: stretch;
+            margin-top: -8px;
+            font-family: "Tiro Bangla-Regular", Helvetica;
+            font-weight: 400;
+            color: var(--white-100);
+            font-size: 32px;
+            letter-spacing: 0;
+            line-height: normal;
+        }
+
+        .course-details .text-wrapper-3 {
+            position: absolute;
+            top: 253px;
+            left: 16px;
+            font-family: "Tiro Bangla-Regular", Helvetica;
+            font-weight: 400;
+            color: var(--blackheading);
+            font-size: 24px;
+            letter-spacing: 0;
+            line-height: normal;
+            white-space: nowrap;
+        }
+
+        .course-details .frame-2 {
+            display: flex;
+            width: 310px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 12px;
+            position: absolute;
+            top: 202px;
+            left: 16px;
+            background-color: #ffffff;
+            border-radius: 23px;
+            box-shadow: 0px 1px 5px #00000029;
+        }
+
+        .course-details .frame-3 {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .course-details .vector-wrapper {
+            position: relative;
+            width: 14px;
+            height: 14px;
+            aspect-ratio: 1;
+        }
+
+        .course-details .vector {
+            position: absolute;
+            width: 14px;
+            height: 12px;
+            top: 1px;
+            left: 0;
+        }
+
+        .course-details .text-wrapper-4 {
+            position: relative;
+            width: fit-content;
+            font-family: "Tiro Bangla-Regular", Helvetica;
+            font-weight: 400;
+            color: var(--blackheading);
+            font-size: 13px;
+            letter-spacing: 0;
+            line-height: normal;
+            white-space: nowrap;
+        }
+
+        .course-details .vector-2 {
+            position: absolute;
+            width: 11px;
+            height: 11px;
+            top: 1px;
+            left: 1px;
+        }
+
+        .course-details .button-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 310px;
+            align-items: flex-start;
+            gap: 12px;
+            position: absolute;
+            top: 364px;
+            left: 16px;
+        }
+
+        .course-details .button {
+            all: unset;
+            box-sizing: border-box;
+            display: flex;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 16px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            border-radius: 50px;
+            background: linear-gradient(90deg,
+                    rgba(223, 24, 106, 1) 0%,
+                    rgba(250, 111, 33, 1) 100%);
+        }
+
+        .course-details .text-wrapper-5 {
+            position: relative;
+            width: fit-content;
+            margin-top: -3.00px;
+            margin-bottom: -1.00px;
+            font-family: var(--body-text-font-family);
+            font-weight: var(--body-text-font-weight);
+            color: #ffffff;
+            font-size: var(--body-text-font-size);
+            letter-spacing: var(--body-text-letter-spacing);
+            line-height: var(--body-text-line-height);
+            white-space: nowrap;
+            font-style: var(--body-text-font-style);
+        }
+
+        .course-details .arrow-right {
+            position: relative;
+            width: 16px;
+            height: 16px;
+            aspect-ratio: 1;
+        }
+
+        .course-details .vector-3 {
+            position: absolute;
+            width: 12px;
+            height: 10px;
+            top: 3px;
+            left: 2px;
+        }
+
+        .course-details .frame-4 {
+            display: inline-flex;
+            align-items: center;
+            gap: 19px;
+            position: absolute;
+            top: 296px;
+            left: 16px;
+        }
+
+        .course-details .text-wrapper-6 {
+            position: relative;
+            width: fit-content;
+            margin-top: -1.00px;
+            font-family: "Tiro Bangla-Regular", Helvetica;
+            font-weight: 400;
+            color: var(--blackheading);
+            font-size: 40px;
+            letter-spacing: -1.60px;
+            line-height: normal;
+            white-space: nowrap;
+        }
+
+        .course-details .text-wrapper-7 {
+            position: relative;
+            width: fit-content;
+            font-family: "Tiro Bangla-Regular", Helvetica;
+            font-weight: 400;
+            color: var(--blacksubtext);
+            font-size: 24px;
+            letter-spacing: -0.96px;
+            line-height: normal;
+            text-decoration: line-through;
+            white-space: nowrap;
+        }
+
+        .course-details .frame-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 841px;
+            align-items: flex-start;
+            gap: 40px;
+            position: absolute;
+            top: 72px;
+            left: 96px;
+        }
+
+        .course-details .frame-5 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 40px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .course-details .frame-6 {
+            display: flex;
+            height: 46px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4px 0px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+        }
+
+        .course-details .menu {
+            display: flex;
+            width: 590px;
+            align-items: center;
+            position: relative;
+        }
+
+        .course-details .div-wrapper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 6px 12px;
+            position: relative;
+            flex: 0 0 auto;
+            margin-top: -1.00px;
+            margin-bottom: -1.00px;
+            margin-left: -2.00px;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            border-color: transparent;
+            border-image: linear-gradient(90deg,
+                    rgba(223, 24, 106, 1) 0%,
+                    rgba(250, 111, 33, 1) 100%) 1;
+        }
+
+        .course-details .text-wrapper-8 {
+            position: relative;
+            width: 104px;
+            font-family: var(--body-text-semibold-font-family);
+            font-weight: var(--body-text-semibold-font-weight);
+            color: var(--blackheading);
+            font-size: var(--body-text-semibold-font-size);
+            text-align: center;
+            letter-spacing: var(--body-text-semibold-letter-spacing);
+            line-height: var(--body-text-semibold-line-height);
+            font-style: var(--body-text-semibold-font-style);
+        }
+
+        .course-details .frame-7 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 6px 12px;
+            position: relative;
+            flex: 0 0 auto;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-color: var(--greyoutline);
+        }
+
+        .course-details .text-wrapper-9 {
+            position: relative;
+            width: 104px;
+            font-family: var(--body-text-semibold-font-family);
+            font-weight: var(--body-text-semibold-font-weight);
+            color: var(--blacksubtext);
+            font-size: var(--body-text-semibold-font-size);
+            text-align: center;
+            letter-spacing: var(--body-text-semibold-letter-spacing);
+            line-height: var(--body-text-semibold-line-height);
+            font-style: var(--body-text-semibold-font-style);
+        }
+
+        .course-details .text-wrapper-10 {
+            width: fit-content;
+            font-family: var(--body-text-semibold-font-family);
+            font-weight: var(--body-text-semibold-font-weight);
+            color: var(--blacksubtext);
+            font-size: var(--body-text-semibold-font-size);
+            text-align: center;
+            line-height: var(--body-text-semibold-line-height);
+            white-space: nowrap;
+            position: relative;
+            letter-spacing: var(--body-text-semibold-letter-spacing);
+            font-style: var(--body-text-semibold-font-style);
+        }
+
+        .course-details .frame-8 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 6px 12px;
+            position: relative;
+            flex: 0 0 auto;
+            margin-right: 0;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-color: var(--greyoutline);
+        }
+
+        .course-details .frame-9 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 6px 12px;
+            position: relative;
+            flex: 0 0 auto;
+            margin-top: -1.00px;
+            margin-bottom: -1.00px;
+            margin-right: -238.00px;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-color: var(--greyoutline);
+        }
+
+        .course-details .text-wrapper-11 {
+            position: relative;
+            width: fit-content;
+            font-family: "Noto Serif Bengali-SemiBold", Helvetica;
+            font-weight: 600;
+            color: var(--blacksubtext);
+            font-size: 16px;
+            text-align: center;
+            letter-spacing: 0;
+            line-height: normal;
+        }
+
+        .course-details .caret-down-wrapper {
+            display: flex;
+            width: 32px;
+            height: 32px;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 4px;
+            position: relative;
+            border: none;
+            border-radius: 32px;
+        }
+
+        .course-details .caret-down {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            aspect-ratio: 1;
+        }
+
+        .course-details .vector-4 {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 2px;
+            left: 3px;
+        }
+
+        /* Original CSS code should be injected here */
+
+        /* Enhanced accessibility and semantic improvements */
+        .course-details .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .course-details .menu li {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .course-details .menu li:hover {
+            opacity: 0.8;
+        }
+
+        .course-details .menu li:focus {
+            outline: 2px solid #4a90e2;
+            outline-offset: 2px;
+        }
+
+        .course-details .menu li[aria-selected="true"] {
+            border-image: linear-gradient(90deg,
+                    rgba(223, 24, 106, 1) 0%,
+                    rgba(250, 111, 33, 1) 100%) 1;
+        }
+
+        .course-details .button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-details .button:active {
+            transform: translateY(0);
+        }
+
+        .course-details .caret-down-wrapper:hover {
+            background-color: #e0e0e0;
+        }
+
+        .course-details .caret-down-wrapper:focus {
+            outline: 1px solid gray;
+            outline-offset: 2px;
+        }
+
+
+
+        /* Responsive improvements */
+        @media (max-width: 768px) {
+            .course-details {
+                width: 100%;
+                height: auto;
+                min-height: 100vh;
+            }
+
+            .course-details .frame {
+                position: static;
+                width: 100%;
+                height: auto;
+                margin: 0;
+                padding: 16px;
+            }
+
+            .course-details .frame-wrapper {
+                position: static;
+                width: 100%;
+                padding: 16px;
+                margin: 0;
+            }
+
+            .course-details .crouse-card {
+                width: 100%;
+                max-width: 342px;
+                margin: 0 auto;
+            }
+
+            .course-details .menu {
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            .course-details .frame-6 {
+                flex-direction: column;
+                height: auto;
+                gap: 16px;
+            }
+        }
+
+        .frame-10 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 56px;
+            position: relative;
+        }
+
+        .frame-10 .div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+            left: 0;
+            top: 0;
+        }
+
+        .frame-10 .div-2 {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .frame-10 .text-wrapper {
+            position: relative;
+            width: fit-content;
+            margin-top: -1.00px;
+            font-family: var(--h-3-font-family);
+            font-weight: var(--h-3-font-weight);
+            color: var(--blackheading);
+            font-size: var(--h-3-font-size);
+            letter-spacing: var(--h-3-letter-spacing);
+            line-height: var(--h-3-line-height);
+            white-space: nowrap;
+            font-style: var(--h-3-font-style);
+        }
+
+        .frame-10 .text-wrapper-2 {
+            width: fit-content;
+            margin-top: -1.00px;
+            background: linear-gradient(90deg,
+                    rgba(223, 24, 106, 1) 0%,
+                    rgba(250, 111, 33, 1) 100%);
+            -webkit-background-clip: text !important;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+            font-family: var(--h-3-font-family);
+            font-weight: var(--h-3-font-weight);
+            color: transparent;
+            font-size: var(--h-3-font-size);
+            line-height: var(--h-3-line-height);
+            white-space: nowrap;
+            position: relative;
+            letter-spacing: var(--h-3-letter-spacing);
+            font-style: var(--h-3-font-style);
+        }
+
+        .frame-10 .p {
+            align-self: stretch;
+            font-family: var(--body-text-font-family);
+            font-weight: var(--body-text-font-weight);
+            color: var(--blacksubtext);
+            font-size: var(--body-text-font-size);
+            line-height: var(--body-text-line-height);
+            position: relative;
+            letter-spacing: var(--body-text-letter-spacing);
+            font-style: var(--body-text-font-style);
+        }
+
+        .frame-10 .frame-wrapper {
+            display: flex;
+            width: 837px;
+            height: 252px;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            padding: 0px 275px;
+            position: absolute;
+            top: 124px;
+            left: 0;
+            background: linear-gradient(0deg,
+                    rgba(255, 255, 255, 1) 0%,
+                    rgba(255, 255, 255, 0) 100%);
+        }
+
+        .frame-10 .div-wrapper {
+            display: flex;
+            width: 103px;
+            height: 107px;
+            align-items: center;
+            justify-content: space-around;
+            gap: 10px;
+            padding: 16px;
+            position: relative;
+            border: none;
+        }
+
+        .frame-10 .text-wrapper-5 {
+            position: relative;
+            width: fit-content;
+            font-family: var(--body-text-font-family);
+            font-weight: var(--body-text-font-weight);
+            color: var(--blacksubtext);
+            font-size: var(--body-text-font-size);
+            text-align: center;
+            letter-spacing: var(--body-text-letter-spacing);
+            line-height: var(--body-text-line-height);
+            white-space: nowrap;
+            font-style: var(--body-text-font-style);
+        }
+
+        .frame-10 .div-3 {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .frame-10 .div-4 {
+            display: flex;
+            width: 100%;
+            max-width: 841px;
+            align-items: flex-start;
+            gap: 24px;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .frame-10 .vector-wrapper {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            aspect-ratio: 1;
+        }
+
+        .frame-10 .vector {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 6px;
+            left: 1px;
+        }
+
+        .frame-10 .div-5 {
+            flex: 1;
+            margin-top: -1.00px;
+            font-family: var(--body-text-font-family);
+            font-weight: var(--body-text-font-weight);
+            color: transparent;
+            font-size: var(--body-text-font-size);
+            line-height: var(--body-text-line-height);
+            position: relative;
+            letter-spacing: var(--body-text-letter-spacing);
+            font-style: var(--body-text-font-style);
+        }
+
+        .frame-10 .span {
+            color: #121010;
+            font-family: var(--body-text-font-family);
+            font-style: var(--body-text-font-style);
+            font-weight: var(--body-text-font-weight);
+            letter-spacing: var(--body-text-letter-spacing);
+            line-height: var(--body-text-line-height);
+            font-size: var(--body-text-font-size);
+        }
+
+        .frame-10 .text-wrapper-4 {
+            color: #535965;
+            font-family: var(--body-text-font-family);
+            font-style: var(--body-text-font-style);
+            font-weight: var(--body-text-font-weight);
+            letter-spacing: var(--body-text-letter-spacing);
+            line-height: var(--body-text-line-height);
+            font-size: var(--body-text-font-size);
+        }
+
+        .frame-10 .white-overlay {
+            display: flex;
+            width: 837px;
+            height: 252px;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 10px;
+            padding: 0px 275px;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            background: linear-gradient(0deg,
+                    rgba(255, 255, 255, 1) 0%,
+                    rgba(255, 255, 255, 0) 100%);
+        }
+
+        .frame-10 .text-wrapper-5 {
+            width: fit-content;
+            font-family: "Noto Serif Bengali", Helvetica;
+            font-weight: 500;
+            color: var(--blacksubtext);
+            font-size: 16px;
+            text-align: center;
+            line-height: 24px;
+            white-space: nowrap;
+            position: relative;
+            letter-spacing: 0;
+        }
+
+        .frame-10 .div-6 {
+            display: flex;
+            flex-direction: column;
+            width: 756px;
+            align-items: flex-start;
+            gap: 16px;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .frame-10 .title {
+            display: flex;
+            flex-direction: column;
+            width: 756px;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 16px;
+            position: relative;
+            flex: 0 0 auto;
+            background-color: var(--white-100);
+            border-radius: 8px;
+            border: 1px solid;
+            border-color: var(--greyoutline);
+        }
+
+        .frame-10 .div-7 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .frame-10 .div-8 {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .frame-10 .folder-open {
+            position: relative;
+            width: 24px;
+            height: 24px;
+            aspect-ratio: 1;
+        }
+
+        .frame-10 .img {
+            position: absolute;
+            width: 21px;
+            height: 16px;
+            top: 4px;
+            left: 2px;
+        }
+
+        .frame-10 .text-wrapper-6 {
+            width: fit-content;
+            margin-top: -1.00px;
+            font-family: var(--h-6-font-family);
+            font-weight: var(--h-6-font-weight);
+            color: var(--blackheading);
+            font-size: var(--h-6-font-size);
+            line-height: var(--h-6-line-height);
+            white-space: nowrap;
+            position: relative;
+            letter-spacing: var(--h-6-letter-spacing);
+            font-style: var(--h-6-font-style);
+        }
+
+        .frame-10 .t {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 0px 8px;
+            position: relative;
+            flex: 0 0 auto;
+            background-color: var(--white-100);
+            border-radius: 8px;
+            border: 1px solid;
+            border-color: var(--blacksubtext);
+        }
+
+        .frame-10 .text-wrapper-7 {
+            position: relative;
+            width: fit-content;
+            margin-top: -1.00px;
+            font-family: "Inter-SemiBold", Helvetica;
+            font-weight: 600;
+            color: var(--blacksubtext);
+            font-size: 14px;
+            letter-spacing: 0;
+            line-height: 24px;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+
+        .frame-10 .img-wrapper {
+            position: relative;
+            width: 16px;
+            height: 16px;
+            aspect-ratio: 1;
+        }
+
+        .frame-10 .vector-2 {
+            position: absolute;
+            width: 11px;
+            height: 6px;
+            top: 5px;
+            left: 2px;
+        }
+
+        .frame-10 .title-2 {
+            display: flex;
+            width: 724px;
+            align-items: center;
+            gap: 24px;
+            padding: 12px 16px;
+            position: relative;
+            flex: 0 0 auto;
+            border-radius: 8px;
+            border: 1px solid;
+            border-color: var(--greyoutline);
+        }
+
+        .frame-10 .div-9 {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            position: relative;
+            flex: 0 0 auto;
+            margin-right: -4.00px;
+        }
+
+        .frame-10 .div-10 {
+            display: flex;
+            width: 565px;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+        }
+
+        .frame-10 .vector-3 {
+            position: absolute;
+            width: 14px;
+            height: 16px;
+            top: 2px;
+            left: 2px;
+        }
+
+        .frame-10 .text-wrapper-8 {
+            flex: 1;
+            margin-top: -1.00px;
+            font-family: var(--body-text-font-family);
+            font-weight: var(--body-text-font-weight);
+            color: var(--blacksubtext);
+            font-size: var(--body-text-font-size);
+            line-height: var(--body-text-line-height);
+            position: relative;
+            letter-spacing: var(--body-text-letter-spacing);
+            font-style: var(--body-text-font-style);
+            text-align: left;
+            width: auto;
+        }
+
+        .frame-10 .t-2 {
+            padding: 3px 8px;
+            border-radius: 50px;
+            border-color: var(--greyoutline);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex: 0 0 auto;
+            background-color: var(--white-100);
+            border: 1px solid;
+        }
+
+        .frame-10 .text-wrapper-9 {
+            width: fit-content;
+            margin-top: -1.00px;
+            font-family: var(--paragraph-text-font-family);
+            font-weight: var(--paragraph-text-font-weight);
+            color: var(--blacksubtext);
+            font-size: var(--paragraph-text-font-size);
+            line-height: var(--paragraph-text-line-height);
+            white-space: nowrap;
+            position: relative;
+            letter-spacing: var(--paragraph-text-letter-spacing);
+            font-style: var(--paragraph-text-font-style);
+            text-align: left;
+        }
+
+        .frame-10 .vector-4 {
+            position: absolute;
+            width: 12px;
+            height: 14px;
+            top: 0;
+            left: 2px;
+        }
+
+        .frame-10 .div-11 {
+            display: flex;
+            width: 692px;
+            align-items: center;
+            gap: 16px;
+            position: relative;
+        }
+
+        .frame-10 .div-12 {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            flex-grow: 1;
+            gap: 12px;
+            position: relative;
+        }
+
+        .frame-10 .vector-5 {
+            position: absolute;
+            width: 16px;
+            height: 14px;
+            top: 4px;
+            left: 2px;
+        }
+
+        .frame-10 .text-wrapper-10 {
+            position: relative;
+            width: 529px;
+            margin-top: -1.00px;
+            font-family: var(--body-text-font-family);
+            font-weight: var(--body-text-font-weight);
+            color: var(--blacksubtext);
+            font-size: var(--body-text-font-size);
+            letter-spacing: var(--body-text-letter-spacing);
+            line-height: var(--body-text-line-height);
+            font-style: var(--body-text-font-style);
+            text-align: left;
+        }
+
+        .frame-10 .div-13 {
+            display: inline-flex;
+            align-items: flex-start;
+            gap: 24px;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .frame-10 .image-wrapper {
+            position: relative;
+            width: 162px;
+            height: 162px;
+            background-color: #ededed;
+            border-radius: 10.2px;
+            overflow: hidden;
+            border: 1.28px solid;
+            border-color: var(--greyoutline);
+            box-shadow:
+                0px 2.55px 5.1px #0000000d, 0px 8.93px 8.93px #0000000a, 0px 19.13px 11.48px #00000008, 0px 34.44px 14.03px #00000003, 0px 52.3px 15.31px transparent;
+        }
+
+        .frame-10 .image {
+            position: absolute;
+            width: 162px;
+            height: 162px;
+            top: 0;
+            left: 0;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+
+        .frame-10 .div-14 {
+            display: flex;
+            flex-direction: column;
+            width: 413px;
+            align-items: flex-start;
+            gap: 24px;
+            position: relative;
+        }
+
+        .frame-10 .div-15 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .frame-10 .div-16 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .frame-10 .text-wrapper-11 {
+            align-self: stretch;
+            margin-top: -1.00px;
+            font-family: var(--h-5-font-family);
+            font-weight: var(--h-5-font-weight);
+            color: var(--blackheading);
+            font-size: var(--h-5-font-size);
+            line-height: var(--h-5-line-height);
+            position: relative;
+            letter-spacing: var(--h-5-letter-spacing);
+            font-style: var(--h-5-font-style);
+        }
+
+        .frame-10 .div-17 {
+            display: inline-flex;
+            align-items: center;
+            gap: 24px;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .frame-10 .container {
+            position: relative;
+            width: 142px;
+        }
+
+        .frame-10 .div-18 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 6px 16px;
+            position: relative;
+            flex: 0 0 auto;
+            border-radius: 42px;
+            border: none;
+        }
+
+        .frame-10 .div-18::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            padding: 1px;
+            border-radius: 42px;
+            background: linear-gradient(103deg,
+                    rgba(41, 160, 182, 1) 0%,
+                    rgba(176, 195, 67, 1) 100%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .frame-10 .text-wrapper-12 {
+            width: fit-content;
+            margin-top: -1.00px;
+            font-family: "Noto Serif Bengali-Regular", Helvetica;
+            font-weight: 400;
+            color: var(--blackheading);
+            font-size: 14px;
+            line-height: normal;
+            position: relative;
+            letter-spacing: 0;
+        }
+
+        .frame-10 .vector-6 {
+            position: absolute;
+            width: 12px;
+            height: 10px;
+            top: 3px;
+            left: 2px;
+        }
+
+        .frame-10 .div-19 {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .frame-10 .div-20 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 16px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+            background-color: var(--white-100);
+            border-radius: 4px;
+            border: 1px solid;
+            border-color: var(--greyoutline);
+        }
+
+        .frame-10 .text-wrapper-13 {
+            width: 293px;
+            color: var(--blacksubtext);
+            position: relative;
+            margin-top: -1.00px;
+            font-family: var(--h-6-font-family);
+            font-weight: var(--h-6-font-weight);
+            font-size: var(--h-6-font-size);
+            letter-spacing: var(--h-6-letter-spacing);
+            line-height: var(--h-6-line-height);
+            font-style: var(--h-6-font-style);
+        }
+
+        .frame-10 .text-wrapper-14 {
+            width: fit-content;
+            color: var(--blackheading);
+            text-align: right;
+            white-space: nowrap;
+            position: relative;
+            margin-top: -1.00px;
+            font-family: var(--h-6-font-family);
+            font-weight: var(--h-6-font-weight);
+            font-size: var(--h-6-font-size);
+            letter-spacing: var(--h-6-letter-spacing);
+            line-height: var(--h-6-line-height);
+            font-style: var(--h-6-font-style);
+        }
+
+        .frame-10 .vector-7 {
+            position: absolute;
+            width: 18px;
+            height: 15px;
+            top: 3px;
+            left: 1px;
+        }
+
+        .frame-10 .div-21 {
+            display: flex;
+            flex-direction: column;
+            width: 402px;
+            align-items: flex-start;
+            gap: 30px;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .frame-10 .div-22 {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .frame-10 .text-wrapper-15 {
+            position: relative;
+            flex: 1;
+            margin-top: -1.00px;
+            font-family: "Noto Serif Bengali-Medium", Helvetica;
+            font-weight: 500;
+            color: var(--blackheading);
+            font-size: 16px;
+            letter-spacing: 0;
+            line-height: 24px;
+        }
+
+        .frame-10 .element {
+            position: relative;
+            width: 721px;
+            height: 510px;
+        }
+
+        .frame-10 .div-23 {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .frame-10 .div-24 {
+            display: inline-flex;
+            align-items: flex-start;
+            flex: 0 0 auto;
+            gap: 12px;
+            position: relative;
+        }
+
+        .frame-10 .question {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 4px 2px;
+            position: relative;
+            flex: 0 0 auto;
+        }
+
+        .frame-10 .vector-8 {
+            position: relative;
+            width: 19.5px;
+            height: 19.5px;
+        }
+
+        .frame-10 .vector-9 {
+            position: absolute;
+            width: 14px;
+            height: 8px;
+            top: 7px;
+            left: 3px;
+        }
+
+        .frame-10 .div-wrapper-2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 0px;
+            position: relative;
+            align-self: stretch;
+            max-width: 756px;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .frame-10 .div-25 {
+            display: flex;
+            width: 588px;
+            align-items: flex-start;
+            gap: 12px;
+            position: relative;
+        }
+
+        .frame-10 .text-wrapper-16 {
+            position: relative;
+            flex: 1;
+            margin-top: -1.00px;
+            font-family: var(--h-6-font-family);
+            font-weight: var(--h-6-font-weight);
+            color: var(--blackheading);
+            font-size: var(--h-6-font-size);
+            letter-spacing: var(--h-6-letter-spacing);
+            line-height: var(--h-6-line-height);
+            font-style: var(--h-6-font-style);
+        }
+
+        /* Original CSS code should be injected here */
+
+        /* Enhanced semantic and accessibility improvements */
+        .frame-10 button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: inherit;
+            color: inherit;
+            padding: 0;
+        }
+
+        .frame-10 button:hover {
+            opacity: 0.8;
+        }
+
+        .frame-10 button:focus {
+            outline: 2px solid #4a90e2;
+            outline-offset: 2px;
+        }
+
+        .frame-10 details summary {
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .frame-10 details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .frame-10 details summary:focus {
+            outline: 2px solid #4a90e2;
+            outline-offset: 2px;
+        }
+
+        .frame-10 ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .frame-10 a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .frame-10 a:hover {
+            opacity: 0.8;
+        }
+
+        .frame-10 a:focus {
+            outline: 2px solid #4a90e2;
+            outline-offset: 2px;
+        }
+
+        /* Ensure proper heading hierarchy */
+        .frame-10 h1 {
+            font-size: var(--h-3-font-size);
+        }
+
+        .frame-10 h2 {
+            font-size: var(--h-3-font-size);
+        }
+
+        .frame-10 h3 {
+            font-size: var(--h-6-font-size);
+        }
+
+        /* Improve interactive elements */
+        .frame-10 .div-wrapper,
+        .frame-10 .div-18 {
+            transition: opacity 0.2s ease;
+        }
+
+        /* Ensure proper contrast and readability */
+        .frame-10 .text-wrapper-4 {
+            color: #535965;
+        }
+
+        .frame-10 .span {
+            color: #121010;
+            font-weight: 600;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="course-details container">
+        <div class="frame">
+            <article class="crouse-card">
+                <header class="overlap-group-wrapper">
+                    <div class="overlap-group">
+                        <img class="img" src="../../img/course-bg-3.png" alt="কোর্স ব্যাকগ্রাউন্ড ইমেজ" />
+                        <img class="image" src="../../img/course-1.png" alt="আরবী ক্যালিগ্রাফি" />
+                        <div class="div">
+                            <h1 class="text-wrapper">প্রাথমিক</h1>
+                            <div class="text-wrapper-2">আরবীভাষা</div>
+                            <div class="text-wrapper-2">শিক্ষা</div>
+                        </div>
+                    </div>
+                </header>
+                <h2 class="text-wrapper-3">প্রাথমিক আরবীভাষা শিক্ষা</h2>
+                <div class="frame-2">
+                    <div class="frame-3">
+                        <div class="vector-wrapper"><img class="vector" src="../../lesson.svg" alt="লেসন আইকন" /></div>
+                        <span class="text-wrapper-4">২৫ টি লেসন</span>
+                    </div>
+                    <div class="frame-3">
+                        <div class="vector-wrapper"><img class="vector-2" src="../../student-cap.svg"
+                                alt="স্টুডেন্ট আইকন" />
+                        </div>
+                        <span class="text-wrapper-4">৫২ স্টুডেন্ট</span>
+                    </div>
+                    <div class="frame-3">
+                        <div class="vector-wrapper"><img class="vector-2" src="../../live.svg" alt="লাইভ ক্লাস আইকন" />
+                        </div>
+                        <span class="text-wrapper-4">লাইভ ক্লাস</span>
+                    </div>
+                </div>
+                <div class="button-wrapper">
+                    <button class="button" type="button" aria-label="কোর্সটি কিনুন">
+                        <span class="text-wrapper-5">কোর্সটি কিনুন</span>
+                        <div class="arrow-right"><img class="vector-3" src="../../arrow-right.svg" alt="তীর আইকন" />
+                        </div>
+                    </button>
+                </div>
+                <div class="frame-4">
+                    <span class="text-wrapper-6">৪৫০৳</span>
+                    <span class="text-wrapper-7">৮৫০৳</span>
+                </div>
+            </article>
+        </div>
+        <nav class="frame-wrapper">
+            <div class="frame-5">
+                <div class="frame-6">
+                    <ul class="menu" role="tablist">
+                        <li class="div-wrapper" role="tab" aria-selected="true" tabindex="0">
+                            <span class="text-wrapper-8">কোর্স পরিচিতি</span>
+                        </li>
+                        <li class="frame-7" role="tab" aria-selected="false" tabindex="-1">
+                            <span class="text-wrapper-8">ক্লাসের বিষয়সমূহ</span>
+                        </li>
+                        <li class="frame-7" role="tab" aria-selected="false" tabindex="-1">
+                            <span class="text-wrapper-9">কোর্সের বিবরণ</span>
+                        </li>
+                        <li class="frame-7" role="tab" aria-selected="false" tabindex="-1">
+                            <span class="text-wrapper-10">শিক্ষকের পরিচিতি</span>
+                        </li>
+                        <li class="frame-8" role="tab" aria-selected="false" tabindex="-1">
+                            <span class="text-wrapper-10">এই কোর্স থেকে যা যা পাচ্ছেন</span>
+                        </li>
+                        <li class="frame-9" role="tab" aria-selected="false" tabindex="-1">
+                            <span class="text-wrapper-10">শিক্ষার্থীর মন্তব্য</span>
+                        </li>
+                    </ul>
+                    <button class="caret-down-wrapper" type="button" aria-label="মেনু টগল করুন" aria-expanded="false">
+                        <div class="caret-down"><img class="vector-4" src="../../arrow-right-red.svg"
+                                alt="ড্রপডাউন আইকন" />
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="frame-10">
+                <section class="div">
+                    <header class="div-2">
+                        <h1 class="text-wrapper">কোর্স</h1>
+                        <h1 class="text-wrapper-2">পরিচিতি</h1>
+                    </header>
+                    <p class="p">
+                        আপনি কি কুরআন বুঝে পড়তে চান? ইসলামিক জ্ঞানে প্রথম পদক্ষেপ নিতে প্রস্তুত? তাহলে "প্রাথমিক
+                        আরবীভাষা শিক্ষা"
+                        কোর্সটি আপনার জন্য একেবারে উপযুক্ত! Nurul Quran Academy নিয়ে এসেছে একটি সিস্টেমেটিক,
+                        এক্সপার্ট-ডিজাইনড
+                        কোর্স
+                        যা আপনাকে শিখতে দেবে আরবী ভাষার বুনিয়াদি রীতি, হুরুফ থেকে শুরু করে বাক্য গঠন
+                        পর্যন্ত।<br /><br />এই কোর্সে
+                        আমরা এমনভাবে শেখাই, যেন আপনি শেখার প্রতিটি ধাপে অনুপ্রাণিত হন এবং এগিয়ে যেতে পারেন
+                        আত্মবিশ্বাসের সাথে।
+                        ভিডিও
+                        লেসন, লাইভ ক্লাস, প্র্যাকটিস অ্যাসাইনমেন্ট, আর রেগুলার গাইডেন্স—সব মিলিয়ে এটি কেবল একটি কোর্স
+                        নয়, বরং একটি
+                        পূর্ণাঙ্গ শেখার অভিজ্ঞতা।<br /><br />১,০০০+ শিক্ষার্থীর পরীক্ষিত সফলতার সঙ্গে, আমাদের কোর্সে
+                        রয়েছে এমন
+                        পদ্ধতি
+                        যা নতুনদের জন্য ১০০% উপযোগী। আপনি ঘরে বসেই শিখতে পারবেন সঠিক উচ্চারণ, শব্দচয়ন, সাধারণ ব্যাকরণ,
+                        এবং ইসলামিক
+                        প্রাসঙ্গিক শব্দভাণ্ডার—যা ভবিষ্যতে কুরআন ও ইসলামিক টেক্সট বুঝে পড়ার ভিত্তি তৈরি করে
+                        দেবে।<br /><br />শুধু
+                        শেখা নয়—আমরা চাই আপনি বুঝে শিখুন, উপভোগ করে শিখুন, আর নিজের আত্মার উন্নতির পথে এক ধাপ এগিয়ে
+                        যান। এখনই
+                        জয়েন
+                        করুন কোর্সটিতে এবং নিজের আরবী ভাষার যাত্রা শুরু করুন শক্ত ভিত নিয়ে!
+                    </p>
+                    <div class="frame-wrapper">
+                        <button class="div-wrapper" type="button" aria-label="আরও পড়ুন">
+                            <span class="text-wrapper-5">আরও পড়ুন</span>
+                        </button>
+                    </div>
+                </section>
+                <section class="div">
+                    <header class="div-2">
+                        <h2 class="text-wrapper">এই কোর্সে</h2>
+                        <h2 class="text-wrapper-2">শিক্ষার্থীরা শিখবে</h2>
+                    </header>
+                    <div class="div-3">
+                        <article class="div-4">
+                            <div class="vector-wrapper" aria-hidden="true">
+                                <img class="vector" src="../../double-check.svg" alt="" />
+                            </div>
+                            <div class="div-5">
+                                <h3 class="span">হুরুফ চেনা ও সঠিক উচ্চারণ</h3>
+                                <p class="text-wrapper-4">
+                                    – এই কোর্সে আপনি শিখবেন কিভাবে আরবী বর্ণমালা (হুরুফ) সঠিকভাবে চিনতে হয়, উচ্চারণ
+                                    করতে হয় এবং
+                                    নিখুঁতভাবে
+                                    লিখতে হয়, যা একটি শক্তিশালী ভিত্তি তৈরি করবে আপনার আরবী ভাষা শিক্ষার যাত্রার জন্য।
+                                </p>
+                            </div>
+                        </article>
+                        <article class="div-4">
+                            <div class="vector-wrapper" aria-hidden="true">
+                                <img class="vector" src="../../double-check.svg" alt="" />
+                            </div>
+                            <div class="div-5">
+                                <h3 class="span">শব্দ ও বাক্য গঠন</h3>
+                                <p class="text-wrapper-4">
+                                    – আপনি শিখবেন কিভাবে আরবী শব্দ গঠন হয় এবং সেই শব্দ দিয়ে সহজ বাক্য তৈরি করতে হয়,
+                                    যা আপনাকে
+                                    মৌলিকভাবে
+                                    আরবী পড়া, লেখা ও বোঝার যোগ্য করে তুলবে।
+                                </p>
+                            </div>
+                        </article>
+                        <article class="div-4">
+                            <div class="vector-wrapper" aria-hidden="true">
+                                <img class="vector" src="../../double-check.svg" alt="" />
+                            </div>
+                            <div class="div-5">
+                                <h3 class="span">ইসলামিক শব্দভাণ্ডার</h3>
+                                <p class="text-wrapper-4">
+                                    – কোর্সে থাকবে দৈনন্দিন ইসলামিক জীবনে ব্যবহৃত গুরুত্বপূর্ণ শব্দভাণ্ডার, যেমন সালাত,
+                                    দোআ এবং
+                                    ইসলামিক
+                                    টার্মস, যা আপনার ধর্মীয় অনুশীলনকে করবে আরও সচেতন ও অর্থবোধক।
+                                </p>
+                            </div>
+                        </article>
+                        <article class="div-4">
+                            <div class="vector-wrapper" aria-hidden="true">
+                                <img class="vector" src="../../double-check.svg" alt="" />
+                            </div>
+                            <div class="div-5">
+                                <h3 class="span">কুরআনিক শব্দ ও বাক্যের অর্থ</h3>
+                                <p class="text-wrapper-4">
+                                    – আপনি শিখবেন কুরআনে ব্যবহৃত কিছু সাধারণ শব্দ ও বাক্যের অর্থ এবং তাদের প্রাসঙ্গিকতা,
+                                    যাতে কুরআন
+                                    তেলাওয়াতের সময় সেগুলোর গভীর অর্থ বুঝে নিতে পারেন।
+                                </p>
+                            </div>
+                        </article>
+                        <article class="div-4">
+                            <div class="vector-wrapper" aria-hidden="true">
+                                <img class="vector" src="../../double-check.svg" alt="" />
+                            </div>
+                            <div class="div-5">
+                                <h3 class="span">সহজ আরবী ব্যাকরণ</h3>
+                                <p class="text-wrapper-4">
+                                    – এই কোর্সে রয়েছে আরবী ভাষার জন্য প্রয়োজনীয় সহজ ও প্রাঞ্জল ব্যাকরণ শেখার
+                                    ব্যবস্থা, যা আপনাকে
+                                    আরবী
+                                    বাক্য বুঝতে এবং গঠন করতে আত্মবিশ্বাস দেবে।
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="white-overlay">
+                        <button class="div-wrapper" type="button" aria-label="আরও পড়ুন">
+                            <span class="text-wrapper-5">আরও পড়ুন</span>
+                        </button>
+                    </div>
+                </section>
+                <section class="div">
+                    <header class="div-2">
+                        <h2 class="text-wrapper">ক্লাসের</h2>
+                        <h2 class="text-wrapper-2">বিষয়সমূহ</h2>
+                    </header>
+                    <div class="div-6">
+                        <details class="title">
+                            <summary class="div-7">
+                                <div class="div-8">
+                                    <div class="folder-open" aria-hidden="true">
+                                        <img class="img" src="../../folder.svg" alt="" />
+                                    </div>
+                                    <h3 class="text-wrapper-6">আরবীভাষার শব্দের প্রকারভেদ</h3>
+                                    <div class="t">
+                                        <span class="text-wrapper-7">4</span>
+                                    </div>
+                                </div>
+                                <div class="img-wrapper" aria-hidden="true">
+                                    <img class="vector-2" src="../../arrow-down.svg" alt="" />
+                                </div>
+                            </summary>
+                            <div class="title-2">
+                                <div class="div-9">
+                                    <div class="div-10">
+                                        <div class="vector-wrapper" aria-hidden="true">
+                                            <img class="vector-3" src="../../video-file.svg" alt="" />
+                                        </div>
+                                        <p class="text-wrapper-8">ইসম, ফিয়েল, হারফ – শব্দের তিনটি মূল ধরন</p>
+                                    </div>
+                                    <div class="t-2">
+                                        <span class="text-wrapper-9">২ মি. ১৪ সে.</span>
+                                    </div>
+                                    <div class="img-wrapper" aria-hidden="true">
+                                        <img class="vector-4" src="../../lock.svg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title-2">
+                                <div class="div-9">
+                                    <div class="div-10">
+                                        <div class="vector-wrapper" aria-hidden="true">
+                                            <img class="vector-3" src="../../video-file.svg" alt="" />
+                                        </div>
+                                        <p class="text-wrapper-8">শব্দের ভূমিকা ও ব্যবহারিক পার্থক্য</p>
+                                    </div>
+                                    <div class="t-2">
+                                        <span class="text-wrapper-9">২ মি. ১৪ সে.</span>
+                                    </div>
+                                    <div class="img-wrapper" aria-hidden="true">
+                                        <img class="vector-4" src="../../lock.svg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title-2">
+                                <div class="div-9">
+                                    <div class="div-10">
+                                        <div class="vector-wrapper" aria-hidden="true">
+                                            <img class="vector-3" src="../../video-file.svg" alt="" />
+                                        </div>
+                                        <p class="text-wrapper-8">প্রত্যেক ধরনের উদাহরণ ও ব্যাখ্যা</p>
+                                    </div>
+                                    <div class="t-2">
+                                        <span class="text-wrapper-9">২ মি. ১৪ সে.</span>
+                                    </div>
+                                    <div class="img-wrapper" aria-hidden="true">
+                                        <img class="vector-4" src="../../lock.svg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title-2">
+                                <div class="div-11">
+                                    <div class="div-12">
+                                        <div class="vector-wrapper" aria-hidden="true">
+                                            <img class="vector-5" src="../../flag.svg" alt="" />
+                                        </div>
+                                        <p class="text-wrapper-10">কুইজ ১ঃ কোন বাক্যে কোন ধরনে শব্দ ব্যবহৃত হয়েছে তা
+                                            নির্ধারণ</p>
+                                    </div>
+                                    <div class="img-wrapper" aria-hidden="true">
+                                        <img class="vector-4" src="../../lock.svg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+                        <details class="title">
+                            <summary class="div-7">
+                                <div class="div-8">
+                                    <div class="folder-open" aria-hidden="true">
+                                        <img class="img" src="../../folder.svg" alt="" />
+                                    </div>
+                                    <h3 class="text-wrapper-6">পুরুষ ও স্ত্রী বাচক শব্দের পরিচিতি</h3>
+                                    <div class="t">
+                                        <span class="text-wrapper-7">4</span>
+                                    </div>
+                                </div>
+                                <div class="img-wrapper" aria-hidden="true">
+                                    <img class="vector-2" src="../../arrow-down.svg" alt="" />
+                                </div>
+                            </summary>
+                            <div class="title-2">
+                                <div class="div-9">
+                                    <div class="div-10">
+                                        <div class="vector-wrapper" aria-hidden="true">
+                                            <img class="vector-3" src="../../video-file.svg" alt="" />
+                                        </div>
+                                        <p class="text-wrapper-8">পুরুষ ও স্ত্রী বাচক শব্দের সংজ্ঞা</p>
+                                    </div>
+                                    <div class="t-2">
+                                        <span class="text-wrapper-9">২ মি. ১৪ সে.</span>
+                                    </div>
+                                    <div class="img-wrapper" aria-hidden="true">
+                                        <img class="vector-4" src="../../lock.svg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title-2">
+                                <div class="div-9">
+                                    <div class="div-10">
+                                        <div class="vector-wrapper" aria-hidden="true">
+                                            <img class="vector-3" src="../../video-file.svg" alt="" />
+                                        </div>
+                                        <p class="text-wrapper-8">আরবী ভাষায় লিঙ্গ নির্ধারণের সাধারণ নিয়ম</p>
+                                    </div>
+                                    <div class="t-2">
+                                        <span class="text-wrapper-9">২ মি. ১৪ সে.</span>
+                                    </div>
+                                    <div class="img-wrapper" aria-hidden="true">
+                                        <img class="vector-4" src="../../lock.svg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title-2">
+                                <div class="div-9">
+                                    <div class="div-10">
+                                        <div class="vector-wrapper" aria-hidden="true">
+                                            <img class="vector-3" src="../../video-file.svg" alt="" />
+                                        </div>
+                                        <p class="text-wrapper-8">স্ত্রীবাচক বানানোর চিহ্ন বা নিদর্শন </p>
+                                    </div>
+                                    <div class="t-2">
+                                        <span class="text-wrapper-9">২ মি. ১৪ সে.</span>
+                                    </div>
+                                    <div class="img-wrapper" aria-hidden="true">
+                                        <img class="vector-4" src="../../lock.svg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title-2">
+                                <div class="div-11">
+                                    <div class="div-12">
+                                        <div class="vector-wrapper" aria-hidden="true">
+                                            <img class="vector-5" src="../../flag.svg" alt="" />
+                                        </div>
+                                        <p class="text-wrapper-10">কুইজ ২ঃ বাক্য বিশ্লেষণ করে লিঙ্গ চিহ্নিত করা</p>
+                                    </div>
+                                    <div class="img-wrapper" aria-hidden="true">
+                                        <img class="vector-4" src="../../lock.svg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+                        <details class="title">
+                            <summary class="div-7">
+                                <div class="div-8">
+                                    <div class="folder-open" aria-hidden="true">
+                                        <img class="img" src="../../folder.svg" alt="" />
+                                    </div>
+                                    <h3 class="text-wrapper-6">একবচন ও বহুবচন শব্দ চিনুন</h3>
+                                    <div class="t">
+                                        <span class="text-wrapper-7">1</span>
+                                    </div>
+                                </div>
+                                <div class="img-wrapper" aria-hidden="true">
+                                    <img class="vector-2" src="../../arrow-down.svg" alt="" />
+                                </div>
+                            </summary>
+                        </details>
+                        <details class="title">
+                            <summary class="div-7">
+                                <div class="div-8">
+                                    <div class="folder-open" aria-hidden="true">
+                                        <img class="img" src="../../folder.svg" alt="" />
+                                    </div>
+                                    <h3 class="text-wrapper-6">আরবী ক্রিয়াপদের প্রাথমিক ধারণা</h3>
+                                    <div class="t">
+                                        <span class="text-wrapper-7">2</span>
+                                    </div>
+                                </div>
+                                <div class="img-wrapper" aria-hidden="true">
+                                    <img class="vector-2" src="../../arrow-down.svg" alt="" />
+                                </div>
+                            </summary>
+                        </details>
+                        <details class="title">
+                            <summary class="div-7">
+                                <div class="div-8">
+                                    <div class="folder-open" aria-hidden="true">
+                                        <img class="img" src="../../folder.svg" alt="" />
+                                    </div>
+                                    <h3 class="text-wrapper-6">আরবী ভাষায় পরিচিতি দেওয়ার উপায়</h3>
+                                    <div class="t">
+                                        <span class="text-wrapper-7">2</span>
+                                    </div>
+                                </div>
+                                <div class="img-wrapper" aria-hidden="true">
+                                    <img class="vector-2" src="../../arrow-down.svg" alt="" />
+                                </div>
+                            </summary>
+                        </details>
+                    </div>
+                </section>
+                <section class="div">
+                    <header class="div-2">
+                        <h2 class="text-wrapper-2">শিক্ষকের</h2>
+                        <h2 class="text-wrapper">পরিচিতি</h2>
+                    </header>
+                    <div class="div-13">
+                        <div class="image-wrapper">
+                            <img class="image" src="../../img/teacher-4.png" alt="হাফেজ মাওলানা মাহমুদুল হাসান" />
+                        </div>
+                        <div class="div-14">
+                            <div class="div-15">
+                                <div class="div-16">
+                                    <h3 class="text-wrapper-11">হাফেজ মাওলানা মাহমুদুল হাসান</h3>
+                                    <p class="p">হাদীস ও কুরআন তাফসির শিক্ষক</p>
+                                </div>
+                                <p class="p">
+                                    ইসলামী জ্ঞান অর্জনের অনলাইনভিত্তিক অনন্য একটি শিক্ষা প্রতিষ্ঠান। এতে আরবীভাষা ও
+                                    সাহিত্যসহ
+                                    কুরআন-হাদীস-ফিকহ-আকীদা ইত্যাদি শরীয়তের বিভিন্ন বিষয়ে রয়েছে পেইড ও ফ্রি কোর্সসমূহ
+                                </p>
+                            </div>
+                            <div class="div-17">
+                                <img class="container" src="img/container.svg" alt="" aria-hidden="true" />
+                                <a href="#" class="div-18">
+                                    <span class="text-wrapper-12">অন্যান্য কোর্স দেখুন</span>
+                                    <div class="img-wrapper" aria-hidden="true">
+                                        <img class="vector-6" src="img/vector-37.svg" alt="" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="div">
+                    <header class="div-2">
+                        <h2 class="text-wrapper">ক্লাস</h2>
+                        <h2 class="text-wrapper-2">রেটিংস</h2>
+                    </header>
+                    <div class="div-19">
+                        <div class="div-20">
+                            <span class="text-wrapper-13">হ্যাল্পফুল টিচার?</span>
+                            <div class="div-8">
+                                <span class="text-wrapper-14">৪.৮</span>
+                                <div class="vector-wrapper" aria-hidden="true">
+                                    <img class="vector-7" src="../../heart.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="div-20">
+                            <span class="text-wrapper-13">সিলেবাসের মান?</span>
+                            <div class="div-8">
+                                <span class="text-wrapper-14">৪.৮</span>
+                                <div class="vector-wrapper" aria-hidden="true">
+                                    <img class="vector-7" src="../../heart.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="div-20">
+                            <span class="text-wrapper-13">আডিও ভিডিও কোয়ালিটি?</span>
+                            <div class="div-8">
+                                <span class="text-wrapper-14">৩.৫</span>
+                                <div class="vector-wrapper" aria-hidden="true">
+                                    <img class="vector-7" src="../../heart.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="div-20">
+                            <span class="text-wrapper-13">কমিউনিটি সাপোর্ট?</span>
+                            <div class="div-8">
+                                <span class="text-wrapper-14">৩.৮</span>
+                                <div class="vector-wrapper" aria-hidden="true">
+                                    <img class="vector-7" src="../../heart.svg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="div-18">
+                            <span class="text-wrapper-12">আপনার মতামত জানান</span>
+                            <div class="img-wrapper" aria-hidden="true">
+                                <img class="vector-6" src="../../heart.svg" alt="" />
+                            </div>
+                        </a>
+                    </div>
+                </section>
+                <section class="div">
+                    <header class="div-2">
+                        <h2 class="text-wrapper">এই কোর্সটি কাদের জন্য</h2>
+                        <h2 class="text-wrapper-2">উপযুক্ত</h2>
+                    </header>
+                    <ul class="div-21">
+                        <li class="div-22">
+                            <div class="vector-wrapper" aria-hidden="true">
+                                <img class="vector" src="../../double-check.svg" alt="" />
+                            </div>
+                            <p class="text-wrapper-15">যারা আরবী ভাষা একদম নতুন করে শিখতে চান</p>
+                        </li>
+                        <li class="div-22">
+                            <div class="vector-wrapper" aria-hidden="true">
+                                <img class="vector" src="../../double-check.svg" alt="" />
+                            </div>
+                            <p class="text-wrapper-15">যারা কুরআন বুঝে পড়তে চান</p>
+                        </li>
+                        <li class="div-22">
+                            <div class="vector-wrapper" aria-hidden="true">
+                                <img class="vector" src="../../double-check.svg" alt="" />
+                            </div>
+                            <p class="text-wrapper-15">যারা কুরআন বুঝে পড়তে চান</p>
+                        </li>
+                        <li class="div-22">
+                            <div class="vector-wrapper" aria-hidden="true">
+                                <img class="vector" src="../../double-check.svg" alt="" />
+                            </div>
+                            <p class="text-wrapper-15">ইসলামিক শিক্ষা শুরু করতে চান</p>
+                        </li>
+                        <li class="div-22">
+                            <div class="vector-wrapper" aria-hidden="true">
+                                <img class="vector" src="../../double-check.svg" alt="" />
+                            </div>
+                            <p class="text-wrapper-15">অভিভাবক যারা তাদের সন্তানদের আরবী শেখাতে চান</p>
+                        </li>
+                    </ul>
+                </section>
+                <section class="div">
+                    <div class="div-15">
+                        <header class="div-2">
+                            <h2 class="text-wrapper">কোর্সে কি</h2>
+                            <h2 class="text-wrapper-2">সার্টিফিক্যাট</h2>
+                            <h2 class="text-wrapper">আছে</h2>
+                        </header>
+                        <p class="p">হ্যাঁ, কোর্সটি সম্পূর্ণ শেষ করার পরে আপনি নূরুল কোরআন একাডেমি থেকে একটি
+                            সার্টিফিক্যাট পাবেন</p>
+                    </div>
+                    <img class="element" src="../../img/certificate.png" alt="নূরুল কোরআন একাডেমি সার্টিফিক্যাট" />
+                </section>
+                <section class="div">
+                    <div class="div-15">
+                        <header class="div-2">
+                            <h2 class="text-wrapper-2">প্রশ্নোত্তর</h2>
+                            <h2 class="text-wrapper">সবাই জানতে চান</h2>
+                        </header>
+                    </div>
+                    <details class="title" open>
+                        <summary class="div-23">
+                            <div class="div-24">
+                                <div class="question" aria-hidden="true">
+                                    <img class="vector-8" src="../../question.svg" alt="" />
+                                </div>
+                                <h3 class="text-wrapper-6">আরবী উচ্চারণ শুদ্ধ করার জন্য এই কোর্সে কি কোনও বিশেষ সহায়তা
+                                    থাকবে?</h3>
+                            </div>
+                            <div class="vector-wrapper" aria-hidden="true">
+                                <img class="vector-9" src="../../arrow-top.svg" alt="" />
+                            </div>
+                        </summary>
+                        <div class="div-wrapper-2">
+                            <p class="text-wrapper-8">
+                                অবশ্যই। প্রতিটি অক্ষর ও শব্দের উচ্চারণ ভিডিও ও অডিওসহ দেখানো হবে। এছাড়া উচ্চারণ
+                                সংশোধনের জন্য আলাদা
+                                প্র্যাকটিস সেশনের ব্যবস্থা আছে, যেখানে আপনি নিজে উচ্চারণ করে তুলনা করতে পারবেন এবং
+                                প্রয়োজনে সহায়তা
+                                চাইতে
+                                পারবেন।
+                            </p>
+                        </div>
+                    </details>
+                    <details class="title">
+                        <summary class="div-23">
+                            <div class="div-25">
+                                <div class="question" aria-hidden="true">
+                                    <img class="vector-8" src="../../question.svg" alt="" />
+                                </div>
+                                <h3 class="text-wrapper-16">
+                                    আমি আগে কয়েকবার চেষ্টা করেছি আরবী শেখার, কিন্তু নিয়মিত হতে পারিনি — এই কোর্সে
+                                    কীভাবে অভ্যাস
+                                    গড়ে তোলা
+                                    সম্ভব?
+                                </h3>
+                            </div>
+                            <div class="vector-wrapper" aria-hidden="true">
+                                <img class="vector-9" src="../../arrow-down.svg" alt="" />
+                            </div>
+                        </summary>
+                    </details>
+                    <details class="title">
+                        <summary class="div-23">
+                            <div class="div-25">
+                                <div class="question" aria-hidden="true">
+                                    <img class="vector-8" src="../../question.svg" alt="" />
+                                </div>
+                                <h3 class="text-wrapper-16">আমি কি এই কোর্স শেষে কুরআন পাঠ শুরু করতে পারব?</h3>
+                            </div>
+                            <div class="vector-wrapper" aria-hidden="true">
+                                <img class="vector-9" src="../../arrow-down.svg" alt="" />
+                            </div>
+                        </summary>
+                    </details>
+                    <details class="title">
+                        <summary class="div-23">
+                            <div class="div-25">
+                                <div class="question" aria-hidden="true">
+                                    <img class="vector-8" src="../../question.svg" alt="" />
+                                </div>
+                                <h3 class="text-wrapper-16">কি ধরনের আরবী শেখানো হবে — আধুনিক আরবী না কুরআনভিত্তিক?</h3>
+                            </div>
+                            <div class="vector-wrapper" aria-hidden="true">
+                                <img class="vector-9" src="../../arrow-down.svg" alt="" />
+                            </div>
+                        </summary>
+                    </details>
+                    <details class="title">
+                        <summary class="div-23">
+                            <div class="div-25">
+                                <div class="question" aria-hidden="true">
+                                    <img class="vector-8" src="../../question.svg" alt="" />
+                                </div>
+                                <h3 class="text-wrapper-16">এই কোর্সের শেখার ধরণ কি শুধুই মুখস্থনির্ভর, নাকি বুঝিয়ে
+                                    শেখানো হয়?
+                                </h3>
+                            </div>
+                            <div class="vector-wrapper" aria-hidden="true">
+                                <img class="vector-9" src="../../arrow-down.svg" alt="" />
+                            </div>
+                        </summary>
+                    </details>
+                    <details class="title">
+                        <summary class="div-23">
+                            <div class="div-25">
+                                <div class="question" aria-hidden="true">
+                                    <img class="vector-8" src="../../question.svg" alt="" />
+                                </div>
+                                <h3 class="text-wrapper-16">আমি যদি নির্দিষ্ট কোনও অক্ষর বা লেসন বুঝতে না পারি, তখন কী
+                                    করবো?</h3>
+                            </div>
+                            <div class="vector-wrapper" aria-hidden="true">
+                                <img class="vector-9" src="../../arrow-down.svg" alt="" />
+                            </div>
+                        </summary>
+                    </details>
+                </section>
+            </div>
+        </nav>
+    </section>
+
+</body>
+
+</html>

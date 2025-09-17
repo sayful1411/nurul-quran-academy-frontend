@@ -13,23 +13,23 @@
     <link rel="stylesheet" href="../../src/globals.css">
     <style>
         .course-details {
-            position: relative;
             max-width: 1440px;
             margin: 0 auto;
             background-color: #fefefe;
             min-height: 100vh;
-            padding: 0;
             width: 100%;
             overflow-x: hidden;
+            display: grid;
+            grid-template-columns: 1fr 342px;
+            gap: 32px;
+            padding: 76px 85px 40px 96px;
         }
 
         .course-details__sidebar {
-            position: absolute;
-            top: 76px;
-            right: 85px;
-            width: 342px;
-            height: 922px;
-            overflow-y: scroll;
+            grid-column: 2;
+            height: fit-content;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
         }
 
         .course-details__sidebar::-webkit-scrollbar {
@@ -234,10 +234,7 @@
         }
 
         .course-details__main-content {
-            position: absolute;
-            top: 72px;
-            left: 96px;
-            width: 841px;
+            grid-column: 1;
             display: flex;
             flex-direction: column;
             gap: 40px;
@@ -250,28 +247,40 @@
         }
 
         .course-tabs__header {
+            position: relative;
             display: flex;
             align-items: center;
-            justify-content: space-between;
             border-bottom: 1px solid var(--greyoutline);
+            overflow: hidden;
+            padding-right: 48px;
+            padding-bottom: 1px;
         }
 
         .course-tabs__nav {
             display: flex;
             align-items: flex-start;
             gap: 8px;
-            flex-wrap: wrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            flex: 1;
+        }
+
+        .course-tabs__nav::-webkit-scrollbar {
+            display: none;
         }
 
         .course-tabs__nav-list {
             display: flex;
             align-items: flex-start;
             gap: 8px;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             list-style: none;
             margin: 0;
             padding: 0;
-            width: 100%;
+            width: max-content;
+            min-width: 100%;
         }
 
         .course-tabs__nav-item {
@@ -283,6 +292,8 @@
             border-bottom: 1px solid transparent;
             cursor: pointer;
             transition: all 0.2s ease;
+            flex-shrink: 0;
+            white-space: nowrap;
         }
 
         .course-tabs__nav-item--active {
@@ -300,9 +311,7 @@
             letter-spacing: var(--body-text-semibold-letter-spacing);
             line-height: 1.4;
             font-style: var(--body-text-semibold-font-style);
-            white-space: normal;
-            word-break: break-word;
-            hyphens: auto;
+            white-space: nowrap;
         }
 
         .course-tabs__nav-item:not(.course-tabs__nav-item--active) .course-tabs__nav-text {
@@ -310,6 +319,10 @@
         }
 
         .course-tabs__mobile-toggle {
+            position: absolute;
+            top: 50%;
+            right: 8px;
+            transform: translateY(-50%);
             display: flex;
             width: 32px;
             height: 32px;
@@ -318,9 +331,12 @@
             padding: 4px;
             border: none;
             border-radius: 32px;
-            background: none;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(4px);
             cursor: pointer;
             transition: background-color 0.2s ease;
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .course-tabs__mobile-toggle:hover {
@@ -661,8 +677,7 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
-            max-width: 756px;
-            width: 100%;
+            width: 756px;
             padding: 16px;
         }
 
@@ -796,6 +811,7 @@
             align-self: stretch;
             width: 100%;
             flex: 0 0 auto;
+            text-align: left;
         }
 
         .teacher-profile__name {
@@ -831,6 +847,7 @@
             letter-spacing: var(--body-text-letter-spacing);
             font-style: var(--body-text-font-style);
             margin: 0;
+            text-align: left;
         }
 
         .teacher-profile__actions {
@@ -1102,7 +1119,6 @@
             background-color: var(--white-100);
             border-radius: 12px;
             border: 1px solid var(--greyoutline);
-            margin-bottom: 24px;
             overflow: hidden;
         }
 
@@ -1167,8 +1183,8 @@
             margin-top: -1px;
             font-family: var(--h-6-font-family);
             font-weight: var(--h-6-font-weight);
-            color: var(--blackheading);
-            font-size: var(--h-6-font-size);
+            color: #535966;
+            font-size: var(--body-text-semibold-font-size);
             letter-spacing: var(--h-6-letter-spacing);
             line-height: var(--h-6-line-height);
             font-style: var(--h-6-font-style);
@@ -1181,18 +1197,9 @@
         @media (max-width: 1024px) {
             .course-details {
                 max-width: 100%;
-                padding: 0 16px;
-            }
-
-            .course-details__sidebar {
-                right: 16px;
-                width: 300px;
-            }
-
-            .course-details__main-content {
-                left: 16px;
-                width: calc(100% - 332px);
-                max-width: 700px;
+                padding: 76px 16px 40px 16px;
+                grid-template-columns: 1fr 300px;
+                gap: 24px;
             }
 
             .course-card {
@@ -1236,7 +1243,6 @@
         /* Tablet (768px and below) */
         @media (max-width: 768px) {
             .course-details {
-                position: static;
                 width: 100%;
                 height: auto;
                 min-height: 100vh;
@@ -1244,12 +1250,14 @@
                 display: flex;
                 flex-direction: column;
                 gap: 32px;
+                grid-template-columns: none;
             }
 
             .course-details__sidebar {
-                position: static;
+                grid-column: unset;
                 width: 100%;
                 height: auto;
+                max-height: none;
                 margin: 0;
                 padding: 0;
                 order: 2;
@@ -1257,7 +1265,7 @@
             }
 
             .course-details__main-content {
-                position: static;
+                grid-column: unset;
                 width: 100%;
                 padding: 0;
                 margin: 0;
@@ -1284,12 +1292,13 @@
             }
 
             .course-tabs__nav {
-                overflow: visible;
+                overflow-x: auto;
+                overflow-y: hidden;
             }
 
             .course-tabs__nav-list {
-                flex-wrap: wrap;
-                width: 100%;
+                flex-wrap: nowrap;
+                width: max-content;
                 gap: 8px;
                 justify-content: flex-start;
             }
@@ -1298,21 +1307,22 @@
                 padding: 12px 16px;
                 flex: 0 0 auto;
                 min-width: fit-content;
-                white-space: normal;
+                white-space: nowrap;
                 text-align: center;
             }
 
             .course-tabs__header {
-                flex-direction: column;
+                flex-direction: row;
                 height: auto;
                 gap: 16px;
-                align-items: flex-start;
-                padding: 20px 0;
+                align-items: center;
+                padding: 1px 0;
             }
 
-            .course-tabs__mobile-toggle {
-                align-self: flex-end;
+            .course-tabs {
+                gap: 0;
             }
+
 
             /* Curriculum responsive width fixes */
             .curriculum {
@@ -1346,7 +1356,11 @@
 
             .content-section__header {
                 gap: 8px;
-                margin-bottom: 20px;
+                margin-bottom: 0;
+            }
+
+            .course-content {
+                gap: 0;
             }
 
             .content-section__title {
@@ -1403,21 +1417,8 @@
 
             .teacher-profile {
                 flex-direction: column;
-                align-items: center;
-                text-align: center;
                 gap: 20px;
                 width: 100%;
-            }
-
-            .teacher-profile__image-wrapper {
-                width: 120px;
-                height: 120px;
-                align-self: center;
-            }
-
-            .teacher-profile__image {
-                width: 120px;
-                height: 120px;
             }
 
             .teacher-profile__content {
@@ -1429,7 +1430,7 @@
             }
 
             .teacher-profile__actions {
-                flex-direction: column;
+                flex-direction: row;
                 gap: 16px;
                 align-items: center;
             }
@@ -1453,10 +1454,6 @@
                 gap: 16px;
             }
 
-            .faq__item {
-                margin-bottom: 12px;
-            }
-
             .faq__question {
                 padding: 16px;
             }
@@ -1476,9 +1473,25 @@
                 padding: 20px 16px;
                 gap: 24px;
             }
+            
+            .course-content {
+                gap: 5px;
+            }
 
-            .course-details__main-content {
-                gap: 24px;
+            .course-tabs__header {
+                padding: 1px 0;
+            }
+
+            .course-tabs {
+                gap: 0;
+            }
+
+            .content-section__header {
+                margin-bottom: 0;
+            }
+
+            .course-details__sidebar {
+                display: none;
             }
 
             .course-card {
@@ -1534,21 +1547,21 @@
             .course-tabs__nav-list {
                 gap: 6px;
                 justify-content: flex-start;
+                flex-wrap: nowrap;
+                width: max-content;
             }
 
             .course-tabs__nav-item {
                 padding: 10px 12px;
                 flex: 0 0 auto;
                 min-width: fit-content;
-                max-width: calc(50% - 3px);
             }
 
             .course-tabs__nav-text {
                 font-size: 13px;
-                white-space: normal;
+                white-space: nowrap;
                 text-align: center;
                 line-height: 1.3;
-                word-break: break-word;
             }
 
             .content-section {
@@ -1643,16 +1656,6 @@
                 gap: 16px;
             }
 
-            .teacher-profile__image-wrapper {
-                width: 100px;
-                height: 100px;
-            }
-
-            .teacher-profile__image {
-                width: 100px;
-                height: 100px;
-            }
-
             .teacher-profile__name {
                 font-size: 18px;
                 line-height: 1.3;
@@ -1711,10 +1714,11 @@
 
             .course-ratings {
                 gap: 16px;
+                width: 100%;
             }
 
             .course-ratings__item {
-                flex-direction: column;
+                flex-direction: row;
                 align-items: flex-start;
                 gap: 8px;
             }
@@ -1757,7 +1761,6 @@
 
             .faq__item {
                 width: 100%;
-                margin-bottom: 16px;
             }
 
             .faq__question {
@@ -1790,16 +1793,20 @@
 
             .course-tabs__nav-item {
                 padding: 8px 10px;
-                max-width: 100%;
+                flex: 0 0 auto;
+                min-width: fit-content;
             }
 
             .course-tabs__nav-text {
                 font-size: 12px;
                 line-height: 1.4;
+                white-space: nowrap;
             }
 
             .course-tabs__nav-list {
                 gap: 4px;
+                flex-wrap: nowrap;
+                width: max-content;
             }
 
             .content-section__title {
@@ -1873,45 +1880,6 @@
 <body>
 
     <main class="course-details">
-        <aside class="course-details__sidebar">
-            <article class="course-card">
-                <header class="course-card__header">
-                    <div class="course-card__background course-card__background--course1">
-                        <div class="course-card__overlay"></div>
-                        <img class="course-card__image" src="../../img/course-1.png"
-                            alt="প্রাথমিক আরবীভাষা শিক্ষা কোর্স" />
-                        <div class="course-card__title-wrapper">
-                            <h3 class="course-card__title-line">প্রাথমিক</h3>
-                            <h3 class="course-card__title-line">আরবীভাষা</h3>
-                            <h3 class="course-card__title-line course-card__title-line--small">শিক্ষা</h3>
-                        </div>
-                    </div>
-                </header>
-                <h2 class="course-card__name">প্রাথমিক আরবীভাষা শিক্ষা</h2>
-                <div class="course-card__info">
-                    <div class="course-card__info-item">
-                        <img class="course-card__icon" src="../../lesson.svg" alt="লেসন আইকন" />
-                        <span class="course-card__info-text">২৫ টি লেসন</span>
-                    </div>
-                    <div class="course-card__info-item">
-                        <img class="course-card__icon" src="../../student-cap.svg" alt="স্টুডেন্ট আইকন" />
-                        <span class="course-card__info-text">৫২ স্টুডেন্ট</span>
-                    </div>
-                    <div class="course-card__info-item">
-                        <img class="course-card__icon" src="../../live.svg" alt="লাইভ ক্লাস আইকন" />
-                        <span class="course-card__info-text">লাইভ ক্লাস</span>
-                    </div>
-                </div>
-                <div class="course-card__pricing">
-                    <span class="course-card__current-price">৪৫০৳</span>
-                    <span class="course-card__original-price">৮৫০৳</span>
-                </div>
-                <button class="course-card__cta-button" type="button" aria-label="কোর্সটি কিনুন">
-                    <span class="course-card__button-text">কোর্সটি কিনুন</span>
-                    <img class="course-card__arrow-icon" src="../../arrow-right.svg" alt="তীর আইকন" />
-                </button>
-            </article>
-        </aside>
         <div class="course-details__main-content">
             <nav class="course-tabs">
                 <div class="course-tabs__header">
@@ -2454,7 +2422,90 @@
                 </div>
             </nav>
         </div>
+        <aside class="course-details__sidebar">
+            <article class="course-card">
+                <header class="course-card__header">
+                    <div class="course-card__background course-card__background--course1">
+                        <div class="course-card__overlay"></div>
+                        <img class="course-card__image" src="../../img/course-1.png"
+                            alt="প্রাথমিক আরবীভাষা শিক্ষা কোর্স" />
+                        <div class="course-card__title-wrapper">
+                            <h3 class="course-card__title-line">প্রাথমিক</h3>
+                            <h3 class="course-card__title-line">আরবীভাষা</h3>
+                            <h3 class="course-card__title-line course-card__title-line--small">শিক্ষা</h3>
+                        </div>
+                    </div>
+                </header>
+                <h2 class="course-card__name">প্রাথমিক আরবীভাষা শিক্ষা</h2>
+                <div class="course-card__info">
+                    <div class="course-card__info-item">
+                        <img class="course-card__icon" src="../../lesson.svg" alt="লেসন আইকন" />
+                        <span class="course-card__info-text">২৫ টি লেসন</span>
+                    </div>
+                    <div class="course-card__info-item">
+                        <img class="course-card__icon" src="../../student-cap.svg" alt="স্টুডেন্ট আইকন" />
+                        <span class="course-card__info-text">৫২ স্টুডেন্ট</span>
+                    </div>
+                    <div class="course-card__info-item">
+                        <img class="course-card__icon" src="../../live.svg" alt="লাইভ ক্লাস আইকন" />
+                        <span class="course-card__info-text">লাইভ ক্লাস</span>
+                    </div>
+                </div>
+                <div class="course-card__pricing">
+                    <span class="course-card__current-price">৪৫০৳</span>
+                    <span class="course-card__original-price">৮৫০৳</span>
+                </div>
+                <button class="course-card__cta-button" type="button" aria-label="কোর্সটি কিনুন">
+                    <span class="course-card__button-text">কোর্সটি কিনুন</span>
+                    <img class="course-card__arrow-icon" src="../../arrow-right.svg" alt="তীর আইকন" />
+                </button>
+            </article>
+        </aside>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.querySelector('.course-tabs__mobile-toggle');
+            const navContainer = document.querySelector('.course-tabs__nav');
+            const navList = document.querySelector('.course-tabs__nav-list');
+
+            if (toggleButton && navContainer && navList) {
+                let currentScrollPosition = 0;
+                const scrollAmount = 200; // Amount to scroll in pixels
+
+                toggleButton.addEventListener('click', function() {
+                    // Get the maximum scroll position
+                    const maxScroll = navList.scrollWidth - navContainer.clientWidth;
+
+                    // Calculate next scroll position
+                    currentScrollPosition += scrollAmount;
+
+                    // If we've reached the end, reset to beginning
+                    if (currentScrollPosition >= maxScroll) {
+                        currentScrollPosition = 0;
+                    }
+
+                    // Smoothly scroll to the new position
+                    navContainer.scrollTo({
+                        left: currentScrollPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Update button rotation for visual feedback
+                    const rotation = (currentScrollPosition / maxScroll) * 360;
+                    toggleButton.style.transform = `translateY(-50%) rotate(${rotation}deg)`;
+                });
+
+                // Update button position when user manually scrolls
+                navContainer.addEventListener('scroll', function() {
+                    currentScrollPosition = navContainer.scrollLeft;
+                    const maxScroll = navList.scrollWidth - navContainer.clientWidth;
+                    const rotation = maxScroll > 0 ? (currentScrollPosition / maxScroll) * 360 : 0;
+                    toggleButton.style.transform = `translateY(-50%) rotate(${rotation}deg)`;
+                });
+            }
+        });
+    </script>
 
 </body>
 

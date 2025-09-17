@@ -6,1509 +6,1522 @@
   <meta charset="utf-8" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&family=Tiro+Bangla:ital@0;1&display=swap"
+    rel="stylesheet">
   <title>Nurul Quran Academy</title>
   <link rel="stylesheet" href="/src/style.css" />
 </head>
 
 <body>
 
-  <header>
-    <!-- Offer -->
-    <div class="container">
-      <div class="offer">
-        <div class="frame">
-          <div class="text-wrapper">ছোটদের কোরআন শিক্ষা কোর্সে</div>
-        </div>
-        <img class="image" src="/img/offer-1.png" />
-        <img class="img" src="/img/offer-2.png" />
-        <div class="x-circle"><img class="vector" src="/x-circle.svg" /></div>
-      </div>
-    </div>
-    <!-- Hero -->
-    <div class="container">
-      <div class="hero">
-        <div class="overlap-group">
-          <img class="bg" src="/img/bg-2.png" />
-          <img class="img" src="/img/hero.png" />
-          <div class="ellipse"></div>
-          <img class="rectangle" src="/rectangle-1.svg" />
-          <div class="div"></div>
-          <nav class="navbar">
-            <div class="frame">
-              <img class="image" src="/img/logo.png" />
-              <div class="frame-2">
-                <div class="spark">
-                  <div class="text-wrapper">স্পেশাল অফার</div>
-                </div>
-                <div class="page">
-                  <div class="text-wrapper">ফ্রী কোর্স</div>
-                </div>
-                <div class="page">
-                  <div class="text-wrapper">সব কোর্স ক্যাটাগরি</div>
-                  <div class="vector-wrapper"><img class="vector" src="/arrow-down.svg" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="frame-3">
-              <button class="button">
-                <div class="text-wrapper-2">লগ ইন</div>
-                <div class="vector-wrapper"><img class="vector-2" src="/chevron-right.svg" />
-                </div>
-              </button>
-              <button class="button-2">
-                <div class="text-wrapper-2">যোগাযোগ করুন</div>
-              </button>
-            </div>
-          </nav>
-          <div class="frame-4">
-            <div class="frame-5">
-              <div class="frame-6">
-                <p class="p">
-                  <span class="span">ইসলামী জ্ঞানে </span> <span class="text-wrapper-3">আলোকিত
-                    করুন
-                    নিজের
-                    ভবিষ্যৎ!</span>
-                </p>
-                <p class="text-wrapper-4">
-                  ইসলামী জ্ঞান অর্জনের এক অনন্য অনলাইন উদ্যোগ। যেখানে আরবী ভাষা ও সাহিত্যসহ কুরআন,
-                  হাদীস,
-                  ফিকহ ও আকীদার
-                  উপর রয়েছে সুচিন্তিত পেইড ও ফ্রি কোর্সের আয়োজন।
-                </p>
-              </div>
-              <button class="button-3">
-                <div class="text-wrapper-5">শেখা শুরু করুন</div>
-                <div class="vector-wrapper"><img class="vector-3" src="/arrow-right.svg" /></div>
-              </button>
-            </div>
-            <div class="frame-7">
-              <p class="text-wrapper-6">বিগত ৩ বছর ধরে আমাদের সাফল্য</p>
-              <div class="frame-8">
-                <div class="frame-9">
-                  <div class="student-wrapper">
-                    <div class="img-wrapper"><img class="vector-4" src="/student.svg" />
-                    </div>
-                  </div>
-                  <div class="frame-10">
-                    <div class="text-wrapper-7">১০,০০০</div>
-                    <div class="text-wrapper-8">শিক্ষার্থী</div>
-                  </div>
-                </div>
-                <div class="frame-9">
-                  <div class="graduation-cap-wrapper">
-                    <div class="img-wrapper"><img class="vector-5" src="/teacher.svg" />
-                    </div>
-                  </div>
-                  <div class="frame-10">
-                    <div class="text-wrapper-7">২৫+</div>
-                    <div class="text-wrapper-8">শিক্ষক</div>
-                  </div>
-                </div>
-                <div class="frame-9">
-                  <div class="seal-check-wrapper">
-                    <div class="img-wrapper"><img class="vector-6" src="/check.svg" />
-                    </div>
-                  </div>
-                  <div class="frame-10">
-                    <div class="text-wrapper-7">৮৯%</div>
-                    <div class="text-wrapper-8">কোর্স কমপ্লিট রেট</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <!-- Header -->
+  <header class="header container" role="banner">
+    <div class="header__brand">
+      <img class="header__logo" src="../img/logo.png" alt="Nurul Quran Academy Logo" />
+      <nav class="header__navigation" role="navigation" aria-label="Main navigation">
+        <a href="#special-offer" class="nav-link nav-link--special" aria-label="স্পেশাল অফার">
+          <span class="nav-link__text">স্পেশাল অফার</span>
+        </a>
+        <a href="#free-courses" class="nav-link" aria-label="ফ্রী কোর্স">
+          <span class="nav-link__text">ফ্রী কোর্স</span>
+        </a>
+        <button class="nav-dropdown" type="button" aria-expanded="false" aria-haspopup="true"
+          aria-label="সব কোর্স ক্যাটাগরি">
+          <span class="nav-dropdown__text">সব কোর্স ক্যাটাগরি</span>
+          <div class="nav-dropdown__icon">
+            <img class="nav-dropdown__arrow" src="../arrow-down.svg" alt="" />
           </div>
+        </button>
+      </nav>
+    </div>
+    <div class="header__actions">
+      <button class="btn btn--outline" type="button" aria-label="লগ ইন">
+        <span class="btn__text">লগ ইন</span>
+        <div class="btn__icon">
+          <img class="btn__arrow" src="../arrow-right-active.svg" alt="" />
         </div>
-      </div>
+      </button>
+      <button class="btn btn--primary" type="button" aria-label="যোগাযোগ করুন">
+        <span class="btn__text">যোগাযোগ করুন</span>
+      </button>
     </div>
   </header>
 
-  <!-- Courses -->
-  <section class="container">
-    <div class="course">
-      <div class="frame">
-        <div class="div">
-          <div class="frame-2">
-            <div class="button-wrapper">
-              <h2 class="popular-courses"><span>জনপ্রিয়</span> কোর্স সমূহ</h2>
-              <button class="button">
-                <div class="text-wrapper">সব কোর্স দেখুন</div>
+  <!-- Mobile Navigation (shown only on mobile devices) -->
+  <nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <div class="mobile-nav__container">
+      <a href="#home" class="mobile-nav__item mobile-nav__item--active" aria-current="page">
+        <div class="mobile-nav__icon" aria-hidden="true">
+          <img src="../home-menu-active.svg" alt="">
+        </div>
+        <span class="mobile-nav__label">হোম</span>
+      </a>
+
+      <a href="#special" class="mobile-nav__item">
+        <div class="mobile-nav__icon" aria-hidden="true">
+          <img src="../gift-menu.svg" alt="">
+        </div>
+        <span class="mobile-nav__label">স্পেশাল</span>
+      </a>
+
+      <a href="#free-courses" class="mobile-nav__item">
+        <div class="mobile-nav__icon" aria-hidden="true">
+          <img src="../circle-menu.svg" alt="">
+        </div>
+        <span class="mobile-nav__label">ফ্রী কোর্স</span>
+      </a>
+
+      <a href="#all-courses" class="mobile-nav__item">
+        <div class="mobile-nav__icon" aria-hidden="true">
+          <img src="../cap-menu.svg" alt="">
+        </div>
+        <span class="mobile-nav__label">সব কোর্স</span>
+      </a>
+
+      <a href="#login" class="mobile-nav__item">
+        <div class="mobile-nav__icon" aria-hidden="true">
+          <img src="../user-menu.svg" alt="">
+        </div>
+        <span class="mobile-nav__label">লগ ইন</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main>
+    <!-- Hero -->
+    <section class="hero container" role="section">
+      <div class="hero__background">
+        <div class="hero__background-gradient--left" aria-hidden="true"></div>
+        <div class="hero__background-gradient--right" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__image-container">
+        <img class="hero__image-overlay" src="../rectangle-1.svg" alt="" aria-hidden="true" />
+        <img class="hero__image" src="../img/hero.png" alt="Islamic scholars and students in a learning environment" />
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__text-section">
+          <div class="hero__heading-group">
+            <h1 class="hero__title">
+              <span class="hero__title--highlight">ইসলামী জ্ঞানে আলোকিত করুন নিজের ভবিষ্যৎ!</span>
+            </h1>
+            <p class="hero__description">
+              ইসলামী জ্ঞান অর্জনের এক অনন্য অনলাইন উদ্যোগ। যেখানে আরবী ভাষা ও সাহিত্যসহ কুরআন, হাদীস, ফিকহ ও
+              আকীদার উপর রয়েছে সুচিন্তিত পেইড ও ফ্রি কোর্সের আয়োজন।
+            </p>
+          </div>
+          <button class="hero__cta-button" type="button" aria-label="শেখা শুরু করুন - কোর্সে এনরোল করতে ক্লিক করুন">
+            <span class="hero__button-text">শেখা শুরু করুন</span>
+            <img class="hero__button-icon" src="../arrow-right.svg" alt="" aria-hidden="true" />
+          </button>
+        </div>
+
+        <div class="hero__statistics" aria-labelledby="success-stats">
+          <h2 class="hero__statistics-title" id="success-stats">বিগত ৩ বছর ধরে আমাদের সাফল্য</h2>
+          <div class="hero__statistics-grid" role="list">
+            <div class="hero__statistic-item" role="listitem">
+              <img class="hero__statistic-icon" src="../student.svg" alt="শিক্ষার্থী আইকন" />
+              <div class="hero__statistic-content">
+                <div class="hero__statistic-number">১০,০০০</div>
+                <div class="hero__statistic-label">শিক্ষার্থী</div>
+              </div>
+            </div>
+            <div class="hero__statistic-item" role="listitem">
+              <img class="hero__statistic-icon" src="../teacher.svg" alt="শিক্ষক আইকন" />
+              <div class="hero__statistic-content">
+                <div class="hero__statistic-number">২৫+</div>
+                <div class="hero__statistic-label">শিক্ষক</div>
+              </div>
+            </div>
+            <div class="hero__statistic-item" role="listitem">
+              <img class="hero__statistic-icon" src="../check.svg" alt="কোর্স সম্পূর্ণতার হার আইকন" />
+              <div class="hero__statistic-content">
+                <div class="hero__statistic-number">৮৯%</div>
+                <div class="hero__statistic-label">কোর্স কমপ্লিট রেট</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Courses -->
+    <section class="popular-courses-section">
+      <div class="popular-courses-section__container">
+        <div class="popular-courses-section__header">
+          <div class="popular-courses-section__top">
+            <div class="popular-courses-section__title-wrapper">
+              <h2 class="popular-courses-section__title">
+                <span class="popular-courses-section__title--highlight">জনপ্রিয়</span> কোর্স সমূহ
+              </h2>
+              <button class="popular-courses-section__view-all-btn">
+                <span class="popular-courses-section__view-all-text">সব কোর্স দেখুন</span>
               </button>
             </div>
-            <div class="group">
-              <div class="overlap-group">
-                <div class="frame-3">
-                  <div class="frame-4">
-                    <div class="vector-wrapper"><img class="vector" src="/heart.svg" /></div>
-                    <div class="frame-5">
-                      <div class="text-wrapper-2">জনপ্রিয় কোর্স সমূহ</div>
-                      <div class="frame-6">
-                        <div class="text-wrapper-3">১১ টি কোর্স</div>
-                        <div class="ellipse"></div>
-                        <div class="text-wrapper-3">৫২ টি ক্লাস</div>
-                      </div>
+            <nav class="category-filter" aria-label="Course categories">
+              <ul class="category-filter__list">
+                <li class="category-filter__item category-filter__item--active">
+                  <div class="category-filter__icon">
+                    <img src="../public/heart.svg" alt="Popular courses icon" />
+                  </div>
+                  <div class="category-filter__content">
+                    <h3 class="category-filter__title">জনপ্রিয় কোর্স সমূহ</h3>
+                    <div class="category-filter__stats">
+                      <span class="category-filter__stat">১১ টি কোর্স</span>
+                      <div class="category-filter__dot"></div>
+                      <span class="category-filter__stat">৫২ টি ক্লাস</span>
                     </div>
                   </div>
-                  <div class="frame-7">
-                    <div class="vector-wrapper"><img class="img" src="/game-icons_arabic-door.svg" /></div>
-                    <div class="frame-5">
-                      <div class="text-wrapper-4">আরবি ভাষা</div>
-                      <div class="frame-8">
-                        <div class="text-wrapper-3">১২ টি কোর্স</div>
-                        <div class="ellipse"></div>
-                        <div class="text-wrapper-3">৫২ টি ক্লাস</div>
-                      </div>
+                </li>
+                <li class="category-filter__item">
+                  <div class="category-filter__icon">
+                    <img src="../public/game-icons_arabic-door.svg" alt="Arabic language icon" />
+                  </div>
+                  <div class="category-filter__content">
+                    <h3 class="category-filter__title">আরবি ভাষা</h3>
+                    <div class="category-filter__stats">
+                      <span class="category-filter__stat">১২ টি কোর্স</span>
+                      <div class="category-filter__dot"></div>
+                      <span class="category-filter__stat">৫২ টি ক্লাস</span>
                     </div>
                   </div>
-                  <div class="frame-7">
-                    <div class="vector-wrapper"><img class="vector-2" src="/BookBookmark.svg" />
-                    </div>
-                    <div class="frame-5">
-                      <div class="text-wrapper-4">কুরআন শিক্ষা</div>
-                      <div class="frame-8">
-                        <div class="text-wrapper-3">৯ টি কোর্স</div>
-                        <div class="ellipse"></div>
-                        <div class="text-wrapper-3">৫২ টি ক্লাস</div>
-                      </div>
+                </li>
+                <li class="category-filter__item">
+                  <div class="category-filter__icon">
+                    <img src="../public/BookBookmark.svg" alt="Quran education icon" />
+                  </div>
+                  <div class="category-filter__content">
+                    <h3 class="category-filter__title">কুরআন শিক্ষা</h3>
+                    <div class="category-filter__stats">
+                      <span class="category-filter__stat">৯ টি কোর্স</span>
+                      <div class="category-filter__dot"></div>
+                      <span class="category-filter__stat">৫২ টি ক্লাস</span>
                     </div>
                   </div>
-                  <div class="frame-7">
-                    <div class="vector-wrapper"><img class="vector-3" src="/MoonStars.svg" />
-                    </div>
-                    <div class="frame-5">
-                      <div class="text-wrapper-4">সীরাত</div>
-                      <div class="frame-8">
-                        <div class="text-wrapper-3">২ টি কোর্স</div>
-                        <div class="ellipse"></div>
-                        <div class="text-wrapper-3">৫ টি ক্লাস</div>
-                      </div>
+                </li>
+                <li class="category-filter__item">
+                  <div class="category-filter__icon">
+                    <img src="../public/MoonStars.svg" alt="Sirat icon" />
+                  </div>
+                  <div class="category-filter__content">
+                    <h3 class="category-filter__title">সীরাত</h3>
+                    <div class="category-filter__stats">
+                      <span class="category-filter__stat">২ টি কোর্স</span>
+                      <div class="category-filter__dot"></div>
+                      <span class="category-filter__stat">৫ টি ক্লাস</span>
                     </div>
                   </div>
-                  <div class="frame-7">
-                    <div class="vector-wrapper"><img class="vector-4" src="/VideoCamera.svg" />
-                    </div>
-                    <div class="frame-5">
-                      <div class="text-wrapper-4">প্রি-রেকর্ডেড কোর্স</div>
-                      <div class="frame-8">
-                        <div class="text-wrapper-3">৫ টি কোর্স</div>
-                        <div class="ellipse"></div>
-                        <div class="text-wrapper-3">২৫ টি ক্লাস</div>
-                      </div>
+                </li>
+                <li class="category-filter__item">
+                  <div class="category-filter__icon">
+                    <img src="../public/VideoCamera.svg" alt="Pre-recorded courses icon" />
+                  </div>
+                  <div class="category-filter__content">
+                    <h3 class="category-filter__title">প্রি-রেকর্ডেড কোর্স</h3>
+                    <div class="category-filter__stats">
+                      <span class="category-filter__stat">৫ টি কোর্স</span>
+                      <div class="category-filter__dot"></div>
+                      <span class="category-filter__stat">২৫ টি ক্লাস</span>
                     </div>
                   </div>
-                </div>
-                <div class="caret-down-wrapper">
-                  <div class="caret-down"><img class="vector-6" src="/right-arrow.svg" /></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="frame-11">
-            <div class="frame-12">
-              <div class="crouse-card">
-                <div class="frame-13">
-                  <!-- <img class="faruk-kaymak" src="img/faruk-kaymak-cnvvdjvdivi-unsplash-1-3.png" /> -->
-                  <div class="overlap-group-2">
-                    <img class="image" src="img/course-1.png" />
-                    <div class="frame-14">
-                      <div class="text-wrapper-7">প্রাথমিক</div>
-                      <div class="text-wrapper-8">আরবীভাষা</div>
-                      <div class="text-wrapper-9">শিক্ষা</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="frame-15">
-                  <div class="frame-16">
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-7" src="/lesson.svg" /></div>
-                      <div class="text-wrapper-10">২৫ টি লেসন</div>
-                    </div>
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-8" src="/student-cap.svg" />
-                      </div>
-                      <div class="text-wrapper-10">৫২ স্টুডেন্ট</div>
-                    </div>
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-8" src="/live.svg" />
-                      </div>
-                      <div class="text-wrapper-10">লাইভ ক্লাস</div>
-                    </div>
-                  </div>
-                  <div class="frame-17">
-                    <div class="frame-18">
-                      <p class="p">প্রাথমিক আরবীভাষা শিক্ষার মাধ্যমে শুরু করুন আপনার যাত্রা</p>
-                      <p class="text-wrapper-11">
-                        এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
-                        আরবি ভাষা জানতে পারবেন
-                      </p>
-                    </div>
-                    <div class="frame-19">
-                      <div class="text-wrapper-12">৮৫০৳</div>
-                      <button class="button-2">
-                        <div class="text-wrapper-13">বিস্তারিত</div>
-                        <div class="caret-down-2"><img class="vector-9" src="/right-arrow.svg" /></div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="crouse-card">
-                <div class="frame-20">
-                  <img class="faruk-kaymak-2" src="img/faruk-kaymak-cnvvdjvdivi-unsplash-1-6.png" />
-                  <div class="overlap-group-3">
-                    <img class="image" src="img/course-2.png" />
-                    <div class="frame-14">
-                      <div class="text-wrapper-7">কুরআন</div>
-                      <div class="text-wrapper-14">ও সালাত</div>
-                      <div class="text-wrapper-14">অনুধাবন</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="frame-15">
-                  <div class="frame-16">
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-7" src="/lesson.svg" />
-                      </div>
-                      <div class="text-wrapper-10">২৫ টি লেসন</div>
-                    </div>
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-8" src="/student-cap.svg" />
-                      </div>
-                      <div class="text-wrapper-10">৫২ স্টুডেন্ট</div>
-                    </div>
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-10" src="/live.svg" />
-                      </div>
-                      <div class="text-wrapper-10">রেকর্ডেড ক্লাস</div>
-                    </div>
-                  </div>
-                  <div class="frame-17">
-                    <div class="frame-18">
-                      <p class="p">কুরআন ও সালাত অনুধাবন কোর্স করে হয়ে উঠুন আদর্শ মুসলিম</p>
-                      <p class="text-wrapper-11">
-                        এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
-                        আরবি ভাষা জানতে পারবেন
-                      </p>
-                    </div>
-                    <div class="frame-19">
-                      <div class="text-wrapper-15">ফ্রী কোর্স</div>
-                      <button class="button-2">
-                        <div class="text-wrapper-13">বিস্তারিত</div>
-                        <div class="caret-down-2"><img class="vector-9" src="/right-arrow.svg" /></div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="crouse-card">
-                <div class="frame-21">
-                  <img class="faruk-kaymak-3" src="img/faruk-kaymak-cnvvdjvdivi-unsplash-1.png" />
-                  <div class="overlap-group-4">
-                    <img class="image" src="img/course-3.png" />
-                    <div class="frame-14">
-                      <div class="text-wrapper-7">আরবী</div>
-                      <div class="text-wrapper-14">হাতের</div>
-                      <div class="text-wrapper-14">লেখা</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="frame-22">
-                  <div class="frame-16">
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-7" src="/lesson.svg" />
-                      </div>
-                      <div class="text-wrapper-10">২৫ টি লেসন</div>
-                    </div>
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-8" src="/student-cap.svg" />
-                      </div>
-                      <div class="text-wrapper-10">৫২ স্টুডেন্ট</div>
-                    </div>
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-8" src="/live.svg" />
-                      </div>
-                      <div class="text-wrapper-10">লাইভ ক্লাস</div>
-                    </div>
-                  </div>
-                  <div class="frame-17">
-                    <div class="frame-23">
-                      <p class="p">প্রাথমিক আরবীভাষা শিক্ষার মাধ্যমে শুরু করুন আপনার যাত্রা</p>
-                      <p class="text-wrapper-11">
-                        এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
-                        আরবি ভাষা জানতে পারবেন
-                      </p>
-                    </div>
-                    <div class="frame-24">
-                      <div class="frame-25">
-                        <div class="text-wrapper-12">৪৫০৳</div>
-                        <div class="text-wrapper-16">৮৫০৳</div>
-                      </div>
-                      <button class="button-2">
-                        <div class="text-wrapper-13">বিস্তারিত</div>
-                        <div class="caret-down-2"><img class="vector-9" src="/right-arrow.svg" /></div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="frame-12">
-              <div class="crouse-card">
-                <div class="frame-26">
-                  <img class="faruk-kaymak-4" src="img/faruk-kaymak-cnvvdjvdivi-unsplash-1-4.png" />
-                  <div class="overlap-group-5">
-                    <img class="image" src="img/course-4.png" />
-                    <div class="frame-14">
-                      <div class="text-wrapper-7">প্রাথমিক</div>
-                      <div class="text-wrapper-14">দ্বীন শিক্ষা</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="frame-15">
-                  <div class="frame-16">
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-7" src="/lesson.svg" />
-                      </div>
-                      <div class="text-wrapper-10">২৫ টি লেসন</div>
-                    </div>
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-8" src="/student-cap.svg" />
-                      </div>
-                      <div class="text-wrapper-10">৫২ স্টুডেন্ট</div>
-                    </div>
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-10" src="/live.svg" />
-                      </div>
-                      <div class="text-wrapper-10">রেকর্ডেড ক্লাস</div>
-                    </div>
-                  </div>
-                  <div class="frame-17">
-                    <div class="frame-18">
-                      <p class="p">প্রাথমিক দ্বীন শিক্ষা কোর্স করে শুরু করুন আপনার ইসলাম যত্রা</p>
-                      <p class="text-wrapper-11">
-                        এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
-                        আরবি ভাষা জানতে পারবেন
-                      </p>
-                    </div>
-                    <div class="frame-19">
-                      <div class="text-wrapper-15">ফ্রী কোর্স</div>
-                      <button class="button-2">
-                        <div class="text-wrapper-13">বিস্তারিত</div>
-                        <div class="caret-down-2"><img class="vector-9" src="/right-arrow.svg" /></div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="crouse-card">
-                <div class="frame-27">
-                  <img class="faruk-kaymak-5" src="img/faruk-kaymak-cnvvdjvdivi-unsplash-1-2.png" />
-                  <div class="overlap-group-6">
-                    <img class="image" src="img/course-5.png" />
-                    <div class="frame-14">
-                      <div class="text-wrapper-7">ব্যাসিক</div>
-                      <div class="text-wrapper-14">আকীদা</div>
-                      <div class="text-wrapper-14">শিক্ষা</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="frame-15">
-                  <div class="frame-16">
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-7" src="/lesson.svg" />
-                      </div>
-                      <div class="text-wrapper-10">২৫ টি লেসন</div>
-                    </div>
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-8" src="/student-cap.svg" />
-                      </div>
-                      <div class="text-wrapper-10">৫২ স্টুডেন্ট</div>
-                    </div>
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-10" src="/live.svg" />
-                      </div>
-                      <div class="text-wrapper-10">রেকর্ডেড ক্লাস</div>
-                    </div>
-                  </div>
-                  <div class="frame-17">
-                    <div class="frame-18">
-                      <p class="p">ব্যাসিক আকীদা কোর্স করে সমৃদ্ধ করুন নিজের জ্ঞানের পরিধি</p>
-                      <p class="text-wrapper-11">
-                        এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
-                        আরবি ভাষা জানতে পারবেন
-                      </p>
-                    </div>
-                    <div class="frame-19">
-                      <div class="text-wrapper-12">৫০০৳</div>
-                      <button class="button-2">
-                        <div class="text-wrapper-13">বিস্তারিত</div>
-                        <div class="caret-down-2"><img class="vector-9" src="/right-arrow.svg" /></div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="crouse-card">
-                <div class="frame-28">
-                  <img class="faruk-kaymak-6" src="img/faruk-kaymak-cnvvdjvdivi-unsplash-1-5.png" />
-                  <div class="overlap-group-7">
-                    <img class="image" src="img/course-6.png" />
-                    <div class="frame-14">
-                      <div class="text-wrapper-7">৩০ নং পারা</div>
-                      <div class="text-wrapper-14">হিফজ</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="frame-15">
-                  <div class="frame-16">
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-7" src="/lesson.svg" />
-                      </div>
-                      <div class="text-wrapper-10">২৫ টি লেসন</div>
-                    </div>
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-8" src="/student-cap.svg" />
-                      </div>
-                      <div class="text-wrapper-10">৫২ স্টুডেন্ট</div>
-                    </div>
-                    <div class="frame-8">
-                      <div class="img-wrapper"><img class="vector-10" src="/live.svg" />
-                      </div>
-                      <div class="text-wrapper-10">রেকর্ডেড ক্লাস</div>
-                    </div>
-                  </div>
-                  <div class="frame-17">
-                    <div class="frame-18">
-                      <p class="p">৩০ নং পারা হিফজ কোর্স করার মাধ্যমে পবিত্র কোরআন আয়ত্ব করুন</p>
-                      <p class="text-wrapper-11">
-                        এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
-                        আরবি ভাষা জানতে পারবেন
-                      </p>
-                    </div>
-                    <div class="frame-19">
-                      <div class="text-wrapper-12">৮৫০৳</div>
-                      <button class="button-2">
-                        <div class="text-wrapper-13">বিস্তারিত</div>
-                        <div class="caret-down-2"><img class="vector-9" src="/right-arrow.svg" /></div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="frame-29">
-              <div class="text-wrapper-17">১</div>
-              <div class="text-wrapper-18">২</div>
-              <div class="text-wrapper-18">৩</div>
-              <div class="text-wrapper-18">.</div>
-              <div class="text-wrapper-18">.</div>
-              <div class="text-wrapper-18">.</div>
-              <div class="text-wrapper-18">৫</div>
-            </div>
+                </li>
+              </ul>
+              <button class="category-filter__nav-btn" aria-label="Navigate categories">
+                <img class="category-filter__nav-icon" src="../public/right-arrow.svg" alt="Navigation arrow" />
+              </button>
+            </nav>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonial -->
-  <section class="container">
-    <div class="testimonial">
-      <!-- <img class="image" src="img/image-63.png" />
-      <img class="img" src="img/image-66.png" /> -->
-      <div class="frame">
-        <div class="overlap">
-          <div class="gradient"></div>
-          <div class="div">
-            <div class="group">
-              <div class="overlap-group">
-                <div class="component">
-                  <div class="rectangle"></div>
-                </div>
-                <img class="whatsapp-image" src="/img/testimonial-1.png" />
-                <div class="play"><img class="vector" src="/play.svg" /></div>
-              </div>
-            </div>
-            <div class="frame-wrapper">
-              <div class="frame-2">
-                <p class="text-wrapper">
-                  আলহামদুলিল্লাহ, নুরুল কোরআন অ্যাকাডেমি ইমসলামের বর্তা সহীহভাবে পৌঁছে দেয়ার জন্য
-                  যা করছে তা খুবই
-                  প্রশংসনীয়, এবং এই ডিজিটাল যুগে আমাদেরকে ইসলামকে মানুষের কাছে পৌঁছাতে হবে
-                  ডিজিটালভাবে, যা এই প্রতিষ্ঠান
-                  সফলতার সাথে করে আসছে।
-                </p>
-                <div class="frame-3">
-                  <img class="ellipse" src="/img/ahmudullah.png" />
-                  <div class="frame-4">
-                    <div class="text-wrapper-2">শায়খ আহমাদুল্লাহ</div>
-                    <div class="text-wrapper-3">চেয়ারম্যান, আস-সুন্নাহ ফাউন্ডেশন</div>
+        <section class="course-grid">
+          <div class="course-grid__row">
+            <article class="course-card">
+              <header class="course-card__header">
+                <div class="course-card__background course-card__background--course1">
+                  <div class="course-card__overlay"></div>
+                  <img class="course-card__image" src="../img/course-1.png" alt="প্রাথমিক আরবীভাষা শিক্ষা কোর্স" />
+                  <div class="course-card__title-wrapper">
+                    <h3 class="course-card__title-line">প্রাথমিক</h3>
+                    <h3 class="course-card__title-line">আরবীভাষা</h3>
+                    <h3 class="course-card__title-line course-card__title-line--small">শিক্ষা</h3>
                   </div>
                 </div>
+              </header>
+              <div class="course-card__content">
+                <div class="course-card__stats">
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/lesson.svg" alt="Lessons" />
+                    <span class="course-card__stat-text">২৫ টি লেসন</span>
+                  </div>
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/student-cap.svg" alt="Students" />
+                    <span class="course-card__stat-text">৫২ স্টুডেন্ট</span>
+                  </div>
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/live.svg" alt="Live class" />
+                    <span class="course-card__stat-text">লাইভ ক্লাস</span>
+                  </div>
+                </div>
+                <div class="course-card__info">
+                  <div class="course-card__text-content">
+                    <h4 class="course-card__description">প্রাথমিক আরবীভাষা শিক্ষার মাধ্যমে শুরু করুন আপনার যাত্রা</h4>
+                    <p class="course-card__details">
+                      এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
+                      আরবি ভাষা জানতে পারবেন
+                    </p>
+                  </div>
+                  <footer class="course-card__footer">
+                    <span class="course-card__price">৮৫০৳</span>
+                    <button class="course-card__details-btn">
+                      <span class="course-card__details-text">বিস্তারিত</span>
+                      <img class="course-card__arrow-icon" src="../public/right-arrow.svg" alt="Arrow" />
+                    </button>
+                  </footer>
+                </div>
               </div>
+            </article>
+            <article class="course-card">
+              <header class="course-card__header">
+                <div class="course-card__background course-card__background--course2">
+                  <div class="course-card__overlay"></div>
+                  <img class="course-card__image" src="../img/course-2.png" alt="কুরআন ও সালাত অনুধাবন কোর্স" />
+                  <div class="course-card__title-wrapper">
+                    <h3 class="course-card__title-line">কুরআন</h3>
+                    <h3 class="course-card__title-line">ও সালাত</h3>
+                    <h3 class="course-card__title-line">অনুধাবন</h3>
+                  </div>
+                </div>
+              </header>
+              <div class="course-card__content">
+                <div class="course-card__stats">
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/lesson.svg" alt="Lessons" />
+                    <span class="course-card__stat-text">২৫ টি লেসন</span>
+                  </div>
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/student-cap.svg" alt="Students" />
+                    <span class="course-card__stat-text">৫২ স্টুডেন্ট</span>
+                  </div>
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/live.svg" alt="Recorded class" />
+                    <span class="course-card__stat-text">রেকর্ডেড ক্লাস</span>
+                  </div>
+                </div>
+                <div class="course-card__info">
+                  <div class="course-card__text-content">
+                    <h4 class="course-card__description">কুরআন ও সালাত অনুধাবন কোর্স করে হয়ে উঠুন আদর্শ মুসলিম</h4>
+                    <p class="course-card__details">
+                      এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
+                      আরবি ভাষা জানতে পারবেন
+                    </p>
+                  </div>
+                  <footer class="course-card__footer">
+                    <span class="course-card__price course-card__price--free">ফ্রী কোর্স</span>
+                    <button class="course-card__details-btn">
+                      <span class="course-card__details-text">বিস্তারিত</span>
+                      <img class="course-card__arrow-icon" src="../public/right-arrow.svg" alt="Arrow" />
+                    </button>
+                  </footer>
+                </div>
+              </div>
+            </article>
+            <article class="course-card">
+              <header class="course-card__header">
+                <div class="course-card__background course-card__background--course3">
+                  <div class="course-card__overlay"></div>
+                  <img class="course-card__image" src="../img/course-3.png" alt="আরবী হাতের লেখা কোর্স" />
+                  <div class="course-card__title-wrapper">
+                    <h3 class="course-card__title-line">আরবী</h3>
+                    <h3 class="course-card__title-line">হাতের</h3>
+                    <h3 class="course-card__title-line">লেখা</h3>
+                  </div>
+                </div>
+              </header>
+              <div class="course-card__content">
+                <div class="course-card__stats">
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/lesson.svg" alt="Lessons" />
+                    <span class="course-card__stat-text">২৫ টি লেসন</span>
+                  </div>
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/student-cap.svg" alt="Students" />
+                    <span class="course-card__stat-text">৫২ স্টুডেন্ট</span>
+                  </div>
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/live.svg" alt="Live class" />
+                    <span class="course-card__stat-text">লাইভ ক্লাস</span>
+                  </div>
+                </div>
+                <div class="course-card__info">
+                  <div class="course-card__text-content">
+                    <h4 class="course-card__description">প্রাথমিক আরবীভাষা শিক্ষার মাধ্যমে শুরু করুন আপনার যাত্রা</h4>
+                    <p class="course-card__details">
+                      এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
+                      আরবি ভাষা জানতে পারবেন
+                    </p>
+                  </div>
+                  <footer class="course-card__footer">
+                    <div class="course-card__price-wrapper">
+                      <span class="course-card__price">৪৫০৳</span>
+                      <span class="course-card__price course-card__price--original">৮৫০৳</span>
+                    </div>
+                    <button class="course-card__details-btn">
+                      <span class="course-card__details-text">বিস্তারিত</span>
+                      <img class="course-card__arrow-icon" src="../public/right-arrow.svg" alt="Arrow" />
+                    </button>
+                  </footer>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="course-grid__row">
+            <article class="course-card">
+              <header class="course-card__header">
+                <div class="course-card__background course-card__background--course4">
+                  <div class="course-card__overlay"></div>
+                  <img class="course-card__image" src="../img/course-4.png" alt="প্রাথমিক দ্বীন শিক্ষা কোর্স" />
+                  <div class="course-card__title-wrapper">
+                    <h3 class="course-card__title-line">প্রাথমিক</h3>
+                    <h3 class="course-card__title-line">দ্বীন শিক্ষা</h3>
+                  </div>
+                </div>
+              </header>
+              <div class="course-card__content">
+                <div class="course-card__stats">
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/lesson.svg" alt="Lessons" />
+                    <span class="course-card__stat-text">২৫ টি লেসন</span>
+                  </div>
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/student-cap.svg" alt="Students" />
+                    <span class="course-card__stat-text">৫২ স্টুডেন্ট</span>
+                  </div>
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/live.svg" alt="Recorded class" />
+                    <span class="course-card__stat-text">রেকর্ডেড ক্লাস</span>
+                  </div>
+                </div>
+                <div class="course-card__info">
+                  <div class="course-card__text-content">
+                    <h4 class="course-card__description">প্রাথমিক দ্বীন শিক্ষা কোর্স করে শুরু করুন আপনার ইসলাম যত্রা
+                    </h4>
+                    <p class="course-card__details">
+                      এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
+                      আরবি ভাষা জানতে পারবেন
+                    </p>
+                  </div>
+                  <footer class="course-card__footer">
+                    <span class="course-card__price course-card__price--free">ফ্রী কোর্স</span>
+                    <button class="course-card__details-btn">
+                      <span class="course-card__details-text">বিস্তারিত</span>
+                      <img class="course-card__arrow-icon" src="../public/right-arrow.svg" alt="Arrow" />
+                    </button>
+                  </footer>
+                </div>
+              </div>
+            </article>
+            <article class="course-card">
+              <header class="course-card__header">
+                <div class="course-card__background course-card__background--course5">
+                  <div class="course-card__overlay"></div>
+                  <img class="course-card__image" src="../img/course-5.png" alt="ব্যাসিক আকীদা শিক্ষা কোর্স" />
+                  <div class="course-card__title-wrapper">
+                    <h3 class="course-card__title-line">ব্যাসিক</h3>
+                    <h3 class="course-card__title-line">আকীদা</h3>
+                    <h3 class="course-card__title-line">শিক্ষা</h3>
+                  </div>
+                </div>
+              </header>
+              <div class="course-card__content">
+                <div class="course-card__stats">
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/lesson.svg" alt="Lessons" />
+                    <span class="course-card__stat-text">২৫ টি লেসন</span>
+                  </div>
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/student-cap.svg" alt="Students" />
+                    <span class="course-card__stat-text">৫২ স্টুডেন্ট</span>
+                  </div>
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/live.svg" alt="Recorded class" />
+                    <span class="course-card__stat-text">রেকর্ডেড ক্লাস</span>
+                  </div>
+                </div>
+                <div class="course-card__info">
+                  <div class="course-card__text-content">
+                    <h4 class="course-card__description">ব্যাসিক আকীদা কোর্স করে সমৃদ্ধ করুন নিজের জ্ঞানের পরিধি</h4>
+                    <p class="course-card__details">
+                      এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
+                      আরবি ভাষা জানতে পারবেন
+                    </p>
+                  </div>
+                  <footer class="course-card__footer">
+                    <span class="course-card__price">৫০০৳</span>
+                    <button class="course-card__details-btn">
+                      <span class="course-card__details-text">বিস্তারিত</span>
+                      <img class="course-card__arrow-icon" src="../public/right-arrow.svg" alt="Arrow" />
+                    </button>
+                  </footer>
+                </div>
+              </div>
+            </article>
+            <article class="course-card">
+              <header class="course-card__header">
+                <div class="course-card__background course-card__background--course6">
+                  <div class="course-card__overlay"></div>
+                  <img class="course-card__image" src="../img/course-6.png" alt="৩০ নং পারা হিফজ কোর্স" />
+                  <div class="course-card__title-wrapper">
+                    <h3 class="course-card__title-line">৩০ নং পারা</h3>
+                    <h3 class="course-card__title-line">হিফজ</h3>
+                  </div>
+                </div>
+              </header>
+              <div class="course-card__content">
+                <div class="course-card__stats">
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/lesson.svg" alt="Lessons" />
+                    <span class="course-card__stat-text">২৫ টি লেসন</span>
+                  </div>
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/student-cap.svg" alt="Students" />
+                    <span class="course-card__stat-text">৫২ স্টুডেন্ট</span>
+                  </div>
+                  <div class="course-card__stat">
+                    <img class="course-card__stat-icon" src="../public/live.svg" alt="Recorded class" />
+                    <span class="course-card__stat-text">রেকর্ডেড ক্লাস</span>
+                  </div>
+                </div>
+                <div class="course-card__info">
+                  <div class="course-card__text-content">
+                    <h4 class="course-card__description">৩০ নং পারা হিফজ কোর্স করার মাধ্যমে পবিত্র কোরআন আয়ত্ব করুন
+                    </h4>
+                    <p class="course-card__details">
+                      এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
+                      আরবি ভাষা জানতে পারবেন
+                    </p>
+                  </div>
+                  <footer class="course-card__footer">
+                    <span class="course-card__price">৮৫০৳</span>
+                    <button class="course-card__details-btn">
+                      <span class="course-card__details-text">বিস্তারিত</span>
+                      <img class="course-card__arrow-icon" src="../public/right-arrow.svg" alt="Arrow" />
+                    </button>
+                  </footer>
+                </div>
+              </div>
+            </article>
+          </div>
+          <nav class="pagination" aria-label="Course pages">
+            <button class="pagination__item pagination__item--active">১</button>
+            <button class="pagination__item">২</button>
+            <button class="pagination__item">৩</button>
+            <span class="pagination__item">.</span>
+            <span class="pagination__item">.</span>
+            <span class="pagination__item">.</span>
+            <button class="pagination__item">৫</button>
+          </nav>
+        </section>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="testimonial-section">
+      <div class="testimonial-section__container">
+        <header class="testimonial__header testimonial__header--mobile">
+          <h2 class="testimonial__title">বিজ্ঞজন আমাদের কাজের <span class="testimonial__title--highlight">প্রশংসা
+              করেছেন !!</span></h2>
+        </header>
+        <div class="testimonial-section__content">
+          <div class="testimonial-video">
+            <div class="testimonial-video__container">
+              <div class="testimonial-video__border"></div>
+              <img class="testimonial-video__image" src="../img/testimonial-1.png"
+                alt="শায়খ আহমাদুল্লাহর প্রশংসাপত্র ভিডিও" />
+              <button class="testimonial-video__play-btn" aria-label="প্রশংসাপত্র ভিডিও চালান">
+                <img class="testimonial-video__play-icon" src="../public/play.svg" alt="চালান" />
+              </button>
             </div>
           </div>
+          <article class="testimonial-content">
+            <header class="testimonial__header">
+              <h2 class="testimonial__title">বিজ্ঞজন আমাদের কাজের <span class="testimonial__title--highlight">প্রশংসা
+                  করেছেন !!</span></h2>
+            </header>
+            <div class="testimonial-content__wrapper">
+              <blockquote class="testimonial-content__quote">
+                আলহামদুলিল্লাহ, নুরুল কোরআন অ্যাকাডেমি ইমসলামের বর্তা সহীহভাবে পৌঁছে দেয়ার জন্য
+                যা করছে তা খুবই
+                প্রশংসনীয়, এবং এই ডিজিটাল যুগে আমাদেরকে ইসলামকে মানুষের কাছে পৌঁছাতে হবে
+                ডিজিটালভাবে, যা এই প্রতিষ্ঠান
+                সফলতার সাথে করে আসছে।
+              </blockquote>
+              <footer class="testimonial-content__author">
+                <img class="testimonial-content__avatar" src="../img/ahmudullah.png" alt="শায়খ আহমাদুল্লাহ" />
+                <div class="testimonial-content__author-info">
+                  <cite class="testimonial-content__name">শায়খ আহমাদুল্লাহ</cite>
+                  <p class="testimonial-content__title">চেয়ারম্যান, আস-সুন্নাহ ফাউন্ডেশন</p>
+                </div>
+              </footer>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Offer 2 -->
-  <section class="offer-2 container">
-    <div class="frame">
-      <header class="div">
-        <h2 class="text-wrapper">ছোটদের কোরআন শিক্ষা কোর্সে</h2>
-        <h1 class="text-wrapper-2">ভর্তি চলছে!</h1>
-      </header>
-      <button class="button" type="button" aria-label="কোর্সে ভর্তি হতে ক্লিক করুন">
-        <span class="text-wrapper-3">ক্লিক করুন</span>
-        <span class="arrow-right" aria-hidden="true">
-          <img class="vector" src="img/vector.svg" alt="" />
-        </span>
-      </button>
-    </div>
-    <img class="image" src="/img/offer-3.png" alt="কোরআন শিক্ষার চিত্র" />
-    <img class="img" src="/img/offer-4.png" alt="শিক্ষার্থীদের চিত্র" />
-  </section>
+    <!-- Admission Banner -->
+    <section class="admission-banner" role="banner">
+      <div class="admission-banner__content">
+        <header class="admission-banner__text">
+          <h2 class="admission-banner__subtitle">ছোটদের কোরআন শিক্ষা কোর্সে <span class="admission-banner__title">ভর্তি
+              চলছে!</span> </h2>
 
-  <!-- Testimonial 2 -->
-  <section class="testimonial-2 container">
-    <div class="overlap-group">
-      <div class="frame">
-        <div class="frame-wrapper">
-          <div class="div">
-            <div class="frame-2">
-              <h1 class="text-wrapper">আমাদের</h1>
-              <h1 class="text-wrapper-2">শিক্ষার্থীরা</h1>
-              <h1 class="text-wrapper">কি বলছেন</h1>
-            </div>
-            <div class="frame-3" role="list" aria-label="শিক্ষার্থীদের প্রশংসাপত্র">
-              <article class="frame-4" role="listitem">
-                <blockquote class="p">
-                  আমি আগে দ্বীনের অনেক বিষয় বুঝতাম না। এই প্ল্যাটফর্মের কোর্সগুলো খুব সহজ ভাষায় এবং বাস্তব উদাহরণ
-                  দিয়ে ইসলামিক জ্ঞান বুঝিয়ে দেয়। বিশেষ করে আকীদা ও ফিকহ কোর্স থেকে অনেক উপকার পেয়েছি।
+        </header>
+        <button class="admission-banner__button" type="button" aria-label="কোর্সে ভর্তি হতে ক্লিক করুন">
+          <span class="admission-banner__button-text">ক্লিক করুন</span>
+          <span class="admission-banner__arrow" aria-hidden="true">
+            <img class="admission-banner__arrow-icon" src="../arrow-right.svg" alt="" />
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Feedback -->
+    <section class="feedback container">
+      <div class="feedback__container">
+        <div class="feedback__content">
+          <div class="feedback__main-content">
+            <header class="feedback__header">
+              <h1 class="feedback__title">আমাদের</h1>
+              <h1 class="feedback__title--highlight">শিক্ষার্থীরা</h1>
+              <h1 class="feedback__title">কি বলছেন</h1>
+            </header>
+            <div class="feedback__testimonials" role="list" aria-label="শিক্ষার্থীদের প্রশংসাপত্র">
+              <article class="feedback__testimonial-card" role="listitem">
+                <img class="feedback__quote-icon" src="../qutation.svg" alt="উদ্ধৃতি চিহ্ন" aria-hidden="true" />
+                <blockquote class="feedback__testimonial-text">
+                  আমি আগে দ্বীনের অনেক বিষয় বুঝতাম না। এই প্ল্যাটফর্মের কোর্সগুলো খুব সহজ ভাষায় এবং
+                  বাস্তব উদাহরণ
+                  দিয়ে ইসলামিক জ্ঞান বুঝিয়ে দেয়। বিশেষ করে আকীদা ও ফিকহ কোর্স থেকে অনেক উপকার
+                  পেয়েছি।
                   আলহামদুলিল্লাহ!
                 </blockquote>
-                <div class="frame-5">
-                  <div class="image-wrapper">
-                    <img class="image" src="/img/student-1.png" alt="মো. ইমরান হোসেনের প্রোফাইল ছবি" />
+                <div class="feedback__testimonial-author">
+                  <div class="feedback__author-avatar">
+                    <img class="feedback__avatar-image" src="../img/student-1.png"
+                      alt="মো. ইমরান হোসেনের প্রোফাইল ছবি" />
                   </div>
-                  <div class="frame-6">
-                    <cite class="text-wrapper-3">মো. ইমরান হোসেন</cite>
-                    <div class="text-wrapper-4">শিক্ষার্থী</div>
+                  <div class="feedback__author-info">
+                    <cite class="feedback__author-name">মো. ইমরান হোসেন</cite>
+                    <div class="feedback__author-role">শিক্ষার্থী</div>
                   </div>
                 </div>
-                <img class="img" src="/qutation.svg" alt="উদ্ধৃতি চিহ্ন" aria-hidden="true" />
               </article>
-              <article class="frame-4" role="listitem">
-                <blockquote class="p">
-                  ঘরে বসেই বিশ্বস্ত ইসলামিক জ্ঞান লাভ করা যায় এই প্ল্যাটফর্ম থেকে। ইউজার ইন্টারফেস খুব সহজ, ভিডিওগুলো
+              <article class="feedback__testimonial-card" role="listitem">
+                <img class="feedback__quote-icon" src="../qutation.svg" alt="উদ্ধৃতি চিহ্ন" aria-hidden="true" />
+                <blockquote class="feedback__testimonial-text">
+                  ঘরে বসেই বিশ্বস্ত ইসলামিক জ্ঞান লাভ করা যায় এই প্ল্যাটফর্ম থেকে। ইউজার ইন্টারফেস
+                  খুব সহজ, ভিডিওগুলো
                   মানসম্পন্ন এবং প্রতিটি কোর্স সুন্দরভাবে সাজানো। আমি আমার বন্ধুদেরও রেফার করছি।
                 </blockquote>
-                <div class="frame-5">
-                  <div class="image-wrapper">
-                    <img class="image" src="/img/student-2.png" alt="শামিমা আক্তারের প্রোফাইল ছবি" />
+                <div class="feedback__testimonial-author">
+                  <div class="feedback__author-avatar">
+                    <img class="feedback__avatar-image" src="../img/student-2.png" alt="শামিমা আক্তারের প্রোফাইল ছবি" />
                   </div>
-                  <div class="frame-6">
-                    <cite class="text-wrapper-3">শামিমা আক্তার</cite>
-                    <div class="text-wrapper-4">শিক্ষার্থী</div>
+                  <div class="feedback__author-info">
+                    <cite class="feedback__author-name">শামিমা আক্তার</cite>
+                    <div class="feedback__author-role">শিক্ষার্থী</div>
                   </div>
                 </div>
-                <img class="img" src="/qutation.svg" alt="উদ্ধৃতি চিহ্ন" aria-hidden="true" />
               </article>
-              <article class="frame-4" role="listitem">
-                <blockquote class="p">
-                  আমি চাকরির পাশাপাশি অনলাইনে সময় করে এই প্ল্যাটফর্ম থেকে পড়াশোনা করি। শিক্ষকরা খুবই আন্তরিক এবং
+              <article class="feedback__testimonial-card" role="listitem">
+                <img class="feedback__quote-icon" src="../qutation.svg" alt="উদ্ধৃতি চিহ্ন" aria-hidden="true" />
+                <blockquote class="feedback__testimonial-text">
+                  আমি চাকরির পাশাপাশি অনলাইনে সময় করে এই প্ল্যাটফর্ম থেকে পড়াশোনা করি। শিক্ষকরা খুবই
+                  আন্তরিক এবং
                   লাইভ সেশনে প্রশ্ন করলে সুন্দর করে উত্তর দেন। এটা একটা বরকতময় উদ্যোগ।
                 </blockquote>
-                <div class="frame-5">
-                  <div class="image-wrapper">
-                    <img class="image-2" src="/img/student-3.png" alt="মো. সাইফুল ইসলামের প্রোফাইল ছবি" />
+                <div class="feedback__testimonial-author">
+                  <div class="feedback__author-avatar">
+                    <img class="feedback__avatar-image" src="../img/student-3.png"
+                      alt="মো. সাইফুল ইসলামের প্রোফাইল ছবি" />
                   </div>
-                  <div class="frame-6">
-                    <cite class="text-wrapper-3">মো. সাইফুল ইসলাম</cite>
-                    <div class="text-wrapper-4">শিক্ষার্থী</div>
+                  <div class="feedback__author-info">
+                    <cite class="feedback__author-name">মো. সাইফুল ইসলাম</cite>
+                    <div class="feedback__author-role">শিক্ষার্থী</div>
                   </div>
                 </div>
-                <img class="img-2" src="/qutation.svg" alt="উদ্ধৃতি চিহ্ন" aria-hidden="true" />
               </article>
             </div>
           </div>
         </div>
-        <div class="arrow-frame">
-          <button type="button" class="component" aria-label="Previous">
-            <span class="arrow-right" aria-hidden="true">
-              <img class="vector" src="/arrow-left.svg" alt="" />
-            </span>
+        <nav class="feedback__navigation">
+          <button type="button" class="feedback__nav-button" aria-label="Previous testimonial">
+            <img class="feedback__nav-icon" src="/arrow-left.svg" alt="" aria-hidden="true" />
           </button>
-          <button type="button" class="arrow-right-wrapper" aria-label="Next">
-            <span class="arrow-right" aria-hidden="true">
-              <img class="img" src="/arrow-right-active.svg" alt="" />
-            </span>
+          <button type="button" class="feedback__nav-button--active" aria-label="Next testimonial">
+            <img class="feedback__nav-icon" src="/arrow-right-active.svg" alt="" aria-hidden="true" />
           </button>
-        </div>
+        </nav>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Special Offer -->
-  <section class="special-offers container">
-    <!-- <img class="image" src="img/image-66.png" alt="Background decoration" /> -->
-    <div class="frame">
-      <div class="div">
-        <h1 class="text-wrapper">স্পেশাল</h1>
-        <h1 class="text-wrapper-2">অফার</h1>
-        <h1 class="text-wrapper">কোর্স সমূহ</h1>
-      </div>
-      <div class="frame-2">
-        <article class="crouse-card">
-          <div class="overlap">
-            <div class="frame-3">
-              <!-- <img class="faruk-kaymak" src="img/faruk-kaymak-cnvvdjvdivi-unsplash-1.png" alt="" /> -->
-              <div class="overlap-group">
-                <img class="img" src="/img/course-4.png" alt="Course illustration" />
-                <div class="frame-4">
-                  <h2 class="text-wrapper-3">প্রাথমিক</h2>
-                  <h2 class="text-wrapper-4">দ্বীন শিক্ষা</h2>
-                </div>
-              </div>
-            </div>
-            <div class="div-wrapper">
-              <span class="text-wrapper-5">২৫% ছাড়</span>
-            </div>
-          </div>
-          <div class="frame-5">
-            <div class="frame-6">
-              <div class="frame-7">
-                <div class="vector-wrapper">
-                  <img class="vector" src="/lesson.svg" alt="Lessons icon" />
-                </div>
-                <span class="text-wrapper-6">২৫ টি লেসন</span>
-              </div>
-              <div class="frame-7">
-                <div class="vector-wrapper">
-                  <img class="vector-2" src="/student-cap.svg" alt="Students icon" />
-                </div>
-                <span class="text-wrapper-6">৫২ স্টুডেন্ট</span>
-              </div>
-              <div class="frame-7">
-                <div class="vector-wrapper">
-                  <img class="vector-3" src="/live.svg" alt="Class type icon" />
-                </div>
-                <span class="text-wrapper-6">রেকর্ডেড ক্লাস</span>
-              </div>
-            </div>
-            <div class="frame-8">
-              <div class="frame-9">
-                <h3 class="p">প্রাথমিক আরবীভাষা শিক্ষার মাধ্যমে শুরু করুন আপনার যাত্রা</h3>
-                <p class="text-wrapper-7">
-                  এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে পারবেন
-                </p>
-              </div>
-              <div class="frame-10">
-                <div class="frame-11">
-                  <span class="text-wrapper-8">২৫০৳</span>
-                  <span class="text-wrapper-9">৮৫০৳</span>
-                </div>
-                <button class="button" type="button" aria-label="কোর্সের বিস্তারিত দেখুন">
-                  <span class="text-wrapper-10">বিস্তারিত</span>
-                  <div class="caret-down">
-                    <img class="vector-4" src="/right-arrow.svg" alt="" />
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="crouse-card">
-          <div class="overlap">
-            <div class="frame-12">
-              <!-- <img class="faruk-kaymak-2" src="img/image.png" alt="" /> -->
-              <div class="overlap-group-2">
-                <img class="img" src="/img/course-7.png" alt="Course illustration" />
-                <div class="frame-4">
-                  <h2 class="text-wrapper-3">ইসলামের</h2>
-                  <h2 class="text-wrapper-4">দৃষ্টিতে গীবত</h2>
-                </div>
-              </div>
-            </div>
-            <div class="frame-13">
-              <span class="text-wrapper-5">২২% ছাড়</span>
-            </div>
-          </div>
-          <div class="frame-5">
-            <div class="frame-6">
-              <div class="frame-7">
-                <div class="vector-wrapper">
-                  <img class="vector" src="/lesson.svg" alt="Lessons icon" />
-                </div>
-                <span class="text-wrapper-6">২৫ টি লেসন</span>
-              </div>
-              <div class="frame-7">
-                <div class="vector-wrapper">
-                  <img class="vector-2" src="/student-cap.svg" alt="Students icon" />
-                </div>
-                <span class="text-wrapper-6">৫২ স্টুডেন্ট</span>
-              </div>
-              <div class="frame-7">
-                <div class="vector-wrapper">
-                  <img class="vector-2" src="/live.svg" alt="Class type icon" />
-                </div>
-                <span class="text-wrapper-6">লাইভ ক্লাস</span>
-              </div>
-            </div>
-            <div class="frame-8">
-              <div class="frame-9">
-                <h3 class="p">ইসলামের দৃষ্টিতে গীবত ও তার অপকারিতা সম্পর্কে জানুন</h3>
-                <p class="text-wrapper-7">
-                  এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে পারবেন
-                </p>
-              </div>
-              <div class="frame-10">
-                <div class="frame-11">
-                  <span class="text-wrapper-8">২৫০৳</span>
-                  <span class="text-wrapper-9">৮৫০৳</span>
-                </div>
-                <button class="button" type="button" aria-label="কোর্সের বিস্তারিত দেখুন">
-                  <span class="text-wrapper-10">বিস্তারিত</span>
-                  <div class="caret-down">
-                    <img class="vector-4" src="/right-arrow.svg" alt="" />
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="crouse-card">
-          <div class="overlap">
-            <div class="frame-14">
-              <!-- <img class="faruk-kaymak-3" src="img/faruk-kaymak-cnvvdjvdivi-unsplash-1-2.png" alt="" /> -->
-              <div class="overlap-group-3">
-                <img class="img" src="/img/course-8.png" alt="Course illustration" />
-                <div class="frame-4">
-                  <h2 class="text-wrapper-3">আম্মাপারার</h2>
-                  <h2 class="text-wrapper-4">তরজমা</h2>
-                </div>
-              </div>
-            </div>
-            <div class="div-wrapper">
-              <span class="text-wrapper-5">৫২% ছাড়</span>
-            </div>
-          </div>
-          <div class="frame-5">
-            <div class="frame-6">
-              <div class="frame-7">
-                <div class="vector-wrapper">
-                  <img class="vector" src="/lesson.svg" alt="Lessons icon" />
-                </div>
-                <span class="text-wrapper-6">২৫ টি লেসন</span>
-              </div>
-              <div class="frame-7">
-                <div class="vector-wrapper">
-                  <img class="vector-2" src="/student-cap.svg" alt="Students icon" />
-                </div>
-                <span class="text-wrapper-6">৫২ স্টুডেন্ট</span>
-              </div>
-              <div class="frame-7">
-                <div class="vector-wrapper">
-                  <img class="vector-2" src="/live.svg" alt="Class type icon" />
-                </div>
-                <span class="text-wrapper-6">লাইভ ক্লাস</span>
-              </div>
-            </div>
-            <div class="frame-8">
-              <div class="frame-9">
-                <h3 class="p">প্রাথমিক আরবীভাষা শিক্ষার মাধ্যমে শুরু করুন আপনার যাত্রা</h3>
-                <p class="text-wrapper-7">
-                  এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে পারবেন
-                </p>
-              </div>
-              <div class="frame-10">
-                <div class="frame-11">
-                  <span class="text-wrapper-8">৪৫০৳</span>
-                  <span class="text-wrapper-9">৮৫০৳</span>
-                </div>
-                <button class="button" type="button" aria-label="কোর্সের বিস্তারিত দেখুন">
-                  <span class="text-wrapper-10">বিস্তারিত</span>
-                  <div class="caret-down">
-                    <img class="vector-4" src="/right-arrow.svg" alt="" />
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Teachers -->
-  <section class="experience-teachers container">
-    <div class="overlap-group">
-      <div class="frame">
-        <div class="frame-wrapper">
-          <div class="div">
-            <div class="frame-2">
-              <h1 class="text-wrapper">আমাদের</h1>
-              <h1 class="text-wrapper-2">অভিজ্ঞ</h1>
-              <h1 class="text-wrapper">শিক্ষকবৃন্দ</h1>
-            </div>
-            <div class="frame-3">
-              <article class="div">
-                <img class="rectangle" src="/img/teacher-1.png" alt="মাওলানা আবদুল কাদের এর ছবি" />
-                <section class="frame-wrapper">
-                  <div class="div-2">
-                    <header class="div-3">
-                      <h2 class="text-wrapper">মাওলানা আবদুল কাদের</h2>
-                      <h3 class="text-wrapper-2">কুরআন শরীফ শিক্ষক</h3>
-                    </header>
-                    <p class="p">২০ বছরের অভিজ্ঞতাসম্পন্ন হাফেজ ও তাজবিদ বিশেষজ্ঞ।</p>
-                  </div>
-                </section>
-              </article>
-              <article class="div">
-                <img class="rectangle" src="/img/teacher-2.png" alt="মাওলানা ফারুক হাসান এর ছবি" />
-                <section class="frame-wrapper">
-                  <div class="div-2">
-                    <header class="div-3">
-                      <h2 class="text-wrapper">মাওলানা ফারুক হাসান</h2>
-                      <h3 class="text-wrapper-2">হাদীস ও ফিকহ শিক্ষক</h3>
-                    </header>
-                    <p class="p">ইসলামি শাস্রচর্চায় ১৫ বছরের অভিজ্ঞতা, বিভিন্ন মাদ্রাসায় অধ্যাপনায় নিয়োজিত।</p>
-                  </div>
-                </section>
-              </article>
-              <article class="div">
-                <img class="rectangle" src="/img/teacher-3.png" alt="হাফেজ সুলাইমান হাবিব এর ছবি" />
-                <section class="frame-wrapper">
-                  <div class="div-2">
-                    <header class="div-3">
-                      <h2 class="text-wrapper">হাফেজ সুলাইমান হাবিব</h2>
-                      <h3 class="text-wrapper-2">হিফজুল কুরআন প্রশিক্ষক</h3>
-                    </header>
-                    <p class="p">ইসলামি শাস্রচর্চায় ১৫ বছরের অভিজ্ঞতা, বিভিন্ন মাদ্রাসায় অধ্যাপনায় নিয়োজিত।</p>
-                  </div>
-                </section>
-              </article>
-            </div>
-          </div>
-        </div>
-        <div class="arrow-frame">
-          <button type="button" class="component" aria-label="Previous">
-            <span class="arrow-right" aria-hidden="true">
-              <img class="vector" src="/arrow-left.svg" alt="" />
-            </span>
-          </button>
-          <button type="button" class="arrow-right-wrapper" aria-label="Next">
-            <span class="arrow-right" aria-hidden="true">
-              <img class="img" src="/arrow-right-active.svg" alt="" />
-            </span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us -->
-  <main class="why-choose-us container">
-    <div class="overlap">
-      <img class="image" src="/img/bg-3.png" alt="Background pattern" />
-      <div class="frame">
-        <header>
-          <h1 class="text-wrapper">পর্যাক্রমে শিখুন আর এগিয়ে চলুন</h1>
+    <!-- Special Offer -->
+    <section class="special-offers" role="main">
+      <div class="special-offers__container">
+        <header class="special-offers__header">
+          <h1 class="special-offers__title">স্পেশাল</h1>
+          <h1 class="special-offers__title--gradient">অফার</h1>
+          <h1 class="special-offers__title">কোর্স সমূহ</h1>
         </header>
-        <section class="learning-path" aria-labelledby="step-01">
-          <div class="overlap-group">
-            <article class="div">
-              <div class="frame-2">
-                <header class="frame-3">
-                  <div class="vector-wrapper" aria-hidden="true">
-                    <img class="vector" src="/check-2.svg" alt="" />
-                  </div>
-                  <h2 id="step-01" class="text-wrapper-2">স্টেপ - ০১</h2>
-                </header>
-                <div class="frame-4">
-                  <div class="frame-5">
-                    <div class="frame-6">
-                      <h3 class="text-wrapper-3">কুরআন শিক্ষার প্রাথমিক ধাপ</h3>
-                      <p class="p">
-                        এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে পারবেন
-                      </p>
-                    </div>
-                    <div class="frame-7">
-                      <button class="button" type="button"
-                        aria-label="কুরআন শিক্ষার প্রাথমিক ধাপ সম্পর্কে বিস্তারিত জানুন">
-                        <span class="text-wrapper-4">বিস্তারিত</span>
-                        <div class="vector-wrapper" aria-hidden="true">
-                          <img class="img" src="/right-arrow.svg" alt="" />
-                        </div>
-                      </button>
-                    </div>
-                  </div>
+
+        <div class="special-offers__cards">
+          <article class="course-card">
+            <div class="course-card__header">
+              <div class="course-card__background course-card__background--blue">
+                <div class="course-card__background"></div>
+              </div>
+              <img class="course-card__image" src="/img/course-4.png" alt="প্রাথমিক দ্বীন শিক্ষা কোর্সের চিত্র" />
+              <div class="course-card__title-wrapper">
+                <h2 class="course-card__title-line">প্রাথমিক</h2>
+                <h2 class="course-card__title-line">দ্বীন শিক্ষা</h2>
+              </div>
+              <div class="course-card__discount">
+                <span class="course-card__discount-text">২৫% ছাড়</span>
+              </div>
+            </div>
+
+            <div class="course-card__content">
+              <div class="course-card__stats">
+                <div class="course-card__stat">
+                  <img class="course-card__icon" src="/lesson.svg" alt="পাঠ আইকন" />
+                  <span class="course-card__stat-text">২৫ টি লেসন</span>
+                </div>
+                <div class="course-card__stat">
+                  <img class="course-card__icon" src="/student-cap.svg" alt="শিক্ষার্থী আইকন" />
+                  <span class="course-card__stat-text">৫২ স্টুডেন্ট</span>
+                </div>
+                <div class="course-card__stat">
+                  <img class="course-card__icon" src="/live.svg" alt="ক্লাসের ধরন আইকন" />
+                  <span class="course-card__stat-text">রেকর্ডেড ক্লাস</span>
                 </div>
               </div>
-              <div class="frame-8">
-                <img src="/img/course-thumb-1.png" alt="">
-              </div>
-            </article>
-          </div>
-        </section>
-        <section class="overlap-wrapper" aria-labelledby="step-02">
-          <div class="frame-wrapper">
-            <article class="div">
-              <div class="frame-2">
-                <header class="frame-3">
-                  <div class="vector-wrapper" aria-hidden="true">
-                    <img class="vector" src="/check-2.svg" alt="" />
+
+              <div class="course-card__details">
+                <div class="course-card__text-content">
+                  <h3 class="course-card__heading">প্রাথমিক আরবীভাষা শিক্ষার মাধ্যমে শুরু করুন আপনার
+                    যাত্রা</h3>
+                  <p class="course-card__description">
+                    এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে
+                    পারবেন
+                  </p>
+                </div>
+
+                <div class="course-card__footer">
+                  <div class="course-card__pricing">
+                    <span class="course-card__price">২৫০৳</span>
+                    <span class="course-card__price--old">৮৫০৳</span>
                   </div>
-                  <h2 id="step-02" class="text-wrapper-2">স্টেপ - ০২</h2>
-                </header>
-                <div class="frame-4">
-                  <div class="frame-5">
-                    <div class="frame-6">
-                      <h3 class="text-wrapper-3">কুরআনের বিশুদ্ধকরণ (তাজভীদ) কোর্স</h3>
-                      <p class="text-wrapper-7">
-                        এরপর কুরআনের সঠিক উচ্চারণে সমস্যা থেকে গেলে তা শুদ্ধ করা হয় হয়। যাতে শব্দের মিসম্যাচ ও ভুল
-                        উচ্চারণ দূর হয় এবং কুরআন যথাযথভাবে তিলাওয়াত করা সম্ভব হয়।
-                      </p>
+                  <button class="course-card__button" type="button"
+                    aria-label="প্রাথমিক দ্বীন শিক্ষা কোর্সের বিস্তারিত দেখুন">
+                    <span class="course-card__button-text">বিস্তারিত</span>
+                    <div class="course-card__arrow">
+                      <img src="/right-arrow.svg" alt="" />
                     </div>
-                    <div class="frame-7">
-                      <button class="button" type="button"
-                        aria-label="কুরআনের বিশুদ্ধকরণ কোর্স সম্পর্কে বিস্তারিত জানুন">
-                        <span class="text-wrapper-4">বিস্তারিত</span>
-                        <div class="vector-wrapper" aria-hidden="true">
-                          <img class="img" src="/right-arrow.svg" alt="" />
-                        </div>
-                      </button>
-                    </div>
-                  </div>
+                  </button>
                 </div>
               </div>
-              <div class="frame-10">
-                <img src="/img/course-thumb-2.png" alt="" />
+            </div>
+          </article>
+
+          <article class="course-card">
+            <div class="course-card__header">
+              <div class="course-card__background course-card__background--orange">
+                <div class="course-card__background"></div>
               </div>
-            </article>
-          </div>
-        </section>
-        <section class="overlap-group-wrapper" aria-labelledby="step-03">
-          <div class="div-wrapper">
-            <article class="div">
-              <div class="frame-2">
-                <header class="frame-3">
-                  <div class="vector-wrapper" aria-hidden="true">
-                    <img class="vector" src="/check-2.svg" alt="" />
-                  </div>
-                  <h2 id="step-03" class="text-wrapper-2">স্টেপ - ০৩</h2>
-                </header>
-                <div class="frame-4">
-                  <div class="frame-5">
-                    <div class="frame-6">
-                      <h3 class="text-wrapper-3">কুরআন হিফজ (কুরআন মুখস্থকরণ)</h3>
-                      <p class="text-wrapper-7">
-                        কুরআনের তিলাওয়াত ঠিক করার পর যারা ইচ্ছুক তারা পুরো কুরআন কিংবা কুরআনের পছন্দনীয় কিছু অংশ বা
-                        আমলি সূরা ইত্যাদি মুখস্থ করতে পারে।
-                      </p>
-                    </div>
-                    <div class="frame-7">
-                      <button class="button" type="button" aria-label="কুরআন হিফজ কোর্স সম্পর্কে বিস্তারিত জানুন">
-                        <span class="text-wrapper-4">বিস্তারিত</span>
-                        <div class="vector-wrapper" aria-hidden="true">
-                          <img class="img" src="/right-arrow.svg" alt="" />
-                        </div>
-                      </button>
-                    </div>
-                  </div>
+              <img class="course-card__image" src="/img/course-7.png" alt="ইসলামের দৃষ্টিতে গীবত কোর্সের চিত্র" />
+              <div class="course-card__title-wrapper">
+                <h2 class="course-card__title-line">ইসলামের</h2>
+                <h2 class="course-card__title-line">দৃষ্টিতে গীবত</h2>
+              </div>
+              <div class="course-card__discount">
+                <span class="course-card__discount-text">২২% ছাড়</span>
+              </div>
+            </div>
+
+            <div class="course-card__content">
+              <div class="course-card__stats">
+                <div class="course-card__stat">
+                  <img class="course-card__icon" src="/lesson.svg" alt="পাঠ আইকন" />
+                  <span class="course-card__stat-text">২৫ টি লেসন</span>
+                </div>
+                <div class="course-card__stat">
+                  <img class="course-card__icon" src="/student-cap.svg" alt="শিক্ষার্থী আইকন" />
+                  <span class="course-card__stat-text">৫২ স্টুডেন্ট</span>
+                </div>
+                <div class="course-card__stat">
+                  <img class="course-card__icon" src="/live.svg" alt="ক্লাসের ধরন আইকন" />
+                  <span class="course-card__stat-text">লাইভ ক্লাস</span>
                 </div>
               </div>
-              <div class="frame-11">
-                <img src="/img/course-thumb-3.png" alt="">
-              </div>
-            </article>
-          </div>
-        </section>
-        <section class="learning-path-2" aria-labelledby="step-04">
-          <div class="overlap-2">
-            <article class="div">
-              <div class="frame-2">
-                <header class="frame-3">
-                  <div class="vector-wrapper" aria-hidden="true">
-                    <img class="vector" src="/check-2.svg" alt="" />
+
+              <div class="course-card__details">
+                <div class="course-card__text-content">
+                  <h3 class="course-card__heading">ইসলামের দৃষ্টিতে গীবত ও তার অপকারিতা সম্পর্কে জানুন
+                  </h3>
+                  <p class="course-card__description">
+                    এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে
+                    পারবেন
+                  </p>
+                </div>
+
+                <div class="course-card__footer">
+                  <div class="course-card__pricing">
+                    <span class="course-card__price">২৫০৳</span>
+                    <span class="course-card__price--old">৮৫০৳</span>
                   </div>
-                  <h2 id="step-04" class="text-wrapper-2">স্টেপ - ০৪</h2>
-                </header>
-                <div class="frame-4">
-                  <div class="frame-5">
-                    <div class="frame-6">
-                      <h3 class="text-wrapper-3">আরবীভাষা শিক্ষা</h3>
-                      <p class="p">
-                        অথবা কুরআনের অর্থ বুঝতে আরবীভাষা শিখতে পারে। আমরা আরবীভাষার দক্ষতা বৃদ্ধির জন্য বিভিন্ন
-                        পর্যায়ের কোর্স পরিচালনা করি।
-                      </p>
+                  <button class="course-card__button" type="button"
+                    aria-label="ইসলামের দৃষ্টিতে গীবত কোর্সের বিস্তারিত দেখুন">
+                    <span class="course-card__button-text">বিস্তারিত</span>
+                    <div class="course-card__arrow">
+                      <img src="/right-arrow.svg" alt="" />
                     </div>
-                    <div class="frame-7">
-                      <button class="button" type="button" aria-label="আরবীভাষা শিক্ষা কোর্স সম্পর্কে বিস্তারিত জানুন">
-                        <span class="text-wrapper-4">বিস্তারিত</span>
-                        <div class="vector-wrapper" aria-hidden="true">
-                          <img class="img" src="/right-arrow.svg" alt="" />
-                        </div>
-                      </button>
-                    </div>
-                  </div>
+                  </button>
                 </div>
               </div>
-              <div class="frame-12">
-                <img src="/img/course-thumb-4.png" alt="">
+            </div>
+          </article>
+
+          <article class="course-card">
+            <div class="course-card__header">
+              <div class="course-card__background course-card__background--purple">
+                <div class="course-card__background"></div>
               </div>
-            </article>
-          </div>
-        </section>
-        <section class="learning-path-3" aria-labelledby="step-05">
-          <div class="overlap-3">
-            <article class="frame-13">
-              <div class="frame-2">
-                <header class="frame-3">
-                  <div class="vector-wrapper" aria-hidden="true">
-                    <img class="vector" src="/check-2.svg" alt="" />
-                  </div>
-                  <h2 id="step-05" class="text-wrapper-2">স্টেপ - ০৫</h2>
-                </header>
-                <div class="frame-4">
-                  <div class="frame-5">
-                    <div class="frame-6">
-                      <h3 class="text-wrapper-3">আকীদা শিক্ষা</h3>
-                      <p class="p">
-                        আরবীভাষায় দক্ষতা অর্জনের পাশাপাশি শিক্ষার্থীরা আকীদা (ইসলামের বিশ্বাসের মূলনীতি) সম্পর্কে
-                        জানতে পারবে। যা তাদের ঈমানকে মজবুত ও সুদৃঢ় করবে এবং ঈমানের হেফাজতে ভূমিকা রাখবে
-                      </p>
-                    </div>
-                    <div class="frame-7">
-                      <button class="button" type="button" aria-label="আকীদা শিক্ষা কোর্স সম্পর্কে বিস্তারিত জানুন">
-                        <span class="text-wrapper-4">বিস্তারিত</span>
-                        <div class="vector-wrapper" aria-hidden="true">
-                          <img class="img" src="/right-arrow.svg" alt="" />
-                        </div>
-                      </button>
-                    </div>
-                  </div>
+              <img class="course-card__image" src="/img/course-8.png" alt="আম্মাপারার তরজমা কোর্সের চিত্র" />
+              <div class="course-card__title-wrapper">
+                <h2 class="course-card__title-line">আম্মাপারার</h2>
+                <h2 class="course-card__title-line">তরজমা</h2>
+              </div>
+              <div class="course-card__discount">
+                <span class="course-card__discount-text">৫২% ছাড়</span>
+              </div>
+            </div>
+
+            <div class="course-card__content">
+              <div class="course-card__stats">
+                <div class="course-card__stat">
+                  <img class="course-card__icon" src="/lesson.svg" alt="পাঠ আইকন" />
+                  <span class="course-card__stat-text">২৫ টি লেসন</span>
+                </div>
+                <div class="course-card__stat">
+                  <img class="course-card__icon" src="/student-cap.svg" alt="শিক্ষার্থী আইকন" />
+                  <span class="course-card__stat-text">৫২ স্টুডেন্ট</span>
+                </div>
+                <div class="course-card__stat">
+                  <img class="course-card__icon" src="/live.svg" alt="ক্লাসের ধরন আইকন" />
+                  <span class="course-card__stat-text">লাইভ ক্লাস</span>
                 </div>
               </div>
-              <div class="frame-14">
-                <img src="/img/course-thumb-5.png" alt="">
-              </div>
-            </article>
-          </div>
-        </section>
-        <section class="learning-path-4" aria-labelledby="step-06">
-          <div class="overlap-4">
-            <article class="div">
-              <div class="frame-2">
-                <header class="frame-3">
-                  <div class="vector-wrapper" aria-hidden="true">
-                    <img class="vector" src="/check-2.svg" alt="" />
+
+              <div class="course-card__details">
+                <div class="course-card__text-content">
+                  <h3 class="course-card__heading">প্রাথমিক আরবীভাষা শিক্ষার মাধ্যমে শুরু করুন আপনার
+                    যাত্রা</h3>
+                  <p class="course-card__description">
+                    এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে
+                    পারবেন
+                  </p>
+                </div>
+
+                <div class="course-card__footer">
+                  <div class="course-card__pricing">
+                    <span class="course-card__price">৪৫০৳</span>
+                    <span class="course-card__price--old">৮৫০৳</span>
                   </div>
-                  <h2 id="step-06" class="text-wrapper-2">স্টেপ - ০৬</h2>
-                </header>
-                <div class="frame-4">
-                  <div class="frame-5">
-                    <div class="frame-6">
-                      <h3 class="text-wrapper-3">ফিকহ অধ্যয়ন</h3>
-                      <p class="p">
-                        অথবা কুরআনের অর্থ বুঝতে আরবীভাষা শিখতে পারে। আমরা আরবীভাষার দক্ষতা বৃদ্ধির জন্য বিভিন্ন
-                        পর্যায়ের কোর্স পরিচালনা করি।
-                      </p>
+                  <button class="course-card__button" type="button"
+                    aria-label="আম্মাপারার তরজমা কোর্সের বিস্তারিত দেখুন">
+                    <span class="course-card__button-text">বিস্তারিত</span>
+                    <div class="course-card__arrow">
+                      <img src="/right-arrow.svg" alt="" />
                     </div>
-                    <div class="frame-7">
-                      <button class="button" type="button" aria-label="ফিকহ অধ্যয়ন কোর্স সম্পর্কে বিস্তারিত জানুন">
-                        <span class="text-wrapper-4">বিস্তারিত</span>
-                        <div class="vector-wrapper" aria-hidden="true">
-                          <img class="img" src="/right-arrow.svg" alt="" />
-                        </div>
-                      </button>
-                    </div>
-                  </div>
+                  </button>
                 </div>
               </div>
-              <div class="frame-15">
-                <img src="/img/course-thumb-6.png" alt="">
-              </div>
-            </article>
-          </div>
-        </section>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Teacher -->
+    <section class="teachers-section container" role="main">
+      <div class="teachers-section__container">
+        <div class="teachers-section__content">
+          <div class="teachers-section__main">
+            <header class="teachers-section__header">
+              <h1 class="teachers-section__title">আমাদের</h1>
+              <h1 class="teachers-section__title--gradient">অভিজ্ঞ</h1>
+              <h1 class="teachers-section__title">শিক্ষকবৃন্দ</h1>
+            </header>
+
+            <div class="teachers-section__grid">
+              <article class="teacher-card">
+                <img class="teacher-card__image" src="/img/teacher-1.png" alt="মাওলানা আবদুল কাদের এর ছবি" />
+                <div class="teacher-card__content">
+                  <div class="teacher-card__info">
+                    <div class="teacher-card__header">
+                      <h2 class="teacher-card__name">মাওলানা আবদুল কাদের</h2>
+                      <h3 class="teacher-card__title">কুরআন শরীফ শিক্ষক</h3>
+                    </div>
+                    <p class="teacher-card__description">২০ বছরের অভিজ্ঞতাসম্পন্ন হাফেজ ও তাজবিদ বিশেষজ্ঞ।</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="teacher-card">
+                <img class="teacher-card__image" src="/img/teacher-2.png" alt="মাওলানা ফারুক হাসান এর ছবি" />
+                <div class="teacher-card__content">
+                  <div class="teacher-card__info">
+                    <div class="teacher-card__header">
+                      <h2 class="teacher-card__name">মাওলানা ফারুক হাসান</h2>
+                      <h3 class="teacher-card__title">হাদীস ও ফিকহ শিক্ষক</h3>
+                    </div>
+                    <p class="teacher-card__description">ইসলামি শাস্রচর্চায় ১৫ বছরের অভিজ্ঞতা, বিভিন্ন মাদ্রাসায়
+                      অধ্যাপনায় নিয়োজিত।</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="teacher-card">
+                <img class="teacher-card__image" src="/img/teacher-3.png" alt="হাফেজ সুলাইমান হাবিব এর ছবি" />
+                <div class="teacher-card__content">
+                  <div class="teacher-card__info">
+                    <div class="teacher-card__header">
+                      <h2 class="teacher-card__name">হাফেজ সুলাইমান হাবিব</h2>
+                      <h3 class="teacher-card__title">হিফজুল কুরআন প্রশিক্ষক</h3>
+                    </div>
+                    <p class="teacher-card__description">ইসলামি শাস্রচর্চায় ১৫ বছরের অভিজ্ঞতা, বিভিন্ন মাদ্রাসায়
+                      অধ্যাপনায় নিয়োজিত।</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <nav class="teachers-section__navigation" aria-label="শিক্ষক তালিকা নেভিগেশন">
+            <button type="button" class="navigation-button" aria-label="পূর্ববর্তী">
+              <img class="navigation-button__icon" src="/arrow-left.svg" alt="" />
+            </button>
+            <button type="button" class="navigation-button navigation-button--active" aria-label="পরবর্তী">
+              <img class="navigation-button__icon" src="/arrow-right-active.svg" alt="" />
+            </button>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Path -->
+    <section class="learning-path">
+      <div class="learning-path__container">
+        <header class="learning-path__header">
+          <h1 class="learning-path__title">পর্যাক্রমে শিখুন আর এগিয়ে চলুন</h1>
+        </header>
+        <div class="learning-path__steps">
+          <article class="step-card step-card--primary">
+            <div class="step-card__content">
+              <header class="step-card__header">
+                <div class="step-card__badge">
+                  <img src="/check-2.svg" alt="" aria-hidden="true">
+                  <span class="step-card__number">স্টেপ - ০১</span>
+                </div>
+              </header>
+              <div class="step-card__body">
+                <h2 class="step-card__title">কুরআন শিক্ষার প্রাথমিক ধাপ</h2>
+                <p class="step-card__description">
+                  এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে
+                  আরবি ভাষা জানতে পারবেন
+                </p>
+                <button class="step-card__button" type="button"
+                  aria-label="কুরআন শিক্ষার প্রাথমিক ধাপ সম্পর্কে বিস্তারিত জানুন">
+                  <span>বিস্তারিত</span>
+                  <img src="/right-arrow.svg" alt="" aria-hidden="true">
+                </button>
+              </div>
+            </div>
+            <figure class="step-card__image">
+              <img src="/img/course-thumb-1.png" alt="কুরআন শিক্ষার প্রাথমিক ধাপ">
+            </figure>
+          </article>
+
+          <article class="step-card step-card--secondary">
+            <div class="step-card__content">
+              <header class="step-card__header">
+                <div class="step-card__badge">
+                  <img src="/check-2.svg" alt="" aria-hidden="true">
+                  <span class="step-card__number">স্টেপ - ০২</span>
+                </div>
+              </header>
+              <div class="step-card__body">
+                <h2 class="step-card__title">কুরআনের বিশুদ্ধকরণ (তাজভীদ) কোর্স</h2>
+                <p class="step-card__description">
+                  এরপর কুরআনের সঠিক উচ্চারণে সমস্যা থেকে গেলে তা শুদ্ধ করা হয় হয়। যাতে
+                  শব্দের মিসম্যাচ ও ভুল
+                  উচ্চারণ দূর হয় এবং কুরআন যথাযথভাবে তিলাওয়াত করা সম্ভব হয়।
+                </p>
+                <button class="step-card__button" type="button"
+                  aria-label="কুরআনের বিশুদ্ধকরণ কোর্স সম্পর্কে বিস্তারিত জানুন">
+                  <span>বিস্তারিত</span>
+                  <img src="/right-arrow.svg" alt="" aria-hidden="true">
+                </button>
+              </div>
+            </div>
+            <figure class="step-card__image">
+              <img src="/img/course-thumb-2.png" alt="কুরআনের বিশুদ্ধকরণ কোর্স">
+            </figure>
+          </article>
+
+          <article class="step-card step-card--tertiary">
+            <div class="step-card__content">
+              <header class="step-card__header">
+                <div class="step-card__badge">
+                  <img src="/check-2.svg" alt="" aria-hidden="true">
+                  <span class="step-card__number">স্টেপ - ০৩</span>
+                </div>
+              </header>
+              <div class="step-card__body">
+                <h2 class="step-card__title">কুরআন হিফজ (কুরআন মুখস্থকরণ)</h2>
+                <p class="step-card__description">
+                  কুরআনের তিলাওয়াত ঠিক করার পর যারা ইচ্ছুক তারা পুরো কুরআন কিংবা কুরআনের
+                  পছন্দনীয় কিছু অংশ বা
+                  আমলি সূরা ইত্যাদি মুখস্থ করতে পারে।
+                </p>
+                <button class="step-card__button" type="button" aria-label="কুরআন হিফজ কোর্স সম্পর্কে বিস্তারিত জানুন">
+                  <span>বিস্তারিত</span>
+                  <img src="/right-arrow.svg" alt="" aria-hidden="true">
+                </button>
+              </div>
+            </div>
+            <figure class="step-card__image">
+              <img src="/img/course-thumb-3.png" alt="কুরআন হিফজ কোর্স">
+            </figure>
+          </article>
+
+          <article class="step-card step-card--quaternary">
+            <div class="step-card__content">
+              <header class="step-card__header">
+                <div class="step-card__badge">
+                  <img src="/check-2.svg" alt="" aria-hidden="true">
+                  <span class="step-card__number">স্টেপ - ০৪</span>
+                </div>
+              </header>
+              <div class="step-card__body">
+                <h2 class="step-card__title">আরবীভাষা শিক্ষা</h2>
+                <p class="step-card__description">
+                  অথবা কুরআনের অর্থ বুঝতে আরবীভাষা শিখতে পারে। আমরা আরবীভাষার দক্ষতা
+                  বৃদ্ধির জন্য বিভিন্ন
+                  পর্যায়ের কোর্স পরিচালনা করি।
+                </p>
+                <button class="step-card__button" type="button"
+                  aria-label="আরবীভাষা শিক্ষা কোর্স সম্পর্কে বিস্তারিত জানুন">
+                  <span>বিস্তারিত</span>
+                  <img src="/right-arrow.svg" alt="" aria-hidden="true">
+                </button>
+              </div>
+            </div>
+            <figure class="step-card__image">
+              <img src="/img/course-thumb-4.png" alt="আরবীভাষা শিক্ষা কোর্স">
+            </figure>
+          </article>
+
+          <article class="step-card step-card--quinary">
+            <div class="step-card__content">
+              <header class="step-card__header">
+                <div class="step-card__badge">
+                  <img src="/check-2.svg" alt="" aria-hidden="true">
+                  <span class="step-card__number">স্টেপ - ০৫</span>
+                </div>
+              </header>
+              <div class="step-card__body">
+                <h2 class="step-card__title">আকীদা শিক্ষা</h2>
+                <p class="step-card__description">
+                  আরবীভাষায় দক্ষতা অর্জনের পাশাপাশি শিক্ষার্থীরা আকীদা (ইসলামের বিশ্বাসের
+                  মূলনীতি) সম্পর্কে
+                  জানতে পারবে। যা তাদের ৈমানকে মজবুত ও সুদৃঢ় করবে এবং ৈমানের হেফাজতে
+                  ভূমিকা রাখবে
+                </p>
+                <button class="step-card__button" type="button"
+                  aria-label="আকীদা শিক্ষা কোর্স সম্পর্কে বিস্তারিত জানুন">
+                  <span>বিস্তারিত</span>
+                  <img src="/right-arrow.svg" alt="" aria-hidden="true">
+                </button>
+              </div>
+            </div>
+            <figure class="step-card__image">
+              <img src="/img/course-thumb-5.png" alt="আকীদা শিক্ষা কোর্স">
+            </figure>
+          </article>
+
+          <article class="step-card step-card--senary">
+            <div class="step-card__content">
+              <header class="step-card__header">
+                <div class="step-card__badge">
+                  <img src="/check-2.svg" alt="" aria-hidden="true">
+                  <span class="step-card__number">স্টেপ - ০৬</span>
+                </div>
+              </header>
+              <div class="step-card__body">
+                <h2 class="step-card__title">ফিকহ অধ্যয়ন</h2>
+                <p class="step-card__description">
+                  অথবা কুরআনের অর্থ বুঝতে আরবীভাষা শিখতে পারে। আমরা আরবীভাষার দক্ষতা
+                  বৃদ্ধির জন্য বিভিন্ন
+                  পর্যায়ের কোর্স পরিচালনা করি।
+                </p>
+                <button class="step-card__button" type="button"
+                  aria-label="ফিকহ অধ্যয়ন কোর্স সম্পর্কে বিস্তারিত জানুন">
+                  <span>বিস্তারিত</span>
+                  <img src="/right-arrow.svg" alt="" aria-hidden="true">
+                </button>
+              </div>
+            </div>
+            <figure class="step-card__image">
+              <img src="/img/course-thumb-6.png" alt="ফিকহ অধ্যয়ন কোর্স">
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature -->
+    <section class="features container">
+      <header class="features__header--mobile">
+        <h1 class="features__title">নূরুল কুরআন একাডেমিতে</h1>
+        <h2 class="features__subtitle">আপনি যা পাচ্ছেন</h2>
+      </header>
+      <div class="features__container">
+        <figure class="features__hero" aria-hidden="true">
+          <div class="features__hero-content"></div>
+        </figure>
+        <div class="features__content">
+          <header class="features__header">
+            <h1 class="features__title">নূরুল কুরআন একাডেমিতে</h1>
+            <h2 class="features__subtitle">আপনি যা পাচ্ছেন</h2>
+          </header>
+          <div class="features__grid">
+            <article class="feature-card">
+              <div class="feature-card__icon" aria-hidden="true">
+                <img src="/feature-01.svg" alt="">
+              </div>
+              <div class="feature-card__content">
+                <h3 class="feature-card__title">উচ্চমানের কোর্স কনটেন্ট</h3>
+                <p class="feature-card__description">
+                  আমাদের সব কোর্স তৈরি করা হয়েছে বিশেষজ্ঞ শিক্ষকদের দ্বারা, যারা নিজের ক্ষেত্রের অভিজ্ঞ
+                  এবং দক্ষ।
+                </p>
+              </div>
+            </article>
+            <article class="feature-card">
+              <div class="feature-card__icon" aria-hidden="true">
+                <img src="/feature-02.svg" alt="">
+              </div>
+              <div class="feature-card__content">
+                <h3 class="feature-card__title">লাইভ ও রেকর্ডেড ক্লাস</h3>
+                <p class="feature-card__description">
+                  আপনি পছন্দমতো লাইভ ক্লাসে অংশ নিতে পারবেন বা রেকর্ডেড ভিডিও দেখে যেকোনো সময় পড়াশোনা
+                  চালিয়ে যেতে পারবেন।
+                </p>
+              </div>
+            </article>
+            <article class="feature-card">
+              <div class="feature-card__icon" aria-hidden="true">
+                <img src="/feature-03.svg" alt="">
+              </div>
+              <div class="feature-card__content">
+                <h3 class="feature-card__title">ফ্লেক্সিবল সময়সূচি</h3>
+                <p class="feature-card__description">আপনার ব্যস্ততার সাথে খাপ খাইয়ে যেকোনো সময় পড়াশোনা
+                  করার সুবিধা।</p>
+              </div>
+            </article>
+            <article class="feature-card">
+              <div class="feature-card__icon" aria-hidden="true">
+                <img src="/feature-04.svg" alt="">
+              </div>
+              <div class="feature-card__content">
+                <h3 class="feature-card__title">কমিউনিটি সাপোর্ট</h3>
+                <p class="feature-card__description">
+                  আপনার মত শিক্ষার্থীদের সাথে নেটওয়ার্ক গড়ে তোলার সুযোগ, যা শিক্ষায় নতুন মাত্রা যোগ
+                  করে।
+                </p>
+              </div>
+            </article>
+            <article class="feature-card">
+              <div class="feature-card__icon" aria-hidden="true">
+                <img src="/feature-05.svg" alt="">
+              </div>
+              <div class="feature-card__content">
+                <h3 class="feature-card__title">স্মার্ট টেকনোলজি, সহজ ব্যবহার</h3>
+                <p class="feature-card__description">মোবাইল ও কম্পিউটার— যেকোনো ডিভাইস থেকে ঝামেলামুক্ত ও
+                  স্মুথ লার্নিংয়ের নিশ্চয়তা।</p>
+              </div>
+            </article>
+            <article class="feature-card">
+              <div class="feature-card__icon" aria-hidden="true">
+                <img src="/feature-06.svg" alt="">
+              </div>
+              <div class="feature-card__content">
+                <h3 class="feature-card__title">ধারাবাহিকভাবে দ্বীন শিক্ষা</h3>
+                <p class="feature-card__description">ইসলামের বিভিন্ন বিষয় ধারাবাহিকভাবে শিক্ষাগ্রহণের
+                  চমৎকার আয়োজন।</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <main class="blog-section">
+      <div class="blog-section__background">
+        <div class="blog-section__container">
+          <div class="blog-section__content">
+            <header class="blog-section__header">
+              <div class="blog-section__title">
+                <h1 class="blog-section__title-text">পছন্দের</h1>
+                <h1 class="blog-section__title-text blog-section__title-text--gradient">ব্লগ</h1>
+                <h1 class="blog-section__title-text">পড়ুন</h1>
+              </div>
+
+              <div class="blog-section__grid">
+                <article class="blog-card">
+                  <header class="blog-card__image-wrapper">
+                    <div class="blog-card__image blog-card__image--interview" role="img"
+                      aria-label="একজন হাফেজা ছাত্রীর সাক্ষাৎকার">
+                      <h2 class="blog-card__overlay-title">একজন হাফেজা ছাত্রীর সাক্ষাৎকার</h2>
+                    </div>
+                  </header>
+                  <div class="blog-card__content">
+                    <div class="blog-card__info">
+                      <p class="blog-card__author">হাফেজ সুলাইমান হাবিব</p>
+                      <h3 class="blog-card__title">একজন হাফেজা ছাত্রীর সাক্ষাৎকার এবং আগামীর ভাবনা</h3>
+                      <div class="blog-card__meta">
+                        <time class="blog-card__meta-item" datetime="2025-03-14">১৪ মার্চ ২০২৫</time>
+                        <span class="blog-card__meta-separator" aria-hidden="true"></span>
+                        <span class="blog-card__meta-item">৭ মিনিট</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="blog-card">
+                  <header class="blog-card__image-wrapper">
+                    <div class="blog-card__image blog-card__image--journey" role="img"
+                      aria-label="আমার হিফজ-যাত্রা ও পরবর্তী গল্প">
+                      <h2 class="blog-card__overlay-title">আমার হিফজ-যাত্রা ও পরবর্তী গল্প</h2>
+                    </div>
+                  </header>
+                  <div class="blog-card__content">
+                    <div class="blog-card__info">
+                      <p class="blog-card__author">হাফেজ সুলাইমান হাবিব</p>
+                      <h3 class="blog-card__title blog-card__title--multiline">
+                        আমার হিফজ-যাত্রা যেভাবে শুরু হয়েছিলো এবং পরবর্তী গল্প
+                      </h3>
+                      <div class="blog-card__meta">
+                        <time class="blog-card__meta-item" datetime="2025-03-14">১৪ মার্চ ২০২৫</time>
+                        <span class="blog-card__meta-separator" aria-hidden="true"></span>
+                        <span class="blog-card__meta-item">৭ মিনিট</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="blog-card">
+                  <header class="blog-card__image-wrapper">
+                    <div class="blog-card__image blog-card__image--children" role="img"
+                      aria-label="সন্তানের আরবির চর্চা কীভাবে শুরু করবেন">
+                      <h2 class="blog-card__overlay-title">সন্তানের আরবির চর্চা কীভাবে শুরু করবেন</h2>
+                    </div>
+                  </header>
+                  <div class="blog-card__content">
+                    <div class="blog-card__info">
+                      <p class="blog-card__author">হাফেজ সুলাইমান হাবিব</p>
+                      <h3 class="blog-card__title blog-card__title--multiline">
+                        আপনার সন্তানের আরবির চর্চা কীভাবে শুরু করবেন জানুন বিস্তারিত
+                      </h3>
+                      <div class="blog-card__meta">
+                        <time class="blog-card__meta-item" datetime="2025-03-14">১৪ মার্চ ২০২৫</time>
+                        <span class="blog-card__meta-separator" aria-hidden="true"></span>
+                        <span class="blog-card__meta-item">৭ মিনিট</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </header>
+          </div>
+
+          <nav class="blog-section__navigation" aria-label="ব্লগ নেভিগেশন">
+            <button type="button" class="blog-section__nav-button" aria-label="পূর্ববর্তী">
+              <img class="blog-section__nav-icon" src="/arrow-left.svg" alt="" />
+            </button>
+            <button type="button" class="blog-section__nav-button blog-section__nav-button--next" aria-label="পরবর্তী">
+              <img class="blog-section__nav-icon" src="/arrow-right-active.svg" alt="" />
+            </button>
+          </nav>
+        </div>
+      </div>
+    </main>
+
+    <!-- Offer Call To Action -->
+    <section class="offer-cta container">
+      <div class="offer-cta__container">
+        <div class="offer-cta__background">
+          <img class="offer-cta__decorative-image" src="/img/cta-01.png" alt="ইসলামী শিক্ষার প্রতীক" />
+          <div class="offer-cta__content">
+            <header class="offer-cta__text-section">
+              <h1 class="offer-cta__title">ইসলামী জ্ঞান অর্জনের মাধ্যমে আলোকিত করুন নিজের ভবিষ্যৎ</h1>
+              <button class="offer-cta__button" type="button" aria-label="শেখা শুরু করুন">
+                <span class="offer-cta__button-text">শেখা শুরু করুন</span>
+                <div class="offer-cta__button-icon" aria-hidden="true">
+                  <img src="/arrow-right.svg" alt="" />
+                </div>
+              </button>
+            </header>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section container" role="main" aria-label="প্রশ্নোত্তর বিভাগ">
+      <div class="faq-section__container">
+        <header class="faq-section__header">
+          <h1 class="faq-section__title--gradient">প্রশ্নোত্তর</h1>
+          <h1 class="faq-section__title">সবাই জানতে চান</h1>
+        </header>
+
+        <div class="faq-section__content">
+          <div class="faq-section__column">
+            <details class="faq-item">
+              <summary class="faq-item__summary" aria-expanded="false">
+                <img class="faq-item__icon" src="/plus.svg" alt="" />
+                <h3 class="faq-item__question">Nurul Quran Academy কী?</h3>
+              </summary>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__summary" aria-expanded="false">
+                <img class="faq-item__icon" src="/plus.svg" alt="" />
+                <h3 class="faq-item__question">নারী ও পুরুষদের জন্য আলাদা ক্লাস আছে কি?</h3>
+              </summary>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__summary" aria-expanded="false">
+                <img class="faq-item__icon" src="/plus.svg" alt="" />
+                <h3 class="faq-item__question">ক্লাসগুলো কীভাবে নেওয়া হয়?</h3>
+              </summary>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__summary" aria-expanded="true">
+                <img class="faq-item__icon" src="/plus.svg" alt="" />
+                <h3 class="faq-item__question">কুরআন শেখার জন্য কোনো পূর্বজ্ঞান থাকা লাগবে কি?</h3>
+              </summary>
+              <div class="faq-item__content">
+                <p class="faq-item__answer">
+                  উভয় ধরনের কোর্স রয়েছে। কিছু কোর্স সম্পূর্ণ ফ্রি, আর কিছু কোর্সের জন্য নির্ধারিত ফি
+                  রয়েছে। তবে
+                  আর্থিক অসচ্ছল শিক্ষার্থীদের জন্য স্কলারশিপ সুবিধাও রয়েছে।
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-section__column">
+            <details class="faq-item">
+              <summary class="faq-item__summary" aria-expanded="false">
+                <img class="faq-item__icon" src="/plus.svg" alt="" />
+                <h3 class="faq-item__question">কোর্স শেষে কি সার্টিফিকেট দেওয়া হয়?</h3>
+              </summary>
+              <div class="faq-item__content">
+                <p class="faq-item__answer">
+                  উভয় ধরনের কোর্স রয়েছে। কিছু কোর্স সম্পূর্ণ ফ্রি, আর কিছু কোর্সের জন্য নির্ধারিত ফি
+                  রয়েছে। তবে
+                  আর্থিক অসচ্ছল শিক্ষার্থীদের জন্য স্কলারশিপ সুবিধাও রয়েছে।
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item" open>
+              <summary class="faq-item__summary" aria-expanded="true">
+                <img class="faq-item__icon" src="/plus.svg" alt="" />
+                <h3 class="faq-item__question">কোর্সগুলো কি ফ্রি নাকি পেইড?</h3>
+              </summary>
+              <div class="faq-item__content">
+                <p class="faq-item__answer">
+                  উভয় ধরনের কোর্স রয়েছে। কিছু কোর্স সম্পূর্ণ ফ্রি, আর কিছু কোর্সের জন্য নির্ধারিত ফি
+                  রয়েছে। তবে
+                  আর্থিক অসচ্ছল শিক্ষার্থীদের জন্য স্কলারশিপ সুবিধাও রয়েছে।
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__summary" aria-expanded="false">
+                <img class="faq-item__icon" src="/plus.svg" alt="" />
+                <h3 class="faq-item__question">শিক্ষকেরা কারা?</h3>
+              </summary>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tutorial Call To Action -->
+    <section class="tutorial-cta" role="region" aria-label="টিউটোরিয়াল কল টু অ্যাকশন">
+      <div class="tutorial-cta__container">
+        <div class="tutorial-cta__background">
+          <div class="tutorial-cta__bg-left">
+            <img class="tutorial-cta__bg-image--mobile" src="../img/tutorial-02.png"
+              alt="মোবাইল ডিভাইস ব্যবহারের চিত্র" />
+          </div>
+          <div class="tutorial-cta__bg-right">
+            <img class="tutorial-cta__bg-image--desktop" src="../img/tutorial-01.png" alt="ডেস্কটপ টিউটোরিয়াল চিত্র" />
+          </div>
+        </div>
+
+        <div class="tutorial-cta__blur-overlay" aria-hidden="true"></div>
+
+        <div class="tutorial-cta__content">
+          <h2 class="tutorial-cta__title">কীভাবে login করতে হবে জানুন</h2>
+          <button class="tutorial-cta__button" type="button" aria-label="লগইন টিউটোরিয়াল দেখতে ক্লিক করুন">
+            <span class="tutorial-cta__button-text">ক্লিক করুন</span>
+            <span class="tutorial-cta__button-icon" aria-hidden="true">
+              <img class="tutorial-cta__arrow" src="../arrow-right.svg" alt="" />
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Feature 1 -->
-  <section class="feature-1 container">
-    <div class="frame">
-      <div class="overlap-group-wrapper"></div>
-      <div class="div">
-        <div class="frame-2">
-          <h1 class="text-wrapper">নূরুল কুরআন একাডেমিতে</h1>
-          <h2 class="text-wrapper-2">আপনি যা পাচ্ছেন</h2>
-        </div>
-        <div class="frame-3">
-          <div class="frame-4">
-            <article class="frame-5">
-              <div class="vector-wrapper" aria-hidden="true">
-                <img class="vector" src="/feature-01.svg" alt="" />
-              </div>
-              <div class="frame-6">
-                <h3 class="text-wrapper-3">উচ্চমানের কোর্স কনটেন্ট</h3>
-                <p class="p">
-                  আমাদের সব কোর্স তৈরি করা হয়েছে বিশেষজ্ঞ শিক্ষকদের দ্বারা, যারা নিজের ক্ষেত্রের অভিজ্ঞ এবং দক্ষ।
-                </p>
-              </div>
-            </article>
-            <article class="frame-5">
-              <div class="vector-wrapper" aria-hidden="true">
-                <img class="vector-2" src="/feature-02.svg" alt="" />
-              </div>
-              <div class="frame-7">
-                <h3 class="text-wrapper-3">ফ্লেক্সিবল সময়সূচি</h3>
-                <p class="p">আপনার ব্যস্ততার সাথে খাপ খাইয়ে যেকোনো সময় পড়াশোনা করার সুবিধা।</p>
-              </div>
-            </article>
-            <article class="frame-5">
-              <div class="vector-wrapper" aria-hidden="true">
-                <img class="vector-3" src="/feature-03.svg" alt="" />
-              </div>
-              <div class="frame-7">
-                <h3 class="text-wrapper-3">স্মার্ট টেকনোলজি, সহজ ব্যবহার</h3>
-                <p class="p">মোবাইল ও কম্পিউটার— যেকোনো ডিভাইস থেকে ঝামেলামুক্ত ও স্মুথ লার্নিংয়ের নিশ্চয়তা।</p>
-              </div>
-            </article>
-          </div>
-          <div class="frame-4">
-            <article class="frame-5">
-              <div class="vector-wrapper" aria-hidden="true">
-                <img class="vector-4" src="/feature-04.svg" alt="" />
-              </div>
-              <div class="frame-8">
-                <h3 class="text-wrapper-3">লাইভ ও রেকর্ডেড ক্লাস</h3>
-                <p class="p">
-                  আপনি পছন্দমতো লাইভ ক্লাসে অংশ নিতে পারবেন বা রেকর্ডেড ভিডিও দেখে যেকোনো সময় পড়াশোনা চালিয়ে যেতে
-                  পারবেন।
-                </p>
-              </div>
-            </article>
-            <article class="frame-5">
-              <div class="vector-wrapper" aria-hidden="true">
-                <img class="vector-5" src="/feature-05.svg" alt="" />
-              </div>
-              <div class="frame-9">
-                <h3 class="text-wrapper-3">কমিউনিটি সাপোর্ট</h3>
-                <p class="p">
-                  আপনার মত শিক্ষার্থীদের সাথে নেটওয়ার্ক গড়ে তোলার সুযোগ, যা শিক্ষায় নতুন মাত্রা যোগ করে।
-                </p>
-              </div>
-            </article>
-            <article class="frame-5">
-              <div class="vector-wrapper" aria-hidden="true">
-                <img class="vector-6" src="/feature-06.svg" alt="" />
-              </div>
-              <div class="frame-9">
-                <h3 class="text-wrapper-3">ধারাবাহিকভাবে দ্বীন শিক্ষা</h3>
-                <p class="p">ইসলামের বিভিন্ন বিষয় ধারাবাহিকভাবে শিক্ষাগ্রহণের চমৎকার আয়োজন।</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Blog -->
-  <section class="blog container">
-    <div class="overlap-group">
-      <div class="frame">
-        <div class="frame-wrapper">
-          <div class="div">
-            <div class="frame-2">
-              <h1 class="text-wrapper">পছন্দের</h1>
-              <h1 class="text-wrapper-2">ব্লগ</h1>
-              <h1 class="text-wrapper">পড়ুন</h1>
-            </div>
-            <div class="frame-3">
-              <article class="card">
-                <header class="card-image-wrapper">
-                  <div class="card-image card-image--interview">
-                    <h2 class="card-title">একজন হাফেজা ছাত্রীর সাক্ষাৎকার</h2>
-                  </div>
-                </header>
-                <div class="card-content">
-                  <div class="card-info">
-                    <p class="author-name">হাফেজ সুলাইমান হাবিব</p>
-                    <h3 class="card-description">একজন হাফেজা ছাত্রীর সাক্ষাৎকার এবং আগামীর ভাবনা</h3>
-                    <div class="card-meta">
-                      <time class="meta-date" datetime="2025-03-14">১৪ মার্চ ২০২৫</time>
-                      <span class="meta-separator" aria-hidden="true"></span>
-                      <span class="meta-duration">৭ মিনিট</span>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article class="card">
-                <header class="card-image-wrapper">
-                  <div class="card-image card-image--journey">
-                    <h2 class="card-title card-title--journey">আমার হিফজ-যাত্রা ও পরবর্তী গল্প</h2>
-                  </div>
-                </header>
-                <div class="card-content">
-                  <div class="card-info">
-                    <p class="author-name">হাফেজ সুলাইমান হাবিব</p>
-                    <h3 class="card-description card-description--multiline">
-                      আমার হিফজ-যাত্রা যেভাবে শুরু হয়েছিলো এবং পরবর্তী গল্প
-                    </h3>
-                    <div class="card-meta">
-                      <time class="meta-date" datetime="2025-03-14">১৪ মার্চ ২০২৫</time>
-                      <span class="meta-separator" aria-hidden="true"></span>
-                      <span class="meta-duration">৭ মিনিট</span>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article class="card">
-                <header class="card-image-wrapper">
-                  <div class="card-image card-image--children">
-                    <h2 class="card-title card-title--children">সন্তানের আরবির চর্চা কীভাবে শুরু করবেন</h2>
-                  </div>
-                </header>
-                <div class="card-content">
-                  <p class="author-name">হাফেজ সুলাইমান হাবিব</p>
-                  <h3 class="card-description card-description--multiline">
-                    আপনার সন্তানের আরবির চর্চা কীভাবে শুরু করবেন জানুন বিস্তারিত
-                  </h3>
-                  <div class="card-meta">
-                    <time class="meta-date" datetime="2025-03-14">১৪ মার্চ ২০২৫</time>
-                    <span class="meta-separator" aria-hidden="true"></span>
-                    <span class="meta-duration">৭ মিনিট</span>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-        <div class="arrow-frame">
-          <button type="button" class="component" aria-label="Previous">
-            <span class="arrow-right" aria-hidden="true">
-              <img class="vector" src="/arrow-left.svg" alt="" />
-            </span>
-          </button>
-          <button type="button" class="arrow-right-wrapper" aria-label="Next">
-            <span class="arrow-right" aria-hidden="true">
-              <img class="img" src="/arrow-right-active.svg" alt="" />
-            </span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call To Action -->
-  <section class="cta container">
-    <div class="frame">
-      <div class="overlap-group">
-        <img class="image" src="/img/cta-01.png" alt="ইসলামী শিক্ষার প্রতীক" />
-        <div class="frame-wrapper">
-          <div class="div">
-            <h1 class="text-wrapper">ইসলামী জ্ঞান অর্জনের মাধ্যমে আলোকিত করুন নিজের ভবিষ্যৎ</h1>
-            <button class="button" type="button" aria-label="শেখা শুরু করুন">
-              <span class="text-wrapper-2">শেখা শুরু করুন</span>
-              <div class="arrow-right" aria-hidden="true">
-                <img class="vector" src="/arrow-right.svg" alt="" />
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Accordion QA -->
-  <section class="accordion-qa container">
-    <div class="frame">
-      <h1 class="heading">
-        <span>প্রশ্নোত্তর</span>সবাই জানতে চান
-      </h1>
-      <div class="div">
-        <div class="frame-2">
-          <details class="question">
-            <summary class="frame-3">
-              <img class="expend-collapse" src="/plus.svg" alt="Expand/Collapse icon" />
-              <h3 class="text-wrapper">Nurul Quran Academy কী?</h3>
-            </summary>
-          </details>
-          <details class="question">
-            <summary class="frame-3">
-              <img class="expend-collapse" src="/plus.svg" alt="Expand/Collapse icon" />
-              <h3 class="text-wrapper">নারী ও পুরুষদের জন্য আলাদা ক্লাস আছে কি?</h3>
-            </summary>
-          </details>
-          <details class="question">
-            <summary class="frame-3">
-              <img class="expend-collapse" src="/plus.svg" alt="Expand/Collapse icon" />
-              <h3 class="text-wrapper">ক্লাসগুলো কীভাবে নেওয়া হয়?</h3>
-            </summary>
-          </details>
-          <details class="question">
-            <summary class="frame-3">
-              <img class="expend-collapse" src="/plus.svg" alt="Expand/Collapse icon" />
-              <h3 class="text-wrapper">কুরআন শেখার জন্য কোনো পূর্বজ্ঞান থাকা লাগবে কি?</h3>
-            </summary>
-            <div class="nurul-quran-academy-wrapper">
-              <p class="nurul-quran-academy">
-                উভয় ধরনের কোর্স রয়েছে। কিছু কোর্স সম্পূর্ণ ফ্রি, আর কিছু কোর্সের জন্য নির্ধারিত ফি
-                রয়েছে। তবে
-                আর্থিক অসচ্ছল শিক্ষার্থীদের জন্য স্কলারশিপ সুবিধাও রয়েছে।
-              </p>
-            </div>
-          </details>
-        </div>
-        <div class="frame-4">
-          <details class="question">
-            <summary class="frame-3">
-              <img class="expend-collapse" src="/plus.svg" alt="Expand/Collapse icon" />
-              <h3 class="text-wrapper">কোর্স শেষে কি সার্টিফিকেট দেওয়া হয়?</h3>
-            </summary>
-            <div class="nurul-quran-academy-wrapper">
-              <p class="nurul-quran-academy">
-                উভয় ধরনের কোর্স রয়েছে। কিছু কোর্স সম্পূর্ণ ফ্রি, আর কিছু কোর্সের জন্য নির্ধারিত ফি
-                রয়েছে। তবে
-                আর্থিক অসচ্ছল শিক্ষার্থীদের জন্য স্কলারশিপ সুবিধাও রয়েছে।
-              </p>
-            </div>
-          </details>
-          <details class="question" open>
-            <summary class="frame-3">
-              <img class="expend-collapse" src="/plus.svg" alt="Expand/Collapse icon" />
-              <h3 class="text-wrapper">কোর্সগুলো কি ফ্রি নাকি পেইড?</h3>
-            </summary>
-            <div class="nurul-quran-academy-wrapper">
-              <p class="nurul-quran-academy">
-                উভয় ধরনের কোর্স রয়েছে। কিছু কোর্স সম্পূর্ণ ফ্রি, আর কিছু কোর্সের জন্য নির্ধারিত ফি
-                রয়েছে। তবে
-                আর্থিক অসচ্ছল শিক্ষার্থীদের জন্য স্কলারশিপ সুবিধাও রয়েছে।
-              </p>
-            </div>
-          </details>
-          <details class="question">
-            <summary class="frame-3">
-              <img class="expend-collapse" src="/plus.svg" alt="Expand/Collapse icon" />
-              <h3 class="text-wrapper">শিক্ষকেরা কারা?</h3>
-            </summary>
-          </details>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tutorial -->
-  <section class="tutorial container">
-    <div class="frame">
-      <div class="overlap-group">
-        <img class="faruk-kaymak" src="/img/tutorial-02.png"
-          alt="Background image showing hands holding a glowing smartphone" />
-        <img class="image" src="/img/tutorial-01.png" alt="Decorative overlay image" />
-        <div class="rectangle" aria-hidden="true"></div>
-        <div class="content">
-          <h1 class="heading">কীভাবে login করতে হবে জানুন</h1>
-          <button class="cta-button" type="button" aria-label="Click to learn how to login">
-            <span class="button-text">ক্লিক করুন</span>
-            <span class="arrow-right" aria-hidden="true">
-              <img class="vector" src="/arrow-right.svg" alt="" />
-            </span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
-  <footer class="footer container">
-    <div class="frame" aria-hidden="true">
-      <img class="element" src="/img/footer-01.png" alt="" />
-      <img class="img" src="/img/footer-02.png" alt="" />
-      <img class="element-2" src="/img/footer-03.png" alt="" />
+  <footer class="footer" role="contentinfo">
+    <div class="footer__decoration" aria-hidden="true">
+      <img class="footer__decoration-image footer__decoration-image--left" src="/img/footer-01.png" alt="" />
+      <img class="footer__decoration-image footer__decoration-image--center" src="/img/footer-02.png" alt="" />
+      <img class="footer__decoration-image footer__decoration-image--right" src="/img/footer-03.png" alt="" />
     </div>
-    <div class="div">
-      <section class="frame-2">
-        <header class="frame-3">
-          <img class="image" src="/img/footer-logo.png" alt="Nurul Quran Academy Logo" />
-          <p class="text-wrapper">
+
+    <div class="footer__container">
+      <section class="footer__about">
+        <div class="footer__brand">
+          <img class="footer__logo" src="/img/footer-logo.png" alt="নূরুল কুরআন একাডেমী লোগো" />
+          <p class="footer__description">
             ইসলামী জ্ঞান অর্জনের অনলাইনভিত্তিক অনন্য একটি শিক্ষা প্রতিষ্ঠান। এতে আরবীভাষা ও সাহিত্যসহ
             কুরআন-হাদীস-ফিকহ-আকীদা ইত্যাদি শরীয়তের বিভিন্ন বিষয়ে রয়েছে পেইড ও ফ্রি কোর্সসমূহ।
           </p>
-        </header>
-        <div class="frame-4">
-          <button class="text-wrapper-2" type="button" aria-label="লগ ইন বা সাইন আপ করুন">লগ ইন/ সাইন আপ</button>
-          <div class="arrow-right" aria-hidden="true"><img class="vector" src="/arrow-right.svg" alt="" /></div>
         </div>
+        <button class="footer__auth-button" type="button" aria-label="লগ ইন বা সাইন আপ করুন">
+          <span class="footer__auth-text">লগ ইন/ সাইন আপ</span>
+          <span class="footer__auth-icon" aria-hidden="true">
+            <img class="footer__auth-arrow" src="/arrow-right.svg" alt="" />
+          </span>
+        </button>
       </section>
-      <nav class="frame-5" role="navigation" aria-label="Footer Navigation">
-        <div class="frame-6">
-          <div class="frame-7">
-            <div class="div-wrapper">
-              <h3 class="text-wrapper-3">আরও জানুন</h3>
-            </div>
-            <div class="div-wrapper"><a href="#gallery" class="text-wrapper-4">গ্যালারি</a></div>
-            <div class="div-wrapper"><a href="#testimonials" class="text-wrapper-5">শিক্ষার্থীদের মন্তব্য</a></div>
-            <div class="div-wrapper"><a href="#teachers" class="text-wrapper-5">শিক্ষক/শিক্ষিকা</a></div>
-            <div class="div-wrapper"><a href="#e-campus" class="text-wrapper-4">ই-ক্যাম্পাস</a></div>
-            <div class="div-wrapper"><a href="#about" class="text-wrapper-4">পরিচিতি</a></div>
-            <div class="div-wrapper"><a href="#faq" class="text-wrapper-4">সচরাচর জিজ্ঞাসা</a></div>
-          </div>
-          <div class="frame-7">
-            <div class="div-wrapper">
-              <h3 class="text-wrapper-3">ঘুরে আসুন</h3>
-            </div>
-            <div class="div-wrapper"><a href="#home" class="text-wrapper-4">মূলপাতা</a></div>
-            <div class="div-wrapper"><a href="#free-courses" class="text-wrapper-5">ফ্রি কোর্স</a></div>
-            <div class="div-wrapper"><a href="#paid-courses" class="text-wrapper-5">পেইড কোর্স</a></div>
-            <div class="div-wrapper"><a href="#blog" class="text-wrapper-4">ব্লগ</a></div>
-            <div class="div-wrapper"><a href="#videos" class="text-wrapper-4">ভিডিও</a></div>
-            <div class="div-wrapper"><a href="#sadaqah" class="text-wrapper-4">সাদাকাহ</a></div>
-          </div>
-          <address class="frame-8">
-            <div class="div-wrapper">
-              <h3 class="text-wrapper-3">যোগাযোগ</h3>
-            </div>
-            <div class="div-wrapper"><span class="text-wrapper-5">ঠিকানা: বসিলা, মুহাম্মদপুর, ঢাকা।</span></div>
-            <div class="div-wrapper">
-              <a href="tel:+8801700946569" class="text-wrapper-5">ফোন নং: +8801700946569,</a>
-            </div>
-            <div class="div-wrapper">
-              <a href="mailto:nurulquran887@gmail.com" class="text-wrapper-5">ইমেইল: nurulquran887@gmail.com</a>
-            </div>
-            <div class="div-wrapper"><a href="#complaints" class="text-wrapper-4">অভিযোগ বাক্স</a></div>
-          </address>
-        </div>
-        <div class="social-media">
-          <nav class="social-media-nav" role="navigation" aria-label="Social media links">
-            <ul class="social-media-list">
-              <li class="social-media-item">
-                <a href="#" class="social-media-link" aria-label="Visit our Facebook page">
-                  <span class="social-icon facebook-icon"></span>
-                </a>
+
+      <nav class="footer__navigation" role="navigation" aria-label="ফুটার নেভিগেশন">
+        <div class="footer__nav-sections">
+          <div class="footer__nav-section">
+            <h3 class="footer__nav-title">আরও জানুন</h3>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="#gallery" class="footer__nav-link">গ্যালারি</a>
               </li>
-              <li class="social-media-item">
-                <a href="#" class="social-media-link" aria-label="Contact us on WhatsApp">
-                  <span class="social-icon whatsapp-icon"></span>
-                </a>
+              <li class="footer__nav-item">
+                <a href="#testimonials" class="footer__nav-link">শিক্ষার্থীদের মন্তব্য</a>
               </li>
-              <li class="social-media-item">
-                <a href="#" class="social-media-link" aria-label="Connect with us on LinkedIn">
-                  <span class="social-icon linkedin-icon"></span>
-                </a>
+              <li class="footer__nav-item">
+                <a href="#teachers" class="footer__nav-link">শিক্ষক/শিক্ষিকা</a>
               </li>
-              <li class="social-media-item">
-                <a href="#" class="social-media-link" aria-label="Subscribe to our YouTube channel">
-                  <span class="social-icon youtube-icon"></span>
-                </a>
+              <li class="footer__nav-item">
+                <a href="#e-campus" class="footer__nav-link">ই-ক্যাম্পাস</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#about" class="footer__nav-link">পরিচিতি</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#faq" class="footer__nav-link">সচরাচর জিজ্ঞাসা</a>
               </li>
             </ul>
-          </nav>
+          </div>
+
+          <div class="footer__nav-section">
+            <h3 class="footer__nav-title">ঘুরে আসুন</h3>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="#home" class="footer__nav-link">মূলপাতা</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#free-courses" class="footer__nav-link">ফ্রি কোর্স</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#paid-courses" class="footer__nav-link">পেইড কোর্স</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#blog" class="footer__nav-link">ব্লগ</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#videos" class="footer__nav-link">ভিডিও</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#sadaqah" class="footer__nav-link">সাদাকাহ</a>
+              </li>
+            </ul>
+          </div>
+
+          <address class="footer__nav-section footer__contact">
+            <h3 class="footer__nav-title">যোগাযোগ</h3>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <span class="footer__nav-link footer__contact-item">ঠিকানা: বসিলা, মুহাম্মদপুর, ঢাকা।</span>
+              </li>
+              <li class="footer__nav-item">
+                <a href="tel:+8801700946569" class="footer__nav-link">ফোন নং: +8801700946569</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="mailto:nurulquran887@gmail.com" class="footer__nav-link">ইমেইল: nurulquran887@gmail.com</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#complaints" class="footer__nav-link">অভিযোগ বাক্স</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+
+        <div class="footer__social">
+          <ul class="footer__social-list" role="list" aria-label="সামাজিক মাধ্যম লিংক">
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link" aria-label="আমাদের ফেসবুক পেজ দেখুন">
+                <span class="footer__social-icon footer__social-icon--facebook"></span>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link" aria-label="হোয়াটসঅ্যাপে যোগাযোগ করুন">
+                <span class="footer__social-icon footer__social-icon--whatsapp"></span>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link" aria-label="লিংকডইনে যুক্ত হন">
+                <span class="footer__social-icon footer__social-icon--linkedin"></span>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="#" class="footer__social-link" aria-label="আমাদের ইউটিউব চ্যানেল সাবস্ক্রাইব করুন">
+                <span class="footer__social-icon footer__social-icon--youtube"></span>
+              </a>
+            </li>
+          </ul>
         </div>
       </nav>
     </div>

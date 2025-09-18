@@ -30,6 +30,8 @@
       --paragraph-text-letter-spacing: 0;
       --paragraph-text-line-height: 1.5;
       --paragraph-text-font-style: normal;
+      --black-heading: #1a1a1a;
+      --black-subtext: #666666;
       --h-2-font-size: 32px;
       --h-3-font-family: 'Noto Serif Bengali', sans-serif;
       --h-3-font-weight: 600;
@@ -57,7 +59,8 @@
       --h6-semibold-font-style: normal;
     }
 
-    html,body{
+    html,
+    body {
       font-family: "Noto Serif Bengali", Helvetica !important;
     }
 
@@ -196,6 +199,61 @@
 
     .hide-scrollbar::-webkit-scrollbar {
       display: none;
+    }
+
+    /* Testimonial */
+    /* Video background blur effect */
+    .testimonial-video-bg::before {
+      content: "";
+      position: absolute;
+      width: 400px;
+      height: 300px;
+      top: 48%;
+      left: 0;
+      transform: translateY(-50%);
+      border-radius: 45px;
+      filter: blur(15px);
+      background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Video border gradient */
+    .video-gradient-border {
+      background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
+      filter: blur(5px);
+    }
+
+    /* Title highlight gradient */
+    .title-highlight-gradient {
+      background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* Responsive video background adjustments */
+    @media (max-width: 1024px) {
+      .testimonial-video-bg::before {
+        width: 380px;
+        height: 260px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .testimonial-video-bg::before {
+        width: 100%;
+        height: 200px;
+        left: 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .testimonial-video-bg::before {
+        height: 160px;
+        top: 60%;
+      }
     }
   </style>
 </head>
@@ -960,12 +1018,12 @@
           <div class="flex flex-col gap-8 md:gap-10">
             <!-- Title and View All Button -->
             <div class="flex items-center justify-center gap-4 md:gap-6">
-              <h2 class="text-black text-[23px] font-bold m-0 md:text-[var(--h-2-font-size)]">
+              <h2 class="text-black text-[23px] font-bold m-0 md:text-(length:--h-2-font-size)">
                 <span class="title-highlight">জনপ্রিয়</span> কোর্স সমূহ
               </h2>
               <button
                 class="gradient-border-btn relative h-12 px-4 py-2.5 inline-flex items-center justify-center gap-2.5 bg-[var(--white-100)] rounded-[50px] border-none cursor-pointer md:px-6">
-                <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap md:text-base">সব কোর্স
+                <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap md:text-base">সব কোর্স
                   দেখুন</span>
               </button>
             </div>
@@ -980,11 +1038,11 @@
                     <img src="./heart.svg" alt="Popular courses icon" class="max-w-full max-h-full object-contain" />
                   </div>
                   <div class="flex flex-col flex-1">
-                    <h3 class="text-[var(--blackheading)] text-base leading-6 m-0">জনপ্রিয় কোর্স সমূহ</h3>
+                    <h3 class="text-[var(--black-heading)] text-base leading-6 m-0">জনপ্রিয় কোর্স সমূহ</h3>
                     <div class="flex items-center gap-1.5">
-                      <span class="text-[var(--blacksubtext)] text-sm leading-6 whitespace-nowrap">১১ টি কোর্স</span>
+                      <span class="text-[var(--black-subtext)] text-sm leading-6 whitespace-nowrap">১১ টি কোর্স</span>
                       <div class="stats-dot w-1 h-1 rounded-full flex-shrink-0"></div>
-                      <span class="text-[var(--blacksubtext)] text-sm leading-6 whitespace-nowrap">৫২ টি ক্লাস</span>
+                      <span class="text-[var(--black-subtext)] text-sm leading-6 whitespace-nowrap">৫২ টি ক্লাস</span>
                     </div>
                   </div>
                 </li>
@@ -997,11 +1055,11 @@
                       class="max-w-full max-h-full object-contain" />
                   </div>
                   <div class="flex flex-col flex-1">
-                    <h3 class="text-[var(--blackheading)] text-base leading-6 m-0">আরবি ভাষা</h3>
+                    <h3 class="text-[var(--black-heading)] text-base leading-6 m-0">আরবি ভাষা</h3>
                     <div class="flex items-center gap-1.5">
-                      <span class="text-[var(--blacksubtext)] text-sm leading-6 whitespace-nowrap">১২ টি কোর্স</span>
+                      <span class="text-[var(--black-subtext)] text-sm leading-6 whitespace-nowrap">১২ টি কোর্স</span>
                       <div class="stats-dot w-1 h-1 rounded-full flex-shrink-0"></div>
-                      <span class="text-[var(--blacksubtext)] text-sm leading-6 whitespace-nowrap">৫২ টি ক্লাস</span>
+                      <span class="text-[var(--black-subtext)] text-sm leading-6 whitespace-nowrap">৫২ টি ক্লাস</span>
                     </div>
                   </div>
                 </li>
@@ -1014,11 +1072,11 @@
                       class="max-w-full max-h-full object-contain" />
                   </div>
                   <div class="flex flex-col flex-1">
-                    <h3 class="text-[var(--blackheading)] text-base leading-6 m-0">কুরআন শিক্ষা</h3>
+                    <h3 class="text-[var(--black-heading)] text-base leading-6 m-0">কুরআন শিক্ষা</h3>
                     <div class="flex items-center gap-1.5">
-                      <span class="text-[var(--blacksubtext)] text-sm leading-6 whitespace-nowrap">৯ টি কোর্স</span>
+                      <span class="text-[var(--black-subtext)] text-sm leading-6 whitespace-nowrap">৯ টি কোর্স</span>
                       <div class="stats-dot w-1 h-1 rounded-full flex-shrink-0"></div>
-                      <span class="text-[var(--blacksubtext)] text-sm leading-6 whitespace-nowrap">৫২ টি ক্লাস</span>
+                      <span class="text-[var(--black-subtext)] text-sm leading-6 whitespace-nowrap">৫২ টি ক্লাস</span>
                     </div>
                   </div>
                 </li>
@@ -1030,11 +1088,11 @@
                     <img src="./MoonStars.svg" alt="Sirat icon" class="max-w-full max-h-full object-contain" />
                   </div>
                   <div class="flex flex-col flex-1">
-                    <h3 class="text-[var(--blackheading)] text-base leading-6 m-0">সীরাত</h3>
+                    <h3 class="text-[var(--black-heading)] text-base leading-6 m-0">সীরাত</h3>
                     <div class="flex items-center gap-1.5">
-                      <span class="text-[var(--blacksubtext)] text-sm leading-6 whitespace-nowrap">২ টি কোর্স</span>
+                      <span class="text-[var(--black-subtext)] text-sm leading-6 whitespace-nowrap">২ টি কোর্স</span>
                       <div class="stats-dot w-1 h-1 rounded-full flex-shrink-0"></div>
-                      <span class="text-[var(--blacksubtext)] text-sm leading-6 whitespace-nowrap">৫ টি ক্লাস</span>
+                      <span class="text-[var(--black-subtext)] text-sm leading-6 whitespace-nowrap">৫ টি ক্লাস</span>
                     </div>
                   </div>
                 </li>
@@ -1047,11 +1105,11 @@
                       class="max-w-full max-h-full object-contain" />
                   </div>
                   <div class="flex flex-col flex-1">
-                    <h3 class="text-[var(--blackheading)] text-base leading-6 m-0">প্রি-রেকর্ডেড কোর্স</h3>
+                    <h3 class="text-[var(--black-heading)] text-base leading-6 m-0">প্রি-রেকর্ডেড কোর্স</h3>
                     <div class="flex items-center gap-1.5">
-                      <span class="text-[var(--blacksubtext)] text-sm leading-6 whitespace-nowrap">৫ টি কোর্স</span>
+                      <span class="text-[var(--black-subtext)] text-sm leading-6 whitespace-nowrap">৫ টি কোর্স</span>
                       <div class="stats-dot w-1 h-1 rounded-full flex-shrink-0"></div>
-                      <span class="text-[var(--blacksubtext)] text-sm leading-6 whitespace-nowrap">২৫ টি ক্লাস</span>
+                      <span class="text-[var(--black-subtext)] text-sm leading-6 whitespace-nowrap">২৫ টি ক্লাস</span>
                     </div>
                   </div>
                 </li>
@@ -1090,35 +1148,35 @@
                   class="flex justify-between items-center px-3 py-2 bg-white rounded-[23px] shadow-[0px_1px_5px_#00000029]">
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./lesson.svg" alt="Lessons" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">২৫ টি লেসন</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">২৫ টি লেসন</span>
                   </div>
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./student-cap.svg" alt="Students" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">৫২ স্টুডেন্ট</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">৫২ স্টুডেন্ট</span>
                   </div>
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./live.svg" alt="Live class" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">লাইভ ক্লাস</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">লাইভ ক্লাস</span>
                   </div>
                 </div>
                 <!-- Info -->
                 <div class="flex flex-col gap-3">
                   <div class="flex flex-col gap-2">
-                    <h4 class="text-[var(--blackheading)] text-base font-semibold leading-[1.4] m-0">প্রাথমিক আরবীভাষা
+                    <h4 class="text-[var(--black-heading)] text-base font-semibold leading-[1.4] m-0">প্রাথমিক আরবীভাষা
                       শিক্ষার মাধ্যমে শুরু করুন আপনার যাত্রা</h4>
-                    <p class="text-[var(--blacksubtext)] text-sm leading-6 m-0">
+                    <p class="text-[var(--black-subtext)] text-sm leading-6 m-0">
                       এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে পারবেন
                     </p>
                   </div>
                   <footer class="flex items-center justify-between">
                     <div class="flex items-center gap-5">
                       <span
-                        class="text-[var(--blackheading)] text-xl font-medium leading-[1.3] whitespace-nowrap m-0">৪৫০৳</span>
-                      <span class="text-[var(--blackheading)] text-lg font-normal leading-6 line-through">৮৫০৳</span>
+                        class="text-[var(--black-heading)] text-xl font-medium leading-[1.3] whitespace-nowrap m-0">৪৫০৳</span>
+                      <span class="text-[var(--black-heading)] text-lg font-normal leading-6 line-through">৮৫০৳</span>
                     </div>
                     <button
                       class="gradient-border-btn relative h-10 px-4 py-2.5 inline-flex items-center justify-center gap-2.5 bg-[var(--white-100)] rounded-[50px] border-none cursor-pointer">
-                      <span class="text-[var(--blackheading)] text-base leading-6 whitespace-nowrap">বিস্তারিত</span>
+                      <span class="text-[var(--black-heading)] text-base leading-6 whitespace-nowrap">বিস্তারিত</span>
                       <img class="w-4 h-4" src="./right-arrow.svg" alt="Arrow" />
                     </button>
                   </footer>
@@ -1146,23 +1204,23 @@
                   class="flex justify-between items-center px-3 py-2 bg-white rounded-[23px] shadow-[0px_1px_5px_#00000029]">
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./lesson.svg" alt="Lessons" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">২৫ টি লেসন</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">২৫ টি লেসন</span>
                   </div>
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./student-cap.svg" alt="Students" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">৫২ স্টুডেন্ট</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">৫২ স্টুডেন্ট</span>
                   </div>
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./live.svg" alt="Recorded class" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">রেকর্ডেড ক্লাস</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">রেকর্ডেড ক্লাস</span>
                   </div>
                 </div>
                 <!-- Info -->
                 <div class="flex flex-col gap-3">
                   <div class="flex flex-col gap-2">
-                    <h4 class="text-[var(--blackheading)] text-base font-semibold leading-[1.4] m-0">কুরআন ও সালাত
+                    <h4 class="text-[var(--black-heading)] text-base font-semibold leading-[1.4] m-0">কুরআন ও সালাত
                       অনুধাবন কোর্স করে হয়ে উঠুন আদর্শ মুসলিম</h4>
-                    <p class="text-[var(--blacksubtext)] text-sm leading-6 m-0">
+                    <p class="text-[var(--black-subtext)] text-sm leading-6 m-0">
                       এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে পারবেন
                     </p>
                   </div>
@@ -1171,7 +1229,7 @@
                       কোর্স</span>
                     <button
                       class="gradient-border-btn relative h-10 px-4 py-2.5 inline-flex items-center justify-center gap-2.5 bg-[var(--white-100)] rounded-[50px] border-none cursor-pointer">
-                      <span class="text-[var(--blackheading)] text-base leading-6 whitespace-nowrap">বিস্তারিত</span>
+                      <span class="text-[var(--black-heading)] text-base leading-6 whitespace-nowrap">বিস্তারিত</span>
                       <img class="w-4 h-4" src="./right-arrow.svg" alt="Arrow" />
                     </button>
                   </footer>
@@ -1199,35 +1257,35 @@
                   class="flex justify-between items-center px-3 py-2 bg-white rounded-[23px] shadow-[0px_1px_5px_#00000029]">
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./lesson.svg" alt="Lessons" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">২৫ টি লেসন</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">২৫ টি লেসন</span>
                   </div>
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./student-cap.svg" alt="Students" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">৫২ স্টুডেন্ট</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">৫২ স্টুডেন্ট</span>
                   </div>
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./live.svg" alt="Live class" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">লাইভ ক্লাস</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">লাইভ ক্লাস</span>
                   </div>
                 </div>
                 <!-- Info -->
                 <div class="flex flex-col gap-3">
                   <div class="flex flex-col gap-2">
-                    <h4 class="text-[var(--blackheading)] text-base font-semibold leading-[1.4] m-0">প্রাথমিক আরবীভাষা
+                    <h4 class="text-[var(--black-heading)] text-base font-semibold leading-[1.4] m-0">প্রাথমিক আরবীভাষা
                       শিক্ষার মাধ্যমে শুরু করুন আপনার যাত্রা</h4>
-                    <p class="text-[var(--blacksubtext)] text-sm leading-6 m-0">
+                    <p class="text-[var(--black-subtext)] text-sm leading-6 m-0">
                       এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে পারবেন
                     </p>
                   </div>
                   <footer class="flex items-center justify-between">
                     <div class="flex items-center gap-5">
                       <span
-                        class="text-[var(--blackheading)] text-xl font-medium leading-[1.3] whitespace-nowrap m-0">৪৫০৳</span>
-                      <span class="text-[var(--blackheading)] text-lg font-normal leading-6 line-through">৮৫০৳</span>
+                        class="text-[var(--black-heading)] text-xl font-medium leading-[1.3] whitespace-nowrap m-0">৪৫০৳</span>
+                      <span class="text-[var(--black-heading)] text-lg font-normal leading-6 line-through">৮৫০৳</span>
                     </div>
                     <button
                       class="gradient-border-btn relative h-10 px-4 py-2.5 inline-flex items-center justify-center gap-2.5 bg-[var(--white-100)] rounded-[50px] border-none cursor-pointer">
-                      <span class="text-[var(--blackheading)] text-base leading-6 whitespace-nowrap">বিস্তারিত</span>
+                      <span class="text-[var(--black-heading)] text-base leading-6 whitespace-nowrap">বিস্তারিত</span>
                       <img class="w-4 h-4" src="./right-arrow.svg" alt="Arrow" />
                     </button>
                   </footer>
@@ -1257,23 +1315,23 @@
                   class="flex justify-between items-center px-3 py-2 bg-white rounded-[23px] shadow-[0px_1px_5px_#00000029]">
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./lesson.svg" alt="Lessons" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">২৫ টি লেসন</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">২৫ টি লেসন</span>
                   </div>
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./student-cap.svg" alt="Students" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">৫২ স্টুডেন্ট</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">৫২ স্টুডেন্ট</span>
                   </div>
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./live.svg" alt="Recorded class" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">রেকর্ডেড ক্লাস</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">রেকর্ডেড ক্লাস</span>
                   </div>
                 </div>
                 <!-- Info -->
                 <div class="flex flex-col gap-3">
                   <div class="flex flex-col gap-2">
-                    <h4 class="text-[var(--blackheading)] text-base font-semibold leading-[1.4] m-0">প্রাথমিক দ্বীন
+                    <h4 class="text-[var(--black-heading)] text-base font-semibold leading-[1.4] m-0">প্রাথমিক দ্বীন
                       শিক্ষা কোর্স করে শুরু করুন আপনার ইসলাম যত্রা</h4>
-                    <p class="text-[var(--blacksubtext)] text-sm leading-6 m-0">
+                    <p class="text-[var(--black-subtext)] text-sm leading-6 m-0">
                       এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে পারবেন
                     </p>
                   </div>
@@ -1282,7 +1340,7 @@
                       কোর্স</span>
                     <button
                       class="gradient-border-btn relative h-10 px-4 py-2.5 inline-flex items-center justify-center gap-2.5 bg-[var(--white-100)] rounded-[50px] border-none cursor-pointer">
-                      <span class="text-[var(--blackheading)] text-base leading-6 whitespace-nowrap">বিস্তারিত</span>
+                      <span class="text-[var(--black-heading)] text-base leading-6 whitespace-nowrap">বিস্তারিত</span>
                       <img class="w-4 h-4" src="./right-arrow.svg" alt="Arrow" />
                     </button>
                   </footer>
@@ -1310,32 +1368,33 @@
                   class="flex justify-between items-center px-3 py-2 bg-white rounded-[23px] shadow-[0px_1px_5px_#00000029]">
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./lesson.svg" alt="Lessons" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">২৫ টি লেসন</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">২৫ টি লেসন</span>
                   </div>
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./student-cap.svg" alt="Students" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">৫২ স্টুডেন্ট</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">৫২ স্টুডেন্ট</span>
                   </div>
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./live.svg" alt="Recorded class" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">রেকর্ডেড ক্লাস</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">রেকর্ডেড ক্লাস</span>
                   </div>
                 </div>
                 <!-- Info -->
                 <div class="flex flex-col gap-3">
                   <div class="flex flex-col gap-2">
-                    <h4 class="text-[var(--blackheading)] text-base font-semibold leading-[1.4] m-0">ব্যাসিক আকীদা কোর্স
+                    <h4 class="text-[var(--black-heading)] text-base font-semibold leading-[1.4] m-0">ব্যাসিক আকীদা
+                      কোর্স
                       করে সমৃদ্ধ করুন নিজের জ্ঞানের পরিধি</h4>
-                    <p class="text-[var(--blacksubtext)] text-sm leading-6 m-0">
+                    <p class="text-[var(--black-subtext)] text-sm leading-6 m-0">
                       এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে পারবেন
                     </p>
                   </div>
                   <footer class="flex items-center justify-between">
                     <span
-                      class="text-[var(--blackheading)] text-xl font-medium leading-[1.3] whitespace-nowrap m-0">৫০০৳</span>
+                      class="text-[var(--black-heading)] text-xl font-medium leading-[1.3] whitespace-nowrap m-0">৫০০৳</span>
                     <button
                       class="gradient-border-btn relative h-10 px-4 py-2.5 inline-flex items-center justify-center gap-2.5 bg-[var(--white-100)] rounded-[50px] border-none cursor-pointer">
-                      <span class="text-[var(--blackheading)] text-base leading-6 whitespace-nowrap">বিস্তারিত</span>
+                      <span class="text-[var(--black-heading)] text-base leading-6 whitespace-nowrap">বিস্তারিত</span>
                       <img class="w-4 h-4" src="./right-arrow.svg" alt="Arrow" />
                     </button>
                   </footer>
@@ -1362,32 +1421,32 @@
                   class="flex justify-between items-center px-3 py-2 bg-white rounded-[23px] shadow-[0px_1px_5px_#00000029]">
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./lesson.svg" alt="Lessons" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">২৫ টি লেসন</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">২৫ টি লেসন</span>
                   </div>
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./student-cap.svg" alt="Students" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">৫২ স্টুডেন্ট</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">৫২ স্টুডেন্ট</span>
                   </div>
                   <div class="flex items-center gap-1.5">
                     <img class="w-[14px] h-[14px]" src="./live.svg" alt="Recorded class" />
-                    <span class="text-[var(--blackheading)] text-sm leading-6 whitespace-nowrap">রেকর্ডেড ক্লাস</span>
+                    <span class="text-[var(--black-heading)] text-sm leading-6 whitespace-nowrap">রেকর্ডেড ক্লাস</span>
                   </div>
                 </div>
                 <!-- Info -->
                 <div class="flex flex-col gap-3">
                   <div class="flex flex-col gap-2">
-                    <h4 class="text-[var(--blackheading)] text-base font-semibold leading-[1.4] m-0">৩০ নং পারা হিফজ
+                    <h4 class="text-[var(--black-heading)] text-base font-semibold leading-[1.4] m-0">৩০ নং পারা হিফজ
                       কোর্স করার মাধ্যমে পবিত্র কোরআন আয়ত্ব করুন</h4>
-                    <p class="text-[var(--blacksubtext)] text-sm leading-6 m-0">
+                    <p class="text-[var(--black-subtext)] text-sm leading-6 m-0">
                       এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে পারবেন
                     </p>
                   </div>
                   <footer class="flex items-center justify-between">
                     <span
-                      class="text-[var(--blackheading)] text-xl font-medium leading-[1.3] whitespace-nowrap m-0">৮৫০৳</span>
+                      class="text-[var(--black-heading)] text-xl font-medium leading-[1.3] whitespace-nowrap m-0">৮৫০৳</span>
                     <button
                       class="gradient-border-btn relative h-10 px-4 py-2.5 inline-flex items-center justify-center gap-2.5 bg-[var(--white-100)] rounded-[50px] border-none cursor-pointer">
-                      <span class="text-[var(--blackheading)] text-base leading-6 whitespace-nowrap">বিস্তারিত</span>
+                      <span class="text-[var(--black-heading)] text-base leading-6 whitespace-nowrap">বিস্তারিত</span>
                       <img class="w-4 h-4" src="./right-arrow.svg" alt="Arrow" />
                     </button>
                   </footer>
@@ -1401,21 +1460,21 @@
             <button
               class="pagination-active text-base leading-6 px-2 py-2 border-none bg-none transition-all duration-300 cursor-pointer md:px-3">১</button>
             <button
-              class="text-[var(--blacksubtext)] text-base leading-6 px-2 py-2 border-none bg-none transition-all duration-300 cursor-pointer hover:bg-[#f5f5f5] md:px-3">২</button>
+              class="text-[var(--black-subtext)] text-base leading-6 px-2 py-2 border-none bg-none transition-all duration-300 cursor-pointer hover:bg-[#f5f5f5] md:px-3">২</button>
             <button
-              class="text-[var(--blacksubtext)] text-base leading-6 px-2 py-2 border-none bg-none transition-all duration-300 cursor-pointer hover:bg-[#f5f5f5] md:px-3">৩</button>
-            <span class="text-[var(--blacksubtext)] text-base leading-6 px-2 py-2 md:px-3">.</span>
-            <span class="text-[var(--blacksubtext)] text-base leading-6 px-2 py-2 md:px-3">.</span>
-            <span class="text-[var(--blacksubtext)] text-base leading-6 px-2 py-2 md:px-3">.</span>
+              class="text-[var(--black-subtext)] text-base leading-6 px-2 py-2 border-none bg-none transition-all duration-300 cursor-pointer hover:bg-[#f5f5f5] md:px-3">৩</button>
+            <span class="text-[var(--black-subtext)] text-base leading-6 px-2 py-2 md:px-3">.</span>
+            <span class="text-[var(--black-subtext)] text-base leading-6 px-2 py-2 md:px-3">.</span>
+            <span class="text-[var(--black-subtext)] text-base leading-6 px-2 py-2 md:px-3">.</span>
             <button
-              class="text-[var(--blacksubtext)] text-base leading-6 px-2 py-2 border-none bg-none transition-all duration-300 cursor-pointer hover:bg-[#f5f5f5] md:px-3">৫</button>
+              class="text-[var(--black-subtext)] text-base leading-6 px-2 py-2 border-none bg-none transition-all duration-300 cursor-pointer hover:bg-[#f5f5f5] md:px-3">৫</button>
           </nav>
         </section>
       </div>
     </section>
 
     <!-- Testimonial -->
-    <section class="testimonial-section">
+    <!-- <section class="testimonial-section">
       <div class="container testimonial-section__container">
         <header class="testimonial__header testimonial__header--mobile">
           <h2 class="testimonial__title">বিজ্ঞজন আমাদের কাজের <span class="testimonial__title--highlight">প্রশংসা
@@ -1450,6 +1509,74 @@
                 <div class="testimonial-content__author-info">
                   <cite class="testimonial-content__name">শায়খ আহমাদুল্লাহ</cite>
                   <p class="testimonial-content__title">চেয়ারম্যান, আস-সুন্নাহ ফাউন্ডেশন</p>
+                </div>
+              </footer>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section> -->
+
+    <section
+      class="bg-[#f8fffc] min-h-[558px] overflow-hidden relative flex items-center justify-center py-16 px-5 md:py-20 lg:py-25">
+      <div class="max-w-[985px] w-full relative container">
+        <!-- Mobile Header (visible only on mobile) -->
+        <header class="hidden sm:hidden block mb-12">
+          <h2 class="text-[var(--black-heading)] text-2xl font-bold leading-[1.3] m-0">
+            বিজ্ঞজন আমাদের কাজের <span class="title-highlight-gradient">প্রশংসা করেছেন !!</span>
+          </h2>
+        </header>
+
+        <div
+          class="flex items-center gap-16 relative flex-col text-center md:flex-row md:text-left md:gap-10 lg:gap-16">
+          <!-- Video Player -->
+          <div
+            class="testimonial-video-bg relative w-full max-w-[400px] h-[250px] flex-shrink-0 md:w-[400px] md:h-[275px] lg:w-[528px] lg:h-[363px]">
+            <div class="relative w-full h-full">
+
+              <!-- Video Image -->
+              <img class="relative w-full h-full object-contain rounded-[28px] z-[2]" src="../img/testimonial-1.png"
+                alt="শায়খ আহমাদুল্লাহর প্রশংসাপত্র ভিডিও" />
+
+              <!-- Play Button -->
+              <button
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-none border-none cursor-pointer z-[3] transition-transform duration-300 hover:scale-110"
+                aria-label="প্রশংসাপত্র ভিডিও চালান">
+                <img class="w-full h-full object-contain" src="./play.svg" alt="চালান" />
+              </button>
+            </div>
+          </div>
+
+          <!-- Testimonial Content -->
+          <article class="flex-1 max-w-[393px] w-full md:max-w-[320px] lg:max-w-[393px]">
+            <!-- Desktop Header (hidden on mobile) -->
+            <header class="flex flex-wrap items-start justify-center gap-3 mb-8 sm:block md:justify-start">
+              <h2 class="text-(length:--h-2-font-size) font-bold leading-[1.3] m-0">
+                বিজ্ঞজন আমাদের কাজের <span class="title-highlight-gradient">প্রশংসা করেছেন !!</span>
+              </h2>
+            </header>
+
+            <div class="flex flex-col gap-8 mt-5">
+              <!-- Quote -->
+              <blockquote
+                class="text-[var(--black-subtext)] text-base leading-6 m-0 text-left sm:text-sm sm:leading-[1.6]">
+                আলহামদুলিল্লাহ, নুরুল কোরআন অ্যাকাডেমি ইমসলামের বর্তা সহীহভাবে পৌঁছে দেয়ার জন্য যা করছে তা খুবই
+                প্রশংসনীয়, এবং এই ডিজিটাল যুগে আমাদেরকে ইসলামকে মানুষের কাছে পৌঁছাতে হবে ডিজিটালভাবে, যা এই প্রতিষ্ঠান
+                সফলতার সাথে করে আসছে।
+              </blockquote>
+
+              <!-- Author -->
+              <footer class="flex items-start gap-4 justify-center md:justify-start">
+                <img class="w-12 h-12 rounded-full object-cover flex-shrink-0" src="../img/ahmudullah.png"
+                  alt="শায়খ আহমাদুল্লাহ" />
+                <div class="flex-1 flex flex-col">
+                  <cite
+                    class="text-[var(--black-heading)] text-lg font-semibold leading-[1.4] m-0 mb-1 text-left not-italic sm:text-base">
+                    শায়খ আহমাদুল্লাহ
+                  </cite>
+                  <p class="text-[var(--black-subtext)] text-sm leading-6 m-0 text-left">
+                    চেয়ারম্যান, আস-সুন্নাহ ফাউন্ডেশন
+                  </p>
                 </div>
               </footer>
             </div>

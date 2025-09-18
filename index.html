@@ -255,6 +255,69 @@
         top: 60%;
       }
     }
+
+    /* Admission */
+    .admission-banner-bg::before {
+      content: "";
+      position: absolute;
+      left: 48px;
+      top: 0;
+      width: 200px;
+      height: 200px;
+      background-image: url("/img/offer-3.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      mix-blend-mode: luminosity;
+      z-index: 1;
+    }
+
+    .admission-banner-bg::after {
+      content: "";
+      position: absolute;
+      right: 4px;
+      top: 0;
+      width: 200px;
+      height: 200px;
+      background-image: url("/img/offer-4.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      mix-blend-mode: luminosity;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      .admission-banner-bg::before {
+        left: 15px;
+        top: 0;
+        width: 150px;
+        height: 150px;
+      }
+
+      .admission-banner-bg::after {
+        right: 15px;
+        top: 12px;
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .admission-banner-bg::before {
+        left: -10%;
+        top: 18%;
+        width: 100px;
+        height: 100px;
+      }
+
+      .admission-banner-bg::after {
+        right: -5%;
+        top: 18%;
+        width: 100px;
+        height: 100px;
+      }
+    }
   </style>
 </head>
 
@@ -1586,6 +1649,7 @@
     </section>
 
     <!-- Admission Banner -->
+    <!-- Original CSS-based admission banner (commented out)
     <section class="admission-banner" role="banner">
       <div class="container admission-banner__content">
         <header class="admission-banner__text">
@@ -1601,6 +1665,35 @@
         </button>
       </div>
     </section>
+    -->
+
+    <!-- Tailwind-based admission banner -->
+    <section
+      class="relative w-full min-h-[100px] bg-[#9b1b40] mx-auto p-8 flex items-center justify-center overflow-hidden admission-banner-bg xl:p-6 md:px-8 md:py-0 md:gap-4 lg:min-h-[200px] sm:px-4 sm:min-h-[100px]"
+      role="banner">
+      <div
+        class="container flex items-center justify-around lg:justify-center gap-0 lg:gap-32 z-10 relative xl:gap-6 md:flex-row md:gap-4 md:items-center md:justify-between max-w-[500px] md:w-full sm:flex-row">
+        <header class="flex flex-col gap-3 max-w-80 md:flex-1 md:text-left md:max-w-none">
+          <h2
+            class="flex flex-col lg:gap-5 gap-2 text-white m-0 lg:text-(length:--h-6-font-size) leading-[150%] font-normal md:text-[0.9rem] md:leading-[1.2] sm:text-sm sm:leading-[1.5]">
+            ছোটদের কোরআন শিক্ষা কোর্সে
+            <span
+              class="block text-[23px] leading-[110%] font-medium text-white md:text-(length:--h-2-font-size) md:leading-[1.2] sm:text-[1.8rem] sm:leading-[1.5]">ভর্তি
+              চলছে!</span>
+          </h2>
+        </header>
+        <button
+          class="inline-flex h-12 items-center justify-center gap-2.5 px-6 rounded-full bg-gradient-to-r from-[#df186a] to-[#fa6f21] cursor-pointer transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 flex-shrink-0 md:h-10 md:px-4 md:min-w-[120px] sm:h-9 sm:px-3 sm:min-w-[100px]"
+          type="button" aria-label="কোর্সে ভর্তি হতে ক্লিক করুন">
+          <span class="text-white whitespace-nowrap text-base font-normal md:text-[0.85rem] sm:text-[0.8rem]">ক্লিক
+            করুন</span>
+          <span class="w-4 h-4 flex items-center justify-center" aria-hidden="true">
+            <img class="w-4 h-4 sm:w-3 sm:h-3" src="../arrow-right.svg" alt="" />
+          </span>
+        </button>
+      </div>
+    </section>
+
 
     <!-- Feedback -->
     <section class="feedback">

@@ -16,6 +16,50 @@
       --primary-color: #9b1b40;
       --button-color: #9b1b40;
       --secondary-color: #000;
+      --white-100: #ffffff;
+      --black-heading: #1a1a1a;
+      --body-text-font-family: 'Noto Serif Bengali', sans-serif;
+      --body-text-font-weight: 400;
+      --body-text-font-size: 16px;
+      --body-text-letter-spacing: 0;
+      --body-text-line-height: 1.5;
+      --body-text-font-style: normal;
+      --paragraph-text-font-family: 'Noto Serif Bengali', sans-serif;
+      --paragraph-text-font-weight: 400;
+      --paragraph-text-font-size: 12px;
+      --paragraph-text-letter-spacing: 0;
+      --paragraph-text-line-height: 1.5;
+      --paragraph-text-font-style: normal;
+    }
+
+    /* Special nav link gradient border */
+    .nav-link-special::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 1px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, rgba(160, 24, 223, 1) 0%, rgba(90, 205, 79, 1) 50%, rgba(244, 184, 73, 1) 75%, rgba(250, 33, 80, 1) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Primary button gradient border */
+    .btn-primary-gradient::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 1px;
+      border-radius: 50px;
+      background: linear-gradient(103deg, rgba(41, 160, 182, 1) 0%, rgba(176, 195, 67, 1) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: 1;
+      pointer-events: none;
     }
   </style>
 </head>
@@ -41,16 +85,16 @@
       </div>
     </div>
   </div> -->
+
   <div class="w-full bg-[var(--primary-color)]" role="banner">
-    <div class="container">
+    <div class="container mx-auto">
       <div class="flex items-center justify-between min-h-[40px] px-4 gap-2 md:gap-4 sm:px-3 xs:px-2 xs:gap-1">
         <img
           class="flex-shrink-0 h-6 w-auto mix-blend-luminosity object-cover sm:h-8 md:h-10 sm:max-w-[80px] md:max-w-[120px]"
           src="../img/offer-2.png" alt="" />
 
         <div class="flex-1 flex justify-center items-center mx-1 sm:mx-2 md:mx-4">
-          <h1
-            class="font-normal m-0 text-sm text-center leading-tight sm:text-base md:text-lg text-white">
+          <h1 class="font-normal m-0 text-sm text-center leading-tight sm:text-base md:text-lg text-white">
             ছোটদের কোরআন শিক্ষা কোর্সে
           </h1>
         </div>
@@ -69,7 +113,7 @@
   </div>
 
   <!-- Header -->
-  <header class="header container" role="banner">
+  <!-- <header class="header container" role="banner">
     <div class="header__brand">
       <img class="header__logo" src="../img/logo.png" alt="Nurul Quran Academy Logo" />
       <nav class="header__navigation" role="navigation" aria-label="Main navigation">
@@ -99,10 +143,63 @@
         <span class="btn__text">যোগাযোগ করুন</span>
       </button>
     </div>
+  </header> -->
+
+  <header
+    class="flex w-full items-center justify-between px-6 py-4 bg-[var(--white-100)] box-border md:flex-col lg:flex-row"
+    role="banner">
+    <div class="flex items-center gap-0 flex-shrink-0 md:gap-12">
+      <img class="w-[120px] h-auto aspect-[2.62] object-cover md:w-[163px]" src="../img/logo.png"
+        alt="Nurul Quran Academy Logo" />
+
+      <nav class="hidden md:flex items-center gap-3 flex-shrink-0" role="navigation" aria-label="Main navigation">
+        <a href="#special-offer"
+          class="nav-link-special relative flex items-center justify-center gap-2 px-2 py-2.5 flex-shrink-0 rounded-lg border-none no-underline bg-transparent cursor-pointer transition-colors duration-200 hover:bg-black/5 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2"
+          aria-label="স্পেশাল অফার">
+          <span class="w-fit text-[var(--black-heading)] text-base font-normal leading-6 whitespace-nowrap">স্পেশাল
+            অফার</span>
+        </a>
+
+        <a href="#free-courses"
+          class="flex items-center justify-center gap-2 px-2 py-2.5 flex-shrink-0 rounded-lg border-none no-underline bg-transparent cursor-pointer transition-colors duration-200 hover:bg-black/5 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2"
+          aria-label="ফ্রী কোর্স">
+          <span class="w-fit text-[var(--black-heading)] text-base font-normal leading-6 whitespace-nowrap">ফ্রী
+            কোর্স</span>
+        </a>
+
+        <button
+          class="flex items-center justify-center gap-2 px-2 py-2.5 flex-shrink-0 rounded-lg border-none bg-transparent cursor-pointer transition-colors duration-200 hover:bg-black/5 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2 [&[aria-expanded='true']_.dropdown-arrow]:rotate-180"
+          type="button" aria-expanded="false" aria-haspopup="true" aria-label="সব কোর্স ক্যাটাগরি">
+          <span class="w-fit text-[var(--black-heading)] text-base font-normal leading-6 whitespace-nowrap">সব কোর্স
+            ক্যাটাগরি</span>
+          <div class="w-4 h-4 aspect-square">
+            <img class="dropdown-arrow w-[11px] h-[6px] transition-transform duration-200" src="../arrow-down.svg"
+              alt="" />
+          </div>
+        </button>
+      </nav>
+    </div>
+
+    <div class="flex justify-end items-center gap-3 flex-shrink-0 md:gap-4">
+      <button
+        class="hidden md:flex items-center justify-center h-12 px-2 py-2.5 gap-2 rounded-[50px] border border-[var(--white-100)] bg-[var(--white-100)] text-[var(--black-heading)] text-base font-normal leading-6 cursor-pointer transition-colors duration-200 flex-shrink-0 hover:bg-black/5 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2"
+        type="button" aria-label="লগ ইন">
+        <span class="w-fit whitespace-nowrap">লগ ইন</span>
+        <div class="flex items-center justify-center">
+          <img class="w-4 h-[10px]" src="../arrow-right-active.svg" alt="" />
+        </div>
+      </button>
+
+      <button
+        class="btn-primary-gradient relative flex items-center justify-center h-12 px-6 py-2.5 gap-2.5 rounded-[50px] bg-[var(--white-100)] text-[var(--black-heading)] text-sm font-normal leading-6 cursor-pointer transition-colors duration-200 flex-shrink-0 hover:bg-black/5 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2 md:text-base"
+        type="button" aria-label="যোগাযোগ করুন">
+        <span class="w-fit whitespace-nowrap">যোগাযোগ করুন</span>
+      </button>
+    </div>
   </header>
 
   <!-- Mobile Navigation (shown only on mobile devices) -->
-  <nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <!-- <nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
     <div class="mobile-nav__container">
       <a href="#home" class="mobile-nav__item mobile-nav__item--active" aria-current="page">
         <div class="mobile-nav__icon" aria-hidden="true">
@@ -137,6 +234,66 @@
           <img src="../user-menu.svg" alt="">
         </div>
         <span class="mobile-nav__label">লগ ইন</span>
+      </a>
+    </div>
+  </nav> -->
+
+  <nav class="fixed bottom-0 left-0 right-0 z-[1000] md:hidden block" role="navigation"
+    aria-label="Mobile navigation">
+    <div
+      class="flex items-center justify-between p-4 bg-[var(--white-100)] max-w-[768px] mx-auto xs:p-3 xs:px-2 sm:p-2.5 sm:px-1">
+      <a href="#home"
+        class="mobile-nav-item flex flex-col items-center gap-1 px-2 no-underline transition-opacity duration-200 cursor-pointer hover:opacity-80 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2 focus:rounded focus-visible:outline-2 focus-visible:outline-[#4a90e2] focus-visible:outline-offset-2 focus-visible:rounded xs:px-1 xs:gap-0.5 sm:px-0.5"
+        aria-current="page">
+        <div class="w-5 h-5 flex items-center justify-center relative xs:w-[18px] xs:h-[18px] sm:w-4 sm:h-4"
+          aria-hidden="true">
+          <img src="../home-menu-active.svg" alt="" class="max-w-full max-h-full object-contain">
+        </div>
+        <span
+          class="mobile-nav-active text-center text-xs leading-6 whitespace-nowrap transition-colors duration-200 xs:text-[10.8px] sm:text-[9.6px]">হোম</span>
+      </a>
+
+      <a href="#special"
+        class="mobile-nav-item flex flex-col items-center gap-1 px-2 no-underline transition-opacity duration-200 cursor-pointer hover:opacity-80 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2 focus:rounded focus-visible:outline-2 focus-visible:outline-[#4a90e2] focus-visible:outline-offset-2 focus-visible:rounded xs:px-1 xs:gap-0.5 sm:px-0.5">
+        <div class="w-5 h-5 flex items-center justify-center relative xs:w-[18px] xs:h-[18px] sm:w-4 sm:h-4"
+          aria-hidden="true">
+          <img src="../gift-menu.svg" alt="" class="max-w-full max-h-full object-contain">
+        </div>
+        <span
+          class="text-center text-xs leading-6 whitespace-nowrap text-[#afafaf] transition-colors duration-200 xs:text-[10.8px] sm:text-[9.6px]">স্পেশাল</span>
+      </a>
+
+      <a href="#free-courses"
+        class="mobile-nav-item flex flex-col items-center gap-1 px-2 no-underline transition-opacity duration-200 cursor-pointer hover:opacity-80 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2 focus:rounded focus-visible:outline-2 focus-visible:outline-[#4a90e2] focus-visible:outline-offset-2 focus-visible:rounded xs:px-1 xs:gap-0.5 sm:px-0.5">
+        <div class="w-5 h-5 flex items-center justify-center relative xs:w-[18px] xs:h-[18px] sm:w-4 sm:h-4"
+          aria-hidden="true">
+          <img src="../circle-menu.svg" alt="" class="max-w-full max-h-full object-contain">
+        </div>
+        <span
+          class="text-center text-xs leading-6 whitespace-nowrap text-[#afafaf] transition-colors duration-200 xs:text-[10.8px] sm:text-[9.6px]">ফ্রী
+          কোর্স</span>
+      </a>
+
+      <a href="#all-courses"
+        class="mobile-nav-item flex flex-col items-center gap-1 px-2 no-underline transition-opacity duration-200 cursor-pointer hover:opacity-80 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2 focus:rounded focus-visible:outline-2 focus-visible:outline-[#4a90e2] focus-visible:outline-offset-2 focus-visible:rounded xs:px-1 xs:gap-0.5 sm:px-0.5">
+        <div class="w-5 h-5 flex items-center justify-center relative xs:w-[18px] xs:h-[18px] sm:w-4 sm:h-4"
+          aria-hidden="true">
+          <img src="../cap-menu.svg" alt="" class="max-w-full max-h-full object-contain">
+        </div>
+        <span
+          class="text-center text-xs leading-6 whitespace-nowrap text-[#afafaf] transition-colors duration-200 xs:text-[10.8px] sm:text-[9.6px]">সব
+          কোর্স</span>
+      </a>
+
+      <a href="#login"
+        class="mobile-nav-item flex flex-col items-center gap-1 px-2 no-underline transition-opacity duration-200 cursor-pointer hover:opacity-80 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2 focus:rounded focus-visible:outline-2 focus-visible:outline-[#4a90e2] focus-visible:outline-offset-2 focus-visible:rounded xs:px-1 xs:gap-0.5 sm:px-0.5">
+        <div class="w-5 h-5 flex items-center justify-center relative xs:w-[18px] xs:h-[18px] sm:w-4 sm:h-4"
+          aria-hidden="true">
+          <img src="../user-menu.svg" alt="" class="max-w-full max-h-full object-contain">
+        </div>
+        <span
+          class="text-center text-xs leading-6 whitespace-nowrap text-[#afafaf] transition-colors duration-200 xs:text-[10.8px] sm:text-[9.6px]">লগ
+          ইন</span>
       </a>
     </div>
   </nav>

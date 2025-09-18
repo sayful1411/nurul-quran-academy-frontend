@@ -11,85 +11,24 @@
     <title>Nurul Quran Academy</title>
     <link rel="stylesheet" href="../src/globals.css">
     <style>
-        /* Mobile-first approach */
+        /* Base styles - Mobile First */
         .hero {
-            background-color: #1a0c12;
+            background-image: url('../public/Hero.svg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
             position: relative;
             overflow: hidden;
-            align-items: stretch;
-        }
-
-        .hero__background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .hero__background-gradient--left {
-            display: none;
-            position: absolute;
-            top: 10%;
-            left: -20%;
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            filter: blur(140px);
-            background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
-        }
-
-        .hero__background-gradient--right {
-            position: absolute;
-            top: -10%;
-            right: -20%;
-            width: 600px;
-            height: 300px;
-            border-radius: 50%;
-            filter: blur(140px);
-            background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
-        }
-
-        .hero__image-container {
-            position: relative;
-            z-index: 2;
-            flex: 1;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            padding: 0;
-        }
-
-        .hero__image {
-            width: 100%;
-            max-width: 768px;
-            height: auto;
-            aspect-ratio: 1.5;
-            object-fit: cover;
-            position: relative;
-        }
-
-        .hero__image-overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            object-fit: cover;
-            z-index: 2;
-            transform: rotate(-90deg);
-            width: 150%;
         }
 
         .hero__content {
             position: relative;
             z-index: 2;
-            padding: 2rem 1rem 0;
             display: flex;
             flex-direction: column;
             gap: 2rem;
+            width: 100%;
         }
 
         .hero__text-section {
@@ -203,6 +142,7 @@
             align-items: center;
             justify-content: center;
             padding-bottom: 2rem;
+            flex-wrap: wrap;
         }
 
         .hero__statistic-item {
@@ -247,61 +187,28 @@
             margin: 0;
         }
 
-        /* Tablet and larger screens */
+        /* Tablet styles */
         @media (min-width: 768px) {
-            .hero {
-                flex-direction: row;
-                align-items: flex-end;
-                min-height: 606px;
-                max-width: 1440px;
-                margin: 0 auto;
-            }
-
-            .hero__image-container {
-                flex: 1;
-                order: 2;
-                align-items: flex-end;
-                justify-content: flex-end;
-                padding: 0;
-            }
-
-            .hero__image {
-                max-width: 768px;
-            }
-
-            .hero__image-overlay {
-                position: absolute;
-                top: 0;
-                left: -30%;
-                height: 100%;
-                transform: none;
-                width: 100%;
-            }
 
             .hero__content {
                 flex: 1;
-                order: 1;
-                padding: 2rem 2rem 0;
-                gap: 3.5rem;
-                max-width: 608px;
-                z-index: 4;
-                align-self: center;
+                max-width: 50%;
+                gap: 3rem;
             }
 
             .hero__title {
                 font-size: clamp(2.5rem, 4vw, 3.25rem);
                 line-height: 1.35;
-                text-align: left;
             }
 
             .hero__description {
                 font-size: clamp(1rem, 1.5vw, 1.1875rem);
-                text-align: left;
             }
 
             .hero__cta-button {
                 align-self: flex-start;
                 width: auto;
+                max-width: 200px;
             }
 
             .hero__statistics-title {
@@ -309,109 +216,89 @@
             }
 
             .hero__statistics-grid {
-                flex-direction: row;
                 justify-content: flex-start;
                 gap: 2rem;
-                flex-wrap: wrap;
-            }
-
-            .hero__background-gradient--left {
-                top: 5%;
-                left: -15%;
-                width: 420px;
-                height: 420px;
-                display: block;
-            }
-
-            .hero__background-gradient--right {
-                top: -20%;
-                right: -15%;
-                width: 868px;
-                height: 420px;
-                border-radius: 434px / 210px;
             }
         }
 
-        /* Large desktop screens */
-        @media (min-width: 1200px) {
+        /* Desktop styles */
+        @media (min-width: 1024px) {
+
             .hero__content {
-                padding: 4rem 0 0 4rem;
+                max-width: 45%;
+                gap: 3.5rem;
             }
 
-            .hero__statistics-grid {
-                gap: 2rem;
+            .hero__title {
+                font-size: clamp(3rem, 5vw, 4rem);
+            }
+
+            .hero__description {
+                font-size: clamp(1.1rem, 1.5vw, 1.25rem);
             }
         }
 
-        /* High resolution displays */
-        @media (min-width: 1440px) {
-            .hero {
-                max-width: none;
-                width: 1440px;
+        /* Large desktop styles */
+        @media (min-width: 1200px) {
+
+            .hero__content {
+                max-width: 50%;
             }
         }
     </style>
 </head>
 
 <body>
-    <section class="hero container" role="section">
-        <div class="hero__background">
-            <div class="hero__background-gradient--left" aria-hidden="true"></div>
-            <div class="hero__background-gradient--right" aria-hidden="true"></div>
-        </div>
-
-        <div class="hero__image-container">
-            <img class="hero__image-overlay" src="../rectangle-1.svg" alt="" aria-hidden="true" />
-            <img class="hero__image" src="../img/hero.png"
-                alt="Islamic scholars and students in a learning environment" />
-        </div>
-
-        <div class="hero__content">
-            <div class="hero__text-section">
-                <div class="hero__heading-group">
-                    <h1 class="hero__title">
-                        <span class="hero__title--highlight">ইসলামী জ্ঞানে আলোকিত করুন নিজের ভবিষ্যৎ!</span>
-                    </h1>
-                    <p class="hero__description">
-                        ইসলামী জ্ঞান অর্জনের এক অনন্য অনলাইন উদ্যোগ। যেখানে আরবী ভাষা ও সাহিত্যসহ কুরআন, হাদীস, ফিকহ ও
-                        আকীদার উপর রয়েছে সুচিন্তিত পেইড ও ফ্রি কোর্সের আয়োজন।
-                    </p>
+    <div class="hero">
+        <div class="container" style="margin-top: 100px;">
+            <div class="hero__content">
+                <div class="hero__text-section">
+                    <div class="hero__heading-group">
+                        <h1 class="hero__title">
+                            <span class="hero__title--highlight">ইসলামী জ্ঞানে আলোকিত করুন নিজের ভবিষ্যৎ!</span>
+                        </h1>
+                        <p class="hero__description">
+                            ইসলামী জ্ঞান অর্জনের এক অনন্য অনলাইন উদ্যোগ। যেখানে আরবী ভাষা ও সাহিত্যসহ কুরআন, হাদীস, ফিকহ
+                            ও
+                            আকীদার উপর রয়েছে সুচিন্তিত পেইড ও ফ্রি কোর্সের আয়োজন।
+                        </p>
+                    </div>
+                    <button class="hero__cta-button" type="button"
+                        aria-label="শেখা শুরু করুন - কোর্সে এনরোল করতে ক্লিক করুন">
+                        <span class="hero__button-text">শেখা শুরু করুন</span>
+                        <img class="hero__button-icon" src="../arrow-right.svg" alt="" aria-hidden="true" />
+                    </button>
                 </div>
-                <button class="hero__cta-button" type="button"
-                    aria-label="শেখা শুরু করুন - কোর্সে এনরোল করতে ক্লিক করুন">
-                    <span class="hero__button-text">শেখা শুরু করুন</span>
-                    <img class="hero__button-icon" src="../arrow-right.svg" alt="" aria-hidden="true" />
-                </button>
-            </div>
 
-            <div class="hero__statistics" aria-labelledby="success-stats">
-                <h2 class="hero__statistics-title" id="success-stats">বিগত ৩ বছর ধরে আমাদের সাফল্য</h2>
-                <div class="hero__statistics-grid" role="list">
-                    <div class="hero__statistic-item" role="listitem">
-                        <img class="hero__statistic-icon" src="../student.svg" alt="শিক্ষার্থী আইকন" />
-                        <div class="hero__statistic-content">
-                            <div class="hero__statistic-number">১০,০০০</div>
-                            <div class="hero__statistic-label">শিক্ষার্থী</div>
+                <div class="hero__statistics" aria-labelledby="success-stats">
+                    <h2 class="hero__statistics-title" id="success-stats">বিগত ৩ বছর ধরে আমাদের সাফল্য</h2>
+                    <div class="hero__statistics-grid" role="list">
+                        <div class="hero__statistic-item" role="listitem">
+                            <img class="hero__statistic-icon" src="../student.svg" alt="শিক্ষার্থী আইকন" />
+                            <div class="hero__statistic-content">
+                                <div class="hero__statistic-number">১০,০০০</div>
+                                <div class="hero__statistic-label">শিক্ষার্থী</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="hero__statistic-item" role="listitem">
-                        <img class="hero__statistic-icon" src="../teacher.svg" alt="শিক্ষক আইকন" />
-                        <div class="hero__statistic-content">
-                            <div class="hero__statistic-number">২৫+</div>
-                            <div class="hero__statistic-label">শিক্ষক</div>
+                        <div class="hero__statistic-item" role="listitem">
+                            <img class="hero__statistic-icon" src="../teacher.svg" alt="শিক্ষক আইকন" />
+                            <div class="hero__statistic-content">
+                                <div class="hero__statistic-number">২৫+</div>
+                                <div class="hero__statistic-label">শিক্ষক</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="hero__statistic-item" role="listitem">
-                        <img class="hero__statistic-icon" src="../check.svg" alt="কোর্স সম্পূর্ণতার হার আইকন" />
-                        <div class="hero__statistic-content">
-                            <div class="hero__statistic-number">৮৯%</div>
-                            <div class="hero__statistic-label">কোর্স কমপ্লিট রেট</div>
+                        <div class="hero__statistic-item" role="listitem">
+                            <img class="hero__statistic-icon" src="../check.svg" alt="কোর্স সম্পূর্ণতার হার আইকন" />
+                            <div class="hero__statistic-content">
+                                <div class="hero__statistic-number">৮৯%</div>
+                                <div class="hero__statistic-label">কোর্স কমপ্লিট রেট</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </body>
 
 </html>

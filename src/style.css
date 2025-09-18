@@ -2,13 +2,159 @@
 @import url("globals.css");
 
 /*--------------------------------------------------------------
+  Offer
+--------------------------------------------------------------*/
+
+.offer-wrapper {
+  width: 100%;
+  background-color: #9b1b40;
+}
+
+.offer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.offer__left-decoration {
+  flex-shrink: 0;
+  height: 40px;
+  width: auto;
+  mix-blend-mode: luminosity;
+  object-fit: cover;
+}
+
+.offer__content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 16px;
+}
+
+.offer__title {
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.offer__right-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.offer__right-decoration {
+  height: 40px;
+  width: auto;
+  mix-blend-mode: luminosity;
+  object-fit: cover;
+}
+
+.offer__close-button {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.offer__close-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.offer__close-button:hover {
+  opacity: 0.8;
+}
+
+.offer__close-button:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .offer {
+    padding: 0 12px;
+    min-height: auto;
+    gap: 8px;
+  }
+
+  .offer__title {
+    font-size: 16px;
+  }
+
+  .offer__left-decoration,
+  .offer__right-decoration {
+    height: 32px;
+    max-width: 120px;
+  }
+
+  .offer__content {
+    margin: 0 8px;
+  }
+
+  .offer__right-section {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .offer {
+    padding: 0 8px;
+    gap: 4px;
+  }
+
+  .offer__title {
+    font-size: 14px;
+  }
+
+  .offer__left-decoration,
+  .offer__right-decoration {
+    height: 24px;
+    max-width: 80px;
+  }
+
+  .offer__content {
+    margin: 0 4px;
+  }
+
+  .offer__right-section {
+    gap: 4px;
+  }
+
+  .offer__close-button {
+    width: 20px;
+    height: 20px;
+  }
+
+  .offer__close-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/*--------------------------------------------------------------
   Header
 --------------------------------------------------------------*/
 
 .header {
   display: flex;
   width: 100%;
-  max-width: 1440px;
   align-items: center;
   justify-content: space-between;
   padding: 16px 72px;
@@ -281,7 +427,7 @@
       rgba(46, 188, 204, 1) 100%
     )
     1;
-  max-width: 391px;
+  max-width: 768px;
   margin: 0 auto;
 }
 
@@ -689,8 +835,6 @@
     flex-direction: row;
     align-items: flex-end;
     min-height: 606px;
-    max-width: 1440px;
-    margin: 0 auto;
   }
 
   .hero__image-container {
@@ -779,22 +923,12 @@
   }
 }
 
-/* High resolution displays */
-@media (min-width: 1440px) {
-  .hero {
-    max-width: none;
-    width: 1440px;
-  }
-}
-
 /*--------------------------------------------------------------
   Popular Courses
 --------------------------------------------------------------*/
 
 /* Popular Courses Section */
 .popular-courses-section {
-  max-width: 1440px;
-  margin: 0 auto;
   padding: 100px 167px;
   background-color: #fefefe;
 }
@@ -1827,7 +1961,7 @@
 
 .admission-banner {
   position: relative;
-  max-width: 1440px;
+  width: 100%;
   min-height: 200px;
   background-color: #9b1b40;
   margin: 0 auto;
@@ -1872,7 +2006,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 8rem;
   z-index: 2;
   position: relative;
 }
@@ -2071,7 +2205,7 @@
   }
 
   .admission-banner__subtitle {
-    font-size: 1.2rem;
+    font-size: 14px;
     line-height: 1.5;
   }
 
@@ -2417,8 +2551,6 @@
 --------------------------------------------------------------*/
 
 .special-offers {
-  max-width: 1440px;
-  margin: 0 auto;
   padding: 100px 2rem 60px;
   background-color: #ffffff;
   overflow: hidden;
@@ -2902,8 +3034,6 @@
 --------------------------------------------------------------*/
 
 .teachers-section {
-  max-width: 1440px;
-  margin: 0 auto;
   background-color: #fffcf8;
   background-image: url("../img/testimonial-bg.png");
   background-size: cover;
@@ -3627,8 +3757,6 @@
 }
 
 .features__container {
-  max-width: 1440px;
-  margin: 0 auto;
   padding: 0 67px;
   display: grid;
   grid-template-columns: 520px 1fr;
@@ -4236,10 +4364,6 @@
 .offer-cta__content {
   display: flex;
   align-items: flex-end;
-  /* position: absolute;
-            top: 126px;
-            left: 154px;
-            gap: 148px; */
 }
 
 .offer-cta__text-section {
@@ -4400,8 +4524,6 @@
 
 .faq-section {
   padding: 100px 2rem 60px;
-  max-width: 1440px;
-  margin: 0 auto;
   background-color: #fefefe;
 }
 
@@ -4650,8 +4772,6 @@
 --------------------------------------------------------------*/
 .tutorial-cta {
   padding: 80px 2rem;
-  max-width: 1440px;
-  margin: 0 auto;
 }
 
 .tutorial-cta__container {
@@ -4942,8 +5062,6 @@
 
 .footer {
   position: relative;
-  max-width: 1440px;
-  margin: 0 auto;
   background-color: #f8f5ec;
   overflow: hidden;
   padding: 100px 2rem 60px;

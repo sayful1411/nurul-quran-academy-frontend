@@ -15,6 +15,26 @@
 
 <body>
 
+  <!-- Offer Banner -->
+  <div class="offer-wrapper" role="banner">
+    <div class="container">
+      <div class="offer">
+        <img class="offer__left-decoration" src="../img/offer-2.png" alt="" />
+
+        <div class="offer__content">
+          <h1 class="offer__title">ছোটদের কোরআন শিক্ষা কোর্সে</h1>
+        </div>
+
+        <div class="offer__right-section">
+          <img class="offer__right-decoration" src="../img/offer-1.png" alt="" />
+          <button class="offer__close-button" type="button" aria-label="বন্ধ করুন">
+            <img class="offer__close-icon" src="../x-circle.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Header -->
   <header class="header container" role="banner">
     <div class="header__brand">
@@ -47,7 +67,7 @@
       </button>
     </div>
   </header>
-
+  
   <!-- Mobile Navigation (shown only on mobile devices) -->
   <nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
     <div class="mobile-nav__container">
@@ -91,7 +111,7 @@
   <!-- Main -->
   <main>
     <!-- Hero -->
-    <section class="hero container" role="section">
+    <section class="hero" role="section">
       <div class="hero__background">
         <div class="hero__background-gradient--left" aria-hidden="true"></div>
         <div class="hero__background-gradient--right" aria-hidden="true"></div>
@@ -149,7 +169,7 @@
     </section>
 
     <!-- Popular Courses -->
-    <section class="popular-courses-section">
+    <section class="container popular-courses-section">
       <div class="popular-courses-section__container">
         <div class="popular-courses-section__header">
           <div class="popular-courses-section__top">
@@ -528,7 +548,7 @@
 
     <!-- Testimonial -->
     <section class="testimonial-section">
-      <div class="testimonial-section__container">
+      <div class="container testimonial-section__container">
         <header class="testimonial__header testimonial__header--mobile">
           <h2 class="testimonial__title">বিজ্ঞজন আমাদের কাজের <span class="testimonial__title--highlight">প্রশংসা
               করেছেন !!</span></h2>
@@ -572,7 +592,7 @@
 
     <!-- Admission Banner -->
     <section class="admission-banner" role="banner">
-      <div class="admission-banner__content">
+      <div class="container admission-banner__content">
         <header class="admission-banner__text">
           <h2 class="admission-banner__subtitle">ছোটদের কোরআন শিক্ষা কোর্সে <span class="admission-banner__title">ভর্তি
               চলছে!</span> </h2>
@@ -588,8 +608,8 @@
     </section>
 
     <!-- Feedback -->
-    <section class="feedback container">
-      <div class="feedback__container">
+    <section class="feedback">
+      <div class="container feedback__container">
         <div class="feedback__content">
           <div class="feedback__main-content">
             <header class="feedback__header">
@@ -668,7 +688,7 @@
     </section>
 
     <!-- Special Offer -->
-    <section class="special-offers" role="main">
+    <section class="container special-offers" role="main">
       <div class="special-offers__container">
         <header class="special-offers__header">
           <h1 class="special-offers__title">স্পেশাল</h1>
@@ -855,8 +875,8 @@
     </section>
 
     <!-- Teacher -->
-    <section class="teachers-section container" role="main">
-      <div class="teachers-section__container">
+    <section class="teachers-section" role="main">
+      <div class="container teachers-section__container">
         <div class="teachers-section__content">
           <div class="teachers-section__main">
             <header class="teachers-section__header">
@@ -923,7 +943,7 @@
 
     <!-- Learning Path -->
     <section class="learning-path">
-      <div class="learning-path__container">
+      <div class="container learning-path__container">
         <header class="learning-path__header">
           <h1 class="learning-path__title">পর্যাক্রমে শিখুন আর এগিয়ে চলুন</h1>
         </header>
@@ -1180,8 +1200,8 @@
     </section>
 
     <!-- Blog -->
-    <main class="blog-section">
-      <div class="blog-section__background">
+    <section class="blog-section">
+      <div class="container blog-section__background">
         <div class="blog-section__container">
           <div class="blog-section__content">
             <header class="blog-section__header">
@@ -1269,7 +1289,7 @@
           </nav>
         </div>
       </div>
-    </main>
+    </section>
 
     <!-- Offer Call To Action -->
     <section class="offer-cta container">
@@ -1378,7 +1398,7 @@
     </section>
 
     <!-- Tutorial Call To Action -->
-    <section class="tutorial-cta" role="region" aria-label="টিউটোরিয়াল কল টু অ্যাকশন">
+    <section class="container tutorial-cta" role="region" aria-label="টিউটোরিয়াল কল টু অ্যাকশন">
       <div class="tutorial-cta__container">
         <div class="tutorial-cta__background">
           <div class="tutorial-cta__bg-left">
@@ -1407,123 +1427,124 @@
 
   <!-- Footer -->
   <footer class="footer" role="contentinfo">
-    <div class="footer__decoration" aria-hidden="true">
-      <img class="footer__decoration-image footer__decoration-image--left" src="/img/footer-01.png" alt="" />
-      <img class="footer__decoration-image footer__decoration-image--center" src="/img/footer-02.png" alt="" />
-      <img class="footer__decoration-image footer__decoration-image--right" src="/img/footer-03.png" alt="" />
-    </div>
+    <div class="container">
+      <div class="footer__decoration" aria-hidden="true">
+        <img class="footer__decoration-image footer__decoration-image--left" src="/img/footer-01.png" alt="" />
+        <img class="footer__decoration-image footer__decoration-image--center" src="/img/footer-02.png" alt="" />
+        <img class="footer__decoration-image footer__decoration-image--right" src="/img/footer-03.png" alt="" />
+      </div>
+      <div class="footer__container">
+        <section class="footer__about">
+          <div class="footer__brand">
+            <img class="footer__logo" src="/img/footer-logo.png" alt="নূরুল কুরআন একাডেমী লোগো" />
+            <p class="footer__description">
+              ইসলামী জ্ঞান অর্জনের অনলাইনভিত্তিক অনন্য একটি শিক্ষা প্রতিষ্ঠান। এতে আরবীভাষা ও সাহিত্যসহ
+              কুরআন-হাদীস-ফিকহ-আকীদা ইত্যাদি শরীয়তের বিভিন্ন বিষয়ে রয়েছে পেইড ও ফ্রি কোর্সসমূহ।
+            </p>
+          </div>
+          <button class="footer__auth-button" type="button" aria-label="লগ ইন বা সাইন আপ করুন">
+            <span class="footer__auth-text">লগ ইন/ সাইন আপ</span>
+            <span class="footer__auth-icon" aria-hidden="true">
+              <img class="footer__auth-arrow" src="/arrow-right.svg" alt="" />
+            </span>
+          </button>
+        </section>
 
-    <div class="footer__container">
-      <section class="footer__about">
-        <div class="footer__brand">
-          <img class="footer__logo" src="/img/footer-logo.png" alt="নূরুল কুরআন একাডেমী লোগো" />
-          <p class="footer__description">
-            ইসলামী জ্ঞান অর্জনের অনলাইনভিত্তিক অনন্য একটি শিক্ষা প্রতিষ্ঠান। এতে আরবীভাষা ও সাহিত্যসহ
-            কুরআন-হাদীস-ফিকহ-আকীদা ইত্যাদি শরীয়তের বিভিন্ন বিষয়ে রয়েছে পেইড ও ফ্রি কোর্সসমূহ।
-          </p>
-        </div>
-        <button class="footer__auth-button" type="button" aria-label="লগ ইন বা সাইন আপ করুন">
-          <span class="footer__auth-text">লগ ইন/ সাইন আপ</span>
-          <span class="footer__auth-icon" aria-hidden="true">
-            <img class="footer__auth-arrow" src="/arrow-right.svg" alt="" />
-          </span>
-        </button>
-      </section>
+        <nav class="footer__navigation" role="navigation" aria-label="ফুটার নেভিগেশন">
+          <div class="footer__nav-sections">
+            <div class="footer__nav-section">
+              <h3 class="footer__nav-title">আরও জানুন</h3>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item">
+                  <a href="#gallery" class="footer__nav-link">গ্যালারি</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#testimonials" class="footer__nav-link">শিক্ষার্থীদের মন্তব্য</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#teachers" class="footer__nav-link">শিক্ষক/শিক্ষিকা</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#e-campus" class="footer__nav-link">ই-ক্যাম্পাস</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#about" class="footer__nav-link">পরিচিতি</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#faq" class="footer__nav-link">সচরাচর জিজ্ঞাসা</a>
+                </li>
+              </ul>
+            </div>
 
-      <nav class="footer__navigation" role="navigation" aria-label="ফুটার নেভিগেশন">
-        <div class="footer__nav-sections">
-          <div class="footer__nav-section">
-            <h3 class="footer__nav-title">আরও জানুন</h3>
-            <ul class="footer__nav-list">
-              <li class="footer__nav-item">
-                <a href="#gallery" class="footer__nav-link">গ্যালারি</a>
+            <div class="footer__nav-section">
+              <h3 class="footer__nav-title">ঘুরে আসুন</h3>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item">
+                  <a href="#home" class="footer__nav-link">মূলপাতা</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#free-courses" class="footer__nav-link">ফ্রি কোর্স</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#paid-courses" class="footer__nav-link">পেইড কোর্স</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#blog" class="footer__nav-link">ব্লগ</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#videos" class="footer__nav-link">ভিডিও</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#sadaqah" class="footer__nav-link">সাদাকাহ</a>
+                </li>
+              </ul>
+            </div>
+
+            <address class="footer__nav-section footer__contact">
+              <h3 class="footer__nav-title">যোগাযোগ</h3>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item">
+                  <span class="footer__nav-link footer__contact-item">ঠিকানা: বসিলা, মুহাম্মদপুর, ঢাকা।</span>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="tel:+8801700946569" class="footer__nav-link">ফোন নং: +8801700946569</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="mailto:nurulquran887@gmail.com" class="footer__nav-link">ইমেইল: nurulquran887@gmail.com</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="#complaints" class="footer__nav-link">অভিযোগ বাক্স</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="footer__social">
+            <ul class="footer__social-list" role="list" aria-label="সামাজিক মাধ্যম লিংক">
+              <li class="footer__social-item">
+                <a href="#" class="footer__social-link" aria-label="আমাদের ফেসবুক পেজ দেখুন">
+                  <span class="footer__social-icon footer__social-icon--facebook"></span>
+                </a>
               </li>
-              <li class="footer__nav-item">
-                <a href="#testimonials" class="footer__nav-link">শিক্ষার্থীদের মন্তব্য</a>
+              <li class="footer__social-item">
+                <a href="#" class="footer__social-link" aria-label="হোয়াটসঅ্যাপে যোগাযোগ করুন">
+                  <span class="footer__social-icon footer__social-icon--whatsapp"></span>
+                </a>
               </li>
-              <li class="footer__nav-item">
-                <a href="#teachers" class="footer__nav-link">শিক্ষক/শিক্ষিকা</a>
+              <li class="footer__social-item">
+                <a href="#" class="footer__social-link" aria-label="লিংকডইনে যুক্ত হন">
+                  <span class="footer__social-icon footer__social-icon--linkedin"></span>
+                </a>
               </li>
-              <li class="footer__nav-item">
-                <a href="#e-campus" class="footer__nav-link">ই-ক্যাম্পাস</a>
-              </li>
-              <li class="footer__nav-item">
-                <a href="#about" class="footer__nav-link">পরিচিতি</a>
-              </li>
-              <li class="footer__nav-item">
-                <a href="#faq" class="footer__nav-link">সচরাচর জিজ্ঞাসা</a>
+              <li class="footer__social-item">
+                <a href="#" class="footer__social-link" aria-label="আমাদের ইউটিউব চ্যানেল সাবস্ক্রাইব করুন">
+                  <span class="footer__social-icon footer__social-icon--youtube"></span>
+                </a>
               </li>
             </ul>
           </div>
-
-          <div class="footer__nav-section">
-            <h3 class="footer__nav-title">ঘুরে আসুন</h3>
-            <ul class="footer__nav-list">
-              <li class="footer__nav-item">
-                <a href="#home" class="footer__nav-link">মূলপাতা</a>
-              </li>
-              <li class="footer__nav-item">
-                <a href="#free-courses" class="footer__nav-link">ফ্রি কোর্স</a>
-              </li>
-              <li class="footer__nav-item">
-                <a href="#paid-courses" class="footer__nav-link">পেইড কোর্স</a>
-              </li>
-              <li class="footer__nav-item">
-                <a href="#blog" class="footer__nav-link">ব্লগ</a>
-              </li>
-              <li class="footer__nav-item">
-                <a href="#videos" class="footer__nav-link">ভিডিও</a>
-              </li>
-              <li class="footer__nav-item">
-                <a href="#sadaqah" class="footer__nav-link">সাদাকাহ</a>
-              </li>
-            </ul>
-          </div>
-
-          <address class="footer__nav-section footer__contact">
-            <h3 class="footer__nav-title">যোগাযোগ</h3>
-            <ul class="footer__nav-list">
-              <li class="footer__nav-item">
-                <span class="footer__nav-link footer__contact-item">ঠিকানা: বসিলা, মুহাম্মদপুর, ঢাকা।</span>
-              </li>
-              <li class="footer__nav-item">
-                <a href="tel:+8801700946569" class="footer__nav-link">ফোন নং: +8801700946569</a>
-              </li>
-              <li class="footer__nav-item">
-                <a href="mailto:nurulquran887@gmail.com" class="footer__nav-link">ইমেইল: nurulquran887@gmail.com</a>
-              </li>
-              <li class="footer__nav-item">
-                <a href="#complaints" class="footer__nav-link">অভিযোগ বাক্স</a>
-              </li>
-            </ul>
-          </address>
-        </div>
-
-        <div class="footer__social">
-          <ul class="footer__social-list" role="list" aria-label="সামাজিক মাধ্যম লিংক">
-            <li class="footer__social-item">
-              <a href="#" class="footer__social-link" aria-label="আমাদের ফেসবুক পেজ দেখুন">
-                <span class="footer__social-icon footer__social-icon--facebook"></span>
-              </a>
-            </li>
-            <li class="footer__social-item">
-              <a href="#" class="footer__social-link" aria-label="হোয়াটসঅ্যাপে যোগাযোগ করুন">
-                <span class="footer__social-icon footer__social-icon--whatsapp"></span>
-              </a>
-            </li>
-            <li class="footer__social-item">
-              <a href="#" class="footer__social-link" aria-label="লিংকডইনে যুক্ত হন">
-                <span class="footer__social-icon footer__social-icon--linkedin"></span>
-              </a>
-            </li>
-            <li class="footer__social-item">
-              <a href="#" class="footer__social-link" aria-label="আমাদের ইউটিউব চ্যানেল সাবস্ক্রাইব করুন">
-                <span class="footer__social-icon footer__social-icon--youtube"></span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </div>
   </footer>
 

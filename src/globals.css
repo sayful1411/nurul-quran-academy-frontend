@@ -111,7 +111,7 @@ html,
 body {
   margin: 0px;
   height: 100%;
-  font-family: "Noto Serif Bengali", Helvetica;
+  font-family: "Noto Serif Bengali", Helvetica !important;
 }
 a {
   text-decoration: none;

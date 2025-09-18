@@ -863,7 +863,7 @@
     order: 1;
     padding: 2rem 2rem 0;
     gap: 3.5rem;
-    max-width: 608px;
+    max-width: 768px;
     z-index: 4;
     align-self: center;
   }

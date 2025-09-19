@@ -569,6 +569,8 @@
       mask-composite: exclude;
     }
 
+
+
   </style>
 </head>
 
@@ -3378,7 +3380,8 @@
       </div>
     </section>
 
-    <!-- Offer Call To Action -->
+    <!-- Offer Call To Action - Original -->
+    <!--
     <section class="offer-cta container">
       <div class="offer-cta__container">
         <div class="offer-cta__background">
@@ -3390,6 +3393,27 @@
                 <span class="offer-cta__button-text">শেখা শুরু করুন</span>
                 <div class="offer-cta__button-icon" aria-hidden="true">
                   <img src="/arrow-right.svg" alt="" />
+                </div>
+              </button>
+            </header>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- Offer Call To Action - Tailwind v4 -->
+    <section class="bg-[#fefefe] py-8 px-4 sm:py-12 sm:px-8 lg:py-16 lg:px-32 flex items-center justify-center">
+      <div class="w-full max-w-[1169px] bg-[#9b1b40] rounded-[32px] overflow-hidden relative min-h-[200px] flex items-center">
+        <div class="w-full h-[200px] sm:h-[420px] bg-[url('../img/cta-02.png')] bg-[length:100%_100%] relative p-8 sm:p-16 lg:p-24 flex items-center">
+          <img class="w-[200px] h-[200px] sm:w-[389px] sm:h-[388px] object-cover mix-blend-hard-light flex-shrink-0 absolute top-[30%] sm:top-[7%] right-0" src="/img/cta-01.png" alt="ইসলামী শিক্ষার প্রতীক" />
+          <div class="flex items-end">
+            <header class="flex flex-col gap-8 w-full max-w-[600px] order-2 sm:order-1">
+              <h1 class="font-[Tiro_Bangla] font-medium text-white text-[clamp(1.5rem,4vw,40px)] leading-[110%] text-left mb-0">ইসলামী জ্ঞান অর্জনের মাধ্যমে আলোকিত করুন নিজের ভবিষ্যৎ</h1>
+              <button class="inline-flex h-12 items-center justify-center gap-2.5 px-6 py-2.5 border-none rounded-full bg-gradient-to-r from-[#df186a] to-[#fa6f21] cursor-pointer transition-all duration-200 w-fit hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(223,24,106,0.3)] active:translate-y-0 focus:outline-2 focus:outline-white focus:outline-offset-2" type="button" aria-label="শেখা শুরু করুন">
+                <span class="text-white text-base font-normal leading-[150%] whitespace-nowrap">শেখা শুরু করুন</span>
+                <div class="w-4 h-4 flex items-center justify-center" aria-hidden="true">
+                  <img class="w-full h-full" src="/arrow-right.svg" alt="" />
                 </div>
               </button>
             </header>

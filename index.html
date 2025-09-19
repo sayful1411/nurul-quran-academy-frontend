@@ -462,6 +462,27 @@
     .course-image {
       mix-blend-mode: luminosity;
     }
+
+    /* Teacher Custom Styles */
+    .teacher-title-gradient {
+      background: linear-gradient(103deg, rgba(41, 160, 182, 1) 0%, rgba(176, 195, 67, 1) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-button-active::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 1px;
+      border-radius: 25.5px;
+      background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
   </style>
 </head>
 
@@ -2425,6 +2446,7 @@
     </section>
 
     <!-- Teacher -->
+    <!-- Original HTML (commented out)
     <section class="teachers-section" role="main">
       <div class="container teachers-section__container">
         <div class="teachers-section__content">
@@ -2485,6 +2507,72 @@
             </button>
             <button type="button" class="navigation-button navigation-button--active" aria-label="পরবর্তী">
               <img class="navigation-button__icon" src="/arrow-right-active.svg" alt="" />
+            </button>
+          </nav>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- Teacher - Tailwind v4 Version -->
+    <section class="bg-[#fffcf8] bg-[url('../img/testimonial-bg.png')] bg-cover bg-center py-8 lg:py-[100px] px-8 md:py-20 md:px-6 lg:px-8 min-h-[693px] flex flex-col items-center justify-center" role="main">
+      <div class="flex flex-col items-center gap-10 max-w-[1107px] w-full mx-auto">
+        <div class="flex flex-col items-center gap-[90px] md:gap-[60px] w-full">
+          <div class="flex flex-col items-center gap-10 w-full">
+            <header class="flex items-center justify-center gap-3 flex-wrap">
+              <h1 class="text-[var(--black-heading)] text-center m-0 text-(length:--h5-medium-font-size) lg:text-(length:--h-1-font-size)">আমাদের</h1>
+              <h1 class="text-gradient text-center m-0 text-(length:--h5-medium-font-size) lg:text-(length:--h-1-font-size)">অভিজ্ঞ</h1>
+              <h1 class="text-[var(--black-heading)] text-center m-0 text-(length:--h5-medium-font-size) lg:text-(length:--h-1-font-size)">শিক্ষকবৃন্দ</h1>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[41px] md:gap-[30px] lg:gap-[41px] max-w-[500px] lg:max-w-[900px] w-full justify-items-center mx-auto">
+              <article class="w-full max-w-[267px] bg-[var(--white-100)] border border-[#e6e6e6] rounded-xl overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <img class="w-full h-[214px] md:h-[180px] lg:h-[214px] object-cover block" src="/img/teacher-1.png" alt="মাওলানা আবদুল কাদের এর ছবি" />
+                <div class="flex flex-col gap-[34px] md:gap-5 lg:gap-[34px] p-4 md:py-2.5 md:px-3.5 lg:py-4 lg:px-5 flex-1">
+                  <div class="flex flex-col gap-3 w-full">
+                    <div class="flex flex-col gap-1 w-full">
+                      <h2 style="font-family: var(--h-6-font-family); font-weight: var(--h-6-font-weight); font-size: var(--h-6-font-size); letter-spacing: var(--h-6-letter-spacing); line-height: var(--h-6-line-height); font-style: var(--h-6-font-style);" class="text-[var(--black-heading)] m-0 md:text-[calc(var(--h-6-font-size)*0.9)] lg:text-[var(--h-6-font-size)]">মাওলানা আবদুল কাদের</h2>
+                      <h3 style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);" class="teacher-title-gradient m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] lg:text-[var(--paragraph-text-font-size)]">কুরআন শরীফ শিক্ষক</h3>
+                    </div>
+                    <p style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);" class="text-[var(--black-subtext)] m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] md:leading-6 lg:text-[var(--paragraph-text-font-size)] lg:leading-[var(--paragraph-text-line-height)]">২০ বছরের অভিজ্ঞতাসম্পন্ন হাফেজ ও তাজবিদ বিশেষজ্ঞ।</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="w-full max-w-[267px] bg-[var(--white-100)] border border-[#e6e6e6] rounded-xl overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <img class="w-full h-[214px] md:h-[180px] lg:h-[214px] object-cover block" src="/img/teacher-2.png" alt="মাওলানা ফারুক হাসান এর ছবি" />
+                <div class="flex flex-col gap-[34px] md:gap-5 lg:gap-[34px] p-4 md:py-2.5 md:px-3.5 lg:py-4 lg:px-5 flex-1">
+                  <div class="flex flex-col gap-3 w-full">
+                    <div class="flex flex-col gap-1 w-full">
+                      <h2 style="font-family: var(--h-6-font-family); font-weight: var(--h-6-font-weight); font-size: var(--h-6-font-size); letter-spacing: var(--h-6-letter-spacing); line-height: var(--h-6-line-height); font-style: var(--h-6-font-style);" class="text-[var(--black-heading)] m-0 md:text-[calc(var(--h-6-font-size)*0.9)] lg:text-[var(--h-6-font-size)]">মাওলানা ফারুক হাসান</h2>
+                      <h3 style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);" class="teacher-title-gradient m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] lg:text-[var(--paragraph-text-font-size)]">হাদীস ও ফিকহ শিক্ষক</h3>
+                    </div>
+                    <p style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);" class="text-[var(--black-subtext)] m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] md:leading-6 lg:text-[var(--paragraph-text-font-size)] lg:leading-[var(--paragraph-text-line-height)]">ইসলামি শাস্রচর্চায় ১৫ বছরের অভিজ্ঞতা, বিভিন্ন মাদ্রাসায় অধ্যাপনায় নিয়োজিত।</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="w-full max-w-[267px] bg-[var(--white-100)] border border-[#e6e6e6] rounded-xl overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <img class="w-full h-[214px] md:h-[180px] lg:h-[214px] object-cover block" src="/img/teacher-3.png" alt="হাফেজ সুলাইমান হাবিব এর ছবি" />
+                <div class="flex flex-col gap-[34px] md:gap-5 lg:gap-[34px] p-4 md:py-2.5 md:px-3.5 lg:py-4 lg:px-5 flex-1">
+                  <div class="flex flex-col gap-3 w-full">
+                    <div class="flex flex-col gap-1 w-full">
+                      <h2 style="font-family: var(--h-6-font-family); font-weight: var(--h-6-font-weight); font-size: var(--h-6-font-size); letter-spacing: var(--h-6-letter-spacing); line-height: var(--h-6-line-height); font-style: var(--h-6-font-style);" class="text-[var(--black-heading)] m-0 md:text-[calc(var(--h-6-font-size)*0.9)] lg:text-[var(--h-6-font-size)]">হাফেজ সুলাইমান হাবিব</h2>
+                      <h3 style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);" class="teacher-title-gradient m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] lg:text-[var(--paragraph-text-font-size)]">হিফজুল কুরআন প্রশিক্ষক</h3>
+                    </div>
+                    <p style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);" class="text-[var(--black-subtext)] m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] md:leading-6 lg:text-[var(--paragraph-text-font-size)] lg:leading-[var(--paragraph-text-line-height)]">ইসলামি শাস্রচর্চায় ১৫ বছরের অভিজ্ঞতা, বিভিন্ন মাদ্রাসায় অধ্যাপনায় নিয়োজিত।</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <nav class="flex items-center gap-4" aria-label="শিক্ষক তালিকা নেভিগেশন">
+            <button type="button" class="flex w-[51px] h-[51px] md:w-[45px] md:h-[45px] lg:w-[51px] lg:h-[51px] items-center justify-center bg-[var(--white-100)] rounded-[25.5px] border border-[var(--grey-outline)] cursor-pointer transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 focus-visible:outline-2 focus-visible:outline-blue-500 focus-visible:outline-offset-2" aria-label="পূর্ববর্তী">
+              <img class="w-[18px] h-[15px] md:w-4 md:h-[13px] lg:w-[18px] lg:h-[15px]" src="/arrow-left.svg" alt="" />
+            </button>
+            <button type="button" class="nav-button-active relative flex w-[51px] h-[51px] md:w-[45px] md:h-[45px] lg:w-[51px] lg:h-[51px] items-center justify-center bg-[var(--white-100)] rounded-[25.5px] border-none cursor-pointer transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 focus-visible:outline-2 focus-visible:outline-blue-500 focus-visible:outline-offset-2" aria-label="পরবর্তী">
+              <img class="w-[18px] h-[15px] md:w-4 md:h-[13px] lg:w-[18px] lg:h-[15px]" src="/arrow-right-active.svg" alt="" />
             </button>
           </nav>
         </div>

@@ -13,50 +13,100 @@
   <link rel="stylesheet" href="/src/style.css" />
   <style>
     :root {
-      --primary-color: #9b1b40;
-      --button-color: #9b1b40;
-      --secondary-color: #000;
-      --white-100: #ffffff;
-      --black-heading: #1a1a1a;
-      --body-text-font-family: 'Noto Serif Bengali', sans-serif;
+      --white-100: rgba(255, 255, 255, 1);
+      --black-heading: rgba(18, 17, 17, 1);
+      --black-subtext: rgba(83, 89, 102, 1);
+      --grey-outline: rgba(240, 240, 240, 1);
+      --h-1-font-family: "Noto Serif Bengali", Helvetica;
+      --h-1-font-weight: 500;
+      --h-1-font-size: 48px;
+      --h-1-letter-spacing: 0px;
+      --h-1-line-height: normal;
+      --h-1-font-style: normal;
+      --h-2-font-family: "Noto Serif Bengali", Helvetica;
+      --h-2-font-weight: 500;
+      --h-2-font-size: 40px;
+      --h-2-letter-spacing: 0px;
+      --h-2-line-height: 110.00000238418579%;
+      --h-2-font-style: normal;
+      --h-3-font-family: "Noto Serif Bengali", Helvetica;
+      --h-3-font-weight: 400;
+      --h-3-font-size: 33px;
+      --h-3-letter-spacing: 0px;
+      --h-3-line-height: 120.00000476837158%;
+      --h-3-font-style: normal;
+      --h-4-font-family: "Noto Serif Bengali", Helvetica;
+      --h-4-font-weight: 400;
+      --h-4-font-size: 28px;
+      --h-4-letter-spacing: 0px;
+      --h-4-line-height: 150%;
+      --h-4-font-style: normal;
+      --h-5-font-family: "Noto Serif Bengali", Helvetica;
+      --h-5-font-weight: 400;
+      --h-5-font-size: 23px;
+      --h-5-letter-spacing: 0px;
+      --h-5-line-height: 120.00000476837158%;
+      --h-5-font-style: normal;
+      --h-6-font-family: "Noto Serif Bengali", Helvetica;
+      --h-6-font-weight: 400;
+      --h-6-font-size: 19px;
+      --h-6-letter-spacing: 0px;
+      --h-6-line-height: 150%;
+      --h-6-font-style: normal;
+      --body-text-font-family: "Noto Serif Bengali", Helvetica;
       --body-text-font-weight: 400;
       --body-text-font-size: 16px;
-      --body-text-letter-spacing: 0;
-      --body-text-line-height: 1.5;
+      --body-text-letter-spacing: 0px;
+      --body-text-line-height: 150%;
       --body-text-font-style: normal;
-      --paragraph-text-font-family: 'Noto Serif Bengali', sans-serif;
+      --paragraph-text-font-family: "Noto Serif Bengali", Helvetica;
       --paragraph-text-font-weight: 400;
-      --paragraph-text-font-size: 12px;
-      --paragraph-text-letter-spacing: 0;
-      --paragraph-text-line-height: 1.5;
+      --paragraph-text-font-size: 14px;
+      --paragraph-text-letter-spacing: 0px;
+      --paragraph-text-line-height: 150%;
       --paragraph-text-font-style: normal;
-      --black-heading: #1a1a1a;
-      --black-subtext: #666666;
-      --h-2-font-size: 32px;
-      --h-3-font-family: 'Noto Serif Bengali', sans-serif;
-      --h-3-font-weight: 600;
-      --h-3-font-size: 24px;
-      --h-3-line-height: 1.3;
-      --h-3-letter-spacing: 0;
-      --h-3-font-style: normal;
-      --h-4-font-family: 'Noto Serif Bengali', sans-serif;
-      --h-4-font-weight: 500;
-      --h-4-font-size: 20px;
-      --h-4-line-height: 1.3;
-      --h-4-letter-spacing: 0;
-      --h-4-font-style: normal;
-      --h-6-font-family: 'Noto Serif Bengali', sans-serif;
-      --h-6-font-weight: 400;
-      --h-6-font-size: 18px;
-      --h-6-line-height: 1.5;
-      --h-6-letter-spacing: 0;
-      --h-6-font-style: normal;
-      --h6-semibold-font-family: 'Noto Serif Bengali', sans-serif;
+      --paragraph-text-small-font-family: "Noto Serif Bengali", Helvetica;
+      --paragraph-text-small-font-weight: 400;
+      --paragraph-text-small-font-size: 11px;
+      --paragraph-text-small-letter-spacing: 0px;
+      --paragraph-text-small-line-height: 120.00000476837158%;
+      --paragraph-text-small-font-style: normal;
+      --h6-bold-font-family: "Noto Serif Bengali", Helvetica;
+      --h6-bold-font-weight: 700;
+      --h6-bold-font-size: 20px;
+      --h6-bold-letter-spacing: 0px;
+      --h6-bold-line-height: 26px;
+      --h6-bold-font-style: normal;
+      --h6-semibold-font-family: "Noto Serif Bengali", Helvetica;
       --h6-semibold-font-weight: 600;
-      --h6-semibold-font-size: 16px;
-      --h6-semibold-line-height: 1.4;
-      --h6-semibold-letter-spacing: 0;
+      --h6-semibold-font-size: 19px;
+      --h6-semibold-letter-spacing: 0px;
+      --h6-semibold-line-height: 150%;
       --h6-semibold-font-style: normal;
+      --h4-medium-font-family: "Noto Serif Bengali", Helvetica;
+      --h4-medium-font-weight: 500;
+      --h4-medium-font-size: 28px;
+      --h4-medium-letter-spacing: 0px;
+      --h4-medium-line-height: 150%;
+      --h4-medium-font-style: normal;
+      --body-text-semibold-font-family: "Noto Serif Bengali", Helvetica;
+      --body-text-semibold-font-weight: 600;
+      --body-text-semibold-font-size: 16px;
+      --body-text-semibold-letter-spacing: 0px;
+      --body-text-semibold-line-height: 150%;
+      --body-text-semibold-font-style: normal;
+      --h5-medium-font-family: "Noto Serif Bengali", Helvetica;
+      --h5-medium-font-weight: 500;
+      --h5-medium-font-size: 23px;
+      --h5-medium-letter-spacing: 0px;
+      --h5-medium-line-height: 150%;
+      --h5-medium-font-style: normal;
+      --shadow-card: 0px 2px 4px 0px rgba(0, 0, 0, 0.05),
+        0px 7px 7px 0px rgba(0, 0, 0, 0.04), 0px 15px 9px 0px rgba(0, 0, 0, 0.03),
+        0px 27px 11px 0px rgba(0, 0, 0, 0.01), 0px 41px 12px 0px rgba(0, 0, 0, 0);
+      --shadow-reverse: 0px -2px 4px 0px rgba(0, 0, 0, 0.05),
+        0px -7px 7px 0px rgba(0, 0, 0, 0.04), 0px -15px 9px 0px rgba(0, 0, 0, 0.03),
+        0px -27px 11px 0px rgba(0, 0, 0, 0.01), 0px -41px 12px 0px rgba(0, 0, 0, 0);
     }
 
     html,
@@ -372,6 +422,46 @@
       }
     }
 
+    /* Special Offer Custom Styles */
+    .course-card-bg-blue {
+      background: linear-gradient(42deg, rgba(37, 2, 16, 1) 0%, rgba(34, 36, 119, 1) 49%, rgba(63, 118, 235, 1) 100%);
+    }
+
+    .course-card-bg-orange {
+      background: linear-gradient(42deg, rgba(37, 2, 16, 1) 0%, rgba(119, 60, 34, 1) 49%, rgba(235, 169, 63, 1) 100%);
+    }
+
+    .course-card-bg-purple {
+      background: linear-gradient(42deg, rgba(37, 2, 16, 1) 0%, rgba(95, 34, 119, 1) 49%, rgba(235, 63, 198, 1) 100%);
+    }
+
+    .text-gradient {
+      background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .discount-badge {
+      background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
+    }
+
+    .course-button::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 1px;
+      border-radius: 50px;
+      background: linear-gradient(103deg, rgba(41, 160, 182, 1) 0%, rgba(176, 195, 67, 1) 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .course-image {
+      mix-blend-mode: luminosity;
+    }
   </style>
 </head>
 
@@ -1832,18 +1922,24 @@
     -->
 
     <!-- Tailwind-based Feedback Section -->
-    <section class="bg-[#fffcf8] bg-cover bg-center min-h-screen py-16 px-4 md:py-24 md:px-8 sm:py-12 sm:px-4 flex items-center justify-center relative feedback-bg">
+    <section
+      class="bg-[#fffcf8] bg-cover bg-center min-h-screen py-16 px-4 md:py-24 md:px-8 sm:py-12 sm:px-4 flex items-center justify-center relative feedback-bg">
       <div class="container flex flex-col items-center gap-10 max-w-[1107px] w-full">
         <div class="flex flex-col gap-22 w-full md:gap-24 sm:gap-16">
           <div class="flex flex-col items-center gap-10 w-full">
             <header class="flex flex-wrap items-start justify-center gap-3 text-center md:flex-row md:gap-2">
               <h1 class="text-[#121111] lg:text-[48px] font-medium text-center m-0 text-[23px]">আমাদের</h1>
-              <h1 class="lg:text-[48px] font-medium text-center m-0 feedback-gradient-text text-[23px]">শিক্ষার্থীরা</h1>
+              <h1 class="lg:text-[48px] font-medium text-center m-0 feedback-gradient-text text-[23px]">শিক্ষার্থীরা
+              </h1>
               <h1 class="text-[#121111] lg:text-[48px] font-medium text-center m-0 text-[23px]">কি বলছেন</h1>
             </header>
-            <div class="flex gap-10 w-full justify-center flex-wrap md:flex-nowrap md:gap-10 sm:testimonial-carousel" role="list" aria-label="শিক্ষার্থীদের প্রশংসাপত্র">
-              <article class="relative w-full max-w-[342px] min-h-[285px] bg-white rounded-xl overflow-hidden border border-[#f0f0f0] shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex flex-col p-6 gap-4 hover:-translate-y-0.5 transition-transform duration-200 md:flex-1 md:max-w-[342px] sm:testimonial-card-mobile" role="listitem">
-                <img class="absolute bottom-4 right-4 w-[25px] h-[52px]" src="../qutation.svg" alt="উদ্ধৃতি চিহ্ন" aria-hidden="true" />
+            <div class="flex gap-10 w-full justify-center flex-wrap md:flex-nowrap md:gap-10 sm:testimonial-carousel"
+              role="list" aria-label="শিক্ষার্থীদের প্রশংসাপত্র">
+              <article
+                class="relative w-full max-w-[342px] min-h-[285px] bg-white rounded-xl overflow-hidden border border-[#f0f0f0] shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex flex-col p-6 gap-4 hover:-translate-y-0.5 transition-transform duration-200 md:flex-1 md:max-w-[342px] sm:testimonial-card-mobile"
+                role="listitem">
+                <img class="absolute bottom-4 right-4 w-[25px] h-[52px]" src="../qutation.svg" alt="উদ্ধৃতি চিহ্ন"
+                  aria-hidden="true" />
                 <blockquote class="text-[#121111] text-base leading-[150%] font-normal m-0 flex-1">
                   আমি আগে দ্বীনের অনেক বিষয় বুঝতাম না। এই প্ল্যাটফর্মের কোর্সগুলো খুব সহজ ভাষায় এবং
                   বাস্তব উদাহরণ
@@ -1862,8 +1958,11 @@
                   </div>
                 </div>
               </article>
-              <article class="relative w-full max-w-[342px] min-h-[285px] bg-white rounded-xl overflow-hidden border border-[#f0f0f0] shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex flex-col p-6 gap-4 hover:-translate-y-0.5 transition-transform duration-200 md:flex-1 md:max-w-[342px] sm:testimonial-card-mobile" role="listitem">
-                <img class="absolute bottom-4 right-4 w-[25px] h-[52px]" src="../qutation.svg" alt="উদ্ধৃতি চিহ্ন" aria-hidden="true" />
+              <article
+                class="relative w-full max-w-[342px] min-h-[285px] bg-white rounded-xl overflow-hidden border border-[#f0f0f0] shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex flex-col p-6 gap-4 hover:-translate-y-0.5 transition-transform duration-200 md:flex-1 md:max-w-[342px] sm:testimonial-card-mobile"
+                role="listitem">
+                <img class="absolute bottom-4 right-4 w-[25px] h-[52px]" src="../qutation.svg" alt="উদ্ধৃতি চিহ্ন"
+                  aria-hidden="true" />
                 <blockquote class="text-[#121111] text-base leading-[150%] font-normal m-0 flex-1">
                   ঘরে বসেই বিশ্বস্ত ইসলামিক জ্ঞান লাভ করা যায় এই প্ল্যাটফর্ম থেকে। ইউজার ইন্টারফেস
                   খুব সহজ, ভিডিওগুলো
@@ -1871,7 +1970,8 @@
                 </blockquote>
                 <div class="flex items-center gap-4 mt-auto">
                   <div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
-                    <img class="w-full h-full object-cover" src="../img/student-2.png" alt="শামিমা আক্তারের প্রোফাইল ছবি" />
+                    <img class="w-full h-full object-cover" src="../img/student-2.png"
+                      alt="শামিমা আক্তারের প্রোফাইল ছবি" />
                   </div>
                   <div class="flex flex-col gap-1">
                     <cite class="text-[#121111] text-base font-semibold leading-[150%] m-0">শামিমা আক্তার</cite>
@@ -1879,8 +1979,11 @@
                   </div>
                 </div>
               </article>
-              <article class="relative w-full max-w-[342px] min-h-[285px] bg-white rounded-xl overflow-hidden border border-[#f0f0f0] shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex flex-col p-6 gap-4 hover:-translate-y-0.5 transition-transform duration-200 md:flex-1 md:max-w-[342px] sm:testimonial-card-mobile" role="listitem">
-                <img class="absolute bottom-4 right-4 w-[25px] h-[52px]" src="../qutation.svg" alt="উদ্ধৃতি চিহ্ন" aria-hidden="true" />
+              <article
+                class="relative w-full max-w-[342px] min-h-[285px] bg-white rounded-xl overflow-hidden border border-[#f0f0f0] shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] flex flex-col p-6 gap-4 hover:-translate-y-0.5 transition-transform duration-200 md:flex-1 md:max-w-[342px] sm:testimonial-card-mobile"
+                role="listitem">
+                <img class="absolute bottom-4 right-4 w-[25px] h-[52px]" src="../qutation.svg" alt="উদ্ধৃতি চিহ্ন"
+                  aria-hidden="true" />
                 <blockquote class="text-[#121111] text-base leading-[150%] font-normal m-0 flex-1">
                   আমি চাকরির পাশাপাশি অনলাইনে সময় করে এই প্ল্যাটফর্ম থেকে পড়াশোনা করি। শিক্ষকরা খুবই
                   আন্তরিক এবং
@@ -1901,10 +2004,14 @@
           </div>
         </div>
         <nav class="flex items-center gap-4">
-          <button type="button" class="flex w-[51px] h-[51px] items-center justify-center border border-[#f0f0f0] bg-white rounded-full cursor-pointer transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_8px_rgba(0,0,0,0.1)] active:translate-y-0 focus-visible:outline-2 focus-visible:outline-[#4a90e2] focus-visible:outline-offset-2" aria-label="Previous testimonial">
+          <button type="button"
+            class="flex w-[51px] h-[51px] items-center justify-center border border-[#f0f0f0] bg-white rounded-full cursor-pointer transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_8px_rgba(0,0,0,0.1)] active:translate-y-0 focus-visible:outline-2 focus-visible:outline-[#4a90e2] focus-visible:outline-offset-2"
+            aria-label="Previous testimonial">
             <img class="w-6 h-6 flex-shrink-0" src="/arrow-left.svg" alt="" aria-hidden="true" />
           </button>
-          <button type="button" class="flex w-[51px] h-[51px] items-center justify-center border border-[#f0f0f0] bg-white rounded-full cursor-pointer transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_8px_rgba(0,0,0,0.1)] active:translate-y-0 focus-visible:outline-2 focus-visible:outline-[#4a90e2] focus-visible:outline-offset-2" aria-label="Previous testimonial">
+          <button type="button"
+            class="flex w-[51px] h-[51px] items-center justify-center border border-[#f0f0f0] bg-white rounded-full cursor-pointer transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_8px_rgba(0,0,0,0.1)] active:translate-y-0 focus-visible:outline-2 focus-visible:outline-[#4a90e2] focus-visible:outline-offset-2"
+            aria-label="Previous testimonial">
             <img class="w-6 h-6 flex-shrink-0" src="/arrow-right-active.svg" alt="" aria-hidden="true" />
           </button>
         </nav>
@@ -1912,6 +2019,7 @@
     </section>
 
     <!-- Special Offer -->
+    <!-- Original HTML (commented out)
     <section class="container special-offers" role="main">
       <div class="special-offers__container">
         <header class="special-offers__header">
@@ -2087,6 +2195,224 @@
                     aria-label="আম্মাপারার তরজমা কোর্সের বিস্তারিত দেখুন">
                     <span class="course-card__button-text">বিস্তারিত</span>
                     <div class="course-card__arrow">
+                      <img src="/right-arrow.svg" alt="" />
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- Special Offer - Tailwind v4 Version -->
+    <section class="py-[100px] px-8 md:px-6 lg:px-8 bg-white overflow-hidden" role="main">
+      <div class="flex flex-col items-center gap-10 max-w-[1106px] mx-auto">
+        <header class="flex items-center justify-center gap-3 flex-wrap text-(length:--h5-medium-font-size) lg:text-(length:--h-1-font-size)">
+          <h1 class="text-h1 font-h1-weight text-black-heading m-0">স্পেশাল</h1>
+          <h1 class="text-h1 font-h1-weight text-gradient m-0">অফার</h1>
+          <h1 class="text-h1 font-h1-weight text-black-heading m-0">কোর্স সমূহ</h1>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full justify-items-center">
+          <!-- Course Card 1 -->
+          <article
+            class="w-full max-w-[342px] bg-white rounded-xl overflow-hidden border border-gray-200 flex flex-col transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="relative w-full h-[186px] overflow-hidden">
+              <div class="absolute top-0 left-0 w-full h-full course-card-bg-blue"></div>
+              <img class="absolute top-0 right-0 w-[189px] h-[186px] course-image object-cover" src="/img/course-4.png"
+                alt="প্রাথমিক দ্বীন শিক্ষা কোর্সের চিত্র" />
+              <div class="absolute top-[34px] left-[31px] flex flex-col max-w-[172px] z-10">
+                <h2 class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">প্রাথমিক</h2>
+                <h2 class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">দ্বীন শিক্ষা</h2>
+              </div>
+              <div
+                class="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 inline-flex items-center justify-center py-2 px-3 rounded-full border border-white discount-badge z-10">
+                <span class="text-sm text-white font-normal">২৫% ছাড়</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col p-4 gap-4 flex-1">
+              <div class="flex items-center justify-between py-2 px-3 bg-white rounded-[23px] shadow-sm gap-2">
+                <div class="flex items-center gap-1.5 flex-1 justify-center">
+                  <img class="w-3.5 h-3.5" src="/lesson.svg" alt="পাঠ আইকন" />
+                  <span
+                    class="text-paragraph-text font-paragraph-text-weight text-blackheading text-xs whitespace-nowrap">২৫
+                    টি লেসন</span>
+                </div>
+                <div class="flex items-center gap-1.5 flex-1 justify-center">
+                  <img class="w-3.5 h-3.5" src="/student-cap.svg" alt="শিক্ষার্থী আইকন" />
+                  <span
+                    class="text-paragraph-text font-paragraph-text-weight text-blackheading text-xs whitespace-nowrap">৫২
+                    স্টুডেন্ট</span>
+                </div>
+                <div class="flex items-center gap-1.5 flex-1 justify-center">
+                  <img class="w-3.5 h-3.5" src="/live.svg" alt="ক্লাসের ধরন আইকন" />
+                  <span
+                    class="text-paragraph-text font-paragraph-text-weight text-blackheading text-xs whitespace-nowrap">রেকর্ডেড
+                    ক্লাস</span>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-3 flex-1">
+                <div class="flex flex-col gap-2 min-h-[108px]">
+                  <h3 class="text-(length:--body-text-semibold-font-size) lg:text-(length:--h6-semibold-font-size) text-black font-bold m-0">প্রাথমিক আরবীভাষা শিক্ষার
+                    মাধ্যমে শুরু করুন আপনার যাত্রা</h3>
+                  <p class="text-paragraph-text font-paragraph-text-weight text-blacksubtext m-0 flex-1">
+                    এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে পারবেন
+                  </p>
+                </div>
+
+                <div class="flex items-center justify-between gap-4">
+                  <div class="flex items-center gap-5">
+                    <span class="text-(length:--h-4-font-size) text-blackheading whitespace-nowrap m-0">২৫০৳</span>
+                    <span
+                      class="text-(length:--h-6-font-size) text-black-heading line-through whitespace-nowrap m-0">৮৫০৳</span>
+                  </div>
+                  <button
+                    class="course-button relative inline-flex h-10 items-center justify-center gap-2.5 py-2.5 px-4 bg-white rounded-full border-none cursor-pointer transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-2 focus-visible:outline-blue-500 focus-visible:outline-offset-2"
+                    type="button" aria-label="প্রাথমিক দ্বীন শিক্ষা কোর্সের বিস্তারিত দেখুন">
+                    <span
+                      class="text-body-text font-body-text-weight text-blackheading whitespace-nowrap m-0">বিস্তারিত</span>
+                    <div class="w-4 h-4 flex items-center justify-center">
+                      <img src="/right-arrow.svg" alt="" />
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Course Card 2 -->
+          <article
+            class="w-full max-w-[342px] bg-white rounded-xl overflow-hidden border border-gray-200 flex flex-col transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="relative w-full h-[186px] overflow-hidden">
+              <div class="absolute top-0 left-0 w-full h-full course-card-bg-orange"></div>
+              <img class="absolute top-0 right-0 w-[189px] h-[186px] course-image object-cover" src="/img/course-7.png"
+                alt="ইসলামের দৃষ্টিতে গীবত কোর্সের চিত্র" />
+              <div class="absolute top-[34px] left-[31px] flex flex-col max-w-[172px] z-10">
+                <h2 class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">ইসলামের</h2>
+                <h2 class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">দৃষ্টিতে গীবত</h2>
+              </div>
+              <div
+                class="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 inline-flex items-center justify-center py-2 px-3 rounded-full border border-white discount-badge z-10">
+                <span class="text-sm text-white font-normal">২২% ছাড়</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col p-4 gap-4 flex-1">
+              <div class="flex items-center justify-between py-2 px-3 bg-white rounded-[23px] shadow-sm gap-2">
+                <div class="flex items-center gap-1.5 flex-1 justify-center">
+                  <img class="w-3.5 h-3.5" src="/lesson.svg" alt="পাঠ আইকন" />
+                  <span
+                    class="text-paragraph-text font-paragraph-text-weight text-blackheading text-xs whitespace-nowrap">২৫
+                    টি লেসন</span>
+                </div>
+                <div class="flex items-center gap-1.5 flex-1 justify-center">
+                  <img class="w-3.5 h-3.5" src="/student-cap.svg" alt="শিক্ষার্থী আইকন" />
+                  <span
+                    class="text-paragraph-text font-paragraph-text-weight text-blackheading text-xs whitespace-nowrap">৫২
+                    স্টুডেন্ট</span>
+                </div>
+                <div class="flex items-center gap-1.5 flex-1 justify-center">
+                  <img class="w-3.5 h-3.5" src="/live.svg" alt="ক্লাসের ধরন আইকন" />
+                  <span
+                    class="text-paragraph-text font-paragraph-text-weight text-blackheading text-xs whitespace-nowrap">লাইভ
+                    ক্লাস</span>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-3 flex-1">
+                <div class="flex flex-col gap-2 min-h-[108px]">
+                  <h3 class="text-(length:--body-text-semibold-font-size) lg:text-(length:--h6-semibold-font-size) text-black font-bold m-0">ইসলামের দৃষ্টিতে গীবত ও তার
+                    অপকারিতা সম্পর্কে জানুন</h3>
+                  <p class="text-paragraph-text font-paragraph-text-weight text-blacksubtext m-0 flex-1">
+                    এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে পারবেন
+                  </p>
+                </div>
+
+                <div class="flex items-center justify-between gap-4">
+                  <div class="flex items-center gap-5">
+                    <span class="text-(length:--h-4-font-size) text-blackheading whitespace-nowrap m-0">২৫০৳</span>
+                    <span
+                      class="text-(length:--h-6-font-size) text-blackheading line-through whitespace-nowrap m-0">৮৫০৳</span>
+                  </div>
+                  <button
+                    class="course-button relative inline-flex h-10 items-center justify-center gap-2.5 py-2.5 px-4 bg-white rounded-full border-none cursor-pointer transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-2 focus-visible:outline-blue-500 focus-visible:outline-offset-2"
+                    type="button" aria-label="ইসলামের দৃষ্টিতে গীবত কোর্সের বিস্তারিত দেখুন">
+                    <span
+                      class="text-body-text font-body-text-weight text-blackheading whitespace-nowrap m-0">বিস্তারিত</span>
+                    <div class="w-4 h-4 flex items-center justify-center">
+                      <img src="/right-arrow.svg" alt="" />
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Course Card 3 -->
+          <article
+            class="w-full max-w-[342px] bg-white rounded-xl overflow-hidden border border-gray-200 flex flex-col transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="relative w-full h-[186px] overflow-hidden">
+              <div class="absolute top-0 left-0 w-full h-full course-card-bg-purple"></div>
+              <img class="absolute top-0 right-0 w-[189px] h-[186px] course-image object-cover" src="/img/course-8.png"
+                alt="আম্মাপারার তরজমা কোর্সের চিত্র" />
+              <div class="absolute top-[34px] left-[31px] flex flex-col max-w-[172px] z-10">
+                <h2 class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">আম্মাপারার</h2>
+                <h2 class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">তরজমা</h2>
+              </div>
+              <div
+                class="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 inline-flex items-center justify-center py-2 px-3 rounded-full border border-white discount-badge z-10">
+                <span class="text-sm text-white font-normal">৫২% ছাড়</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col p-4 gap-4 flex-1">
+              <div class="flex items-center justify-between py-2 px-3 bg-white rounded-[23px] shadow-sm gap-2">
+                <div class="flex items-center gap-1.5 flex-1 justify-center">
+                  <img class="w-3.5 h-3.5" src="/lesson.svg" alt="পাঠ আইকন" />
+                  <span
+                    class="text-paragraph-text font-paragraph-text-weight text-blackheading text-xs whitespace-nowrap">২৫
+                    টি লেসন</span>
+                </div>
+                <div class="flex items-center gap-1.5 flex-1 justify-center">
+                  <img class="w-3.5 h-3.5" src="/student-cap.svg" alt="শিক্ষার্থী আইকন" />
+                  <span
+                    class="text-paragraph-text font-paragraph-text-weight text-blackheading text-xs whitespace-nowrap">৫২
+                    স্টুডেন্ট</span>
+                </div>
+                <div class="flex items-center gap-1.5 flex-1 justify-center">
+                  <img class="w-3.5 h-3.5" src="/live.svg" alt="ক্লাসের ধরন আইকন" />
+                  <span
+                    class="text-paragraph-text font-paragraph-text-weight text-blackheading text-xs whitespace-nowrap">লাইভ
+                    ক্লাস</span>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-3 flex-1">
+                <div class="flex flex-col gap-2 min-h-[108px]">
+                  <h3 class="text-(length:--body-text-semibold-font-size) lg:text-(length:--h6-semibold-font-size) text-black font-bold m-0">প্রাথমিক আরবীভাষা শিক্ষার
+                    মাধ্যমে শুরু করুন আপনার যাত্রা</h3>
+                  <p class="text-paragraph-text font-paragraph-text-weight text-blacksubtext m-0 flex-1">
+                    এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে পারবেন
+                  </p>
+                </div>
+
+                <div class="flex items-center justify-between gap-4">
+                  <div class="flex items-center gap-5">
+                    <span class="text-(length:--h-4-font-size) text-black-heading whitespace-nowrap m-0">৪৫০৳</span>
+                    <span
+                      class="text-(length:--h-6-font-size) text-blackheading line-through whitespace-nowrap m-0">৮৫০৳</span>
+                  </div>
+                  <button
+                    class="course-button relative inline-flex h-10 items-center justify-center gap-2.5 py-2.5 px-4 bg-white rounded-full border-none cursor-pointer transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-2 focus-visible:outline-blue-500 focus-visible:outline-offset-2"
+                    type="button" aria-label="আম্মাপারার তরজমা কোর্সের বিস্তারিত দেখুন">
+                    <span
+                      class="text-body-text font-body-text-weight text-blackheading whitespace-nowrap m-0">বিস্তারিত</span>
+                    <div class="w-4 h-4 flex items-center justify-center">
                       <img src="/right-arrow.svg" alt="" />
                     </div>
                   </button>

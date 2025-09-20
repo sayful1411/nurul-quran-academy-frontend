@@ -470,6 +470,7 @@
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
     .nav-button-active::before {
       content: "";
       position: absolute;
@@ -487,6 +488,7 @@
     .learning-bg {
       background: linear-gradient(11deg, rgba(37, 2, 16, 1) 0%, rgba(158, 36, 71, 1) 100%);
     }
+
     .learning-bg::before {
       content: "";
       position: absolute;
@@ -500,9 +502,11 @@
       mix-blend-mode: multiply;
       z-index: 1;
     }
+
     .step-badge {
       background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
     }
+
     .step-button::before {
       content: "";
       position: absolute;
@@ -516,27 +520,35 @@
       z-index: 1;
       pointer-events: none;
     }
+
     .step-button:hover::before {
       background: linear-gradient(103deg, rgba(41, 160, 182, 0.8) 0%, rgba(176, 195, 67, 0.8) 100%);
     }
+
     .step-img-primary::before {
       background: linear-gradient(75deg, rgba(37, 2, 16, 1) 0%, rgba(248, 79, 81, 1) 52%, rgba(250, 111, 33, 1) 100%);
     }
+
     .step-img-secondary::before {
       background: linear-gradient(75deg, rgba(37, 2, 16, 1) 0%, rgba(79, 132, 248, 1) 52%, rgba(33, 152, 250, 1) 100%);
     }
+
     .step-img-tertiary::before {
       background: linear-gradient(75deg, rgba(37, 2, 16, 1) 0%, rgba(74, 190, 140, 1) 52%, rgba(67, 207, 125, 1) 100%);
     }
+
     .step-img-quaternary::before {
       background: linear-gradient(75deg, rgba(37, 2, 16, 1) 0%, rgba(183, 114, 46, 1) 52%, rgba(183, 114, 46, 1) 100%);
     }
+
     .step-img-quinary::before {
       background: linear-gradient(75deg, rgba(37, 2, 16, 1) 0%, rgba(46, 178, 183, 1) 52%, rgba(46, 174, 183, 1) 100%);
     }
+
     .step-img-senary::before {
       background: linear-gradient(75deg, rgba(37, 2, 16, 1) 0%, rgba(183, 46, 76, 1) 52%, rgba(183, 87, 46, 1) 100%);
     }
+
     .step-img-overlay::before {
       content: "";
       position: absolute;
@@ -578,6 +590,36 @@
       list-style-type: none;
     }
 
+    /* Tutorial CTA Section Custom Styles */
+
+    /* Footer Section Custom Styles */
+    .footer-social-facebook {
+      background-image: url("../logos_facebook-icon.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .footer-social-whatsapp {
+      background-image: url("../logos_whatsapp-icon.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .footer-social-linkedin {
+      background-image: url("../logos_linkedin-icon.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .footer-social-youtube {
+      background-image: url("../logos_youtube-icon.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   </style>
 </head>
 
@@ -2326,7 +2368,8 @@
     <!-- Special Offer - Tailwind v4 Version -->
     <section class="py-[100px] px-8 md:px-6 lg:px-8 bg-white overflow-hidden" role="main">
       <div class="flex flex-col items-center gap-10 max-w-[1106px] mx-auto">
-        <header class="flex items-center justify-center gap-3 flex-wrap text-(length:--h5-medium-font-size) lg:text-(length:--h-1-font-size)">
+        <header
+          class="flex items-center justify-center gap-3 flex-wrap text-(length:--h5-medium-font-size) lg:text-(length:--h-1-font-size)">
           <h1 class="text-h1 font-h1-weight text-black-heading m-0">স্পেশাল</h1>
           <h1 class="text-h1 font-h1-weight text-gradient m-0">অফার</h1>
           <h1 class="text-h1 font-h1-weight text-black-heading m-0">কোর্স সমূহ</h1>
@@ -2341,8 +2384,12 @@
               <img class="absolute top-0 right-0 w-[189px] h-[186px] course-image object-cover" src="/img/course-4.png"
                 alt="প্রাথমিক দ্বীন শিক্ষা কোর্সের চিত্র" />
               <div class="absolute top-[34px] left-[31px] flex flex-col max-w-[172px] z-10">
-                <h2 class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">প্রাথমিক</h2>
-                <h2 class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">দ্বীন শিক্ষা</h2>
+                <h2
+                  class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">
+                  প্রাথমিক</h2>
+                <h2
+                  class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">
+                  দ্বীন শিক্ষা</h2>
               </div>
               <div
                 class="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 inline-flex items-center justify-center py-2 px-3 rounded-full border border-white discount-badge z-10">
@@ -2374,7 +2421,9 @@
 
               <div class="flex flex-col gap-3 flex-1">
                 <div class="flex flex-col gap-2 min-h-[108px]">
-                  <h3 class="text-(length:--body-text-semibold-font-size) lg:text-(length:--h6-semibold-font-size) text-black font-bold m-0">প্রাথমিক আরবীভাষা শিক্ষার
+                  <h3
+                    class="text-(length:--body-text-semibold-font-size) lg:text-(length:--h6-semibold-font-size) text-black font-bold m-0">
+                    প্রাথমিক আরবীভাষা শিক্ষার
                     মাধ্যমে শুরু করুন আপনার যাত্রা</h3>
                   <p class="text-paragraph-text font-paragraph-text-weight text-blacksubtext m-0 flex-1">
                     এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে পারবেন
@@ -2409,8 +2458,12 @@
               <img class="absolute top-0 right-0 w-[189px] h-[186px] course-image object-cover" src="/img/course-7.png"
                 alt="ইসলামের দৃষ্টিতে গীবত কোর্সের চিত্র" />
               <div class="absolute top-[34px] left-[31px] flex flex-col max-w-[172px] z-10">
-                <h2 class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">ইসলামের</h2>
-                <h2 class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">দৃষ্টিতে গীবত</h2>
+                <h2
+                  class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">
+                  ইসলামের</h2>
+                <h2
+                  class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">
+                  দৃষ্টিতে গীবত</h2>
               </div>
               <div
                 class="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 inline-flex items-center justify-center py-2 px-3 rounded-full border border-white discount-badge z-10">
@@ -2442,7 +2495,9 @@
 
               <div class="flex flex-col gap-3 flex-1">
                 <div class="flex flex-col gap-2 min-h-[108px]">
-                  <h3 class="text-(length:--body-text-semibold-font-size) lg:text-(length:--h6-semibold-font-size) text-black font-bold m-0">ইসলামের দৃষ্টিতে গীবত ও তার
+                  <h3
+                    class="text-(length:--body-text-semibold-font-size) lg:text-(length:--h6-semibold-font-size) text-black font-bold m-0">
+                    ইসলামের দৃষ্টিতে গীবত ও তার
                     অপকারিতা সম্পর্কে জানুন</h3>
                   <p class="text-paragraph-text font-paragraph-text-weight text-blacksubtext m-0 flex-1">
                     এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে পারবেন
@@ -2477,8 +2532,12 @@
               <img class="absolute top-0 right-0 w-[189px] h-[186px] course-image object-cover" src="/img/course-8.png"
                 alt="আম্মাপারার তরজমা কোর্সের চিত্র" />
               <div class="absolute top-[34px] left-[31px] flex flex-col max-w-[172px] z-10">
-                <h2 class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">আম্মাপারার</h2>
-                <h2 class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">তরজমা</h2>
+                <h2
+                  class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">
+                  আম্মাপারার</h2>
+                <h2
+                  class="text-(length:--h5-medium-font-size) lg:text-(length:--h-3-font-size) text-white m-0 leading-none">
+                  তরজমা</h2>
               </div>
               <div
                 class="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 inline-flex items-center justify-center py-2 px-3 rounded-full border border-white discount-badge z-10">
@@ -2510,7 +2569,9 @@
 
               <div class="flex flex-col gap-3 flex-1">
                 <div class="flex flex-col gap-2 min-h-[108px]">
-                  <h3 class="text-(length:--body-text-semibold-font-size) lg:text-(length:--h6-semibold-font-size) text-black font-bold m-0">প্রাথমিক আরবীভাষা শিক্ষার
+                  <h3
+                    class="text-(length:--body-text-semibold-font-size) lg:text-(length:--h6-semibold-font-size) text-black font-bold m-0">
+                    প্রাথমিক আরবীভাষা শিক্ষার
                     মাধ্যমে শুরু করুন আপনার যাত্রা</h3>
                   <p class="text-paragraph-text font-paragraph-text-weight text-blacksubtext m-0 flex-1">
                     এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে পারবেন
@@ -2610,52 +2671,94 @@
     -->
 
     <!-- Teacher - Tailwind v4 Version -->
-    <section class="bg-[#fffcf8] bg-[url('../img/testimonial-bg.png')] bg-cover bg-center py-8 lg:py-[100px] px-8 md:py-20 md:px-6 lg:px-8 min-h-[693px] flex flex-col items-center justify-center" role="main">
+    <section
+      class="bg-[#fffcf8] bg-[url('../img/testimonial-bg.png')] bg-cover bg-center py-8 lg:py-[100px] px-8 md:py-20 md:px-6 lg:px-8 min-h-[693px] flex flex-col items-center justify-center"
+      role="main">
       <div class="flex flex-col items-center gap-10 max-w-[1107px] w-full mx-auto">
         <div class="flex flex-col items-center gap-[90px] md:gap-[60px] w-full">
           <div class="flex flex-col items-center gap-10 w-full">
             <header class="flex items-center justify-center gap-3 flex-wrap">
-              <h1 class="text-[var(--black-heading)] text-center m-0 text-(length:--h5-medium-font-size) lg:text-(length:--h-1-font-size)">আমাদের</h1>
-              <h1 class="text-gradient text-center m-0 text-(length:--h5-medium-font-size) lg:text-(length:--h-1-font-size)">অভিজ্ঞ</h1>
-              <h1 class="text-[var(--black-heading)] text-center m-0 text-(length:--h5-medium-font-size) lg:text-(length:--h-1-font-size)">শিক্ষকবৃন্দ</h1>
+              <h1
+                class="text-[var(--black-heading)] text-center m-0 text-(length:--h5-medium-font-size) lg:text-(length:--h-1-font-size)">
+                আমাদের</h1>
+              <h1
+                class="text-gradient text-center m-0 text-(length:--h5-medium-font-size) lg:text-(length:--h-1-font-size)">
+                অভিজ্ঞ</h1>
+              <h1
+                class="text-[var(--black-heading)] text-center m-0 text-(length:--h5-medium-font-size) lg:text-(length:--h-1-font-size)">
+                শিক্ষকবৃন্দ</h1>
             </header>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[41px] md:gap-[30px] lg:gap-[41px] max-w-[500px] lg:max-w-[900px] w-full justify-items-center mx-auto">
-              <article class="w-full max-w-[267px] bg-[var(--white-100)] border border-[#e6e6e6] rounded-xl overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <img class="w-full h-[214px] md:h-[180px] lg:h-[214px] object-cover block" src="/img/teacher-1.png" alt="মাওলানা আবদুল কাদের এর ছবি" />
-                <div class="flex flex-col gap-[34px] md:gap-5 lg:gap-[34px] p-4 md:py-2.5 md:px-3.5 lg:py-4 lg:px-5 flex-1">
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[41px] md:gap-[30px] lg:gap-[41px] max-w-[500px] lg:max-w-[900px] w-full justify-items-center mx-auto">
+              <article
+                class="w-full max-w-[267px] bg-[var(--white-100)] border border-[#e6e6e6] rounded-xl overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <img class="w-full h-[214px] md:h-[180px] lg:h-[214px] object-cover block" src="/img/teacher-1.png"
+                  alt="মাওলানা আবদুল কাদের এর ছবি" />
+                <div
+                  class="flex flex-col gap-[34px] md:gap-5 lg:gap-[34px] p-4 md:py-2.5 md:px-3.5 lg:py-4 lg:px-5 flex-1">
                   <div class="flex flex-col gap-3 w-full">
                     <div class="flex flex-col gap-1 w-full">
-                      <h2 style="font-family: var(--h-6-font-family); font-weight: var(--h-6-font-weight); font-size: var(--h-6-font-size); letter-spacing: var(--h-6-letter-spacing); line-height: var(--h-6-line-height); font-style: var(--h-6-font-style);" class="text-[var(--black-heading)] m-0 md:text-[calc(var(--h-6-font-size)*0.9)] lg:text-[var(--h-6-font-size)]">মাওলানা আবদুল কাদের</h2>
-                      <h3 style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);" class="teacher-title-gradient m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] lg:text-[var(--paragraph-text-font-size)]">কুরআন শরীফ শিক্ষক</h3>
+                      <h2
+                        style="font-family: var(--h-6-font-family); font-weight: var(--h-6-font-weight); font-size: var(--h-6-font-size); letter-spacing: var(--h-6-letter-spacing); line-height: var(--h-6-line-height); font-style: var(--h-6-font-style);"
+                        class="text-[var(--black-heading)] m-0 md:text-[calc(var(--h-6-font-size)*0.9)] lg:text-[var(--h-6-font-size)]">
+                        মাওলানা আবদুল কাদের</h2>
+                      <h3
+                        style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);"
+                        class="teacher-title-gradient m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] lg:text-[var(--paragraph-text-font-size)]">
+                        কুরআন শরীফ শিক্ষক</h3>
                     </div>
-                    <p style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);" class="text-[var(--black-subtext)] m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] md:leading-6 lg:text-[var(--paragraph-text-font-size)] lg:leading-[var(--paragraph-text-line-height)]">২০ বছরের অভিজ্ঞতাসম্পন্ন হাফেজ ও তাজবিদ বিশেষজ্ঞ।</p>
+                    <p style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);"
+                      class="text-[var(--black-subtext)] m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] md:leading-6 lg:text-[var(--paragraph-text-font-size)] lg:leading-[var(--paragraph-text-line-height)]">
+                      ২০ বছরের অভিজ্ঞতাসম্পন্ন হাফেজ ও তাজবিদ বিশেষজ্ঞ।</p>
                   </div>
                 </div>
               </article>
 
-              <article class="w-full max-w-[267px] bg-[var(--white-100)] border border-[#e6e6e6] rounded-xl overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <img class="w-full h-[214px] md:h-[180px] lg:h-[214px] object-cover block" src="/img/teacher-2.png" alt="মাওলানা ফারুক হাসান এর ছবি" />
-                <div class="flex flex-col gap-[34px] md:gap-5 lg:gap-[34px] p-4 md:py-2.5 md:px-3.5 lg:py-4 lg:px-5 flex-1">
+              <article
+                class="w-full max-w-[267px] bg-[var(--white-100)] border border-[#e6e6e6] rounded-xl overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <img class="w-full h-[214px] md:h-[180px] lg:h-[214px] object-cover block" src="/img/teacher-2.png"
+                  alt="মাওলানা ফারুক হাসান এর ছবি" />
+                <div
+                  class="flex flex-col gap-[34px] md:gap-5 lg:gap-[34px] p-4 md:py-2.5 md:px-3.5 lg:py-4 lg:px-5 flex-1">
                   <div class="flex flex-col gap-3 w-full">
                     <div class="flex flex-col gap-1 w-full">
-                      <h2 style="font-family: var(--h-6-font-family); font-weight: var(--h-6-font-weight); font-size: var(--h-6-font-size); letter-spacing: var(--h-6-letter-spacing); line-height: var(--h-6-line-height); font-style: var(--h-6-font-style);" class="text-[var(--black-heading)] m-0 md:text-[calc(var(--h-6-font-size)*0.9)] lg:text-[var(--h-6-font-size)]">মাওলানা ফারুক হাসান</h2>
-                      <h3 style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);" class="teacher-title-gradient m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] lg:text-[var(--paragraph-text-font-size)]">হাদীস ও ফিকহ শিক্ষক</h3>
+                      <h2
+                        style="font-family: var(--h-6-font-family); font-weight: var(--h-6-font-weight); font-size: var(--h-6-font-size); letter-spacing: var(--h-6-letter-spacing); line-height: var(--h-6-line-height); font-style: var(--h-6-font-style);"
+                        class="text-[var(--black-heading)] m-0 md:text-[calc(var(--h-6-font-size)*0.9)] lg:text-[var(--h-6-font-size)]">
+                        মাওলানা ফারুক হাসান</h2>
+                      <h3
+                        style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);"
+                        class="teacher-title-gradient m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] lg:text-[var(--paragraph-text-font-size)]">
+                        হাদীস ও ফিকহ শিক্ষক</h3>
                     </div>
-                    <p style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);" class="text-[var(--black-subtext)] m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] md:leading-6 lg:text-[var(--paragraph-text-font-size)] lg:leading-[var(--paragraph-text-line-height)]">ইসলামি শাস্রচর্চায় ১৫ বছরের অভিজ্ঞতা, বিভিন্ন মাদ্রাসায় অধ্যাপনায় নিয়োজিত।</p>
+                    <p style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);"
+                      class="text-[var(--black-subtext)] m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] md:leading-6 lg:text-[var(--paragraph-text-font-size)] lg:leading-[var(--paragraph-text-line-height)]">
+                      ইসলামি শাস্রচর্চায় ১৫ বছরের অভিজ্ঞতা, বিভিন্ন মাদ্রাসায় অধ্যাপনায় নিয়োজিত।</p>
                   </div>
                 </div>
               </article>
 
-              <article class="w-full max-w-[267px] bg-[var(--white-100)] border border-[#e6e6e6] rounded-xl overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <img class="w-full h-[214px] md:h-[180px] lg:h-[214px] object-cover block" src="/img/teacher-3.png" alt="হাফেজ সুলাইমান হাবিব এর ছবি" />
-                <div class="flex flex-col gap-[34px] md:gap-5 lg:gap-[34px] p-4 md:py-2.5 md:px-3.5 lg:py-4 lg:px-5 flex-1">
+              <article
+                class="w-full max-w-[267px] bg-[var(--white-100)] border border-[#e6e6e6] rounded-xl overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <img class="w-full h-[214px] md:h-[180px] lg:h-[214px] object-cover block" src="/img/teacher-3.png"
+                  alt="হাফেজ সুলাইমান হাবিব এর ছবি" />
+                <div
+                  class="flex flex-col gap-[34px] md:gap-5 lg:gap-[34px] p-4 md:py-2.5 md:px-3.5 lg:py-4 lg:px-5 flex-1">
                   <div class="flex flex-col gap-3 w-full">
                     <div class="flex flex-col gap-1 w-full">
-                      <h2 style="font-family: var(--h-6-font-family); font-weight: var(--h-6-font-weight); font-size: var(--h-6-font-size); letter-spacing: var(--h-6-letter-spacing); line-height: var(--h-6-line-height); font-style: var(--h-6-font-style);" class="text-[var(--black-heading)] m-0 md:text-[calc(var(--h-6-font-size)*0.9)] lg:text-[var(--h-6-font-size)]">হাফেজ সুলাইমান হাবিব</h2>
-                      <h3 style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);" class="teacher-title-gradient m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] lg:text-[var(--paragraph-text-font-size)]">হিফজুল কুরআন প্রশিক্ষক</h3>
+                      <h2
+                        style="font-family: var(--h-6-font-family); font-weight: var(--h-6-font-weight); font-size: var(--h-6-font-size); letter-spacing: var(--h-6-letter-spacing); line-height: var(--h-6-line-height); font-style: var(--h-6-font-style);"
+                        class="text-[var(--black-heading)] m-0 md:text-[calc(var(--h-6-font-size)*0.9)] lg:text-[var(--h-6-font-size)]">
+                        হাফেজ সুলাইমান হাবিব</h2>
+                      <h3
+                        style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);"
+                        class="teacher-title-gradient m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] lg:text-[var(--paragraph-text-font-size)]">
+                        হিফজুল কুরআন প্রশিক্ষক</h3>
                     </div>
-                    <p style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);" class="text-[var(--black-subtext)] m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] md:leading-6 lg:text-[var(--paragraph-text-font-size)] lg:leading-[var(--paragraph-text-line-height)]">ইসলামি শাস্রচর্চায় ১৫ বছরের অভিজ্ঞতা, বিভিন্ন মাদ্রাসায় অধ্যাপনায় নিয়োজিত।</p>
+                    <p style="font-family: var(--paragraph-text-font-family); font-weight: var(--paragraph-text-font-weight); font-size: var(--paragraph-text-font-size); letter-spacing: var(--paragraph-text-letter-spacing); line-height: var(--paragraph-text-line-height); font-style: var(--paragraph-text-font-style);"
+                      class="text-[var(--black-subtext)] m-0 md:text-[calc(var(--paragraph-text-font-size)*0.9)] md:leading-6 lg:text-[var(--paragraph-text-font-size)] lg:leading-[var(--paragraph-text-line-height)]">
+                      ইসলামি শাস্রচর্চায় ১৫ বছরের অভিজ্ঞতা, বিভিন্ন মাদ্রাসায় অধ্যাপনায় নিয়োজিত।</p>
                   </div>
                 </div>
               </article>
@@ -2663,11 +2766,16 @@
           </div>
 
           <nav class="flex items-center gap-4" aria-label="শিক্ষক তালিকা নেভিগেশন">
-            <button type="button" class="flex w-[51px] h-[51px] md:w-[45px] md:h-[45px] lg:w-[51px] lg:h-[51px] items-center justify-center bg-[var(--white-100)] rounded-[25.5px] border border-[var(--grey-outline)] cursor-pointer transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 focus-visible:outline-2 focus-visible:outline-blue-500 focus-visible:outline-offset-2" aria-label="পূর্ববর্তী">
+            <button type="button"
+              class="flex w-[51px] h-[51px] md:w-[45px] md:h-[45px] lg:w-[51px] lg:h-[51px] items-center justify-center bg-[var(--white-100)] rounded-[25.5px] border border-[var(--grey-outline)] cursor-pointer transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 focus-visible:outline-2 focus-visible:outline-blue-500 focus-visible:outline-offset-2"
+              aria-label="পূর্ববর্তী">
               <img class="w-[18px] h-[15px] md:w-4 md:h-[13px] lg:w-[18px] lg:h-[15px]" src="/arrow-left.svg" alt="" />
             </button>
-            <button type="button" class="nav-button-active relative flex w-[51px] h-[51px] md:w-[45px] md:h-[45px] lg:w-[51px] lg:h-[51px] items-center justify-center bg-[var(--white-100)] rounded-[25.5px] border-none cursor-pointer transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 focus-visible:outline-2 focus-visible:outline-blue-500 focus-visible:outline-offset-2" aria-label="পরবর্তী">
-              <img class="w-[18px] h-[15px] md:w-4 md:h-[13px] lg:w-[18px] lg:h-[15px]" src="/arrow-right-active.svg" alt="" />
+            <button type="button"
+              class="nav-button-active relative flex w-[51px] h-[51px] md:w-[45px] md:h-[45px] lg:w-[51px] lg:h-[51px] items-center justify-center bg-[var(--white-100)] rounded-[25.5px] border-none cursor-pointer transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 focus-visible:outline-2 focus-visible:outline-blue-500 focus-visible:outline-offset-2"
+              aria-label="পরবর্তী">
+              <img class="w-[18px] h-[15px] md:w-4 md:h-[13px] lg:w-[18px] lg:h-[15px]" src="/arrow-right-active.svg"
+                alt="" />
             </button>
           </nav>
         </div>
@@ -2851,11 +2959,13 @@
     <section class="learning-bg relative py-8 lg:py-[100px] md:py-[50px] overflow-hidden">
       <div class="max-w-[1106px] mx-auto relative z-10 flex flex-col gap-10 items-center px-4 md:px-5 lg:px-0">
         <header class="text-center">
-          <h1 class="text-white m-0 text-(length:--h-6-font-size) lg:text-(length:--h-1-font-size)">পর্যাক্রমে শিখুন আর এগিয়ে চলুন</h1>
+          <h1 class="text-white m-0 text-(length:--h-6-font-size) lg:text-(length:--h-1-font-size)">পর্যাক্রমে শিখুন আর
+            এগিয়ে চলুন</h1>
         </header>
         <div class="flex flex-col gap-10 w-full">
           <!-- Step 1 -->
-          <article class="rounded-2xl overflow-hidden bg-[url('../img/course-bg-2.png')] bg-[length:100%_100%] min-h-[344px] flex items-center justify-between gap-12 bg-[#fff9e6] flex-col lg:flex-row md:text-center p-4 lg:p-12">
+          <article
+            class="rounded-2xl overflow-hidden bg-[url('../img/course-bg-2.png')] bg-[length:100%_100%] min-h-[344px] flex items-center justify-between gap-12 bg-[#fff9e6] flex-col lg:flex-row md:text-center p-4 lg:p-12">
             <div class="flex-1 flex flex-col gap-8 max-w-[440px] lg:max-w-[440px] md:max-w-none">
               <header class="flex items-center lg:justify-start md:justify-center">
                 <div class="step-badge inline-flex items-center gap-2 py-1 px-2 rounded-[28px]">
@@ -2865,22 +2975,29 @@
               </header>
               <div class="flex flex-col gap-2.5 text-left md:text-center lg:text-left">
                 <h2 class="text-[var(--black-heading)] m-0">কুরআন শিক্ষার প্রাথমিক ধাপ</h2>
-                <p font-size: var(--body-text-font-size); line-height: var(--body-text-line-height); letter-spacing: var(--body-text-letter-spacing); font-style: var(--body-text-font-style);" class="text-[var(--black-subtext)] m-0">
+                <p font-size: var(--body-text-font-size); line-height: var(--body-text-line-height); letter-spacing:
+                  var(--body-text-letter-spacing); font-style: var(--body-text-font-style);"
+                  class="text-[var(--black-subtext)] m-0">
                   এই কোর্সের মাধ্যমে আপনি একদম সহজে হাতে কলমে অভিজ্ঞ শিক্ষকের মাধ্যেমে আরবি ভাষা জানতে পারবেন
                 </p>
-                <button class="step-button inline-flex w-[106px] h-10 items-center justify-center gap-2.5 py-2.5 px-4 bg-[var(--white-100)] rounded-full border-none cursor-pointer relative transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 focus:outline-2 focus:outline-blue-500 focus:outline-offset-2" type="button" aria-label="কুরআন শিক্ষার প্রাথমিক ধাপ সম্পর্কে বিস্তারিত জানুন">
+                <button
+                  class="step-button inline-flex w-[106px] h-10 items-center justify-center gap-2.5 py-2.5 px-4 bg-[var(--white-100)] rounded-full border-none cursor-pointer relative transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 focus:outline-2 focus:outline-blue-500 focus:outline-offset-2"
+                  type="button" aria-label="কুরআন শিক্ষার প্রাথমিক ধাপ সম্পর্কে বিস্তারিত জানুন">
                   <span class="text-[var(--black-heading)] whitespace-nowrap relative z-10">বিস্তারিত</span>
                   <img src="/right-arrow.svg" alt="" aria-hidden="true" class="w-1.5 h-[11px] relative z-10">
                 </button>
               </div>
             </div>
-            <figure class="w-full h-[200px] sm:h-[248px] lg:w-[379px] lg:h-[248px] rounded-xl overflow-hidden relative flex-shrink-0 m-0 step-img-overlay step-img-primary max-w-[400px]">
-              <img src="/img/course-thumb-1.png" alt="কুরআন শিক্ষার প্রাথমিক ধাপ" class="w-full h-full object-cover relative z-10">
+            <figure
+              class="w-full h-[200px] sm:h-[248px] lg:w-[379px] lg:h-[248px] rounded-xl overflow-hidden relative flex-shrink-0 m-0 step-img-overlay step-img-primary max-w-[400px]">
+              <img src="/img/course-thumb-1.png" alt="কুরআন শিক্ষার প্রাথমিক ধাপ"
+                class="w-full h-full object-cover relative z-10">
             </figure>
           </article>
 
           <!-- Step 2 -->
-          <article class="rounded-2xl overflow-hidden bg-[url('../img/course-bg-2.png')] bg-[length:100%_100%] min-h-[344px] flex items-center justify-between gap-12 bg-[#e6f7ff] lg:flex-row flex-col md:text-center p-4 lg:p-12">
+          <article
+            class="rounded-2xl overflow-hidden bg-[url('../img/course-bg-2.png')] bg-[length:100%_100%] min-h-[344px] flex items-center justify-between gap-12 bg-[#e6f7ff] lg:flex-row flex-col md:text-center p-4 lg:p-12">
             <div class="flex-1 flex flex-col gap-8 max-w-[440px] lg:max-w-[440px] md:max-w-none">
               <header class="flex items-center lg:justify-start md:justify-center">
                 <div class="step-badge inline-flex items-center gap-2 py-1 px-2 rounded-[28px]">
@@ -2890,22 +3007,30 @@
               </header>
               <div class="flex flex-col gap-2.5 text-left md:text-center lg:text-left">
                 <h2 class="text-[var(--black-heading)] m-0">কুরআনের বিশুদ্ধকরণ (তাজভীদ) কোর্স</h2>
-                <p font-size: var(--body-text-font-size); line-height: var(--body-text-line-height); letter-spacing: var(--body-text-letter-spacing); font-style: var(--body-text-font-style);" class="text-[var(--black-subtext)] m-0">
-                  এরপর কুরআনের সঠিক উচ্চারণে সমস্যা থেকে গেলে তা শুদ্ধ করা হয় হয়। যাতে শব্দের মিসম্যাচ ও ভুল উচ্চারণ দূর হয় এবং কুরআন যথাযথভাবে তিলাওয়াত করা সম্ভব হয়।
+                <p font-size: var(--body-text-font-size); line-height: var(--body-text-line-height); letter-spacing:
+                  var(--body-text-letter-spacing); font-style: var(--body-text-font-style);"
+                  class="text-[var(--black-subtext)] m-0">
+                  এরপর কুরআনের সঠিক উচ্চারণে সমস্যা থেকে গেলে তা শুদ্ধ করা হয় হয়। যাতে শব্দের মিসম্যাচ ও ভুল উচ্চারণ
+                  দূর হয় এবং কুরআন যথাযথভাবে তিলাওয়াত করা সম্ভব হয়।
                 </p>
-                <button class="step-button inline-flex w-[106px] h-10 items-center justify-center gap-2.5 py-2.5 px-4 bg-[var(--white-100)] rounded-full border-none cursor-pointer relative transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 focus:outline-2 focus:outline-blue-500 focus:outline-offset-2" type="button" aria-label="কুরআনের বিশুদ্ধকরণ কোর্স সম্পর্কে বিস্তারিত জানুন">
+                <button
+                  class="step-button inline-flex w-[106px] h-10 items-center justify-center gap-2.5 py-2.5 px-4 bg-[var(--white-100)] rounded-full border-none cursor-pointer relative transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 focus:outline-2 focus:outline-blue-500 focus:outline-offset-2"
+                  type="button" aria-label="কুরআনের বিশুদ্ধকরণ কোর্স সম্পর্কে বিস্তারিত জানুন">
                   <span class="text-[var(--black-heading)] whitespace-nowrap relative z-10">বিস্তারিত</span>
                   <img src="/right-arrow.svg" alt="" aria-hidden="true" class="w-1.5 h-[11px] relative z-10">
                 </button>
               </div>
             </div>
-            <figure class="w-full h-[200px] sm:h-[248px] lg:w-[379px] lg:h-[248px] rounded-xl overflow-hidden relative flex-shrink-0 m-0 step-img-overlay step-img-secondary max-w-[400px]">
-              <img src="/img/course-thumb-2.png" alt="কুরআনের বিশুদ্ধকরণ কোর্স" class="w-full h-full object-cover relative z-10">
+            <figure
+              class="w-full h-[200px] sm:h-[248px] lg:w-[379px] lg:h-[248px] rounded-xl overflow-hidden relative flex-shrink-0 m-0 step-img-overlay step-img-secondary max-w-[400px]">
+              <img src="/img/course-thumb-2.png" alt="কুরআনের বিশুদ্ধকরণ কোর্স"
+                class="w-full h-full object-cover relative z-10">
             </figure>
           </article>
 
           <!-- Step 3 -->
-          <article class="rounded-2xl overflow-hidden bg-[url('../img/course-bg-2.png')] bg-[length:100%_100%] min-h-[344px] flex items-center justify-between gap-12 bg-[#e6ffef] lg:flex-row flex-col md:text-center p-4 lg:p-12">
+          <article
+            class="rounded-2xl overflow-hidden bg-[url('../img/course-bg-2.png')] bg-[length:100%_100%] min-h-[344px] flex items-center justify-between gap-12 bg-[#e6ffef] lg:flex-row flex-col md:text-center p-4 lg:p-12">
             <div class="flex-1 flex flex-col gap-8 max-w-[440px] lg:max-w-[440px] md:max-w-none">
               <header class="flex items-center lg:justify-start md:justify-center">
                 <div class="step-badge inline-flex items-center gap-2 py-1 px-2 rounded-[28px]">
@@ -2915,22 +3040,30 @@
               </header>
               <div class="flex flex-col gap-2.5 text-left md:text-center lg:text-left">
                 <h2 class="text-[var(--black-heading)] m-0">কুরআন হিফজ (কুরআন মুখস্থকরণ)</h2>
-                <p font-size: var(--body-text-font-size); line-height: var(--body-text-line-height); letter-spacing: var(--body-text-letter-spacing); font-style: var(--body-text-font-style);" class="text-[var(--black-subtext)] m-0">
-                  কুরআনের তিলাওয়াত ঠিক করার পর যারা ইচ্ছুক তারা পুরো কুরআন কিংবা কুরআনের পছন্দনীয় কিছু অংশ বা আমলি সূরা ইত্যাদি মুখস্থ করতে পারে।
+                <p font-size: var(--body-text-font-size); line-height: var(--body-text-line-height); letter-spacing:
+                  var(--body-text-letter-spacing); font-style: var(--body-text-font-style);"
+                  class="text-[var(--black-subtext)] m-0">
+                  কুরআনের তিলাওয়াত ঠিক করার পর যারা ইচ্ছুক তারা পুরো কুরআন কিংবা কুরআনের পছন্দনীয় কিছু অংশ বা আমলি
+                  সূরা ইত্যাদি মুখস্থ করতে পারে।
                 </p>
-                <button class="step-button inline-flex w-[106px] h-10 items-center justify-center gap-2.5 py-2.5 px-4 bg-[var(--white-100)] rounded-full border-none cursor-pointer relative transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 focus:outline-2 focus:outline-blue-500 focus:outline-offset-2" type="button" aria-label="কুরআন হিফজ কোর্স সম্পর্কে বিস্তারিত জানুন">
+                <button
+                  class="step-button inline-flex w-[106px] h-10 items-center justify-center gap-2.5 py-2.5 px-4 bg-[var(--white-100)] rounded-full border-none cursor-pointer relative transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 focus:outline-2 focus:outline-blue-500 focus:outline-offset-2"
+                  type="button" aria-label="কুরআন হিফজ কোর্স সম্পর্কে বিস্তারিত জানুন">
                   <span class="text-[var(--black-heading)] whitespace-nowrap relative z-10">বিস্তারিত</span>
                   <img src="/right-arrow.svg" alt="" aria-hidden="true" class="w-1.5 h-[11px] relative z-10">
                 </button>
               </div>
             </div>
-            <figure class="w-full h-[200px] sm:h-[248px] lg:w-[379px] lg:h-[248px] rounded-xl overflow-hidden relative flex-shrink-0 m-0 step-img-overlay step-img-tertiary max-w-[400px]">
-              <img src="/img/course-thumb-3.png" alt="কুরআন হিফজ কোর্স" class="w-full h-full object-cover relative z-10">
+            <figure
+              class="w-full h-[200px] sm:h-[248px] lg:w-[379px] lg:h-[248px] rounded-xl overflow-hidden relative flex-shrink-0 m-0 step-img-overlay step-img-tertiary max-w-[400px]">
+              <img src="/img/course-thumb-3.png" alt="কুরআন হিফজ কোর্স"
+                class="w-full h-full object-cover relative z-10">
             </figure>
           </article>
 
           <!-- Step 4 -->
-          <article class="rounded-2xl overflow-hidden bg-[url('../img/course-bg-2.png')] bg-[length:100%_100%] min-h-[344px] flex items-center justify-between gap-12 bg-[#fff2e6] lg:flex-row flex-col md:text-center p-4 lg:p-12">
+          <article
+            class="rounded-2xl overflow-hidden bg-[url('../img/course-bg-2.png')] bg-[length:100%_100%] min-h-[344px] flex items-center justify-between gap-12 bg-[#fff2e6] lg:flex-row flex-col md:text-center p-4 lg:p-12">
             <div class="flex-1 flex flex-col gap-8 max-w-[440px] lg:max-w-[440px] md:max-w-none">
               <header class="flex items-center lg:justify-start md:justify-center">
                 <div class="step-badge inline-flex items-center gap-2 py-1 px-2 rounded-[28px]">
@@ -2940,22 +3073,30 @@
               </header>
               <div class="flex flex-col gap-2.5 text-left md:text-center lg:text-left">
                 <h2 class="text-[var(--black-heading)] m-0">আরবীভাষা শিক্ষা</h2>
-                <p font-size: var(--body-text-font-size); line-height: var(--body-text-line-height); letter-spacing: var(--body-text-letter-spacing); font-style: var(--body-text-font-style);" class="text-[var(--black-subtext)] m-0">
-                  অথবা কুরআনের অর্থ বুঝতে আরবীভাষা শিখতে পারে। আমরা আরবীভাষার দক্ষতা বৃদ্ধির জন্য বিভিন্ন পর্যায়ের কোর্স পরিচালনা করি।
+                <p font-size: var(--body-text-font-size); line-height: var(--body-text-line-height); letter-spacing:
+                  var(--body-text-letter-spacing); font-style: var(--body-text-font-style);"
+                  class="text-[var(--black-subtext)] m-0">
+                  অথবা কুরআনের অর্থ বুঝতে আরবীভাষা শিখতে পারে। আমরা আরবীভাষার দক্ষতা বৃদ্ধির জন্য বিভিন্ন পর্যায়ের
+                  কোর্স পরিচালনা করি।
                 </p>
-                <button class="step-button inline-flex w-[106px] h-10 items-center justify-center gap-2.5 py-2.5 px-4 bg-[var(--white-100)] rounded-full border-none cursor-pointer relative transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 focus:outline-2 focus:outline-blue-500 focus:outline-offset-2" type="button" aria-label="আরবীভাষা শিক্ষা কোর্স সম্পর্কে বিস্তারিত জানুন">
+                <button
+                  class="step-button inline-flex w-[106px] h-10 items-center justify-center gap-2.5 py-2.5 px-4 bg-[var(--white-100)] rounded-full border-none cursor-pointer relative transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 focus:outline-2 focus:outline-blue-500 focus:outline-offset-2"
+                  type="button" aria-label="আরবীভাষা শিক্ষা কোর্স সম্পর্কে বিস্তারিত জানুন">
                   <span class="text-[var(--black-heading)] whitespace-nowrap relative z-10">বিস্তারিত</span>
                   <img src="/right-arrow.svg" alt="" aria-hidden="true" class="w-1.5 h-[11px] relative z-10">
                 </button>
               </div>
             </div>
-            <figure class="w-full h-[200px] sm:h-[248px] lg:w-[379px] lg:h-[248px] rounded-xl overflow-hidden relative flex-shrink-0 m-0 step-img-overlay step-img-quaternary max-w-[400px]">
-              <img src="/img/course-thumb-4.png" alt="আরবীভাষা শিক্ষা কোর্স" class="w-full h-full object-cover relative z-10">
+            <figure
+              class="w-full h-[200px] sm:h-[248px] lg:w-[379px] lg:h-[248px] rounded-xl overflow-hidden relative flex-shrink-0 m-0 step-img-overlay step-img-quaternary max-w-[400px]">
+              <img src="/img/course-thumb-4.png" alt="আরবীভাষা শিক্ষা কোর্স"
+                class="w-full h-full object-cover relative z-10">
             </figure>
           </article>
 
           <!-- Step 5 -->
-          <article class="rounded-2xl overflow-hidden bg-[url('../img/course-bg-2.png')] bg-[length:100%_100%] min-h-[344px] flex items-center justify-between gap-12 bg-[#e6f8ff] lg:flex-row flex-col md:text-center p-4 lg:p-12">
+          <article
+            class="rounded-2xl overflow-hidden bg-[url('../img/course-bg-2.png')] bg-[length:100%_100%] min-h-[344px] flex items-center justify-between gap-12 bg-[#e6f8ff] lg:flex-row flex-col md:text-center p-4 lg:p-12">
             <div class="flex-1 flex flex-col gap-8 max-w-[440px] lg:max-w-[440px] md:max-w-none">
               <header class="flex items-center lg:justify-start md:justify-center">
                 <div class="step-badge inline-flex items-center gap-2 py-1 px-2 rounded-[28px]">
@@ -2965,22 +3106,30 @@
               </header>
               <div class="flex flex-col gap-2.5 text-left md:text-center lg:text-left">
                 <h2 class="text-[var(--black-heading)] m-0">আকীদা শিক্ষা</h2>
-                <p font-size: var(--body-text-font-size); line-height: var(--body-text-line-height); letter-spacing: var(--body-text-letter-spacing); font-style: var(--body-text-font-style);" class="text-[var(--black-subtext)] m-0">
-                  আরবীভাষায় দক্ষতা অর্জনের পাশাপাশি শিক্ষার্থীরা আকীদা (ইসলামের বিশ্বাসের মূলনীতি) সম্পর্কে জানতে পারবে। যা তাদের ৈমানকে মজবুত ও সুদৃঢ় করবে এবং ৈমানের হেফাজতে ভূমিকা রাখবে
+                <p font-size: var(--body-text-font-size); line-height: var(--body-text-line-height); letter-spacing:
+                  var(--body-text-letter-spacing); font-style: var(--body-text-font-style);"
+                  class="text-[var(--black-subtext)] m-0">
+                  আরবীভাষায় দক্ষতা অর্জনের পাশাপাশি শিক্ষার্থীরা আকীদা (ইসলামের বিশ্বাসের মূলনীতি) সম্পর্কে জানতে
+                  পারবে। যা তাদের ৈমানকে মজবুত ও সুদৃঢ় করবে এবং ৈমানের হেফাজতে ভূমিকা রাখবে
                 </p>
-                <button class="step-button inline-flex w-[106px] h-10 items-center justify-center gap-2.5 py-2.5 px-4 bg-[var(--white-100)] rounded-full border-none cursor-pointer relative transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 focus:outline-2 focus:outline-blue-500 focus:outline-offset-2" type="button" aria-label="আকীদা শিক্ষা কোর্স সম্পর্কে বিস্তারিত জানুন">
+                <button
+                  class="step-button inline-flex w-[106px] h-10 items-center justify-center gap-2.5 py-2.5 px-4 bg-[var(--white-100)] rounded-full border-none cursor-pointer relative transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 focus:outline-2 focus:outline-blue-500 focus:outline-offset-2"
+                  type="button" aria-label="আকীদা শিক্ষা কোর্স সম্পর্কে বিস্তারিত জানুন">
                   <span class="text-[var(--black-heading)] whitespace-nowrap relative z-10">বিস্তারিত</span>
                   <img src="/right-arrow.svg" alt="" aria-hidden="true" class="w-1.5 h-[11px] relative z-10">
                 </button>
               </div>
             </div>
-            <figure class="w-full h-[200px] sm:h-[248px] lg:w-[379px] lg:h-[248px] rounded-xl overflow-hidden relative flex-shrink-0 m-0 step-img-overlay step-img-quinary max-w-[400px]">
-              <img src="/img/course-thumb-5.png" alt="আকীদা শিক্ষা কোর্স" class="w-full h-full object-cover relative z-10">
+            <figure
+              class="w-full h-[200px] sm:h-[248px] lg:w-[379px] lg:h-[248px] rounded-xl overflow-hidden relative flex-shrink-0 m-0 step-img-overlay step-img-quinary max-w-[400px]">
+              <img src="/img/course-thumb-5.png" alt="আকীদা শিক্ষা কোর্স"
+                class="w-full h-full object-cover relative z-10">
             </figure>
           </article>
 
           <!-- Step 6 -->
-          <article class="rounded-2xl overflow-hidden bg-[url('../img/course-bg-2.png')] bg-[length:100%_100%] min-h-[344px] flex items-center justify-between gap-12 bg-[#ffebe6] lg:flex-row flex-col md:text-center p-4 lg:p-12">
+          <article
+            class="rounded-2xl overflow-hidden bg-[url('../img/course-bg-2.png')] bg-[length:100%_100%] min-h-[344px] flex items-center justify-between gap-12 bg-[#ffebe6] lg:flex-row flex-col md:text-center p-4 lg:p-12">
             <div class="flex-1 flex flex-col gap-8 max-w-[440px] lg:max-w-[440px] md:max-w-none">
               <header class="flex items-center lg:justify-start md:justify-center">
                 <div class="step-badge inline-flex items-center gap-2 py-1 px-2 rounded-[28px]">
@@ -2990,17 +3139,24 @@
               </header>
               <div class="flex flex-col gap-2.5 text-left md:text-center lg:text-left">
                 <h2 class="text-[var(--black-heading)] m-0">ফিকহ অধ্যয়ন</h2>
-                <p font-size: var(--body-text-font-size); line-height: var(--body-text-line-height); letter-spacing: var(--body-text-letter-spacing); font-style: var(--body-text-font-style);" class="text-[var(--black-subtext)] m-0">
-                  অথবা কুরআনের অর্থ বুঝতে আরবীভাষা শিখতে পারে। আমরা আরবীভাষার দক্ষতা বৃদ্ধির জন্য বিভিন্ন পর্যায়ের কোর্স পরিচালনা করি।
+                <p font-size: var(--body-text-font-size); line-height: var(--body-text-line-height); letter-spacing:
+                  var(--body-text-letter-spacing); font-style: var(--body-text-font-style);"
+                  class="text-[var(--black-subtext)] m-0">
+                  অথবা কুরআনের অর্থ বুঝতে আরবীভাষা শিখতে পারে। আমরা আরবীভাষার দক্ষতা বৃদ্ধির জন্য বিভিন্ন পর্যায়ের
+                  কোর্স পরিচালনা করি।
                 </p>
-                <button class="step-button inline-flex w-[106px] h-10 items-center justify-center gap-2.5 py-2.5 px-4 bg-[var(--white-100)] rounded-full border-none cursor-pointer relative transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 focus:outline-2 focus:outline-blue-500 focus:outline-offset-2" type="button" aria-label="ফিকহ অধ্যয়ন কোর্স সম্পর্কে বিস্তারিত জানুন">
+                <button
+                  class="step-button inline-flex w-[106px] h-10 items-center justify-center gap-2.5 py-2.5 px-4 bg-[var(--white-100)] rounded-full border-none cursor-pointer relative transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 focus:outline-2 focus:outline-blue-500 focus:outline-offset-2"
+                  type="button" aria-label="ফিকহ অধ্যয়ন কোর্স সম্পর্কে বিস্তারিত জানুন">
                   <span class="text-[var(--black-heading)] whitespace-nowrap relative z-10">বিস্তারিত</span>
                   <img src="/right-arrow.svg" alt="" aria-hidden="true" class="w-1.5 h-[11px] relative z-10">
                 </button>
               </div>
             </div>
-            <figure class="w-full h-[200px] sm:h-[248px] lg:w-[379px] lg:h-[248px] rounded-xl overflow-hidden relative flex-shrink-0 m-0 step-img-overlay step-img-senary max-w-[400px]">
-              <img src="/img/course-thumb-6.png" alt="ফিকহ অধ্যয়ন কোর্স" class="w-full h-full object-cover relative z-10">
+            <figure
+              class="w-full h-[200px] sm:h-[248px] lg:w-[379px] lg:h-[248px] rounded-xl overflow-hidden relative flex-shrink-0 m-0 step-img-overlay step-img-senary max-w-[400px]">
+              <img src="/img/course-thumb-6.png" alt="ফিকহ অধ্যয়ন কোর্স"
+                class="w-full h-full object-cover relative z-10">
             </figure>
           </article>
         </div>
@@ -3101,13 +3257,17 @@
       <div class="container mx-auto">
         <!-- Mobile Header -->
         <header class="xl:hidden flex flex-col items-center mb-6 text-center">
-          <h1 class="text-[clamp(24px,6vw,48px)] font-medium leading-normal text-[var(--black-heading)] mb-0">নূরুল কুরআন একাডেমিতে</h1>
-          <h2 class="text-[clamp(24px,6vw,48px)] font-medium leading-normal features-gradient-text mb-0">আপনি যা পাচ্ছেন</h2>
+          <h1 class="text-[clamp(24px,6vw,48px)] font-medium leading-normal text-[var(--black-heading)] mb-0">নূরুল
+            কুরআন একাডেমিতে</h1>
+          <h2 class="text-[clamp(24px,6vw,48px)] font-medium leading-normal features-gradient-text mb-0">আপনি যা পাচ্ছেন
+          </h2>
         </header>
 
         <div class="px-4 grid xl:grid-cols-[520px_1fr] gap-10 xl:gap-16 items-center">
           <!-- Hero Image -->
-          <figure class="w-full xl:w-[520px] h-[400px] sm:h-[500px] xl:h-[904px] rounded-2xl overflow-hidden bg-[url('../img/feature-frame-1.png')] bg-cover bg-center xl:order-1" aria-hidden="true">
+          <figure
+            class="w-full xl:w-[520px] h-[400px] sm:h-[500px] xl:h-[904px] rounded-2xl overflow-hidden bg-[url('../img/feature-frame-1.png')] bg-cover bg-center xl:order-1"
+            aria-hidden="true">
             <div class="h-full relative"></div>
           </figure>
 
@@ -3115,18 +3275,21 @@
           <div class="xl:order-2 flex flex-col gap-10">
             <!-- Desktop Header -->
             <header class="hidden xl:flex flex-col items-start">
-              <h1 class="text-5xl font-medium leading-normal text-[var(--black-heading)] mb-0">নূরুল কুরআন একাডেমিতে</h1>
+              <h1 class="text-5xl font-medium leading-normal text-[var(--black-heading)] mb-0">নূরুল কুরআন একাডেমিতে
+              </h1>
               <h2 class="text-5xl font-medium leading-normal features-gradient-text mb-0">আপনি যা পাচ্ছেন</h2>
             </header>
 
             <!-- Features Grid -->
             <div class="grid grid-cols-1 xl:grid-cols-2 gap-5 xl:gap-6">
-              <article class="flex flex-col gap-6 p-4 sm:p-5 xl:p-6 bg-white rounded-2xl border border-[var(--grey-outline)] min-h-[180px] xl:h-[226px]">
+              <article
+                class="flex flex-col gap-6 p-4 sm:p-5 xl:p-6 bg-white rounded-2xl border border-[var(--grey-outline)] min-h-[180px] xl:h-[226px]">
                 <div class="w-12 h-12 flex items-center justify-center flex-shrink-0" aria-hidden="true">
                   <img src="/feature-01.svg" alt="" class="max-w-full max-h-full object-contain">
                 </div>
                 <div class="flex flex-col gap-4 flex-1">
-                  <h3 class="text-[19px] font-semibold leading-[150%] text-[var(--black-heading)] mb-0">উচ্চমানের কোর্স কনটেন্ট</h3>
+                  <h3 class="text-[19px] font-semibold leading-[150%] text-[var(--black-heading)] mb-0">উচ্চমানের কোর্স
+                    কনটেন্ট</h3>
                   <p class="text-base font-normal leading-[150%] text-[var(--black-subtext)] mb-0">
                     আমাদের সব কোর্স তৈরি করা হয়েছে বিশেষজ্ঞ শিক্ষকদের দ্বারা, যারা নিজের ক্ষেত্রের অভিজ্ঞ
                     এবং দক্ষ।
@@ -3134,12 +3297,14 @@
                 </div>
               </article>
 
-              <article class="flex flex-col gap-6 p-4 sm:p-5 xl:p-6 bg-white rounded-2xl border border-[var(--grey-outline)] min-h-[180px] xl:h-[226px]">
+              <article
+                class="flex flex-col gap-6 p-4 sm:p-5 xl:p-6 bg-white rounded-2xl border border-[var(--grey-outline)] min-h-[180px] xl:h-[226px]">
                 <div class="w-12 h-12 flex items-center justify-center flex-shrink-0" aria-hidden="true">
                   <img src="/feature-02.svg" alt="" class="max-w-full max-h-full object-contain">
                 </div>
                 <div class="flex flex-col gap-4 flex-1">
-                  <h3 class="text-[19px] font-semibold leading-[150%] text-[var(--black-heading)] mb-0">লাইভ ও রেকর্ডেড ক্লাস</h3>
+                  <h3 class="text-[19px] font-semibold leading-[150%] text-[var(--black-heading)] mb-0">লাইভ ও রেকর্ডেড
+                    ক্লাস</h3>
                   <p class="text-base font-normal leading-[150%] text-[var(--black-subtext)] mb-0">
                     আপনি পছন্দমতো লাইভ ক্লাসে অংশ নিতে পারবেন বা রেকর্ডেড ভিডিও দেখে যেকোনো সময় পড়াশোনা
                     চালিয়ে যেতে পারবেন।
@@ -3147,23 +3312,28 @@
                 </div>
               </article>
 
-              <article class="flex flex-col gap-6 p-4 sm:p-5 xl:p-6 bg-white rounded-2xl border border-[var(--grey-outline)] min-h-[180px] xl:h-[226px]">
+              <article
+                class="flex flex-col gap-6 p-4 sm:p-5 xl:p-6 bg-white rounded-2xl border border-[var(--grey-outline)] min-h-[180px] xl:h-[226px]">
                 <div class="w-12 h-12 flex items-center justify-center flex-shrink-0" aria-hidden="true">
                   <img src="/feature-03.svg" alt="" class="max-w-full max-h-full object-contain">
                 </div>
                 <div class="flex flex-col gap-4 flex-1">
-                  <h3 class="text-[19px] font-semibold leading-[150%] text-[var(--black-heading)] mb-0">ফ্লেক্সিবল সময়সূচি</h3>
-                  <p class="text-base font-normal leading-[150%] text-[var(--black-subtext)] mb-0">আপনার ব্যস্ততার সাথে খাপ খাইয়ে যেকোনো সময় পড়াশোনা
+                  <h3 class="text-[19px] font-semibold leading-[150%] text-[var(--black-heading)] mb-0">ফ্লেক্সিবল
+                    সময়সূচি</h3>
+                  <p class="text-base font-normal leading-[150%] text-[var(--black-subtext)] mb-0">আপনার ব্যস্ততার সাথে
+                    খাপ খাইয়ে যেকোনো সময় পড়াশোনা
                     করার সুবিধা।</p>
                 </div>
               </article>
 
-              <article class="flex flex-col gap-6 p-4 sm:p-5 xl:p-6 bg-white rounded-2xl border border-[var(--grey-outline)] min-h-[180px] xl:h-[226px]">
+              <article
+                class="flex flex-col gap-6 p-4 sm:p-5 xl:p-6 bg-white rounded-2xl border border-[var(--grey-outline)] min-h-[180px] xl:h-[226px]">
                 <div class="w-12 h-12 flex items-center justify-center flex-shrink-0" aria-hidden="true">
                   <img src="/feature-04.svg" alt="" class="max-w-full max-h-full object-contain">
                 </div>
                 <div class="flex flex-col gap-4 flex-1">
-                  <h3 class="text-[19px] font-semibold leading-[150%] text-[var(--black-heading)] mb-0">কমিউনিটি সাপোর্ট</h3>
+                  <h3 class="text-[19px] font-semibold leading-[150%] text-[var(--black-heading)] mb-0">কমিউনিটি সাপোর্ট
+                  </h3>
                   <p class="text-base font-normal leading-[150%] text-[var(--black-subtext)] mb-0">
                     আপনার মত শিক্ষার্থীদের সাথে নেটওয়ার্ক গড়ে তোলার সুযোগ, যা শিক্ষায় নতুন মাত্রা যোগ
                     করে।
@@ -3171,24 +3341,30 @@
                 </div>
               </article>
 
-              <article class="flex flex-col gap-6 p-4 sm:p-5 xl:p-6 bg-white rounded-2xl border border-[var(--grey-outline)] min-h-[180px] xl:h-[226px]">
+              <article
+                class="flex flex-col gap-6 p-4 sm:p-5 xl:p-6 bg-white rounded-2xl border border-[var(--grey-outline)] min-h-[180px] xl:h-[226px]">
                 <div class="w-12 h-12 flex items-center justify-center flex-shrink-0" aria-hidden="true">
                   <img src="/feature-05.svg" alt="" class="max-w-full max-h-full object-contain">
                 </div>
                 <div class="flex flex-col gap-4 flex-1">
-                  <h3 class="text-[19px] font-semibold leading-[150%] text-[var(--black-heading)] mb-0">স্মার্ট টেকনোলজি, সহজ ব্যবহার</h3>
-                  <p class="text-base font-normal leading-[150%] text-[var(--black-subtext)] mb-0">মোবাইল ও কম্পিউটার— যেকোনো ডিভাইস থেকে ঝামেলামুক্ত ও
+                  <h3 class="text-[19px] font-semibold leading-[150%] text-[var(--black-heading)] mb-0">স্মার্ট
+                    টেকনোলজি, সহজ ব্যবহার</h3>
+                  <p class="text-base font-normal leading-[150%] text-[var(--black-subtext)] mb-0">মোবাইল ও কম্পিউটার—
+                    যেকোনো ডিভাইস থেকে ঝামেলামুক্ত ও
                     স্মুথ লার্নিংয়ের নিশ্চয়তা।</p>
                 </div>
               </article>
 
-              <article class="flex flex-col gap-6 p-4 sm:p-5 xl:p-6 bg-white rounded-2xl border border-[var(--grey-outline)] min-h-[180px] xl:h-[226px]">
+              <article
+                class="flex flex-col gap-6 p-4 sm:p-5 xl:p-6 bg-white rounded-2xl border border-[var(--grey-outline)] min-h-[180px] xl:h-[226px]">
                 <div class="w-12 h-12 flex items-center justify-center flex-shrink-0" aria-hidden="true">
                   <img src="/feature-06.svg" alt="" class="max-w-full max-h-full object-contain">
                 </div>
                 <div class="flex flex-col gap-4 flex-1">
-                  <h3 class="text-[19px] font-semibold leading-[150%] text-[var(--black-heading)] mb-0">ধারাবাহিকভাবে দ্বীন শিক্ষা</h3>
-                  <p class="text-base font-normal leading-[150%] text-[var(--black-subtext)] mb-0">ইসলামের বিভিন্ন বিষয় ধারাবাহিকভাবে শিক্ষাগ্রহণের
+                  <h3 class="text-[19px] font-semibold leading-[150%] text-[var(--black-heading)] mb-0">ধারাবাহিকভাবে
+                    দ্বীন শিক্ষা</h3>
+                  <p class="text-base font-normal leading-[150%] text-[var(--black-subtext)] mb-0">ইসলামের বিভিন্ন বিষয়
+                    ধারাবাহিকভাবে শিক্ষাগ্রহণের
                     চমৎকার আয়োজন।</p>
                 </div>
               </article>
@@ -3294,78 +3470,115 @@
 
     <!-- Blog - Tailwind v4 -->
     <section class="bg-[#fffcf8] min-h-screen relative">
-      <div class="container mx-auto bg-[url('../img/testimonial-bg.png')] bg-cover bg-center bg-no-repeat min-h-[693px] py-16 sm:py-20 lg:py-24">
+      <div
+        class="container mx-auto bg-[url('../img/testimonial-bg.png')] bg-cover bg-center bg-no-repeat min-h-[693px] py-16 sm:py-20 lg:py-24">
         <div class="max-w-[1107px] mx-auto px-4 flex flex-col items-center gap-10">
           <div class="flex flex-col gap-16 sm:gap-20 lg:gap-24 w-full">
             <header class="flex flex-col items-center gap-10 text-left">
               <!-- Title -->
               <div class="flex items-start justify-start gap-3 flex-wrap">
-                <h1 class="text-[clamp(28px,6vw,48px)] font-medium leading-normal text-[var(--black-heading)] mb-0">পছন্দের</h1>
+                <h1 class="text-[clamp(28px,6vw,48px)] font-medium leading-normal text-[var(--black-heading)] mb-0">
+                  পছন্দের</h1>
                 <h1 class="text-[clamp(28px,6vw,48px)] font-medium leading-normal features-gradient-text mb-0">ব্লগ</h1>
-                <h1 class="text-[clamp(28px,6vw,48px)] font-medium leading-normal text-[var(--black-heading)] mb-0">পড়ুন</h1>
+                <h1 class="text-[clamp(28px,6vw,48px)] font-medium leading-normal text-[var(--black-heading)] mb-0">
+                  পড়ুন</h1>
               </div>
 
               <!-- Blog Cards Grid -->
-              <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 xl:gap-10 w-full max-w-[1107px]">
+              <div
+                class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 xl:gap-10 w-full max-w-[1107px]">
                 <!-- Blog Card 1 -->
-                <article class="flex flex-col bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] overflow-hidden max-w-sm mx-auto lg:max-w-none lg:mx-0">
+                <article
+                  class="flex flex-col bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] overflow-hidden max-w-sm mx-auto lg:max-w-none lg:mx-0">
                   <header class="relative h-[246px] bg-[#ededed] overflow-hidden">
-                    <div class="w-full h-full bg-cover bg-center bg-no-repeat bg-[url('../img/blog-01.png')]" role="img" aria-label="একজন হাফেজা ছাত্রীর সাক্ষাৎকার">
-                      <h2 class="absolute bottom-7 left-7 right-7 w-[60%] text-white text-[23px] font-normal leading-[120%] mb-0 line-clamp-2 text-left">একজন হাফেজা ছাত্রীর সাক্ষাৎকার</h2>
+                    <div class="w-full h-full bg-cover bg-center bg-no-repeat bg-[url('../img/blog-01.png')]" role="img"
+                      aria-label="একজন হাফেজা ছাত্রীর সাক্ষাৎকার">
+                      <h2
+                        class="absolute bottom-7 left-7 right-7 w-[60%] text-white text-[23px] font-normal leading-[120%] mb-0 line-clamp-2 text-left">
+                        একজন হাফেজা ছাত্রীর সাক্ষাৎকার</h2>
                     </div>
                   </header>
                   <div class="p-4 sm:p-5 flex flex-col gap-3 flex-grow">
                     <div class="flex flex-col gap-3 text-left">
-                      <p class="text-[14px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">হাফেজ সুলাইমান হাবিব</p>
-                      <h3 class="text-[19px] font-semibold text-[var(--black-heading)] leading-[150%] mb-0">একজন হাফেজা ছাত্রীর সাক্ষাৎকার এবং আগামীর ভাবনা</h3>
+                      <p class="text-[14px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">হাফেজ সুলাইমান
+                        হাবিব</p>
+                      <h3 class="text-[19px] font-semibold text-[var(--black-heading)] leading-[150%] mb-0">একজন হাফেজা
+                        ছাত্রীর সাক্ষাৎকার এবং আগামীর ভাবনা</h3>
                       <div class="flex items-center gap-2 mt-auto">
-                        <time class="text-[14px] font-normal text-[var(--black-subtext)] leading-[150%] whitespace-nowrap mb-0" datetime="2025-03-14">১৪ মার্চ ২০২৫</time>
-                        <span class="w-1 h-1 bg-[var(--black-subtext)] rounded-full flex-shrink-0" aria-hidden="true"></span>
-                        <span class="text-[14px] font-normal text-[var(--black-subtext)] leading-[150%] whitespace-nowrap mb-0">৭ মিনিট</span>
+                        <time
+                          class="text-[14px] font-normal text-[var(--black-subtext)] leading-[150%] whitespace-nowrap mb-0"
+                          datetime="2025-03-14">১৪ মার্চ ২০২৫</time>
+                        <span class="w-1 h-1 bg-[var(--black-subtext)] rounded-full flex-shrink-0"
+                          aria-hidden="true"></span>
+                        <span
+                          class="text-[14px] font-normal text-[var(--black-subtext)] leading-[150%] whitespace-nowrap mb-0">৭
+                          মিনিট</span>
                       </div>
                     </div>
                   </div>
                 </article>
 
                 <!-- Blog Card 2 -->
-                <article class="flex flex-col bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] overflow-hidden max-w-sm mx-auto lg:max-w-none lg:mx-0">
+                <article
+                  class="flex flex-col bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] overflow-hidden max-w-sm mx-auto lg:max-w-none lg:mx-0">
                   <header class="relative h-[246px] bg-[#ededed] overflow-hidden">
-                    <div class="w-full h-full bg-cover bg-center bg-no-repeat bg-[url('../img/blog-02.png')]" role="img" aria-label="আমার হিফজ-যাত্রা ও পরবর্তী গল্প">
-                      <h2 class="absolute bottom-7 left-7 right-7 w-[60%] text-white text-[23px] font-normal leading-[120%] mb-0 line-clamp-2 text-left">আমার হিফজ-যাত্রা ও পরবর্তী গল্প</h2>
+                    <div class="w-full h-full bg-cover bg-center bg-no-repeat bg-[url('../img/blog-02.png')]" role="img"
+                      aria-label="আমার হিফজ-যাত্রা ও পরবর্তী গল্প">
+                      <h2
+                        class="absolute bottom-7 left-7 right-7 w-[60%] text-white text-[23px] font-normal leading-[120%] mb-0 line-clamp-2 text-left">
+                        আমার হিফজ-যাত্রা ও পরবর্তী গল্প</h2>
                     </div>
                   </header>
                   <div class="p-4 sm:p-5 flex flex-col gap-3 flex-grow">
                     <div class="flex flex-col gap-3 text-left">
-                      <p class="text-[14px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">হাফেজ সুলাইমান হাবিব</p>
-                      <h3 class="text-[19px] font-semibold text-[var(--black-heading)] leading-[150%] mb-0 min-h-[54px] line-clamp-2">
+                      <p class="text-[14px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">হাফেজ সুলাইমান
+                        হাবিব</p>
+                      <h3
+                        class="text-[19px] font-semibold text-[var(--black-heading)] leading-[150%] mb-0 min-h-[54px] line-clamp-2">
                         আমার হিফজ-যাত্রা যেভাবে শুরু হয়েছিলো এবং পরবর্তী গল্প
                       </h3>
                       <div class="flex items-center gap-2 mt-auto">
-                        <time class="text-[14px] font-normal text-[var(--black-subtext)] leading-[150%] whitespace-nowrap mb-0" datetime="2025-03-14">১৪ মার্চ ২০২৫</time>
-                        <span class="w-1 h-1 bg-[var(--black-subtext)] rounded-full flex-shrink-0" aria-hidden="true"></span>
-                        <span class="text-[14px] font-normal text-[var(--black-subtext)] leading-[150%] whitespace-nowrap mb-0">৭ মিনিট</span>
+                        <time
+                          class="text-[14px] font-normal text-[var(--black-subtext)] leading-[150%] whitespace-nowrap mb-0"
+                          datetime="2025-03-14">১৪ মার্চ ২০২৫</time>
+                        <span class="w-1 h-1 bg-[var(--black-subtext)] rounded-full flex-shrink-0"
+                          aria-hidden="true"></span>
+                        <span
+                          class="text-[14px] font-normal text-[var(--black-subtext)] leading-[150%] whitespace-nowrap mb-0">৭
+                          মিনিট</span>
                       </div>
                     </div>
                   </div>
                 </article>
 
                 <!-- Blog Card 3 -->
-                <article class="flex flex-col bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] overflow-hidden max-w-sm mx-auto lg:max-w-none lg:mx-0">
+                <article
+                  class="flex flex-col bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] overflow-hidden max-w-sm mx-auto lg:max-w-none lg:mx-0">
                   <header class="relative h-[246px] bg-[#ededed] overflow-hidden">
-                    <div class="w-full h-full bg-cover bg-center bg-no-repeat bg-[url('../img/blog-03.png')]" role="img" aria-label="সন্তানের আরবির চর্চা কীভাবে শুরু করবেন">
-                      <h2 class="absolute bottom-7 left-7 right-7 w-[60%] text-white text-[23px] font-normal leading-[120%] mb-0 line-clamp-2 text-left">সন্তানের আরবির চর্চা কীভাবে শুরু করবেন</h2>
+                    <div class="w-full h-full bg-cover bg-center bg-no-repeat bg-[url('../img/blog-03.png')]" role="img"
+                      aria-label="সন্তানের আরবির চর্চা কীভাবে শুরু করবেন">
+                      <h2
+                        class="absolute bottom-7 left-7 right-7 w-[60%] text-white text-[23px] font-normal leading-[120%] mb-0 line-clamp-2 text-left">
+                        সন্তানের আরবির চর্চা কীভাবে শুরু করবেন</h2>
                     </div>
                   </header>
                   <div class="p-4 sm:p-5 flex flex-col gap-3 flex-grow">
                     <div class="flex flex-col gap-3 text-left">
-                      <p class="text-[14px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">হাফেজ সুলাইমান হাবিব</p>
-                      <h3 class="text-[19px] font-semibold text-[var(--black-heading)] leading-[150%] mb-0 min-h-[54px] line-clamp-2">
+                      <p class="text-[14px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">হাফেজ সুলাইমান
+                        হাবিব</p>
+                      <h3
+                        class="text-[19px] font-semibold text-[var(--black-heading)] leading-[150%] mb-0 min-h-[54px] line-clamp-2">
                         আপনার সন্তানের আরবির চর্চা কীভাবে শুরু করবেন জানুন বিস্তারিত
                       </h3>
                       <div class="flex items-center gap-2 mt-auto">
-                        <time class="text-[14px] font-normal text-[var(--black-subtext)] leading-[150%] whitespace-nowrap mb-0" datetime="2025-03-14">১৪ মার্চ ২০২৫</time>
-                        <span class="w-1 h-1 bg-[var(--black-subtext)] rounded-full flex-shrink-0" aria-hidden="true"></span>
-                        <span class="text-[14px] font-normal text-[var(--black-subtext)] leading-[150%] whitespace-nowrap mb-0">৭ মিনিট</span>
+                        <time
+                          class="text-[14px] font-normal text-[var(--black-subtext)] leading-[150%] whitespace-nowrap mb-0"
+                          datetime="2025-03-14">১৪ মার্চ ২০২৫</time>
+                        <span class="w-1 h-1 bg-[var(--black-subtext)] rounded-full flex-shrink-0"
+                          aria-hidden="true"></span>
+                        <span
+                          class="text-[14px] font-normal text-[var(--black-subtext)] leading-[150%] whitespace-nowrap mb-0">৭
+                          মিনিট</span>
                       </div>
                     </div>
                   </div>
@@ -3376,10 +3589,14 @@
 
           <!-- Navigation -->
           <nav class="flex items-center gap-4 justify-center" aria-label="ব্লগ নেভিগেশন">
-            <button type="button" class="flex items-center justify-center w-[51px] h-[51px] rounded-full bg-white border border-[var(--grey-outline)] cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)] active:translate-y-0 focus-visible:outline-2 focus-visible:outline-[#4a90e2] focus-visible:outline-offset-2 p-0" aria-label="পূর্ববর্তী">
+            <button type="button"
+              class="flex items-center justify-center w-[51px] h-[51px] rounded-full bg-white border border-[var(--grey-outline)] cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)] active:translate-y-0 focus-visible:outline-2 focus-visible:outline-[#4a90e2] focus-visible:outline-offset-2 p-0"
+              aria-label="পূর্ববর্তী">
               <img class="w-[18px] h-[15px] object-contain" src="/arrow-left.svg" alt="" />
             </button>
-            <button type="button" class="flex items-center justify-center w-[51px] h-[51px] rounded-full bg-white border-none cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)] active:translate-y-0 focus-visible:outline-2 focus-visible:outline-[#4a90e2] focus-visible:outline-offset-2 p-0 relative blog-gradient-border" aria-label="পরবর্তী">
+            <button type="button"
+              class="flex items-center justify-center w-[51px] h-[51px] rounded-full bg-white border-none cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)] active:translate-y-0 focus-visible:outline-2 focus-visible:outline-[#4a90e2] focus-visible:outline-offset-2 p-0 relative blog-gradient-border"
+              aria-label="পরবর্তী">
               <img class="w-[18px] h-[15px] object-contain" src="/arrow-right-active.svg" alt="" />
             </button>
           </nav>
@@ -3411,13 +3628,21 @@
 
     <!-- Offer Call To Action - Tailwind v4 -->
     <section class="bg-[#fefefe] py-8 px-4 sm:py-12 sm:px-8 lg:py-16 lg:px-32 flex items-center justify-center">
-      <div class="w-full max-w-[1169px] bg-[#9b1b40] rounded-[32px] overflow-hidden relative min-h-[200px] flex items-center">
-        <div class="w-full h-[200px] sm:h-[420px] bg-[url('../img/cta-02.png')] bg-[length:100%_100%] relative p-8 sm:p-16 lg:p-24 flex items-center">
-          <img class="w-[200px] h-[200px] sm:w-[389px] sm:h-[388px] object-cover mix-blend-hard-light flex-shrink-0 absolute top-[30%] sm:top-[7%] right-0" src="/img/cta-01.png" alt="ইসলামী শিক্ষার প্রতীক" />
+      <div
+        class="w-full max-w-[1169px] bg-[#9b1b40] rounded-[32px] overflow-hidden relative min-h-[200px] flex items-center">
+        <div
+          class="w-full h-[200px] sm:h-[420px] bg-[url('../img/cta-02.png')] bg-[length:100%_100%] relative p-8 sm:p-16 lg:p-24 flex items-center">
+          <img
+            class="w-[200px] h-[200px] sm:w-[389px] sm:h-[388px] object-cover mix-blend-hard-light flex-shrink-0 absolute top-[30%] sm:top-[7%] right-0"
+            src="/img/cta-01.png" alt="ইসলামী শিক্ষার প্রতীক" />
           <div class="flex items-end">
             <header class="flex flex-col gap-8 w-full max-w-[600px] order-2 sm:order-1">
-              <h1 class="font-[Tiro_Bangla] font-medium text-white text-[clamp(1.5rem,4vw,40px)] leading-[110%] text-left mb-0">ইসলামী জ্ঞান অর্জনের মাধ্যমে আলোকিত করুন নিজের ভবিষ্যৎ</h1>
-              <button class="inline-flex h-12 items-center justify-center gap-2.5 px-6 py-2.5 border-none rounded-full bg-gradient-to-r from-[#df186a] to-[#fa6f21] cursor-pointer transition-all duration-200 w-fit hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(223,24,106,0.3)] active:translate-y-0 focus:outline-2 focus:outline-white focus:outline-offset-2" type="button" aria-label="শেখা শুরু করুন">
+              <h1
+                class="font-[Tiro_Bangla] font-medium text-white text-[clamp(1.5rem,4vw,40px)] leading-[110%] text-left mb-0">
+                ইসলামী জ্ঞান অর্জনের মাধ্যমে আলোকিত করুন নিজের ভবিষ্যৎ</h1>
+              <button
+                class="inline-flex h-12 items-center justify-center gap-2.5 px-6 py-2.5 border-none rounded-full bg-gradient-to-r from-[#df186a] to-[#fa6f21] cursor-pointer transition-all duration-200 w-fit hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(223,24,106,0.3)] active:translate-y-0 focus:outline-2 focus:outline-white focus:outline-offset-2"
+                type="button" aria-label="শেখা শুরু করুন">
                 <span class="text-white text-base font-normal leading-[150%] whitespace-nowrap">শেখা শুরু করুন</span>
                 <div class="w-4 h-4 flex items-center justify-center" aria-hidden="true">
                   <img class="w-full h-full" src="/arrow-right.svg" alt="" />
@@ -3521,8 +3746,11 @@
     <section class="w-full py-16 px-8 lg:py-24 lg:px-8 bg-[#fefefe]" role="main" aria-label="প্রশ্নোত্তর বিভাগ">
       <div class="flex flex-col items-center gap-10 max-w-[1228px] mx-auto">
         <header class="flex items-center justify-center gap-3 flex-wrap">
-          <h1 class="text-[clamp(34px,6vw,48px)] font-medium leading-normal features-gradient-text text-center mb-0">প্রশ্নোত্তর</h1>
-          <h1 class="text-[clamp(34px,6vw,48px)] font-medium leading-normal text-[var(--black-heading)] text-center mb-0">সবাই জানতে চান</h1>
+          <h1 class="text-[clamp(34px,6vw,48px)] font-medium leading-normal features-gradient-text text-center mb-0">
+            প্রশ্নোত্তর</h1>
+          <h1
+            class="text-[clamp(34px,6vw,48px)] font-medium leading-normal text-[var(--black-heading)] text-center mb-0">
+            সবাই জানতে চান</h1>
         </header>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 w-full max-w-[1228px]">
@@ -3530,33 +3758,53 @@
           <div class="flex flex-col gap-2 lg:gap-2">
             <!-- FAQ Item 1 -->
             <details class="w-full max-w-[590px] border-b border-[var(--grey-outline)]">
-              <summary class="faq-summary-marker flex items-center gap-3 lg:gap-4 p-3 lg:p-4 cursor-pointer transition-colors duration-200 w-full hover:bg-gray-50 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2" aria-expanded="false">
-                <img class="w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 flex-shrink-0" src="/plus.svg" alt="" />
-                <h3 class="flex-1 text-[calc(19px*0.9)] lg:text-[19px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">Nurul Quran Academy কী?</h3>
+              <summary
+                class="faq-summary-marker flex items-center gap-3 lg:gap-4 p-3 lg:p-4 cursor-pointer transition-colors duration-200 w-full hover:bg-gray-50 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2"
+                aria-expanded="false">
+                <img class="w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 flex-shrink-0" src="/plus.svg"
+                  alt="" />
+                <h3
+                  class="flex-1 text-[calc(19px*0.9)] lg:text-[19px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">
+                  Nurul Quran Academy কী?</h3>
               </summary>
             </details>
 
             <!-- FAQ Item 2 -->
             <details class="w-full max-w-[590px] border-b border-[var(--grey-outline)]">
-              <summary class="faq-summary-marker flex items-center gap-3 lg:gap-4 p-3 lg:p-4 cursor-pointer transition-colors duration-200 w-full hover:bg-gray-50 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2" aria-expanded="false">
-                <img class="w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 flex-shrink-0" src="/plus.svg" alt="" />
-                <h3 class="flex-1 text-[calc(19px*0.9)] lg:text-[19px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">নারী ও পুরুষদের জন্য আলাদা ক্লাস আছে কি?</h3>
+              <summary
+                class="faq-summary-marker flex items-center gap-3 lg:gap-4 p-3 lg:p-4 cursor-pointer transition-colors duration-200 w-full hover:bg-gray-50 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2"
+                aria-expanded="false">
+                <img class="w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 flex-shrink-0" src="/plus.svg"
+                  alt="" />
+                <h3
+                  class="flex-1 text-[calc(19px*0.9)] lg:text-[19px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">
+                  নারী ও পুরুষদের জন্য আলাদা ক্লাস আছে কি?</h3>
               </summary>
             </details>
 
             <!-- FAQ Item 3 -->
             <details class="w-full max-w-[590px] border-b border-[var(--grey-outline)]">
-              <summary class="faq-summary-marker flex items-center gap-3 lg:gap-4 p-3 lg:p-4 cursor-pointer transition-colors duration-200 w-full hover:bg-gray-50 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2" aria-expanded="false">
-                <img class="w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 flex-shrink-0" src="/plus.svg" alt="" />
-                <h3 class="flex-1 text-[calc(19px*0.9)] lg:text-[19px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">ক্লাসগুলো কীভাবে নেওয়া হয়?</h3>
+              <summary
+                class="faq-summary-marker flex items-center gap-3 lg:gap-4 p-3 lg:p-4 cursor-pointer transition-colors duration-200 w-full hover:bg-gray-50 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2"
+                aria-expanded="false">
+                <img class="w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 flex-shrink-0" src="/plus.svg"
+                  alt="" />
+                <h3
+                  class="flex-1 text-[calc(19px*0.9)] lg:text-[19px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">
+                  ক্লাসগুলো কীভাবে নেওয়া হয়?</h3>
               </summary>
             </details>
 
             <!-- FAQ Item 4 -->
             <details class="w-full max-w-[590px] border-b border-[var(--grey-outline)]" open>
-              <summary class="faq-summary-marker flex items-center gap-3 lg:gap-4 p-3 lg:p-4 cursor-pointer transition-colors duration-200 w-full hover:bg-gray-50 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2" aria-expanded="true">
-                <img class="w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 flex-shrink-0 rotate-[133deg]" src="/plus.svg" alt="" />
-                <h3 class="flex-1 text-[calc(19px*0.9)] lg:text-[19px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">কুরআন শেখার জন্য কোনো পূর্বজ্ঞান থাকা লাগবে কি?</h3>
+              <summary
+                class="faq-summary-marker flex items-center gap-3 lg:gap-4 p-3 lg:p-4 cursor-pointer transition-colors duration-200 w-full hover:bg-gray-50 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2"
+                aria-expanded="true">
+                <img class="w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 flex-shrink-0 rotate-[133deg]"
+                  src="/plus.svg" alt="" />
+                <h3
+                  class="flex-1 text-[calc(19px*0.9)] lg:text-[19px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">
+                  কুরআন শেখার জন্য কোনো পূর্বজ্ঞান থাকা লাগবে কি?</h3>
               </summary>
               <div class="px-3 pb-3 lg:px-3 lg:pb-4">
                 <p class="text-[calc(16px*0.9)] lg:text-base font-normal text-[#7a7a7a] leading-[150%] mb-0 p-0">
@@ -3572,9 +3820,14 @@
           <div class="flex flex-col gap-2 lg:gap-2">
             <!-- FAQ Item 5 -->
             <details class="w-full max-w-[590px] border-b border-[var(--grey-outline)]">
-              <summary class="faq-summary-marker flex items-center gap-3 lg:gap-4 p-3 lg:p-4 cursor-pointer transition-colors duration-200 w-full hover:bg-gray-50 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2" aria-expanded="false">
-                <img class="w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 flex-shrink-0" src="/plus.svg" alt="" />
-                <h3 class="flex-1 text-[calc(19px*0.9)] lg:text-[19px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">কোর্স শেষে কি সার্টিফিকেট দেওয়া হয়?</h3>
+              <summary
+                class="faq-summary-marker flex items-center gap-3 lg:gap-4 p-3 lg:p-4 cursor-pointer transition-colors duration-200 w-full hover:bg-gray-50 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2"
+                aria-expanded="false">
+                <img class="w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 flex-shrink-0" src="/plus.svg"
+                  alt="" />
+                <h3
+                  class="flex-1 text-[calc(19px*0.9)] lg:text-[19px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">
+                  কোর্স শেষে কি সার্টিফিকেট দেওয়া হয়?</h3>
               </summary>
               <div class="px-3 pb-3 lg:px-3 lg:pb-4">
                 <p class="text-[calc(16px*0.9)] lg:text-base font-normal text-[#7a7a7a] leading-[150%] mb-0 p-0">
@@ -3587,9 +3840,14 @@
 
             <!-- FAQ Item 6 -->
             <details class="w-full max-w-[590px] border-b border-[var(--grey-outline)]" open>
-              <summary class="faq-summary-marker flex items-center gap-3 lg:gap-4 p-3 lg:p-4 cursor-pointer transition-colors duration-200 w-full hover:bg-gray-50 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2" aria-expanded="true">
-                <img class="w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 flex-shrink-0 rotate-[133deg]" src="/plus.svg" alt="" />
-                <h3 class="flex-1 text-[calc(19px*0.9)] lg:text-[19px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">কোর্সগুলো কি ফ্রি নাকি পেইড?</h3>
+              <summary
+                class="faq-summary-marker flex items-center gap-3 lg:gap-4 p-3 lg:p-4 cursor-pointer transition-colors duration-200 w-full hover:bg-gray-50 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2"
+                aria-expanded="true">
+                <img class="w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 flex-shrink-0 rotate-[133deg]"
+                  src="/plus.svg" alt="" />
+                <h3
+                  class="flex-1 text-[calc(19px*0.9)] lg:text-[19px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">
+                  কোর্সগুলো কি ফ্রি নাকি পেইড?</h3>
               </summary>
               <div class="px-3 pb-3 lg:px-3 lg:pb-4">
                 <p class="text-[calc(16px*0.9)] lg:text-base font-normal text-[#7a7a7a] leading-[150%] mb-0 p-0">
@@ -3602,9 +3860,14 @@
 
             <!-- FAQ Item 7 -->
             <details class="w-full max-w-[590px] border-b border-[var(--grey-outline)]">
-              <summary class="faq-summary-marker flex items-center gap-3 lg:gap-4 p-3 lg:p-4 cursor-pointer transition-colors duration-200 w-full hover:bg-gray-50 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2" aria-expanded="false">
-                <img class="w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 flex-shrink-0" src="/plus.svg" alt="" />
-                <h3 class="flex-1 text-[calc(19px*0.9)] lg:text-[19px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">শিক্ষকেরা কারা?</h3>
+              <summary
+                class="faq-summary-marker flex items-center gap-3 lg:gap-4 p-3 lg:p-4 cursor-pointer transition-colors duration-200 w-full hover:bg-gray-50 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2"
+                aria-expanded="false">
+                <img class="w-4 h-4 lg:w-5 lg:h-5 transition-transform duration-300 flex-shrink-0" src="/plus.svg"
+                  alt="" />
+                <h3
+                  class="flex-1 text-[calc(19px*0.9)] lg:text-[19px] font-normal text-[var(--black-heading)] leading-[150%] mb-0">
+                  শিক্ষকেরা কারা?</h3>
               </summary>
             </details>
           </div>
@@ -3612,7 +3875,8 @@
       </div>
     </section>
 
-    <!-- Tutorial Call To Action -->
+    <!-- Tutorial Call To Action - Original -->
+    <!--
     <section class="container tutorial-cta" role="region" aria-label="টিউটোরিয়াল কল টু অ্যাকশন">
       <div class="tutorial-cta__container">
         <div class="tutorial-cta__background">
@@ -3638,9 +3902,51 @@
         </div>
       </div>
     </section>
+    -->
+
+    <!-- Tutorial Call To Action - Tailwind v4 -->
+    <section class="w-full py-8 px-8 lg:py-20" role="region" aria-label="টিউটোরিয়াল কল টু অ্যাকশন">
+      <div
+        class="relative max-w-[1169px] h-[250px] sm:h-[300px] md:h-[350px] lg:h-[420px] mx-auto rounded-[20px] sm:rounded-[24px] lg:rounded-[32px] overflow-hidden bg-gradient-to-br from-[#250210] to-[#2ebccc] flex items-center">
+        <!-- Background Images -->
+        <div class="absolute top-0 left-0 w-full h-full grid grid-cols-2 lg:grid-cols-[535px_1fr] overflow-hidden">
+          <div class="relative overflow-hidden">
+            <img class="w-full h-full object-cover mix-blend-darken" src="../img/tutorial-02.png"
+              alt="মোবাইল ডিভাইস ব্যবহারের চিত্র" />
+          </div>
+          <div class="relative overflow-hidden">
+            <img class="w-full h-full object-cover mix-blend-luminosity" src="../img/tutorial-01.png"
+              alt="ডেস্কটপ টিউটোরিয়াল চিত্র" />
+          </div>
+        </div>
+
+        <!-- Blur Overlay -->
+        <div
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120px] sm:w-[180px] lg:w-[227px] h-[250px] sm:h-[300px] lg:h-[420px] bg-[#0a4954] blur-[25px] lg:blur-[60px] z-[1]"
+          aria-hidden="true"></div>
+
+        <!-- Content -->
+        <div
+          class="relative z-[2] flex flex-col gap-6 sm:gap-8 lg:gap-8 max-w-full ml-0 lg:ml-[104px] p-3 sm:p-4 lg:p-8">
+          <h2 class="text-[clamp(24px,4vw,40px)] font-medium text-white leading-[110%] mb-0">কীভাবে login করতে হবে জানুন
+          </h2>
+          <button
+            class="inline-flex h-10 sm:h-11 lg:h-12 items-center justify-center gap-2.5 px-4 sm:px-5 lg:px-6 py-1.5 sm:py-2 lg:py-2.5 rounded-full bg-gradient-to-r from-[#df186a] to-[#fa6f21] cursor-pointer transition-all duration-200 self-start hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(223,24,106,0.3)] active:translate-y-0 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 max-w-[150px] sm:max-w-none"
+            type="button" aria-label="লগইন টিউটোরিয়াল দেখতে ক্লিক করুন">
+            <span
+              class="text-white text-[calc(16px*0.9)] sm:text-base font-normal leading-[150%] whitespace-nowrap mb-0">ক্লিক
+              করুন</span>
+            <span class="w-3.5 h-3.5 sm:w-4 sm:h-4 flex items-center justify-center" aria-hidden="true">
+              <img class="w-4 h-4" src="../arrow-right.svg" alt="" />
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Footer - Original -->
+  <!--
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__decoration" aria-hidden="true">
@@ -3759,6 +4065,186 @@
             </ul>
           </div>
         </nav>
+      </div>
+    </div>
+  </footer>
+  -->
+
+  <!-- Footer - Tailwind v4 -->
+  <footer class="w-full" role="contentinfo">
+    <div class="relative bg-[#f8f5ec] overflow-hidden pt-16 md:pt-20 lg:pt-24 pb-20 md:pb-24 lg:pb-0 min-h-[631px]">
+      <!-- Main Content -->
+      <div
+        class="grid grid-cols-1 lg:grid-cols-[1fr_1.8fr] gap-12 md:gap-20 lg:gap-30 max-w-[1112px] mx-auto px-4 md:px-6 lg:px-0 relative z-[2]">
+        <!-- About Section -->
+        <section class="flex flex-col gap-8 md:gap-12 lg:gap-12 max-w-[336px] text-left">
+          <!-- Brand -->
+          <div class="flex flex-col gap-6 md:gap-8 lg:gap-10">
+            <img class="w-[163px] h-[62.24px] object-cover" src="/img/footer-logo.png" alt="নূরুল কুরআন একাডেমী লোগো" />
+            <p
+              class="text-base font-normal text-[var(--black-heading)] leading-[150%] mb-0 text-[calc(16px*0.9)] md:text-base">
+              ইসলামী জ্ঞান অর্জনের অনলাইনভিত্তিক অনন্য একটি শিক্ষা প্রতিষ্ঠান। এতে আরবীভাষা ও সাহিত্যসহ
+              কুরআন-হাদীস-ফিকহ-আকীদা ইত্যাদি শরীয়তের বিভিন্ন বিষয়ে রয়েছে পেইড ও ফ্রি কোর্সসমূহ।
+            </p>
+          </div>
+
+          <!-- Auth Button -->
+          <button
+            class="flex w-full max-w-[299px] h-10 md:h-11 items-center justify-center gap-2.5 px-4 py-2.5 rounded-full bg-gradient-to-r from-[#df186a] to-[#fa6f21] cursor-pointer transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(223,24,106,0.3)] focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
+            type="button" aria-label="লগ ইন বা সাইন আপ করুন">
+            <span class="text-white whitespace-nowrap text-base font-normal leading-[150%] mb-0">লগ ইন/ সাইন আপ</span>
+            <span class="w-4 h-4 flex items-center justify-center" aria-hidden="true">
+              <img class="w-3 h-2.5" src="/arrow-right.svg" alt="" />
+            </span>
+          </button>
+        </section>
+
+        <!-- Navigation Section -->
+        <nav class="flex flex-col gap-8 md:gap-10 lg:gap-12 max-w-[599px]" role="navigation"
+          aria-label="ফুটার নেভিগেশন">
+          <!-- Navigation Links -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-8 lg:gap-8 justify-items-start text-left">
+            <!-- Column 1 -->
+            <div class="flex flex-col gap-4 w-full">
+              <h3
+                class="text-[#9e2447] text-base font-semibold leading-[150%] mb-0 px-2 py-1 text-[calc(16px*0.9)] md:text-base">
+                আরও জানুন</h3>
+              <ul class="flex flex-col gap-2 list-none m-0 p-0">
+                <li class="px-2 py-1">
+                  <a href="#gallery"
+                    class="text-[var(--black-heading)] no-underline text-base font-normal leading-[150%] transition-colors duration-200 block hover:text-[#9e2447] focus-visible:outline-2 focus-visible:outline-[#9e2447] focus-visible:outline-offset-2 focus-visible:rounded-sm text-[calc(16px*0.9)] md:text-base">গ্যালারি</a>
+                </li>
+                <li class="px-2 py-1">
+                  <a href="#testimonials"
+                    class="text-[var(--black-heading)] no-underline text-base font-normal leading-[150%] transition-colors duration-200 block hover:text-[#9e2447] focus-visible:outline-2 focus-visible:outline-[#9e2447] focus-visible:outline-offset-2 focus-visible:rounded-sm text-[calc(16px*0.9)] md:text-base">শিক্ষার্থীদের
+                    মন্তব্য</a>
+                </li>
+                <li class="px-2 py-1">
+                  <a href="#teachers"
+                    class="text-[var(--black-heading)] no-underline text-base font-normal leading-[150%] transition-colors duration-200 block hover:text-[#9e2447] focus-visible:outline-2 focus-visible:outline-[#9e2447] focus-visible:outline-offset-2 focus-visible:rounded-sm text-[calc(16px*0.9)] md:text-base">শিক্ষক/শিক্ষিকা</a>
+                </li>
+                <li class="px-2 py-1">
+                  <a href="#e-campus"
+                    class="text-[var(--black-heading)] no-underline text-base font-normal leading-[150%] transition-colors duration-200 block hover:text-[#9e2447] focus-visible:outline-2 focus-visible:outline-[#9e2447] focus-visible:outline-offset-2 focus-visible:rounded-sm text-[calc(16px*0.9)] md:text-base">ই-ক্যাম্পাস</a>
+                </li>
+                <li class="px-2 py-1">
+                  <a href="#about"
+                    class="text-[var(--black-heading)] no-underline text-base font-normal leading-[150%] transition-colors duration-200 block hover:text-[#9e2447] focus-visible:outline-2 focus-visible:outline-[#9e2447] focus-visible:outline-offset-2 focus-visible:rounded-sm text-[calc(16px*0.9)] md:text-base">পরিচিতি</a>
+                </li>
+                <li class="px-2 py-1">
+                  <a href="#faq"
+                    class="text-[var(--black-heading)] no-underline text-base font-normal leading-[150%] transition-colors duration-200 block hover:text-[#9e2447] focus-visible:outline-2 focus-visible:outline-[#9e2447] focus-visible:outline-offset-2 focus-visible:rounded-sm text-[calc(16px*0.9)] md:text-base">সচরাচর
+                    জিজ্ঞাসা</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="flex flex-col gap-4 w-full">
+              <h3
+                class="text-[#9e2447] text-base font-semibold leading-[150%] mb-0 px-2 py-1 text-[calc(16px*0.9)] md:text-base">
+                ঘুরে আসুন</h3>
+              <ul class="flex flex-col gap-2 list-none m-0 p-0">
+                <li class="px-2 py-1">
+                  <a href="#home"
+                    class="text-[var(--black-heading)] no-underline text-base font-normal leading-[150%] transition-colors duration-200 block hover:text-[#9e2447] focus-visible:outline-2 focus-visible:outline-[#9e2447] focus-visible:outline-offset-2 focus-visible:rounded-sm text-[calc(16px*0.9)] md:text-base">মূলপাতা</a>
+                </li>
+                <li class="px-2 py-1">
+                  <a href="#free-courses"
+                    class="text-[var(--black-heading)] no-underline text-base font-normal leading-[150%] transition-colors duration-200 block hover:text-[#9e2447] focus-visible:outline-2 focus-visible:outline-[#9e2447] focus-visible:outline-offset-2 focus-visible:rounded-sm text-[calc(16px*0.9)] md:text-base">ফ্রি
+                    কোর্স</a>
+                </li>
+                <li class="px-2 py-1">
+                  <a href="#paid-courses"
+                    class="text-[var(--black-heading)] no-underline text-base font-normal leading-[150%] transition-colors duration-200 block hover:text-[#9e2447] focus-visible:outline-2 focus-visible:outline-[#9e2447] focus-visible:outline-offset-2 focus-visible:rounded-sm text-[calc(16px*0.9)] md:text-base">পেইড
+                    কোর্স</a>
+                </li>
+                <li class="px-2 py-1">
+                  <a href="#blog"
+                    class="text-[var(--black-heading)] no-underline text-base font-normal leading-[150%] transition-colors duration-200 block hover:text-[#9e2447] focus-visible:outline-2 focus-visible:outline-[#9e2447] focus-visible:outline-offset-2 focus-visible:rounded-sm text-[calc(16px*0.9)] md:text-base">ব্লগ</a>
+                </li>
+                <li class="px-2 py-1">
+                  <a href="#videos"
+                    class="text-[var(--black-heading)] no-underline text-base font-normal leading-[150%] transition-colors duration-200 block hover:text-[#9e2447] focus-visible:outline-2 focus-visible:outline-[#9e2447] focus-visible:outline-offset-2 focus-visible:rounded-sm text-[calc(16px*0.9)] md:text-base">ভিডিও</a>
+                </li>
+                <li class="px-2 py-1">
+                  <a href="#sadaqah"
+                    class="text-[var(--black-heading)] no-underline text-base font-normal leading-[150%] transition-colors duration-200 block hover:text-[#9e2447] focus-visible:outline-2 focus-visible:outline-[#9e2447] focus-visible:outline-offset-2 focus-visible:rounded-sm text-[calc(16px*0.9)] md:text-base">সাদাকাহ</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 3 - Contact -->
+            <address class="flex flex-col gap-4 w-full not-italic">
+              <h3
+                class="text-[#9e2447] text-base font-semibold leading-[150%] mb-0 px-2 py-1 text-[calc(16px*0.9)] md:text-base">
+                যোগাযোগ</h3>
+              <ul class="flex flex-col gap-2 list-none m-0 p-0">
+                <li class="px-2 py-1">
+                  <span
+                    class="text-[var(--black-heading)] text-base font-normal leading-[150%] mb-0 text-[calc(16px*0.9)] md:text-base">ঠিকানা:
+                    বসিলা, মুহাম্মদপুর, ঢাকা।</span>
+                </li>
+                <li class="px-2 py-1">
+                  <a href="tel:+8801700946569"
+                    class="text-[var(--black-heading)] no-underline text-base font-normal leading-[150%] transition-colors duration-200 block hover:text-[#9e2447] focus-visible:outline-2 focus-visible:outline-[#9e2447] focus-visible:outline-offset-2 focus-visible:rounded-sm text-[calc(16px*0.9)] md:text-base">ফোন
+                    নং: +8801700946569</a>
+                </li>
+                <li class="px-2 py-1">
+                  <a href="mailto:nurulquran887@gmail.com"
+                    class="text-[var(--black-heading)] no-underline text-base font-normal leading-[150%] transition-colors duration-200 block hover:text-[#9e2447] focus-visible:outline-2 focus-visible:outline-[#9e2447] focus-visible:outline-offset-2 focus-visible:rounded-sm text-[calc(16px*0.9)] md:text-base">ইমেইল:
+                    nurulquran887@gmail.com</a>
+                </li>
+                <li class="px-2 py-1">
+                  <a href="#complaints"
+                    class="text-[var(--black-heading)] no-underline text-base font-normal leading-[150%] transition-colors duration-200 block hover:text-[#9e2447] focus-visible:outline-2 focus-visible:outline-[#9e2447] focus-visible:outline-offset-2 focus-visible:rounded-sm text-[calc(16px*0.9)] md:text-base">অভিযোগ
+                    বাক্স</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <!-- Social Media -->
+          <div class="flex items-center gap-4 justify-start mb-0 md:mb-24 lg:mb-0">
+            <ul class="flex items-center gap-4 list-none m-0 p-0" role="list" aria-label="সামাজিক মাধ্যম লিংক">
+              <li>
+                <a href="#"
+                  class="flex items-center justify-center w-9 h-9 md:w-10 md:h-10 bg-[#9e2447] rounded-lg no-underline transition-all duration-200 hover:bg-[#7a1d36] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-[#4a90e2] focus-visible:outline-offset-2"
+                  aria-label="আমাদের ফেসবুক পেজ দেখুন">
+                  <span class="w-5 h-5 md:w-6 md:h-6 footer-social-facebook"></span>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  class="flex items-center justify-center w-9 h-9 md:w-10 md:h-10 bg-[#9e2447] rounded-lg no-underline transition-all duration-200 hover:bg-[#7a1d36] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-[#4a90e2] focus-visible:outline-offset-2"
+                  aria-label="হোয়াটসঅ্যাপে যোগাযোগ করুন">
+                  <span class="w-5 h-5 md:w-6 md:h-6 footer-social-whatsapp"></span>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  class="flex items-center justify-center w-9 h-9 md:w-10 md:h-10 bg-[#9e2447] rounded-lg no-underline transition-all duration-200 hover:bg-[#7a1d36] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-[#4a90e2] focus-visible:outline-offset-2"
+                  aria-label="লিংকডইনে যুক্ত হন">
+                  <span class="w-5 h-5 md:w-6 md:h-6 footer-social-linkedin"></span>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  class="flex items-center justify-center w-9 h-9 md:w-10 md:h-10 bg-[#9e2447] rounded-lg no-underline transition-all duration-200 hover:bg-[#7a1d36] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-[#4a90e2] focus-visible:outline-offset-2"
+                  aria-label="আমাদের ইউটিউব চ্যানেল সাবস্ক্রাইব করুন">
+                  <span class="w-5 h-5 md:w-6 md:h-6 footer-social-youtube"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- Decorative Background Images -->
+      <div class="pt-8 pointer-events-none" aria-hidden="true">
+        <div
+          class="w-full h-[200px] md:h-[250px] lg:h-[300px] bg-[url('/footer-bg.svg')] bg-cover bg-bottom mix-blend-multiply">
+        </div>
       </div>
     </div>
   </footer>

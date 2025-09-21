@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@theme {
+    --color-btn-primary-gradient: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
+    --gradient-title: linear-gradient(#df186a, #fa6f21);
+}
+
+.btn-primary-gradient {
+    background: theme(--color-btn-primary-gradient);
+}
+
+.title-highlight {
+    background-image: theme(--gradient-title);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}

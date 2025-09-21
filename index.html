@@ -131,7 +131,7 @@
     }
 
     /* Primary button gradient border */
-    .btn-primary-gradient::before {
+    .border-gradient-primary:before {
       content: "";
       position: absolute;
       inset: 0;
@@ -143,28 +143,6 @@
       mask-composite: exclude;
       z-index: 1;
       pointer-events: none;
-    }
-
-    /* CTA button gradient background */
-    .hero-cta-gradient {
-      background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
-    }
-
-    /* Background gradient elements */
-    .hero-bg-gradient-left {
-      background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
-    }
-
-    .hero-bg-gradient-right {
-      background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
-    }
-
-    /* Gradient text for title highlight */
-    .title-highlight {
-      background-image: linear-gradient(#df186a, #fa6f21);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
     }
 
     /* Gradient borders for buttons and active states */
@@ -219,13 +197,6 @@
 
     .course-bg-6 {
       background: linear-gradient(41deg, rgba(10, 11, 42, 1) 0%, rgba(37, 79, 141, 1) 55%, rgba(27, 240, 255, 1) 100%);
-    }
-
-    /* Course overlay background */
-    .course-overlay {
-      background-image: url("../img/course-bg-3.png");
-      background-size: cover;
-      background-position: center;
     }
 
     /* Stats dot gradient */
@@ -659,7 +630,7 @@
       </button>
 
       <button
-        class="btn-primary-gradient relative flex items-center justify-center h-12 px-6 py-2.5 gap-2.5 rounded-[50px] bg-[var(--white-100)] text-[var(--black-heading)] text-sm font-normal leading-6 cursor-pointer transition-colors duration-200 flex-shrink-0 hover:bg-black/5 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2 md:text-base"
+        class="border-gradient-primary relative flex items-center justify-center h-12 px-6 py-2.5 gap-2.5 rounded-[50px] bg-[var(--white-100)] text-[var(--black-heading)] text-sm font-normal leading-6 cursor-pointer transition-colors duration-200 flex-shrink-0 hover:bg-black/5 focus:outline-2 focus:outline-[#4a90e2] focus:outline-offset-2 md:text-base"
         type="button" aria-label="যোগাযোগ করুন">
         <span class="w-fit whitespace-nowrap">যোগাযোগ করুন</span>
       </button>
@@ -749,7 +720,7 @@
 
             <!-- CTA Button -->
             <button
-              class="hero-cta-gradient self-center inline-flex w-full h-12 items-center justify-center gap-2.5 px-6 py-2.5 border-none rounded-[50px] cursor-pointer transition-all duration-200 no-underline box-border hover:-translate-y-px hover:shadow-[0_4px_8px_rgba(0,0,0,0.2)] focus:outline-2 focus:outline-white focus:outline-offset-2 disabled:opacity-60 disabled:cursor-not-allowed md:self-start md:w-auto"
+              class="btn-primary-gradient self-center inline-flex w-full h-12 items-center justify-center gap-2.5 px-6 py-2.5 border-none rounded-[50px] cursor-pointer transition-all duration-200 no-underline box-border hover:-translate-y-px hover:shadow-[0_4px_8px_rgba(0,0,0,0.2)] focus:outline-2 focus:outline-white focus:outline-offset-2 disabled:opacity-60 disabled:cursor-not-allowed md:self-start md:w-auto"
               type="button" aria-label="শেখা শুরু করুন - কোর্সে এনরোল করতে ক্লিক করুন">
               <span class="font-medium text-white text-base leading-6 whitespace-nowrap">শেখা শুরু করুন</span>
               <img class="w-4 h-4 flex-shrink-0" src="../arrow-right.svg" alt="" aria-hidden="true" />
@@ -919,7 +890,7 @@
               class="w-full max-w-[342px] mx-auto bg-white rounded-xl overflow-hidden border border-[#e8e8e8] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(0,0,0,0.1)]">
               <header class="relative w-full h-[186px] overflow-hidden">
                 <div class="course-bg-1 absolute inset-0 bg-cover bg-center"></div>
-                <div class="course-overlay absolute inset-0"></div>
+                <div class="bg-[url('../img/course-bg-3.png')] bg-cover bg-center absolute inset-0"></div>
                 <img class="absolute w-[189px] h-[186px] top-0 right-0 object-cover mix-blend-luminosity"
                   src="../img/course-1.png" alt="প্রাথমিক আরবীভাষা শিক্ষা কোর্স" />
                 <div class="absolute top-[34px] left-[31px] max-w-[172px]">
@@ -975,7 +946,7 @@
               class="w-full max-w-[342px] mx-auto bg-white rounded-xl overflow-hidden border border-[#e8e8e8] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(0,0,0,0.1)]">
               <header class="relative w-full h-[186px] overflow-hidden">
                 <div class="course-bg-2 absolute inset-0 bg-cover bg-center"></div>
-                <div class="course-overlay absolute inset-0"></div>
+                <div class="bg-[url('../img/course-bg-3.png')] bg-cover bg-center absolute inset-0"></div>
                 <img class="absolute w-[189px] h-[186px] top-0 right-0 object-cover mix-blend-luminosity"
                   src="../img/course-2.png" alt="কুরআন ও সালাত অনুধাবন কোর্স" />
                 <div class="absolute top-[34px] left-[31px] max-w-[172px]">
@@ -1028,7 +999,7 @@
               class="w-full max-w-[342px] mx-auto bg-white rounded-xl overflow-hidden border border-[#e8e8e8] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(0,0,0,0.1)]">
               <header class="relative w-full h-[186px] overflow-hidden">
                 <div class="course-bg-3 absolute inset-0 bg-cover bg-center"></div>
-                <div class="course-overlay absolute inset-0"></div>
+                <div class="bg-[url('../img/course-bg-3.png')] bg-cover bg-center absolute inset-0"></div>
                 <img class="absolute w-[189px] h-[186px] top-0 right-0 object-cover mix-blend-luminosity"
                   src="../img/course-3.png" alt="আরবী হাতের লেখা কোর্স" />
                 <div class="absolute top-[34px] left-[31px] max-w-[172px]">
@@ -1087,7 +1058,7 @@
               class="w-full max-w-[342px] mx-auto bg-white rounded-xl overflow-hidden border border-[#e8e8e8] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(0,0,0,0.1)]">
               <header class="relative w-full h-[186px] overflow-hidden">
                 <div class="course-bg-4 absolute inset-0 bg-cover bg-center"></div>
-                <div class="course-overlay absolute inset-0"></div>
+                <div class="bg-[url('../img/course-bg-3.png')] bg-cover bg-center absolute inset-0"></div>
                 <img class="absolute w-[189px] h-[186px] top-0 right-0 object-cover mix-blend-luminosity"
                   src="../img/course-4.png" alt="প্রাথমিক দ্বীন শিক্ষা কোর্স" />
                 <div class="absolute top-[34px] left-[31px] max-w-[172px]">
@@ -1139,7 +1110,7 @@
               class="w-full max-w-[342px] mx-auto bg-white rounded-xl overflow-hidden border border-[#e8e8e8] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(0,0,0,0.1)]">
               <header class="relative w-full h-[186px] overflow-hidden">
                 <div class="course-bg-5 absolute inset-0 bg-cover bg-center"></div>
-                <div class="course-overlay absolute inset-0"></div>
+                <div class="bg-[url('../img/course-bg-3.png')] bg-cover bg-center absolute inset-0"></div>
                 <img class="absolute w-[189px] h-[186px] top-0 right-0 object-cover mix-blend-luminosity"
                   src="../img/course-5.png" alt="ব্যাসিক আকীদা শিক্ষা কোর্স" />
                 <div class="absolute top-[34px] left-[31px] max-w-[172px]">
@@ -1193,7 +1164,7 @@
               class="w-full max-w-[342px] mx-auto bg-white rounded-xl overflow-hidden border border-[#e8e8e8] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(0,0,0,0.1)]">
               <header class="relative w-full h-[186px] overflow-hidden">
                 <div class="course-bg-6 absolute inset-0 bg-cover bg-center"></div>
-                <div class="course-overlay absolute inset-0"></div>
+                <div class="bg-[url('../img/course-bg-3.png')] bg-cover bg-center absolute inset-0"></div>
                 <img class="absolute w-[189px] h-[186px] top-0 right-0 object-cover mix-blend-luminosity"
                   src="../img/course-6.png" alt="৩০ নং পারা হিফজ কোর্স" />
                 <div class="absolute top-[34px] left-[31px] max-w-[172px]">

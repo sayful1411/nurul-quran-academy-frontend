@@ -3,6 +3,8 @@
 @theme {
   --color-primary: #9b1b40;
   --color-black-heading: rgba(18, 17, 17, 1);
+  --color-btn-primary-gradient: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
+  --gradient-title: linear-gradient(#df186a, #fa6f21);
 
   /* Gradient definitions */
   --gradient-nav-special: linear-gradient(
@@ -112,12 +114,6 @@ body {
     line-height: 1.5;
     margin: 0;
   }
-
-  span {
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-  }
 }
 
 /* Special nav link gradient border */
@@ -178,4 +174,15 @@ body {
   mask-composite: exclude;
   z-index: 1;
   pointer-events: none;
+}
+
+.btn-primary-gradient {
+  background: theme(--color-btn-primary-gradient);
+}
+
+.title-highlight {
+  background-image: theme(--gradient-title);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }

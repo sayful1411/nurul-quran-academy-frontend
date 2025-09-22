@@ -115,36 +115,6 @@ body {
   pointer-events: none;
 }
 
-/* Gradient border button (same as primary) */
-.gradient-border-btn::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 1px;
-  border-radius: 50px;
-  background: theme(--gradient-primary-border);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Active state gradient border */
-.gradient-border-active::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 2px;
-  border-radius: 8px;
-  background: theme(--gradient-active-border);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  z-index: 1;
-  pointer-events: none;
-}
-
 .btn-primary-gradient {
   background: theme(--color-btn-primary-gradient);
 }

@@ -247,10 +247,39 @@
 
         <!-- Details -->
         <section class="w-full">
-            <div class="flex gap-4 px-8 py-4">
+            <div class="flex gap-12 py-12 px-8">
                 <!-- Left side: 9 sections -->
-                <div class="flex-1 grid grid-cols-1S gap-4">
-                    <section class="bg-gray-200 p-4">Section 1</section>
+                <div class="flex-1 grid grid-cols-1 gap-4">
+                    <section class="w-full relative">
+                        <div class="hide-scrollbar overflow-x-auto">
+                            <ul class="w-full flex whitespace-nowrap gap-5 px-4 py-2 border-b-1 border-[#f0f0f0]">
+                                <li class="shrink-0 border-active">
+                                    <a href="#" class="p-2 inline-block">কোর্স পরিচিতি</a>
+                                </li>
+                                <li class="shrink-0">
+                                    <a href="#" class="p-2 inline-block">ক্লাসের বিষয়সমূহ</a>
+                                </li>
+                                <li class="shrink-0">
+                                    <a href="#" class="p-2 inline-block">কোর্সের বিবরণ</a>
+                                </li>
+                                <li class="shrink-0">
+                                    <a href="#" class="p-2 inline-block">শিক্ষকের পরিচিতি</a>
+                                </li>
+                                <li class="shrink-0">
+                                    <a href="#" class="p-2 inline-block">এই কোর্স থেকে যা যা পাচ্ছেন</a>
+                                </li>
+                                <li class="shrink-0">
+                                    <a href="#" class="p-2 inline-block">শিক্ষার্থীর মন্তব্য</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Right-center toggle button -->
+                        <button type="button"
+                            class="absolute right-0 top-1/2 -translate-y-1/2 px-2 bg-[#f0f0f0] p-2 rounded-full">
+                            <img class="course-tabs__toggle-icon" src="../../arrow-right-red.svg" alt="ড্রপডাউন আইকন" />
+                        </button>
+                    </section>
                     <section class="bg-gray-200 p-4">Section 2</section>
                     <section class="bg-gray-200 p-4">Section 3</section>
                     <section class="bg-gray-200 p-4">Section 4</section>
@@ -262,8 +291,82 @@
                 </div>
 
                 <!-- Right side: 1 section -->
-                <aside class="w-1/4 bg-blue-200 p-4">
-                    Sidebar or single section here
+                <aside class="hidden lg:block w-1/4">
+                    <article
+                        class="w-full h-[428px] flex flex-col bg-white rounded-[12px] border-2 border-[#e8e8e8] shadow-[var(--shadow-card)] overflow-hidden">
+                        <!-- Header -->
+                        <header class="relative h-[186px] w-full flex-shrink-0">
+                            <div
+                                class="absolute inset-0 bg-[linear-gradient(75deg,rgba(37,2,16,1)_0%,rgba(248,79,81,1)_52%,rgba(250,111,33,1)_100%)]">
+                                <div class="absolute inset-0 bg-[url('../../img/course-bg-3.png')] bg-cover bg-center">
+                                </div>
+                                <img src="../../img/course-1.png" alt="প্রাথমিক আরবীভাষা শিক্ষা কোর্স"
+                                    class="absolute top-0 right-0 w-[189px] h-[186px] object-cover mix-blend-luminosity" />
+                                <div class="absolute left-[2rem] top-1/2 -translate-y-1/2 flex flex-col items-start z-[2]">
+                                    <h3 class="text-h3 text-white leading-normal">
+                                        প্রাথমিক
+                                    </h3>
+                                    <h3 class="text-h3 text-white leading-normal">
+                                        আরবীভাষা
+                                    </h3>
+                                    <h3 class="text-h3 text-white leading-normal">
+                                        শিক্ষা
+                                    </h3>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- Info + Name + Price + CTA -->
+                        <div class="flex flex-col flex-1 px-4 py-3 gap-3">
+                            <!-- Info Bar -->
+                            <div
+                                class="flex w-full items-center justify-between px-3 py-2 bg-white rounded-[23px] shadow-[0px_1px_5px_#00000029]">
+                                <div class="flex items-center gap-[6px]">
+                                    <img src="../../lesson.svg" alt="লেসন আইকন" class="w-[14px] h-[14px]" />
+                                    <span
+                                        class="font-[Tiro_Bangla-Regular] text-[#222] text-[13px] whitespace-nowrap">২৫
+                                        টি লেসন</span>
+                                </div>
+                                <div class="flex items-center gap-[6px]">
+                                    <img src="../../student-cap.svg" alt="স্টুডেন্ট আইকন" class="w-[14px] h-[14px]" />
+                                    <span
+                                        class="font-[Tiro_Bangla-Regular] text-[#222] text-[13px] whitespace-nowrap">৫২
+                                        স্টুডেন্ট</span>
+                                </div>
+                                <div class="flex items-center gap-[6px]">
+                                    <img src="../../live.svg" alt="লাইভ ক্লাস আইকন" class="w-[14px] h-[14px]" />
+                                    <span
+                                        class="font-[Tiro_Bangla-Regular] text-[#222] text-[13px] whitespace-nowrap">লাইভ
+                                        ক্লাস</span>
+                                </div>
+                            </div>
+
+                            <!-- Course Name -->
+                            <h2 class="font-[Tiro_Bangla-Regular] text-[#222] text-[24px] whitespace-nowrap">
+                                প্রাথমিক আরবীভাষা শিক্ষা
+                            </h2>
+
+                            <!-- Pricing -->
+                            <div class="flex items-center gap-[19px]">
+                                <span
+                                    class="font-[Tiro_Bangla-Regular] text-[#222] text-[40px] tracking-[-1.6px]">৪৫০৳</span>
+                                <span
+                                    class="font-[Tiro_Bangla-Regular] text-[#777] text-[24px] tracking-[-0.96px] line-through">৮৫০৳</span>
+                            </div>
+
+                            <!-- CTA Button -->
+                            <div class="mt-auto">
+                                <button type="button" aria-label="কোর্সটি কিনুন"
+                                    class="flex w-full h-10 items-center justify-center gap-2 px-4 py-2 rounded-[50px] border-0 bg-[linear-gradient(103deg,rgba(223,24,106,1)_0%,rgba(250,111,33,1)_100%)] cursor-pointer transition-all duration-200">
+                                    <span
+                                        class="font-[var(--body-text-font-family)] text-white text-[var(--body-text-font-size)]">কোর্সটি
+                                        কিনুন</span>
+                                    <img src="../../arrow-right.svg" alt="তীর আইকন"
+                                        class="w-4 h-4 filter brightness-0 invert" />
+                                </button>
+                            </div>
+                        </div>
+                    </article>
                 </aside>
             </div>
         </section>

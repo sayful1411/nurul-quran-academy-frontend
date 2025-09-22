@@ -186,3 +186,12 @@ body {
 .feature-title-mentorship {
   color: #cd4791;
 }
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.border-active {
+  border-image: var(--gradient-active-border);
+}

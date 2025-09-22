@@ -249,7 +249,7 @@
         <section class="w-full">
             <div class="flex gap-12 py-12 px-8">
                 <!-- Left side: 9 sections -->
-                <div class="flex-1 grid grid-cols-1 gap-4">
+                <div class="flex-1 grid grid-cols-1 gap-4 px-5">
                     <section class="w-full relative">
                         <div class="hide-scrollbar overflow-x-auto">
                             <ul class="w-full flex whitespace-nowrap gap-5 px-4 py-2 border-b-1 border-[#f0f0f0]">
@@ -280,7 +280,55 @@
                             <img class="course-tabs__toggle-icon" src="../../arrow-right-red.svg" alt="ড্রপডাউন আইকন" />
                         </button>
                     </section>
-                    <section class="bg-gray-200 p-4">Section 2</section>
+                    <section class="relative overflow-hidden">
+                        <!-- Header -->
+                        <header class="flex flex-wrap items-start gap-2 mb-5">
+                            <h2
+                                class="text-h3">
+                                কোর্স
+                            </h2>
+                            <h2
+                                class="text-h3 title-highlight">
+                                পরিচিতি
+                            </h2>
+                        </header>
+
+                        <!-- Description -->
+                        <p
+                            class="relative font-[var(--body-text-font-family)] font-[var(--body-text-font-weight)] text-[var(--body-text-font-size)] leading-[var(--body-text-line-height)] tracking-[var(--body-text-letter-spacing)] text-[var(--blacksubtext)] max-h-[300px] overflow-hidden [mask-image:linear-gradient(to_bottom,black_0%,black_60%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_0%,black_60%,transparent_100%)]">
+                            আপনি কি কুরআন বুঝে পড়তে চান? ইসলামিক জ্ঞানে প্রথম পদক্ষেপ নিতে প্রস্তুত? তাহলে "প্রাথমিক
+                            আরবীভাষা শিক্ষা" কোর্সটি আপনার জন্য একেবারে উপযুক্ত! Nurul Quran Academy নিয়ে এসেছে একটি
+                            সিস্টেমেটিক,
+                            এক্সপার্ট-ডিজাইনড কোর্স যা আপনাকে শিখতে দেবে আরবী ভাষার বুনিয়াদি রীতি, হুরুফ থেকে শুরু করে
+                            বাক্য গঠন
+                            পর্যন্ত।<br /><br />
+                            এই কোর্সে আমরা এমনভাবে শেখাই, যেন আপনি শেখার প্রতিটি ধাপে অনুপ্রাণিত হন এবং এগিয়ে যেতে
+                            পারেন
+                            আত্মবিশ্বাসের সাথে। ভিডিও লেসন, লাইভ ক্লাস, প্র্যাকটিস অ্যাসাইনমেন্ট, আর রেগুলার গাইডেন্স—সব
+                            মিলিয়ে এটি কেবল একটি
+                            কোর্স নয়, বরং একটি পূর্ণাঙ্গ শেখার অভিজ্ঞতা।<br /><br />
+                            ১,০০০+ শিক্ষার্থীর পরীক্ষিত সফলতার সঙ্গে, আমাদের কোর্সে রয়েছে এমন পদ্ধতি যা নতুনদের জন্য
+                            ১০০% উপযোগী। আপনি ঘরে
+                            বসেই শিখতে পারবেন সঠিক উচ্চারণ, শব্দচয়ন, সাধারণ ব্যাকরণ, এবং ইসলামিক প্রাসঙ্গিক
+                            শব্দভাণ্ডার—যা ভবিষ্যতে কুরআন ও
+                            ইসলামিক টেক্সট বুঝে পড়ার ভিত্তি তৈরি করে দেবে।<br /><br />
+                            শুধু শেখা নয়—আমরা চাই আপনি বুঝে শিখুন, উপভোগ করে শিখুন, আর নিজের আত্মার উন্নতির পথে এক ধাপ
+                            এগিয়ে যান। এখনই
+                            জয়েন করুন কোর্সটিতে এবং নিজের আরবী ভাষার যাত্রা শুরু করুন শক্ত ভিত নিয়ে!
+                        </p>
+
+                        <!-- Read More -->
+                        <div class="absolute bottom-0 left-0 right-0 flex justify-center items-center py-6 z-10">
+                            <button type="button" aria-label="আরও পড়ুন"
+                                class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border-0 cursor-pointer opacity-80 hover:opacity-100 transition-opacity duration-200">
+                                <span
+                                    class="font-[var(--body-text-font-family)] font-semibold text-[var(--body-text-font-size)] text-[var(--blackheading)] text-center tracking-[var(--body-text-letter-spacing)] leading-[var(--body-text-line-height)] whitespace-nowrap">
+                                    আরও পড়ুন
+                                </span>
+                                <img src="../../arrow-right.svg" alt="" class="w-4 h-4 shrink-0" />
+                            </button>
+                        </div>
+                    </section>
                     <section class="bg-gray-200 p-4">Section 3</section>
                     <section class="bg-gray-200 p-4">Section 4</section>
                     <section class="bg-gray-200 p-4">Section 5</section>
@@ -302,7 +350,8 @@
                                 </div>
                                 <img src="../../img/course-1.png" alt="প্রাথমিক আরবীভাষা শিক্ষা কোর্স"
                                     class="absolute top-0 right-0 w-[189px] h-[186px] object-cover mix-blend-luminosity" />
-                                <div class="absolute left-[2rem] top-1/2 -translate-y-1/2 flex flex-col items-start z-[2]">
+                                <div
+                                    class="absolute left-[2rem] top-1/2 -translate-y-1/2 flex flex-col items-start z-[2]">
                                     <h3 class="text-h3 text-white leading-normal">
                                         প্রাথমিক
                                     </h3>

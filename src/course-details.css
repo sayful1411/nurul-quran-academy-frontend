@@ -154,3 +154,35 @@ body {
   mask-composite: exclude;
   pointer-events: none;
 }
+
+.feature-title-certificate {
+  background: linear-gradient(180deg, rgba(255, 106, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.feature-title-lifetime {
+  background: linear-gradient(166deg, rgba(40, 156, 136, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.feature-title-community {
+  background: linear-gradient(180deg, rgba(0, 13, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.feature-title-expert {
+  color: #ca6a37;
+}
+
+.feature-title-mentorship {
+  color: #cd4791;
+}

@@ -4,9 +4,15 @@
   --color-primary: #9b1b40;
   --color-black-heading: rgba(18, 17, 17, 1);
   --color-btn-primary-gradient: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
-  --gradient-title: linear-gradient(#df186a, #fa6f21);
+  --color-white: rgb(255 255 255);
+  --color-gray-100: rgb(240 240 240);
+  --color-hero-start: rgb(37 2 16);
+  --color-hero-middle: rgb(142 40 48);
+  --color-hero-end: rgb(37 2 16);
+  --color-accent-start: rgb(223 24 106);
+  --color-accent-end: rgb(250 111 33);
 
-  /* Gradient definitions */
+  --gradient-title: linear-gradient(#df186a, #fa6f21);
   --gradient-nav-special: linear-gradient(
     90deg,
     rgba(160, 24, 223, 1) 0%,
@@ -24,8 +30,25 @@
     rgba(223, 24, 106, 1) 0%,
     rgba(250, 111, 33, 1) 100%
   );
-
-  --font-family-sans: "Noto Serif Bengali", Helvetica, ui-sans-serif, system-ui;
+  --gradient-course-blue: linear-gradient(
+    42deg,
+    rgb(37 2 16) 0%,
+    rgb(34 36 119) 49%,
+    rgb(63 118 235) 100%
+  );
+  --gradient-course-orange: linear-gradient(
+    42deg,
+    rgb(37 2 16) 0%,
+    rgb(119 60 34) 49%,
+    rgb(235 169 63) 100%
+  );
+  --gradient-course-purple: linear-gradient(
+    42deg,
+    rgb(37 2 16) 0%,
+    rgb(95 34 119) 49%,
+    rgb(235 63 198) 100%
+  );
+  --gradient-discount-badge: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
 
   --font-size-xs: 11px;
   --font-size-sm: 14px;
@@ -37,15 +60,6 @@
   --font-size-4xl: 40px;
   --font-size-5xl: 48px;
 
-  --color-white: rgb(255 255 255);
-
-  --color-gray-100: rgb(240 240 240);
-  --color-hero-start: rgb(37 2 16);
-  --color-hero-middle: rgb(142 40 48);
-  --color-hero-end: rgb(37 2 16);
-  --color-accent-start: rgb(223 24 106);
-  --color-accent-end: rgb(250 111 33);
-
   --shadow-card: 0px 2px 4px 0px rgba(0, 0, 0, 0.05),
     0px 7px 7px 0px rgba(0, 0, 0, 0.04), 0px 15px 9px 0px rgba(0, 0, 0, 0.03),
     0px 27px 11px 0px rgba(0, 0, 0, 0.01), 0px 41px 12px 0px rgba(0, 0, 0, 0);
@@ -56,65 +70,20 @@
 
 html,
 body {
-  font-family: var(--font-family-sans);
+  font-family: var(--font-bengali);
 }
 
-@layer base {
-  /* Default typography for semantic HTML */
-  html {
-    font-family: var(--font-family-sans);
-    font-weight: 400;
-  }
+/* Paragraph utilities */
+.text-small { font-size: clamp(var(--font-size-xs), 0.97vw, var(--font-size-sm)); }
+.text-body { font-size: clamp(var(--font-size-sm), 1.6vw, var(--font-size-base)); }
 
-  h1 {
-    font-size: var(--font-size-3xl);
-    font-weight: 400;
-    line-height: 1.2;
-    margin: 0;
-  }
-
-  h2 {
-    font-size: var(--font-size-4xl);
-    font-weight: 500;
-    line-height: 1.1;
-    margin: 0;
-  }
-
-  h3 {
-    font-size: var(--font-size-2xl);
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0;
-  }
-
-  h4 {
-    font-size: var(--font-size-xl);
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0;
-  }
-
-  h5 {
-    font-size: var(--font-size-lg);
-    font-weight: 400;
-    line-height: 1.2;
-    margin: 0;
-  }
-
-  h6 {
-    font-size: var(--font-size-lg);
-    font-weight: 600;
-    line-height: 1.5;
-    margin: 0;
-  }
-
-  p {
-    font-size: var(--font-size-base);
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0;
-  }
-}
+/* Heading utilities */
+.text-h1 { font-size: clamp(var(--font-size-4xl), 4vw, var(--font-size-5xl)); }
+.text-h2 { font-size: clamp(var(--font-size-xl), 3.33vw, var(--font-size-4xl)); }
+.text-h3 { font-size: clamp(var(--font-size-2xl), 1.13vw, var(--font-size-4xl)); }
+.text-h4 { font-size: clamp(var(--font-size-xl), 2.75vw, var(--font-size-3xl)); }
+.text-h5 { font-size: clamp(var(--font-size-lg), 0.85vw, var(--font-size-2xl)); }
+.text-h6 { font-size: clamp(var(--font-size-lg), 0.38vw, var(--font-size-xl)); }
 
 /* Special nav link gradient border */
 .nav-link-special::before {
@@ -185,4 +154,33 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.course-card-bg-blue {
+  background: var(--gradient-course-blue);
+}
+
+.course-card-bg-orange {
+  background: var(--gradient-course-orange);
+}
+
+.course-card-bg-purple {
+  background: var(--gradient-course-purple);
+}
+
+.discount-badge {
+  background: var(--gradient-discount-badge);
+}
+
+.course-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 50px;
+  background: var(--gradient-primary-border);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }

@@ -1,55 +1,33 @@
 @import "tailwindcss";
 
 @theme {
+  /* Brand Colors */
   --color-primary: #9b1b40;
-  --color-black-heading: rgba(18, 17, 17, 1);
-  --color-btn-primary-gradient: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
-  --color-white: rgb(255 255 255);
-  --color-gray-100: rgb(240 240 240);
+  
+  /* Text Colors */
+  --color-heading: #121111;
+  --color-paragraph: #535966;
+  --color-muted: #f0f0f0;
   --color-hero-start: rgb(37 2 16);
   --color-hero-middle: rgb(142 40 48);
   --color-hero-end: rgb(37 2 16);
   --color-accent-start: rgb(223 24 106);
   --color-accent-end: rgb(250 111 33);
+  
+  /* Gradient Colors */
+  --gradient-primary: linear-gradient(90deg, #df186a 0%, #fa6f21 100%);
+  --gradient-title: linear-gradient(90deg, #df186a, #fa6f21);
+  --gradient-nav: linear-gradient(90deg, #a018df 0%, #5acd4f 50%, #f4b849 75%, #fa2150 100%);
+  --gradient-border: linear-gradient(103deg, #29a0b6 0%, #b0c343 100%);
+  --gradient-border-active: linear-gradient(90deg, #df186a 0%, #fa6f21 100%);
+  --gradient-course-blue: linear-gradient(42deg, #250210 0%, #222477 49%, #3f76eb 100%);
+  --gradient-course-orange: linear-gradient(42deg, #250210 0%, #773c22 49%, #eba93f 100%);
+  --gradient-course-purple: linear-gradient(42deg, #250210 0%, #5f2277 49%, #eb3fc6 100%);
+  --gradient-text-certificate: linear-gradient(180deg, #ff6a00 0%, #ffffff 100%);
+  --gradient-text-lifetime: linear-gradient(166deg, #289c88 0%, #ffffff 100%);
+  --gradient-text-community: linear-gradient(180deg, #000dff 0%, #ffffff 100%);
 
-  --gradient-title: linear-gradient(#df186a, #fa6f21);
-  --gradient-nav-special: linear-gradient(
-    90deg,
-    rgba(160, 24, 223, 1) 0%,
-    rgba(90, 205, 79, 1) 50%,
-    rgba(244, 184, 73, 1) 75%,
-    rgba(250, 33, 80, 1) 100%
-  );
-  --gradient-primary-border: linear-gradient(
-    103deg,
-    rgba(41, 160, 182, 1) 0%,
-    rgba(176, 195, 67, 1) 100%
-  );
-  --gradient-active-border: linear-gradient(
-    90deg,
-    rgba(223, 24, 106, 1) 0%,
-    rgba(250, 111, 33, 1) 100%
-  );
-  --gradient-course-blue: linear-gradient(
-    42deg,
-    rgb(37 2 16) 0%,
-    rgb(34 36 119) 49%,
-    rgb(63 118 235) 100%
-  );
-  --gradient-course-orange: linear-gradient(
-    42deg,
-    rgb(37 2 16) 0%,
-    rgb(119 60 34) 49%,
-    rgb(235 169 63) 100%
-  );
-  --gradient-course-purple: linear-gradient(
-    42deg,
-    rgb(37 2 16) 0%,
-    rgb(95 34 119) 49%,
-    rgb(235 63 198) 100%
-  );
-  --gradient-discount-badge: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
-
+  /* Font Sizes */
   --font-size-xs: 11px;
   --font-size-sm: 14px;
   --font-size-base: 16px;
@@ -60,11 +38,15 @@
   --font-size-4xl: 40px;
   --font-size-5xl: 48px;
 
-  --shadow-card: 0px 2px 4px 0px rgba(0, 0, 0, 0.05),
-    0px 7px 7px 0px rgba(0, 0, 0, 0.04), 0px 15px 9px 0px rgba(0, 0, 0, 0.03),
-    0px 27px 11px 0px rgba(0, 0, 0, 0.01), 0px 41px 12px 0px rgba(0, 0, 0, 0);
+  /* Shadows */
+  --shadow-card: 0px 2px 4px 0px 
+      rgba(0, 0, 0, 0.05), 0px 7px 7px 0px 
+      rgba(0, 0, 0, 0.04), 0px 15px 9px 0px 
+      rgba(0, 0, 0, 0.03), 0px 27px 11px 0px 
+      rgba(0, 0, 0, 0.01), 0px 41px 12px 0px 
+      rgba(0, 0, 0, 0);
 
-  /* Font family */
+  /* Fonts */
   --font-bengali: "Noto Serif Bengali", Helvetica;
 }
 
@@ -73,11 +55,37 @@ body {
   font-family: var(--font-bengali);
 }
 
-/* Paragraph utilities */
+/* Text Color Utilities */
+.text-heading { color: var(--color-heading); }
+.text-paragraph { color: var(--color-paragraph); }
+.text-muted { color: var(--color-muted); }
+
+/* Text Gradient Utilities */
+.text-gradient { background-image: var(--gradient-title); }
+.text-gradient-certificate { background-image: var(--gradient-text-certificate); }
+.text-gradient-lifetime { background-image: var(--gradient-text-lifetime); }
+.text-gradient-community { background-image: var(--gradient-text-community); }
+
+/* Background Gradient Utilities */
+.bg-gradient-primary { background: var(--gradient-primary); }
+.bg-gradient-nav { background: var(--gradient-nav); }
+.bg-course-blue { background: var(--gradient-course-blue); }
+.bg-course-orange { background: var(--gradient-course-orange); }
+.bg-course-purple { background: var(--gradient-course-purple); }
+
+/* Border Gradient Utilities */
+.border-gradient { background: var(--gradient-border); }
+.border-gradient-active { background: var(--gradient-border-active); }
+
+/* Shadow Utilities */
+.shadow-card { box-shadow: var(--shadow-card); }
+
+/* Font Family Utilities */
+.font-bengali { font-family: var(--font-bengali); }
+
+/* Font Size */
 .text-small { font-size: clamp(var(--font-size-xs), 0.97vw, var(--font-size-sm)); }
 .text-body { font-size: clamp(var(--font-size-sm), 1.6vw, var(--font-size-base)); }
-
-/* Heading utilities */
 .text-h1 { font-size: clamp(var(--font-size-4xl), 4vw, var(--font-size-5xl)); }
 .text-h2 { font-size: clamp(var(--font-size-xl), 3.33vw, var(--font-size-4xl)); }
 .text-h3 { font-size: clamp(var(--font-size-2xl), 1.13vw, var(--font-size-4xl)); }
@@ -92,7 +100,7 @@ body {
   inset: 0;
   padding: 1px;
   border-radius: 8px;
-  background: theme(--gradient-nav-special);
+  background: theme(--gradient-nav);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -107,7 +115,7 @@ body {
   inset: 0;
   padding: 1px;
   border-radius: 50px;
-  background: theme(--gradient-primary-border);
+  background: var(--gradient-border);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -115,83 +123,22 @@ body {
   pointer-events: none;
 }
 
-.btn-primary-gradient {
-  background: theme(--color-btn-primary-gradient);
-}
-
-.title-highlight {
-  background-image: theme(--gradient-title);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.course-card-bg-blue {
-  background: var(--gradient-course-blue);
-}
-
-.course-card-bg-orange {
-  background: var(--gradient-course-orange);
-}
-
-.course-card-bg-purple {
-  background: var(--gradient-course-purple);
-}
-
-.discount-badge {
-  background: var(--gradient-discount-badge);
-}
-
+/* Course Style */
 .course-button::before {
   content: "";
   position: absolute;
   inset: 0;
   padding: 1px;
   border-radius: 50px;
-  background: var(--gradient-primary-border);
+  background: var(--gradient-border);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
 }
 
-.feature-title-certificate {
-  background: linear-gradient(180deg, rgba(255, 106, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
-.feature-title-lifetime {
-  background: linear-gradient(166deg, rgba(40, 156, 136, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
-.feature-title-community {
-  background: linear-gradient(180deg, rgba(0, 13, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
-.feature-title-expert {
-  color: #ca6a37;
-}
-
-.feature-title-mentorship {
-  color: #cd4791;
-}
-
-.hide-scrollbar {
+/* Hide Scrollbar */
+@utility hide-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;
-}
-
-.border-active {
-  border-image: var(--gradient-active-border);
 }

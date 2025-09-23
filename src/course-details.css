@@ -8,11 +8,6 @@
   --color-heading: #121111;
   --color-paragraph: #535966;
   --color-muted: #f0f0f0;
-  --color-hero-start: rgb(37 2 16);
-  --color-hero-middle: rgb(142 40 48);
-  --color-hero-end: rgb(37 2 16);
-  --color-accent-start: rgb(223 24 106);
-  --color-accent-end: rgb(250 111 33);
   
   /* Gradient Colors */
   --gradient-primary: linear-gradient(90deg, #df186a 0%, #fa6f21 100%);
@@ -57,8 +52,8 @@ body {
 
 /* Text Color Utilities */
 .text-heading { color: var(--color-heading); }
-.text-paragraph { color: var(--color-paragraph); }
-.text-muted { color: var(--color-muted); }
+/* .text-paragraph { color: var(--color-paragraph); }
+.text-muted { color: var(--color-muted); } */
 
 /* Text Gradient Utilities */
 .text-gradient { background-image: var(--gradient-title); }

@@ -52,8 +52,6 @@ body {
 
 /* Text Color Utilities */
 .text-heading { color: var(--color-heading); }
-/* .text-paragraph { color: var(--color-paragraph); }
-.text-muted { color: var(--color-muted); } */
 
 /* Text Gradient Utilities */
 .text-gradient { background-image: var(--gradient-title); }
@@ -63,7 +61,6 @@ body {
 
 /* Background Gradient Utilities */
 .bg-gradient-primary { background: var(--gradient-primary); }
-.bg-gradient-nav { background: var(--gradient-nav); }
 .bg-course-blue { background: var(--gradient-course-blue); }
 .bg-course-orange { background: var(--gradient-course-orange); }
 .bg-course-purple { background: var(--gradient-course-purple); }
@@ -119,7 +116,7 @@ body {
 }
 
 /* Hide Scrollbar */
-@utility hide-scrollbar {
+.hide-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }

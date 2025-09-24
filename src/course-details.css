@@ -1,12 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand Colors */
-  --color-primary: #9b1b40;
-  
   /* Text Colors */
-  --color-heading: #121111;
-  --color-paragraph: #535966;
+  --color-primary: #121111;
+  --color-secondary: #535966;
   --color-muted: #f0f0f0;
   
   /* Gradient Colors */
@@ -50,9 +47,6 @@ body {
   font-family: var(--font-bengali);
 }
 
-/* Text Color Utilities */
-.text-heading { color: var(--color-heading); }
-
 /* Text Gradient Utilities */
 .text-gradient { background-image: var(--gradient-title); }
 .text-gradient-certificate { background-image: var(--gradient-text-certificate); }
@@ -64,10 +58,6 @@ body {
 .bg-course-blue { background: var(--gradient-course-blue); }
 .bg-course-orange { background: var(--gradient-course-orange); }
 .bg-course-purple { background: var(--gradient-course-purple); }
-
-/* Border Gradient Utilities */
-.border-gradient { background: var(--gradient-border); }
-.border-gradient-active { background: var(--gradient-border-active); }
 
 /* Shadow Utilities */
 .shadow-card { box-shadow: var(--shadow-card); }

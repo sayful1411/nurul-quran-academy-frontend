@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @theme {
+  /* Brand Color */
+  --color-brand: #9e2447;
+
   /* Text Colors */
   --color-primary: #121111;
   --color-secondary: #535966;
@@ -12,12 +15,6 @@
   --gradient-nav: linear-gradient(90deg, #a018df 0%, #5acd4f 50%, #f4b849 75%, #fa2150 100%);
   --gradient-border: linear-gradient(103deg, #29a0b6 0%, #b0c343 100%);
   --gradient-border-active: linear-gradient(90deg, #df186a 0%, #fa6f21 100%);
-  --gradient-course-blue: linear-gradient(42deg, #250210 0%, #222477 49%, #3f76eb 100%);
-  --gradient-course-orange: linear-gradient(42deg, #250210 0%, #773c22 49%, #eba93f 100%);
-  --gradient-course-purple: linear-gradient(42deg, #250210 0%, #5f2277 49%, #eb3fc6 100%);
-  --gradient-text-certificate: linear-gradient(180deg, #ff6a00 0%, #ffffff 100%);
-  --gradient-text-lifetime: linear-gradient(166deg, #289c88 0%, #ffffff 100%);
-  --gradient-text-community: linear-gradient(180deg, #000dff 0%, #ffffff 100%);
 
   /* Font Sizes */
   --font-size-xs: 11px;
@@ -49,15 +46,9 @@ body {
 
 /* Text Gradient Utilities */
 .text-gradient { background-image: var(--gradient-title); }
-.text-gradient-certificate { background-image: var(--gradient-text-certificate); }
-.text-gradient-lifetime { background-image: var(--gradient-text-lifetime); }
-.text-gradient-community { background-image: var(--gradient-text-community); }
 
 /* Background Gradient Utilities */
 .bg-gradient-primary { background: var(--gradient-primary); }
-.bg-course-blue { background: var(--gradient-course-blue); }
-.bg-course-orange { background: var(--gradient-course-orange); }
-.bg-course-purple { background: var(--gradient-course-purple); }
 
 /* Shadow Utilities */
 .shadow-card { box-shadow: var(--shadow-card); }

@@ -1,22 +1,11 @@
-/* @import "tailwindcss";
-
-@theme {
-    --color-btn-primary-gradient: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
-    --gradient-title: linear-gradient(#df186a, #fa6f21);
-}
-
-.btn-primary-gradient {
-    background: theme(--color-btn-primary-gradient);
-}
-
-.title-highlight {
-    background-image: theme(--gradient-title);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-} */
-
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Li M. A. Hai Unicode";
+  src: url("../fonts/Li_M_A_Hai_Unicode.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 @theme {
   /* Brand Color */
@@ -55,6 +44,7 @@
 
   /* Fonts */
   --font-bengali: "Noto Serif Bengali", Helvetica;
+  --font-li-hai: "Li M. A. Hai Unicode", Helvetica, sans-serif;
 }
 
 html,
@@ -75,12 +65,12 @@ body {
 .font-bengali { font-family: var(--font-bengali); }
 
 /* Font Size */
-.text-small { font-size: clamp(var(--font-size-xs), 0.97vw, var(--font-size-sm)); }
+.text-small { font-size: clamp(var(--font-size-xs), 2vw, var(--font-size-sm)); }
 .text-body { font-size: clamp(var(--font-size-sm), 1.6vw, var(--font-size-base)); }
 .text-h1 { font-size: clamp(var(--font-size-4xl), 4vw, var(--font-size-5xl)); }
 .text-h2 { font-size: clamp(var(--font-size-xl), 3.33vw, var(--font-size-4xl)); }
 .text-h3 { font-size: clamp(var(--font-size-2xl), 1.13vw, var(--font-size-4xl)); }
-.text-h4 { font-size: clamp(var(--font-size-xl), 2.75vw, var(--font-size-3xl)); }
+.text-h4 { font-size: clamp(var(--font-size-xl), 2.75vw, var(--font-size-2xl)); }
 .text-h5 { font-size: clamp(var(--font-size-lg), 0.85vw, var(--font-size-2xl)); }
 .text-h6 { font-size: clamp(var(--font-size-lg), 0.38vw, var(--font-size-xl)); }
 
@@ -111,6 +101,36 @@ body {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   z-index: 1;
+  pointer-events: none;
+}
+
+/* Gradient border active */
+.gradient-border-active::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 8px;
+  background: var(--gradient-border-active);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.testimonial-video-bg::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  top: 48%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 45px;
+  filter: blur(15px);
+  background: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
+  z-index: 0;
   pointer-events: none;
 }
 

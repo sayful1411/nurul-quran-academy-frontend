@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 
 @theme {
     --color-btn-primary-gradient: linear-gradient(90deg, rgba(223, 24, 106, 1) 0%, rgba(250, 111, 33, 1) 100%);
@@ -14,4 +14,108 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+} */
+
+@import "tailwindcss";
+
+@theme {
+  /* Brand Color */
+  --color-brand: #9e2447;
+
+  /* Text Colors */
+  --color-primary: #121111;
+  --color-secondary: #535966;
+  --color-muted: #f0f0f0;
+  
+  /* Gradient Colors */
+  --gradient-primary: linear-gradient(90deg, #df186a 0%, #fa6f21 100%);
+  --gradient-title: linear-gradient(90deg, #df186a, #fa6f21);
+  --gradient-nav: linear-gradient(90deg, #a018df 0%, #5acd4f 50%, #f4b849 75%, #fa2150 100%);
+  --gradient-border: linear-gradient(103deg, #29a0b6 0%, #b0c343 100%);
+  --gradient-border-active: linear-gradient(90deg, #df186a 0%, #fa6f21 100%);
+
+  /* Font Sizes */
+  --font-size-xs: 11px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 19px;
+  --font-size-xl: 23px;
+  --font-size-2xl: 28px;
+  --font-size-3xl: 33px;
+  --font-size-4xl: 40px;
+  --font-size-5xl: 48px;
+
+  /* Shadows */
+  --shadow-card: 0px 2px 4px 0px 
+      rgba(0, 0, 0, 0.05), 0px 7px 7px 0px 
+      rgba(0, 0, 0, 0.04), 0px 15px 9px 0px 
+      rgba(0, 0, 0, 0.03), 0px 27px 11px 0px 
+      rgba(0, 0, 0, 0.01), 0px 41px 12px 0px 
+      rgba(0, 0, 0, 0);
+
+  /* Fonts */
+  --font-bengali: "Noto Serif Bengali", Helvetica;
+}
+
+html,
+body {
+  font-family: var(--font-bengali);
+}
+
+/* Text Gradient Utilities */
+.text-gradient { background-image: var(--gradient-title); }
+
+/* Background Gradient Utilities */
+.bg-gradient-primary { background: var(--gradient-primary); }
+
+/* Shadow Utilities */
+.shadow-card { box-shadow: var(--shadow-card); }
+
+/* Font Family Utilities */
+.font-bengali { font-family: var(--font-bengali); }
+
+/* Font Size */
+.text-small { font-size: clamp(var(--font-size-xs), 0.97vw, var(--font-size-sm)); }
+.text-body { font-size: clamp(var(--font-size-sm), 1.6vw, var(--font-size-base)); }
+.text-h1 { font-size: clamp(var(--font-size-4xl), 4vw, var(--font-size-5xl)); }
+.text-h2 { font-size: clamp(var(--font-size-xl), 3.33vw, var(--font-size-4xl)); }
+.text-h3 { font-size: clamp(var(--font-size-2xl), 1.13vw, var(--font-size-4xl)); }
+.text-h4 { font-size: clamp(var(--font-size-xl), 2.75vw, var(--font-size-3xl)); }
+.text-h5 { font-size: clamp(var(--font-size-lg), 0.85vw, var(--font-size-2xl)); }
+.text-h6 { font-size: clamp(var(--font-size-lg), 0.38vw, var(--font-size-xl)); }
+
+/* Special nav link gradient border */
+.nav-link-special::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 8px;
+  background: var(--gradient-nav);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Primary button gradient border */
+.border-gradient-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 50px;
+  background: var(--gradient-border);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Hide Scrollbar */
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
